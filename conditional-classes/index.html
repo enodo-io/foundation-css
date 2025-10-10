@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditional Classes - Enodo Foundation.css</title>
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+    <header class="ps-sticky z-nav-fixed t0 r0 l0 p1 ws-nowrap bg-light-025">
+  <div class="d-flex ai-center">
+    <nav aria-label="Header" class="d-flex g2 ai-center fl1 fs-trafalgar fw-500">
+      <a
+        class="logo px2 md:px1 py1 d-flex g2 ai-center z-nav-fixed"
+        href="/"
+        title="Enodo Foundation.css Documentation"
+      >
+        <svg
+          width="110"
+          height="24"
+          viewBox="0 0 1920 420"
+          style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
+        >
+          <g transform="matrix(26.6423,0,0,26.6423,-2824.65,-472.874)">
+            <path
+              d="M127.765,26.378L127.765,22.332C127.765,22.093 127.892,21.965 128.132,21.965L129.416,21.965C129.635,21.965 129.774,22.075 129.822,22.288L130.035,23.347C130.845,22.454 132.266,21.77 133.597,21.77C136.31,21.77 138.083,23.67 138.083,26.596L138.083,32.697C138.083,32.937 137.953,33.067 137.713,33.067L136.062,33.067C135.822,33.067 135.692,32.937 135.692,32.697L135.692,26.853C135.692,25.102 134.659,23.983 133.079,23.983C131.455,23.983 130.135,25.25 130.135,26.782L130.135,32.697C130.135,32.937 130.005,33.067 129.765,33.067L128.132,33.067C127.892,33.067 127.765,32.937 127.765,32.697L127.765,29.932L127.76,29.938C125.353,32.182 121.376,34.249 117.57,33.242C114.914,32.54 113.412,30.491 112.781,28.235C112.737,28.078 112.775,27.909 112.881,27.785C112.988,27.662 113.15,27.6 113.312,27.621C113.747,27.676 114.197,27.71 114.663,27.719C114.867,27.722 115.046,27.852 115.114,28.044C115.589,29.397 116.547,30.562 118.166,30.99C120.637,31.643 123.169,30.588 125.046,29.191C125.075,29.166 125.106,29.142 125.138,29.118C126.211,28.312 127.112,27.319 127.765,26.378ZM145.776,33.333C148.951,33.333 151.578,30.78 151.578,27.575C151.578,24.335 148.968,21.779 145.794,21.779C142.628,21.779 140.015,24.335 140.015,27.575C140.015,30.78 142.61,33.333 145.776,33.333ZM172.281,33.333C175.456,33.333 178.087,30.78 178.087,27.575C178.087,24.335 175.477,21.779 172.299,21.779C169.133,21.779 166.523,24.335 166.523,27.575C166.523,30.78 169.115,33.333 172.281,33.333ZM162.189,23.155C161.47,22.332 160.428,21.779 159.035,21.779C155.922,21.779 153.513,24.327 153.513,27.528C153.513,30.741 155.904,33.298 159.035,33.298C160.529,33.298 161.627,32.653 162.375,31.73L162.502,32.745C162.55,32.955 162.68,33.067 162.899,33.067L164.219,33.067C164.458,33.067 164.588,32.937 164.588,32.697L164.588,19.009C164.588,18.77 164.458,18.643 164.219,18.643L162.559,18.643C162.319,18.643 162.189,18.77 162.189,19.009L162.189,23.155ZM145.802,31.064C143.947,31.064 142.388,29.561 142.388,27.567C142.388,25.563 143.947,24.048 145.802,24.048C147.649,24.048 149.208,25.563 149.208,27.567C149.208,29.561 147.649,31.064 145.802,31.064ZM172.311,31.064C170.456,31.064 168.894,29.561 168.894,27.567C168.894,25.563 170.456,24.048 172.311,24.048C174.157,24.048 175.717,25.563 175.717,27.567C175.717,29.561 174.157,31.064 172.311,31.064ZM159.07,31.028C157.188,31.028 155.886,29.57 155.886,27.567C155.886,25.563 157.206,24.048 159.088,24.048C160.981,24.048 162.366,25.563 162.366,27.567C162.366,29.57 160.964,31.028 159.07,31.028ZM107.824,21.059C107.657,20.873 107.372,20.854 107.182,21.018L106.182,21.876C106.088,21.957 106.03,22.072 106.022,22.196C106.015,22.319 106.057,22.441 106.14,22.533C107.283,23.805 110.556,26.823 115.609,26.517C118.439,26.345 120.274,25.947 121.477,25.426C122.971,24.779 123.645,23.92 124.002,22.991C124.327,22.147 124.196,21.087 123.628,20.124C122.888,18.871 121.419,17.8 119.684,17.752C117.065,17.679 113.915,18.928 112.747,23.342L112.602,24.004L112.545,23.988C110.096,23.332 108.483,21.794 107.824,21.059ZM114.84,24.232C114.862,24.124 114.887,24.018 114.914,23.915C115.717,20.879 117.82,19.942 119.622,19.992C120.54,20.018 121.306,20.601 121.698,21.264C121.884,21.579 122.017,21.91 121.91,22.186C121.729,22.656 121.342,23.042 120.586,23.369C119.539,23.823 117.936,24.13 115.474,24.28L114.827,24.296L114.84,24.232Z"
+              style="fill:currentColor;fill-rule:nonzero;"
+            ></path>
+          </g>
+        </svg>
+        Foundation.css
+      </a>
+
+      <button
+        id="burger"
+        class="ml-auto baw0 bg-transparent p1 d-block md:d-none"
+        arial-label="Open glossary"
+        arial-controls="sidebar"
+        aria-expanded="false"
+      >
+        <svg
+          width="24px"
+          height="24px"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M4 18L20 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M4 12L20 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M4 6L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="d-flex fd-row g2">
+      <aside id="sidebar" class="ws3 hmx100 bg-light-025 d-none md:d-block">
+  <nav
+    arial-label="Main navigation"
+    class="ps-fixed bg-light-025 t8 b0 py2 w100 md:w-auto d-flex fd-column hmx100 overflow-y-auto"
+  >
+    <span class="fw-500 pt2 px2">Foundations</span>
+    <ul class="d-flex fd-column g1 p2 pl4">
+      <li><a href="/">Principles and installation</a></li>
+      <li><a href="/conditional-classes">Conditional classes</a></li>
+      <li><a href="/sizing">Sizing concepts</a></li>
+      <li><a href="/palette">Color palette</a></li>
+    </ul>
+    <span class="fw-500 pt2 px2">Components</span>
+    <ul class="d-flex fd-column g1 p2 pl4">
+      <li><a href="/backgrounds">Backgrounds</a></li>
+      <li><a href="/borders">Borders</a></li>
+      <li><a href="/borders-radius">Borders radius</a></li>
+      <li><a href="/box-shadows">Box shadows</a></li>
+      <li><a href="/box-sizing">Box sizing</a></li>
+      <li><a href="/colors">Colors</a></li>
+      <li><a href="/cursors">Cursors</a></li>
+      <li><a href="/displays">Displays</a></li>
+      <li><a href="/flexboxes">Flexboxes</a></li>
+      <li><a href="/gaps">Gaps</a></li>
+      <li><a href="/grids">Grids</a></li>
+      <li><a href="/interactivity">Interactivity</a></li>
+      <li><a href="/lists">Lists</a></li>
+      <li><a href="/object-fit">Object fitting</a></li>
+      <li><a href="/opacities">Opacities</a></li>
+      <li><a href="/overflows">Overflows</a></li>
+      <li><a href="/positions">Positioning</a></li>
+      <li><a href="/margins-paddings">Margins & Paddings</a></li>
+      <li><a href="/svg">SVG Icons</a></li>
+      <li><a href="/truncates">Text truncation</a></li>
+      <li><a href="/transitions">Transitions</a></li>
+      <li><a href="/typographies">Typographies</a></li>
+      <li><a href="/vertical-aligns">Vertical alignment</a></li>
+      <li><a href="/visibility">Visibility</a></li>
+      <li><a href="/width-height">Width &amp; Height</a></li>
+      <li><a href="/z-indexes">Z-Indexes</a></li>
+    </ul>
+  </nav>
+</aside>
+
+
+      <main class="d-flex fd-column g8 ws9 wmx100 md:mx-auto p2 md:px0">
+<header class="d-flex fd-column g4">
+  <h1>Conditional Classes</h1>
+  <p>Utility classes that apply conditionally based on breakpoints, hover and focus states.</p>
+</header>
+
+<section>
+  <h2 id="breakpoints">Responsive Breakpoints</h2>
+  <p>
+    Foundation.css uses a mobile-first approach with progressive breakpoints. By default, all
+    classes apply to all screens. Conditional prefixes allow you to apply styles only from certain
+    screen sizes.
+  </p>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Prefix</th>
+        <th scope="col">Breakpoint</th>
+        <th scope="col">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">None</th>
+        <td><code>0px+</code></td>
+        <td>Applies to all screens (mobile-first)</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>sm:</code></th>
+        <td><code>600px+</code></td>
+        <td>Tablets and larger screens</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>md:</code></th>
+        <td><code>1008px+</code></td>
+        <td>Medium screens and larger</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>lg:</code></th>
+        <td><code>1280px+</code></td>
+        <td>Large screens and larger</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Usage Examples</h3>
+  <pre><code>&lt;!-- Responsive layout --&gt;
+&lt;div class="d-block sm:d-flex md:d-grid lg:d-inline-flex"&gt;
+  &lt;!-- Mobile: block --&gt;
+  &lt;!-- 600px+: flex --&gt;
+  &lt;!-- 1008px+: grid --&gt;
+  &lt;!-- 1280px+: inline-flex --&gt;
+&lt;/div&gt;
+
+&lt;!-- Adaptive spacing --&gt;
+&lt;div class="p2 sm:p4 md:p6 lg:p8"&gt;
+  &lt;!-- Padding increases with screen size --&gt;
+&lt;/div&gt;
+
+&lt;!-- Responsive grid --&gt;
+&lt;div class="d-grid grid__1 sm:grid__2 md:grid__3 lg:grid__4 g4"&gt;
+  &lt;!-- 1 column on mobile, 2 on tablet, 3 on desktop, 4 on large screen --&gt;
+&lt;/div&gt;</code></pre>
+</section>
+
+<section>
+  <h2 id="hover">Hover Classes</h2>
+  <p>Classes with the <code>h:</code> prefix apply only when hovering over the element.</p>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Prefix</th>
+        <th scope="col">Behavior</th>
+        <th scope="col">Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>h:</code></th>
+        <td>Applies on hover</td>
+        <td><code>.h:bg-green:hover</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Usage Examples</h3>
+  <pre><code>&lt;!-- Button with hover effect --&gt;
+&lt;button class="bg-light h:bg-green h:fc-white t"&gt;
+  Interactive Button
+&lt;/button&gt;
+
+&lt;!-- Card with hover effect --&gt;
+&lt;div class="bg-white bs-sm h:bs-lg t"&gt;
+  &lt;!-- Shadow intensifies on hover --&gt;
+&lt;/div&gt;
+
+&lt;!-- Link with color change --&gt;
+&lt;a href="#" class="fc-blue h:fc-green h:underline"&gt;
+  Link with hover effect
+&lt;/a&gt;</code></pre>
+
+  <aside>
+    <h3>Available Hover Classes</h3>
+    <div class="d-grid grid__2 g4">
+      <div>
+        <h4>Colors</h4>
+        <ul class="list-unstyled">
+          <li><code>.h:bg-*</code> - Background colors</li>
+          <li><code>.h:fc-*</code> - Text colors</li>
+          <li><code>.h:bc-*</code> - Border colors</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visual Effects</h4>
+        <ul class="list-unstyled">
+          <li><code>.h:bs-*</code> - Box shadows</li>
+          <li><code>.h:o*</code> - Opacity</li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+</section>
+
+<section>
+  <h2 id="focus">Focus Classes</h2>
+  <p>
+    Classes with the <code>f:</code> prefix apply only when the element has focus (keyboard
+    navigation, click, etc.).
+  </p>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Prefix</th>
+        <th scope="col">Behavior</th>
+        <th scope="col">Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>f:</code></th>
+        <td>Applies on focus</td>
+        <td><code>.f:bc-blue:focus</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Usage Examples</h3>
+  <pre><code>&lt;!-- Input field with visible focus --&gt;
+&lt;input type="text" class="bc-light f:bc-blue f:bs-sm"
+       placeholder="Enter text"&gt;
+
+&lt;!-- Button with focus state --&gt;
+&lt;button class="bg-light f:bg-blue f:fc-white"&gt;
+  Accessible Button
+&lt;/button&gt;
+
+&lt;!-- Link with focus for keyboard navigation --&gt;
+&lt;a href="#" class="fc-blue f:fc-green f:underline"&gt;
+  Accessible Link
+&lt;/a&gt;</code></pre>
+
+  <aside>
+    <h3>Available Focus Classes</h3>
+    <div class="d-grid grid__2 g4">
+      <div>
+        <h4>Colors</h4>
+        <ul class="list-unstyled">
+          <li><code>.f:bg-*</code> - Background colors</li>
+          <li><code>.f:fc-*</code> - Text colors</li>
+          <li><code>.f:bc-*</code> - Border colors</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visual Effects</h4>
+        <ul class="list-unstyled">
+          <li><code>.f:o*</code> - Opacity</li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+</section>
+
+<section>
+  <h2 id="combinations">Conditional Class Combinations</h2>
+  <p>You can combine conditional prefixes to create complex and responsive behaviors.</p>
+
+  <h3>Responsive + Hover</h3>
+  <pre><code>&lt;!-- Hover effect that changes based on screen size --&gt;
+&lt;div class="bg-white sm:h:bg-light md:h:bg-blue lg:h:bg-green"&gt;
+  &lt;!-- Mobile: no hover effect --&gt;
+  &lt;!-- 600px+: white hover --&gt;
+  &lt;!-- 1008px+: blue hover --&gt;
+  &lt;!-- 1280px+: green hover --&gt;
+&lt;/div&gt;</code></pre>
+
+  <h3>Responsive + Focus</h3>
+  <pre><code>&lt;!-- Adaptive focus based on screen --&gt;
+&lt;input type="text"
+       class="bc-light sm:f:bc-blue md:f:bc-green lg:f:bc-purple"&gt;</code></pre>
+
+  <h3>Complete Example</h3>
+  <pre><code>&lt;!-- Responsive button with hover and focus states --&gt;
+&lt;button class="
+  bg-light fc-dark
+  sm:bg-blue sm:fc-white
+  md:p4 md:fs-h3
+  lg:p6 lg:fs-h2
+  h:bg-green h:bs-lg
+  sm:h:bg-purple
+  f:bg-orange f:fc-white
+  t
+"&gt;
+  Complete Button
+&lt;/button&gt;</code></pre>
+</section>
+
+<section>
+  <h2 id="best-practices">Best Practices</h2>
+
+  <h3>Mobile-First</h3>
+  <p>Always start by defining styles for mobile, then add larger breakpoints:</p>
+  <pre><code>&lt;!-- ✅ Good --&gt;
+&lt;div class="d-block sm:d-flex md:d-grid"&gt;
+
+&lt;!-- ❌ Avoid --&gt;
+&lt;div class="sm:d-flex md:d-grid d-block"&gt;</code></pre>
+
+  <h3>Accessibility</h3>
+  <p>Always think about users who navigate with the keyboard:</p>
+  <pre><code>&lt;!-- ✅ Good - Visible focus --&gt;
+&lt;button class="bg-blue f:bg-green f:bs-md"&gt;
+
+&lt;!-- ❌ Avoid - No focus --&gt;
+&lt;button class="bg-blue h:bg-green"&gt;</code></pre>
+
+  <h3>Performance</h3>
+  <p>Avoid overloading elements with too many conditional classes:</p>
+  <pre><code>&lt;!-- ✅ Good - Targeted and necessary --&gt;
+&lt;div class="d-grid grid__1 sm:grid__2 md:grid__3"&gt;
+
+&lt;!-- ❌ Avoid - Too many variations --&gt;
+&lt;div class="grid__1 sm:grid__2 md:grid__3 lg:grid__4 xl:grid__5"&gt;</code></pre>
+
+  <h3>Readability</h3>
+  <p>Organize your classes logically:</p>
+  <pre><code>&lt;!-- ✅ Good - Logical and readable --&gt;
+&lt;div class="
+  p2 sm:p4 md:p6
+  bg-white h:bg-light
+  bs-sm h:bs-md
+"&gt;</code></pre>
+</section>
+</main>
+    </div>
+
+    
+
+    <script>
+      const burger = document.getElementById('burger');
+      const menu = document.getElementById('sidebar');
+      let isExpanded = false;
+
+      function toggleMenu() {
+        isExpanded = !isExpanded;
+        burger.setAttribute('aria-expanded', String(!isExpanded));
+        menu.hidden = isExpanded;
+        if (isExpanded) {
+          menu.classList.remove('d-none');
+          menu.classList.add('d-block');
+          menu.classList.add('ps-fixed');
+        } else {
+          menu.classList.add('d-none');
+          menu.classList.remove('d-block');
+          menu.classList.remove('ps-fixed');
+        }
+      }
+
+      burger.addEventListener('click', toggleMenu);
+
+      burger.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleMenu();
+        } else if (e.key === 'Escape' && !menu.hidden) {
+          e.preventDefault();
+          toggleMenu();
+          burger.focus();
+        }
+      });
+    </script>
+  </body>
+</html>

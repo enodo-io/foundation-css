@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation CSS - Enodo Foundation.css</title>
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+    <header class="ps-sticky z-nav-fixed t0 r0 l0 p1 ws-nowrap bg-light-025">
+  <div class="d-flex ai-center">
+    <nav aria-label="Header" class="d-flex g2 ai-center fl1 fs-trafalgar fw-500">
+      <a
+        class="logo px2 md:px1 py1 d-flex g2 ai-center z-nav-fixed"
+        href="/"
+        title="Enodo Foundation.css Documentation"
+      >
+        <svg
+          width="110"
+          height="24"
+          viewBox="0 0 1920 420"
+          style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
+        >
+          <g transform="matrix(26.6423,0,0,26.6423,-2824.65,-472.874)">
+            <path
+              d="M127.765,26.378L127.765,22.332C127.765,22.093 127.892,21.965 128.132,21.965L129.416,21.965C129.635,21.965 129.774,22.075 129.822,22.288L130.035,23.347C130.845,22.454 132.266,21.77 133.597,21.77C136.31,21.77 138.083,23.67 138.083,26.596L138.083,32.697C138.083,32.937 137.953,33.067 137.713,33.067L136.062,33.067C135.822,33.067 135.692,32.937 135.692,32.697L135.692,26.853C135.692,25.102 134.659,23.983 133.079,23.983C131.455,23.983 130.135,25.25 130.135,26.782L130.135,32.697C130.135,32.937 130.005,33.067 129.765,33.067L128.132,33.067C127.892,33.067 127.765,32.937 127.765,32.697L127.765,29.932L127.76,29.938C125.353,32.182 121.376,34.249 117.57,33.242C114.914,32.54 113.412,30.491 112.781,28.235C112.737,28.078 112.775,27.909 112.881,27.785C112.988,27.662 113.15,27.6 113.312,27.621C113.747,27.676 114.197,27.71 114.663,27.719C114.867,27.722 115.046,27.852 115.114,28.044C115.589,29.397 116.547,30.562 118.166,30.99C120.637,31.643 123.169,30.588 125.046,29.191C125.075,29.166 125.106,29.142 125.138,29.118C126.211,28.312 127.112,27.319 127.765,26.378ZM145.776,33.333C148.951,33.333 151.578,30.78 151.578,27.575C151.578,24.335 148.968,21.779 145.794,21.779C142.628,21.779 140.015,24.335 140.015,27.575C140.015,30.78 142.61,33.333 145.776,33.333ZM172.281,33.333C175.456,33.333 178.087,30.78 178.087,27.575C178.087,24.335 175.477,21.779 172.299,21.779C169.133,21.779 166.523,24.335 166.523,27.575C166.523,30.78 169.115,33.333 172.281,33.333ZM162.189,23.155C161.47,22.332 160.428,21.779 159.035,21.779C155.922,21.779 153.513,24.327 153.513,27.528C153.513,30.741 155.904,33.298 159.035,33.298C160.529,33.298 161.627,32.653 162.375,31.73L162.502,32.745C162.55,32.955 162.68,33.067 162.899,33.067L164.219,33.067C164.458,33.067 164.588,32.937 164.588,32.697L164.588,19.009C164.588,18.77 164.458,18.643 164.219,18.643L162.559,18.643C162.319,18.643 162.189,18.77 162.189,19.009L162.189,23.155ZM145.802,31.064C143.947,31.064 142.388,29.561 142.388,27.567C142.388,25.563 143.947,24.048 145.802,24.048C147.649,24.048 149.208,25.563 149.208,27.567C149.208,29.561 147.649,31.064 145.802,31.064ZM172.311,31.064C170.456,31.064 168.894,29.561 168.894,27.567C168.894,25.563 170.456,24.048 172.311,24.048C174.157,24.048 175.717,25.563 175.717,27.567C175.717,29.561 174.157,31.064 172.311,31.064ZM159.07,31.028C157.188,31.028 155.886,29.57 155.886,27.567C155.886,25.563 157.206,24.048 159.088,24.048C160.981,24.048 162.366,25.563 162.366,27.567C162.366,29.57 160.964,31.028 159.07,31.028ZM107.824,21.059C107.657,20.873 107.372,20.854 107.182,21.018L106.182,21.876C106.088,21.957 106.03,22.072 106.022,22.196C106.015,22.319 106.057,22.441 106.14,22.533C107.283,23.805 110.556,26.823 115.609,26.517C118.439,26.345 120.274,25.947 121.477,25.426C122.971,24.779 123.645,23.92 124.002,22.991C124.327,22.147 124.196,21.087 123.628,20.124C122.888,18.871 121.419,17.8 119.684,17.752C117.065,17.679 113.915,18.928 112.747,23.342L112.602,24.004L112.545,23.988C110.096,23.332 108.483,21.794 107.824,21.059ZM114.84,24.232C114.862,24.124 114.887,24.018 114.914,23.915C115.717,20.879 117.82,19.942 119.622,19.992C120.54,20.018 121.306,20.601 121.698,21.264C121.884,21.579 122.017,21.91 121.91,22.186C121.729,22.656 121.342,23.042 120.586,23.369C119.539,23.823 117.936,24.13 115.474,24.28L114.827,24.296L114.84,24.232Z"
+              style="fill:currentColor;fill-rule:nonzero;"
+            ></path>
+          </g>
+        </svg>
+        Foundation.css
+      </a>
+
+      <button
+        id="burger"
+        class="ml-auto baw0 bg-transparent p1 d-block md:d-none"
+        arial-label="Open glossary"
+        arial-controls="sidebar"
+        aria-expanded="false"
+      >
+        <svg
+          width="24px"
+          height="24px"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M4 18L20 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M4 12L20 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M4 6L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="d-flex fd-row g2">
+      <aside id="sidebar" class="ws3 hmx100 bg-light-025 d-none md:d-block">
+  <nav
+    arial-label="Main navigation"
+    class="ps-fixed bg-light-025 t8 b0 py2 w100 md:w-auto d-flex fd-column hmx100 overflow-y-auto"
+  >
+    <span class="fw-500 pt2 px2">Foundations</span>
+    <ul class="d-flex fd-column g1 p2 pl4">
+      <li><a href="/">Principles and installation</a></li>
+      <li><a href="/conditional-classes">Conditional classes</a></li>
+      <li><a href="/sizing">Sizing concepts</a></li>
+      <li><a href="/palette">Color palette</a></li>
+    </ul>
+    <span class="fw-500 pt2 px2">Components</span>
+    <ul class="d-flex fd-column g1 p2 pl4">
+      <li><a href="/backgrounds">Backgrounds</a></li>
+      <li><a href="/borders">Borders</a></li>
+      <li><a href="/borders-radius">Borders radius</a></li>
+      <li><a href="/box-shadows">Box shadows</a></li>
+      <li><a href="/box-sizing">Box sizing</a></li>
+      <li><a href="/colors">Colors</a></li>
+      <li><a href="/cursors">Cursors</a></li>
+      <li><a href="/displays">Displays</a></li>
+      <li><a href="/flexboxes">Flexboxes</a></li>
+      <li><a href="/gaps">Gaps</a></li>
+      <li><a href="/grids">Grids</a></li>
+      <li><a href="/interactivity">Interactivity</a></li>
+      <li><a href="/lists">Lists</a></li>
+      <li><a href="/object-fit">Object fitting</a></li>
+      <li><a href="/opacities">Opacities</a></li>
+      <li><a href="/overflows">Overflows</a></li>
+      <li><a href="/positions">Positioning</a></li>
+      <li><a href="/margins-paddings">Margins & Paddings</a></li>
+      <li><a href="/svg">SVG Icons</a></li>
+      <li><a href="/truncates">Text truncation</a></li>
+      <li><a href="/transitions">Transitions</a></li>
+      <li><a href="/typographies">Typographies</a></li>
+      <li><a href="/vertical-aligns">Vertical alignment</a></li>
+      <li><a href="/visibility">Visibility</a></li>
+      <li><a href="/width-height">Width &amp; Height</a></li>
+      <li><a href="/z-indexes">Z-Indexes</a></li>
+    </ul>
+  </nav>
+</aside>
+
+
+      <main class="d-flex fd-column g8 ws9 wmx100 md:mx-auto p2 md:px0">
+<section class="d-flex fd-column g6">
+  <header class="d-flex fd-column g4 ta-center">
+    <h1 class="fs-canon fw-bold fc-dark">Foundation CSS</h1>
+    <p class="fs-paragon fc-light-700 lh-relaxed">
+      A lightweight, atomic-first CSS framework for building <strong>fast</strong>,
+      <strong>accessible</strong>, and <strong>maintainable</strong> web interfaces.
+    </p>
+    <div class="d-flex jc-center g4">
+      <a href="#installation" class="btn btn--primary">Get Started</a>
+      <a
+        href="https://github.com/enodo-io/foundation-css"
+        target="_blank"
+        rel="noopener"
+        class="btn btn--secondary"
+        >View on GitHub</a
+      >
+    </div>
+  </header>
+
+  <div class="d-grid grid__1 sm:grid__2 lg:grid__3 g6">
+    <div class="d-flex fd-column g3 p4 bg-light-025 br-md">
+      <div class="fs-h2 fc-blue">⚡</div>
+      <h3 class="fs-h3 fw-bold">Lightweight</h3>
+      <p class="fc-light-700">
+        Only 19KB gzipped. Import only what you need with modular SCSS architecture to reduce even
+        more.
+      </p>
+    </div>
+
+    <div class="d-flex fd-column g3 p4 bg-light-025 br-md">
+      <div class="fs-h2 fc-green">♿</div>
+      <h3 class="fs-h3 fw-bold">Accessible</h3>
+      <p class="fc-light-700">
+        Built with accessibility in mind. Semantic HTML, keyboard navigation, and screen reader
+        support.
+      </p>
+    </div>
+
+    <div class="d-flex fd-column g3 p4 bg-light-025 br-md">
+      <div class="fs-h2 fc-purple">📱</div>
+      <h3 class="fs-h3 fw-bold">Responsive</h3>
+      <p class="fc-light-700">
+        Mobile-first approach with consistent breakpoints. Works perfectly on all devices.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="d-flex fd-column g4">
+  <header class="d-flex ai-center jc-space-between">
+    <h2 id="philosophy">Philosophy</h2>
+    <a href="#philosophy">🔗</a>
+  </header>
+
+  <div class="bg-light-025 p6 br-lg">
+    <p class="fs-h3 fw-500 fc-dark mb4">
+      Created in <strong>2019</strong> and now <strong>open source</strong>, Foundation CSS was born
+      from a simple frustration: existing CSS frameworks were either too heavy, too opinionated, or
+      not flexible enough.
+    </p>
+
+    <p class="fc-light-700 lh-relaxed">
+      Inspired by
+      <a
+        href="https://stackoverflow.design/product/develop/using-stacks/"
+        target="_blank"
+        rel="noopener"
+        class="fc-blue h:underline"
+        >Stacks</a
+      >
+      and
+      <a href="https://www.bbc.com/gel" target="_blank" rel="noopener" class="fc-blue h:underline"
+        >BBC GEL guidelines</a
+      >, Foundation CSS follows atomic design principles where every class is an independent,
+      composable building block.
+    </p>
+
+    <p class="fc-light-700 lh-relaxed">
+      Our goal is to help you create <strong>beautiful, readable interfaces quickly</strong> that
+      adapt correctly to all devices and are accessible to all people. Whether you're building a
+      simple website or a complex web application, Foundation CSS provides the foundation for
+      consistent, scalable design systems.
+    </p>
+  </div>
+</section>
+
+<section class="d-flex fd-column g4">
+  <header class="d-flex ai-center jc-space-between">
+    <h2 id="atomic-vs-components">Atomic CSS vs Components</h2>
+    <a href="#atomic-vs-components">🔗</a>
+  </header>
+
+  <div class="d-flex fd-column g4">
+    <p class="fc-light-700 lh-relaxed">
+      Foundation CSS excels at rapid prototyping and one-off styling, but it doesn't prevent you
+      from creating traditional CSS components for repeated elements. Here's when to use each
+      approach:
+    </p>
+
+    <div class="d-grid grid__1 md:grid__2 g6">
+      <div class="d-flex fd-column g3 p4 bg-green-025 br-md">
+        <h3 class="fs-h3 fw-bold fc-green">✅ Use Atomic Classes</h3>
+        <ul class="list-unstyled fc-light-700">
+          <li class="mb2">• Quick prototypes and layouts</li>
+          <li class="mb2">• One-off styling needs</li>
+          <li class="mb2">• Responsive adjustments</li>
+          <li class="mb2">• Spacing and typography</li>
+          <li class="mb2">• Utility styling (colors, borders, etc.)</li>
+        </ul>
+      </div>
+
+      <div class="d-flex fd-column g3 p4 bg-blue-025 br-md">
+        <h3 class="fs-h3 fw-bold fc-blue">🏗️ Create Components</h3>
+        <ul class="list-unstyled fc-light-700">
+          <li class="mb2">• Repeated UI elements (buttons, cards, forms)</li>
+          <li class="mb2">• Complex interactions and animations</li>
+          <li class="mb2">• When atomic classes become too verbose</li>
+          <li class="mb2">• Brand-specific styling</li>
+          <li class="mb2">• Performance-critical components</li>
+        </ul>
+      </div>
+    </div>
+
+    <aside class="bg-light-025 p4 br-md">
+      <h4 class="fs-h4 fw-bold mb3">💡 Pro Tip: Performance Optimization</h4>
+      <p class="fc-light-700 mb3">
+        Always arbitrate between atomic classes and components based on what will be lighter in
+        terms of bundle size. When writing CSS, try to write it at the component level to avoid
+        loading unnecessary CSS everywhere (unless the component is present on all pages).
+      </p>
+
+      <pre><code>// ❌ Too verbose - consider a component
+&lt;button class="d-inline-flex ai-center jc-center bg-blue fc-white
+               p3 br-sm fw-500 t h:bg-blue-600 f:bg-blue-700"&gt;
+  Submit
+&lt;/button&gt;
+
+// ✅ Better as a component
+&lt;button class="btn btn--primary"&gt;Submit&lt;/button&gt;</code></pre>
+    </aside>
+  </div>
+</section>
+
+<section class="d-flex fd-column g4">
+  <header class="d-flex ai-center jc-space-between">
+    <h2 id="installation">Installation</h2>
+    <a href="#installation">🔗</a>
+  </header>
+
+  <div class="d-flex fd-column g4">
+    <h3>NPM Package</h3>
+    <pre><code>npm install @enodo/foundation-css</code></pre>
+
+    <h3>Full Usage</h3>
+    <pre><code>@use "@enodo/foundation-css";</code></pre>
+
+    <h3>CDN (for quick testing)</h3>
+    <pre><code>&lt;link rel="stylesheet" href="https://unpkg.com/@enodo/foundation-css@latest/dist/index.css"&gt;</code></pre>
+
+    <h3>Modular Imports</h3>
+    <p class="fc-light-700">Import only what you need to optimize your bundle size:</p>
+    <pre><code>@use "@enodo/foundation-css/spacing-units";
+@use "@enodo/foundation-css/colors";
+@use "@enodo/foundation-css/typographies";
+@use "@enodo/foundation-css/cursors";
+// Import only the modules you need</code></pre>
+
+    <h3>Customization</h3>
+    <p class="fc-light-700">Customize the framework by overriding variables:</p>
+    <pre><code>@use "@enodo/foundation-css" with (
+  $backgrounds: (
+    size: (
+      auto,
+      cover,
+      contain,
+    ),
+    repeat: (
+      repeat,
+      no-repeat,
+      repeat-x,
+      repeat-y,
+    ),
+    position: (
+      center,
+      top,
+      bottom,
+      left,
+      left-top,
+      left-bottom,
+      right,
+      right-top,
+      right-bottom,
+    ),
+    attachment: (
+      fixed,
+      local,
+      scroll,
+    ),
+  ),
+  $borders: (
+    xs: 3px,
+    sm: 5px,
+    md: 8px,
+    lg: 16px,
+    xl: 24px,
+  ),
+  $box-shadows: (
+    none: none,
+    sm: (
+      0 1px 2px hsla(0deg, 0%, 0%, 0.05),
+      0 1px 4px hsla(0deg, 0%, 0%, 0.05),
+      0 2px 8px hsla(0deg, 0%, 0%, 0.05),
+    ),
+    md: (
+      0 1px 3px hsla(0deg, 0%, 0%, 0.06),
+      0 2px 6px hsla(0deg, 0%, 0%, 0.06),
+      0 3px 8px hsla(0deg, 0%, 0%, 0.09),
+    ),
+    lg: (
+      0 1px 4px hsla(0deg, 0%, 0%, 0.09),
+      0 3px 8px hsla(0deg, 0%, 0%, 0.09),
+      0 4px 13px hsla(0deg, 0%, 0%, 0.13),
+    ),
+    xl: (
+      0 10px 24px hsla(0deg, 0%, 0%, 0.05),
+      0 20px 48px hsla(0deg, 0%, 0%, 0.05),
+      0 1px 4px hsla(0deg, 0%, 0%, 0.1),
+    ),
+  ),
+  $breakpoints: (
+    sm: 600px,
+    md: 1008px,
+    lg: 1280px,
+  ),
+  $colors: (
+    light: (
+      "main": #fff,
+      "025": #f9f9f9,
+      "050": #f1f2f7,
+      "075": #eaecf2,
+      "100": #e1e3e8,
+      "200": #c8c8d5,
+      "300": #a9a9bf,
+      "400": #8b8da8,
+      "500": #6b6e94,
+      "600": #4f517d,
+      "700": #30336b,
+      "800": #27294f,
+      "900": #181a34,
+    ),
+    green: (
+      "main": #4bdc9f,
+      "100": #e8f8f2,
+      "200": #d1f1e5,
+      "300": #9ee6c7,
+      "400": #4bdc9f,
+      "500": #2bc885,
+      "600": #1a8f5f,
+    ),
+    red: (
+      "main": #ff855c,
+      "100": #ffe8e0,
+      "200": #ffd1c2,
+      "300": #ffb399,
+      "400": #ff855c,
+      "500": #ff6b33,
+      "600": #e54d1a,
+    ),
+    orange: (
+      "main": #ffb55c,
+      "100": #fff4e6,
+      "200": #ffe9cc,
+      "300": #ffd699,
+      "400": #ffb55c,
+      "500": #ff9f1f,
+      "600": #e6850a,
+    ),
+    yellow: (
+      "main": #ffd749,
+      "100": #fffce6,
+      "200": #fff9cc,
+      "300": #fff299,
+      "400": #ffd749,
+      "500": #ffcc1a,
+      "600": #e6b800,
+    ),
+    blue: (
+      "main": #4a90e2,
+      "100": #e6f2ff,
+      "200": #cce5ff,
+      "300": #99ccff,
+      "400": #4a90e2,
+      "500": #2e7ce6,
+      "600": #1a5bb3,
+    ),
+    purple: (
+      "main": #da93f3,
+      "100": #f4e6ff,
+      "200": #e9ccff,
+      "300": #d399ff,
+      "400": #da93f3,
+      "500": #c266e6,
+      "600": #a633cc,
+    ),
+    pink: (
+      "main": #ff92b9,
+      "100": #ffe6f0,
+      "200": #ffcce1,
+      "300": #ff99c2,
+      "400": #ff92b9,
+      "500": #ff66a3,
+      "600": #e6337a,
+    ),
+    teal: (
+      "main": #20c997,
+      "100": #e6faf5,
+      "200": #ccf5eb,
+      "300": #99ebd7,
+      "400": #20c997,
+      "500": #1aa085,
+      "600": #147a66,
+    ),
+  ),
+  $cursors: auto, default, pointer, wait, move, not-allowed, help, text, grab, grabbing,
+  $displays:
+    block, grid, inline-grid, inline, inline-block, flex, inline-flex, none, table, table-cell,
+    table-row, unset,
+  $pointer-events: auto, none,
+  $user-selects: auto, none,
+  $user-drags: auto, none,
+  $list-styles: disc, decimal, inherit,
+  $list-positions: inside, outside,
+  $object-fit: contain, cover, fill, none,
+  $opacities: (0, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100),
+  $opacities-hover: (0, 5, 50, 80, 100),
+  $opacities-focus: (100),
+  $positions: absolute, fixed, relative, static, sticky, unset,
+  $spacing-units: (
+    1: 4px,
+    2: 8px,
+    3: 12px,
+    4: 16px,
+    5: 20px,
+    6: 24px,
+    7: 32px,
+    8: 40px,
+    9: 48px,
+    10: 56px,
+    11: 64px,
+    12: 72px,
+    13: 80px,
+    14: 120px,
+    15: 160px,
+    16: 200px,
+  ),
+  $su-full: 1008px, // 996
+  $su-step: math.div($su-full, 12),
+  $font-families: (
+    sans: (
+      system-ui,
+      -apple-system,
+      "Segoe UI",
+      "Roboto",
+      "Helvetica Neue",
+      "Arial",
+      "Noto Sans",
+      "Liberation Sans",
+      sans-serif,
+      "Apple Color Emoji",
+      "Segoe UI Emoji",
+      "Segoe UI Symbol",
+      "Noto Color Emoji",
+    ),
+    mono: (
+      "SFMono-Regular",
+      "Consolas",
+      "Liberation Mono",
+      "Menlo",
+      "Courier",
+      monospace,
+    ),
+  ),
+  $base-font-size: 16px,
+  $font-sizes:
+    atlas, elephant, imperial, royal, foolscap, canon, trafalgar, paragon, double-pica, great-primer,
+    body-copy, pica, long-primer, brevier, minion,
+  $font-weights: 300, 400, 500, 600, 700, 800, 900,
+  $font-styles: normal, italic, unset,
+  $text-aligns: left, center, right, justify, unset,
+  $text-decorations: none, underline, line-through,
+  $text-transforms: capitalize, lowercase, uppercase, none, unset,
+  $white-spaces: normal, nowrap, pre, pre-wrap, pre-line, unset,
+  $word-breaks: normal, break-all, keep-all, inherit, initial, unset,
+  $overflow-wraps: normal, break-word, inherit, initial, unset,
+  $word-wraps: break-word,
+  $hyphens: none, auto, unset,
+  $vertical-aligns: baseline, bottom, middle, sub, super, text-bottom, text-top, top, unset,
+  $z-indexes: (
+    hide: -1,
+    base: 0,
+    selected: 25,
+    active: 50,
+    dropdown: 1000,
+    popover: 2000,
+    tooltip: 3000,
+    banner: 4000,
+    nav: 5000,
+    nav-fixed: 5050,
+    modal-bg: 9000,
+    modal: 9050,
+  )
+);
+</code></pre>
+  </div>
+</section>
+
+<section class="d-flex fd-column g4">
+  <header class="d-flex ai-center jc-space-between">
+    <h2 id="quick-examples">Quick Examples</h2>
+    <a href="#quick-examples">🔗</a>
+  </header>
+
+  <div class="d-flex fd-column g6">
+    <div class="d-flex fd-column g3">
+      <h3>Responsive Card Layout</h3>
+      <pre><code>&lt;div class="d-grid grid__1 sm:grid__2 lg:grid__3 g4"&gt;
+  &lt;div class="bg-white bs-md br-lg p4"&gt;
+    &lt;h3 class="fs-h3 fw-bold mb3"&gt;Card Title&lt;/h3&gt;
+    &lt;p class="fc-light-700 lh-relaxed"&gt;Card content goes here.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="d-flex fd-column g3">
+      <h3>Interactive Button</h3>
+      <pre><code>&lt;button class="
+  d-inline-flex ai-center jc-center
+  bg-blue fc-white
+  p3 br-sm fw-500
+  h:bg-blue-600 f:bg-blue-700
+  t
+"&gt;
+  Click Me
+&lt;/button&gt;</code></pre>
+    </div>
+
+    <div class="d-flex fd-column g3">
+      <h3>Typography Scale</h3>
+      <pre><code>&lt;h1 class="fs-canon fw-bold mb4"&gt;Main Heading&lt;/h1&gt;
+&lt;h2 class="fs-trafalgar fw-600 mb3"&gt;Section Heading&lt;/h2&gt;
+&lt;p class="fs-body-copy fc-light-700 lh-relaxed"&gt;
+  Body text with optimal line height for readability.
+&lt;/p&gt;</code></pre>
+    </div>
+  </div>
+</section>
+
+<section class="d-flex fd-column g4">
+  <header class="d-flex ai-center jc-space-between">
+    <h2 id="features">Key Features</h2>
+    <a href="#features">🔗</a>
+  </header>
+
+  <div class="d-grid grid__1 md:grid__2 g6">
+    <div class="d-flex fd-column g3">
+      <h3 class="fs-h3 fw-bold">🎨 Design System Ready</h3>
+      <ul class="list-unstyled fc-light-700">
+        <li class="mb2">• 16 Spacing Units for consistent rhythm</li>
+        <li class="mb2">• 15 Typography sizes with semantic naming</li>
+        <li class="mb2">• Comprehensive color system with variations</li>
+        <li class="mb2">• Consistent border radius and shadows</li>
+      </ul>
+    </div>
+
+    <div class="d-flex fd-column g3">
+      <h3 class="fs-h3 fw-bold">📱 Mobile-First Responsive</h3>
+      <ul class="list-unstyled fc-light-700">
+        <li class="mb2">• Breakpoints: 600px, 1008px, 1280px</li>
+        <li class="mb2">• Conditional classes: sm:, md:, lg:</li>
+        <li class="mb2">• Hover states: h: prefix</li>
+        <li class="mb2">• Focus states: f: prefix</li>
+      </ul>
+    </div>
+
+    <div class="d-flex fd-column g3">
+      <h3 class="fs-h3 fw-bold">♿ Accessibility Focused</h3>
+      <ul class="list-unstyled fc-light-700">
+        <li class="mb2">• Rem-based units for text scaling</li>
+        <li class="mb2">• High contrast color combinations</li>
+        <li class="mb2">• Keyboard navigation support</li>
+        <li class="mb2">• Screen reader friendly</li>
+      </ul>
+    </div>
+
+    <div class="d-flex fd-column g3">
+      <h3 class="fs-h3 fw-bold">⚡ Performance Optimized</h3>
+      <ul class="list-unstyled fc-light-700">
+        <li class="mb2">• Modular architecture</li>
+        <li class="mb2">• Tree-shakeable imports</li>
+        <li class="mb2">• Minimal CSS footprint</li>
+        <li class="mb2">• No JavaScript dependencies</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="d-flex fd-column g4">
+  <header class="d-flex ai-center jc-space-between">
+    <h2 id="component-creation">Creating Components</h2>
+    <a href="#component-creation">🔗</a>
+  </header>
+
+  <div class="d-flex fd-column g4">
+    <p class="fc-light-700">
+      Create custom components using Foundation CSS variables for consistency:
+    </p>
+
+    <pre><code>@use "sass:map";
+@use "@enodo/foundation-css/variables/spacing-units" as *;
+@use "@enodo/foundation-css/variables/borders" as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: map.get($borders, sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  // Use Foundation CSS spacing units
+  padding: map.get($spacing-units, 3) map.get($spacing-units, 5);
+
+  &__primary {
+    background-color: var(--blue);
+    color: var(--white);
+
+    &:hover {
+      background-color: var(--blue-600);
+    }
+  }
+}</code></pre>
+
+    <p class="fc-light-700">
+      This approach ensures consistency with your design system's spacing scale while creating
+      reusable, maintainable components.
+    </p>
+  </div>
+</section>
+
+<section class="d-flex fd-column g4">
+  <header class="d-flex ai-center jc-space-between">
+    <h2 id="next-steps">Next Steps</h2>
+    <a href="#next-steps">🔗</a>
+  </header>
+
+  <div class="d-grid grid__1 md:grid__2 g4">
+    <a
+      href="/conditional-classes"
+      class="d-flex fd-column g3 p4 bg-light-025 br-md h:bg-light-100 t"
+    >
+      <h3 class="fs-h3 fw-bold fc-blue">Conditional Classes</h3>
+      <p class="fc-light-700">
+        Learn about responsive breakpoints, hover states, and focus management.
+      </p>
+    </a>
+
+    <a href="/sizing" class="d-flex fd-column g3 p4 bg-light-025 br-md h:bg-light-100 t">
+      <h3 class="fs-h3 fw-bold fc-blue">Sizing Concepts</h3>
+      <p class="fc-light-700">
+        Understand spacing units, typography scale, and responsive design principles.
+      </p>
+    </a>
+
+    <a href="/palette" class="d-flex fd-column g3 p4 bg-light-025 br-md h:bg-light-100 t">
+      <h3 class="fs-h3 fw-bold fc-blue">Color Palette</h3>
+      <p class="fc-light-700">
+        Understand the color system, accessibility, and customization principles.
+      </p>
+    </a>
+
+    <a href="/colors" class="d-flex fd-column g3 p4 bg-light-025 br-md h:bg-light-100 t">
+      <h3 class="fs-h3 fw-bold fc-blue">Color Classes</h3>
+      <p class="fc-light-700">
+        Learn how to use color utility classes for text, backgrounds, and borders.
+      </p>
+    </a>
+
+    <a href="/typographies" class="d-flex fd-column g3 p4 bg-light-025 br-md h:bg-light-100 t">
+      <h3 class="fs-h3 fw-bold fc-blue">Typography</h3>
+      <p class="fc-light-700">Discover the typography scale and semantic naming conventions.</p>
+    </a>
+  </div>
+</section>
+
+<style>
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    &--primary {
+      background-color: var(--blue);
+      color: var(--white);
+
+      &:hover {
+        background-color: var(--blue-600);
+      }
+
+      &:focus {
+        background-color: var(--blue-700);
+        outline: 2px solid var(--blue-200);
+        outline-offset: 2px;
+      }
+    }
+
+    &--secondary {
+      background-color: var(--light-100);
+      color: var(--light-700);
+      border: 1px solid var(--light-300);
+
+      &:hover {
+        background-color: var(--light-200);
+        border-color: var(--light-400);
+      }
+
+      &:focus {
+        background-color: var(--light-200);
+        border-color: var(--blue);
+        outline: 2px solid var(--blue-200);
+        outline-offset: 2px;
+      }
+    }
+  }
+</style>
+</main>
+    </div>
+
+    
+
+    <script>
+      const burger = document.getElementById('burger');
+      const menu = document.getElementById('sidebar');
+      let isExpanded = false;
+
+      function toggleMenu() {
+        isExpanded = !isExpanded;
+        burger.setAttribute('aria-expanded', String(!isExpanded));
+        menu.hidden = isExpanded;
+        if (isExpanded) {
+          menu.classList.remove('d-none');
+          menu.classList.add('d-block');
+          menu.classList.add('ps-fixed');
+        } else {
+          menu.classList.add('d-none');
+          menu.classList.remove('d-block');
+          menu.classList.remove('ps-fixed');
+        }
+      }
+
+      burger.addEventListener('click', toggleMenu);
+
+      burger.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleMenu();
+        } else if (e.key === 'Escape' && !menu.hidden) {
+          e.preventDefault();
+          toggleMenu();
+          burger.focus();
+        }
+      });
+    </script>
+  </body>
+</html>
