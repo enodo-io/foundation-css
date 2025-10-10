@@ -1,22 +1,22 @@
 # Foundation CSS
 
-[![npm version](https://badge.fury.io/js/%40enodo%2Ffoundation-css.svg)](https://badge.fury.io/js/%40enodo%2Ffoundation-css)
+[![npm version](https://badge.fury.io/js/@enodo%2Ffoundation-css.svg)](https://badge.fury.io/js/@enodo%2Ffoundation-css)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Bundle size](https://img.shields.io/bundlephobia/minzip/@enodo/foundation-css)](https://bundlephobia.com/package/@enodo/foundation-css)
 [![Build Status](https://github.com/enodo-io/foundation-css/workflows/CI/badge.svg)](https://github.com/enodo-io/foundation-css/actions)
 
 A lightweight, atomic-first CSS framework for building **fast**, **accessible**, and **maintainable** web interfaces. Created in 2019 and now open source, Foundation CSS provides utility classes for rapid prototyping and consistent design systems.
 
-**📚 [View Documentation](https://enodo-io.github.io/foundation-css)** | **Inspired by** [Stacks](https://stackoverflow.design/product/develop/using-stacks/) and [BBC GEL guidelines](https://www.bbc.com/gel).
+**[View Documentation](https://enodo-io.github.io/foundation-css)**
 
-## ✨ Features
+## Features
 
-- 🚀 **Lightweight**: Only **19.8KB gzipped** (156KB minified)
-- 📱 **Mobile-first**: Responsive by default with consistent breakpoints
-- ♿ **Accessible**: Built with accessibility in mind
-- 🎨 **Customizable**: Easy to customize with SCSS variables
-- 🧩 **Modular**: Import only what you need
-- ⚡ **Fast**: Optimized for performance and developer experience
+- **Lightweight**: Only **19.8KB gzipped** (156KB minified)
+- **Mobile-first**: Responsive by default with consistent breakpoints
+- **Accessible**: Built with accessibility in mind
+- **Customizable**: Easy to customize with SCSS variables
+- **Modular**: Import only what you need
+- **Fast**: Optimized for performance and developer experience
 
 ## Installation
 
