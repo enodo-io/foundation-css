@@ -1,0 +1,12 @@
+@forward "../variables/z-indexes";
+@use "sass:list";
+@use "sass:map";
+@use "../variables/z-indexes" as *;
+
+.z {
+  @each $name, $z-index in $z-indexes {
+    &-#{$name} {
+      z-index: $z-index !important;
+    }
+  }
+}

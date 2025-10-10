@@ -1,0 +1,99 @@
+---
+layout: base.njk
+title: Lists
+---
+
+<header class="d-flex fd-column g4">
+  <h1>Lists</h1>
+  <p>Atomic classes for managing a list style properties.</p>
+</header>
+
+<section>
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="classes">Classes</h2>
+    <a href="#classes">🔗</a>
+  </header>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.list-disc</code></th>
+        <td><code>list-style-type: disc;</code></td>
+        <td class="ta-center">–</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.list-decimal</code></th>
+        <td><code>list-style-type: decimal;</code></td>
+        <td class="ta-center">–</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.list-inherit</code></th>
+        <td><code>list-style-type: inherit;</code></td>
+        <td class="ta-center">–</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.list-inside</code></th>
+        <td><code>list-style-position: inside;</code></td>
+        <td class="ta-center">–</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.list-outside</code></th>
+        <td><code>list-style-position: outside;</code></td>
+        <td class="ta-center">–</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <aside>
+    <header class="d-flex ai-center jc-space-between pt6 pb4">
+      <h3 id="list-examples">Examples</h3>
+      <a href="#list-examples">🔗</a>
+    </header>
+    <pre><code>&lt;ul class="list-disc list-inside"&gt;
+  &lt;li&gt;Disc inside&lt;/li&gt;
+  &lt;li&gt;Disc inside&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class="list-decimal list-outside mt4"&gt;
+  &lt;li&gt;Decimal outside&lt;/li&gt;
+  &lt;li&gt;Decimal outside&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class="list-inherit mt4"&gt;
+  &lt;li&gt;Inherit style&lt;/li&gt;
+  &lt;li&gt;Inherit style&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    <div class="preview d-flex fd-column g4">
+      <ul class="list-disc list-inside bg-light p2">
+        <li>Disc inside</li>
+        <li>Disc inside</li>
+      </ul>
+
+      <ol class="list-decimal list-outside bg-light p2 mt4">
+        <li>Decimal outside</li>
+        <li>Decimal outside</li>
+      </ol>
+
+      <ul class="list-inherit bg-light p2 mt4">
+        <li>Inherit style</li>
+        <li>Inherit style</li>
+      </ul>
+    </div>
+  </aside>
+</section>
+
+<section>
+  <h2 id="customization">Customization</h2>
+  <p>Override list variables:</p>
+
+  <div class="bg-light-025 p4 bar-md">
+    <pre><code>$list-styles: disc, decimal, inherit;
+$list-positions: inside, outside;</code></pre>
+  </div>
+</section>

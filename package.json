@@ -1,0 +1,124 @@
+{
+  "name": "@enodo/foundation-css",
+  "version": "1.0.1",
+  "description": "A lightweight, atomic-first CSS framework for building fast, accessible, and maintainable web interfaces",
+  "keywords": [
+    "css",
+    "scss",
+    "sass",
+    "atomic-css",
+    "utility-first",
+    "framework",
+    "design-system",
+    "responsive",
+    "mobile-first",
+    "accessibility"
+  ],
+  "homepage": "https://github.com/enodo-io/foundation-css#readme",
+  "bugs": {
+    "url": "https://github.com/enodo-io/foundation-css/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/enodo-io/foundation-css.git"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/enodo-io"
+  },
+  "license": "MIT",
+  "author": "Jerome Musialak <jerome@eno.do>",
+  "main": "dist/index.css",
+  "sass": "src/index.scss",
+  "style": "dist/index.css",
+  "unpkg": "dist/index.min.css",
+  "jsdelivr": "dist/index.min.css",
+  "exports": {
+    ".": {
+      "sass": "./src/index.scss",
+      "style": "./dist/index.css",
+      "default": "./dist/index.css"
+    },
+    "./scss": "./src/index.scss",
+    "./css": "./dist/index.css",
+    "./variables/*": "./src/variables/_*.scss",
+    "./functions": "./src/functions/_index.scss",
+    "./atomic/*": "./src/atomic/_*.scss",
+    "./cursors": "./src/atomic/_cursors.scss",
+    "./backgrounds": "./src/atomic/_backgrounds.scss",
+    "./borders": "./src/atomic/_borders.scss",
+    "./box-shadows": "./src/atomic/_box-shadows.scss",
+    "./box-sizing": "./src/atomic/_box-sizing.scss",
+    "./colors": "./src/atomic/_colors.scss",
+    "./displays": "./src/atomic/_displays.scss",
+    "./flexboxes": "./src/atomic/_flexboxes.scss",
+    "./grid": "./src/atomic/_grid.scss",
+    "./interactivity": "./src/atomic/_interactivity.scss",
+    "./lists": "./src/atomic/_lists.scss",
+    "./object-fit": "./src/atomic/_object-fit.scss",
+    "./opacities": "./src/atomic/_opacities.scss",
+    "./overflow": "./src/atomic/_overflow.scss",
+    "./palettes": "./src/atomic/_palettes.scss",
+    "./positions": "./src/atomic/_positions.scss",
+    "./spacing-units": "./src/atomic/_spacing-units.scss",
+    "./svg": "./src/atomic/_svg.scss",
+    "./transitions": "./src/atomic/_transitions.scss",
+    "./truncates": "./src/atomic/_truncates.scss",
+    "./typographies": "./src/atomic/_typographies.scss",
+    "./vertical-aligns": "./src/atomic/_vertical-aligns.scss",
+    "./visibility": "./src/atomic/_visibility.scss",
+    "./width-height": "./src/atomic/_width-height.scss",
+    "./z-indexes": "./src/atomic/_z-indexes.scss",
+    "./docs": "./dist/index.html"
+  },
+  "files": [
+    "src/",
+    "dist/index.css",
+    "dist/index.min.css",
+    "dist/index.css.map",
+    "dist/index.min.css.map",
+    "dist/index.html",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "scripts": {
+    "build": "npm run build:css && npm run build:docs",
+    "build:css": "npm run build:css:expanded && npm run build:css:compressed",
+    "build:css:expanded": "sass src/index.scss dist/index.css --style=expanded --source-map --no-error-css",
+    "build:css:compressed": "sass src/index.scss dist/index.min.css --style=compressed --source-map --no-error-css",
+    "build:sass": "sass docs/index.scss docs/assets/styles.css --style=expanded --source-map",
+    "build:docs": "npm run build:sass && eleventy --input=docs --output=dist",
+    "watch:css": "sass --watch src/index.scss:dist/index.css --style=expanded --source-map",
+    "watch:sass": "sass --watch docs/index.scss:docs/assets/styles.css --style=expanded --source-map",
+    "watch:docs": "eleventy --input=docs --output=dist --serve --port=8080",
+    "dev": "npm-run-all build:sass --parallel watch:sass watch:docs",
+    "dev:css": "npm-run-all build:css:expanded --parallel watch:css",
+    "serve": "npm run dev",
+    "lint": "stylelint \"src/**/*.scss\"",
+    "lint:fix": "stylelint \"src/**/*.scss\" --fix",
+    "format": "prettier --write \"src/**/*.scss\" \"docs/**/*.{njk,html}\"",
+    "format:check": "prettier --check \"src/**/*.scss\" \"docs/**/*.{njk,html}\"",
+    "size": "echo 'Bundle sizes:' && ls -lh dist/index*.css && echo 'Gzipped size:' && gzip -c dist/index.min.css | wc -c | awk '{print $1/1024 \" KB\"}'",
+    "analyze": "echo 'CSS Analysis:' && wc -l dist/index.css && echo 'Unique selectors:' && grep -o '\\.[a-zA-Z0-9_-]*' dist/index.css | sort | uniq | wc -l",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint && npm run format:check && npm run build && npm run size && npm run analyze"
+  },
+  "peerDependencies": {
+    "sass": "^1.50.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "browser-sync": "^3.0.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.4.2",
+    "prettier-plugin-jinja-template": "^2.1.0",
+    "sass": "^1.93.2",
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard-scss": "^13.0.0",
+    "stylelint-scss": "^6.0.0"
+  }
+}

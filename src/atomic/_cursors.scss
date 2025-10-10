@@ -1,0 +1,10 @@
+@forward "../variables/cursors";
+@use "../variables/cursors" as *;
+
+.c {
+  @each $cursor in $cursors {
+    &-#{$cursor} {
+      cursor: $cursor !important;
+    }
+  }
+}

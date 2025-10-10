@@ -1,0 +1,91 @@
+---
+layout: base.njk
+title: Object fit
+---
+
+<header class="d-flex fd-column g4">
+  <h1>Object fit</h1>
+  <p>Atomic classes for managing the sizing of an img or video relative to its container.</p>
+</header>
+
+<section>
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="classes">Classess</h2>
+    <a href="#classes">🔗</a>
+  </header>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.of-contain</code></th>
+        <td><code>object-fit: contain;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.of-cover</code></th>
+        <td><code>object-fit: cover;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.of-fill</code></th>
+        <td><code>object-fit: fill;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.of-none</code></th>
+        <td><code>object-fit: none;</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <aside>
+    <header class="d-flex ai-center jc-space-between pt6 pb4">
+      <h3 id="examples">Examples</h3>
+      <a href="#examples">🔗</a>
+    </header>
+    <pre><code>&lt;img class="of-contain" /&gt;
+&lt;img class="of-cover" /&gt;
+&lt;img class="of-fill /&gt;
+&lt;img class="of-none" /&gt;</code></pre>
+    <div class="preview">
+      <div class="d-flex g4">
+        <img
+          class="of-contain ws1 hs1 ba"
+          width="64"
+          height="64"
+          src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='64'%3E%3Crect width='128' height='64' fill='%234bdc9f'/%3E%3Ccircle cx='32' cy='32' r='30'%3E%3C/circle%3E%3Ccircle cx='96' cy='32' r='30'%3E%3C/circle%3E%3C/svg%3E"
+        />
+        <img
+          class="of-cover ws1 hs1 ba"
+          width="64"
+          height="64"
+          src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='64'%3E%3Crect width='128' height='64' fill='%234bdc9f'/%3E%3Ccircle cx='32' cy='32' r='30'%3E%3C/circle%3E%3Ccircle cx='96' cy='32' r='30'%3E%3C/circle%3E%3C/svg%3E"
+        />
+        <img
+          class="of-fill ws1 hs1 ba"
+          width="64"
+          height="64"
+          src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='64'%3E%3Crect width='128' height='64' fill='%234bdc9f'/%3E%3Ccircle cx='32' cy='32' r='30'%3E%3C/circle%3E%3Ccircle cx='96' cy='32' r='30'%3E%3C/circle%3E%3C/svg%3E"
+        />
+        <img
+          class="of-none ws1 hs1 ba"
+          width="64"
+          height="64"
+          src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='64'%3E%3Crect width='128' height='64' fill='%234bdc9f'/%3E%3Ccircle cx='32' cy='32' r='30'%3E%3C/circle%3E%3Ccircle cx='96' cy='32' r='30'%3E%3C/circle%3E%3C/svg%3E"
+        />
+      </div>
+    </div>
+  </aside>
+</section>
+
+<section>
+  <h2 id="customization">Customization</h2>
+  <p>Override object-fit variables:</p>
+
+  <div class="bg-light-025 p4 bar-md">
+    <pre><code>$object-fit: contain, cover, fill, none;</code></pre>
+  </div>
+</section>

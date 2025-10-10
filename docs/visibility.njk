@@ -1,0 +1,54 @@
+---
+layout: base.njk
+title: Visibility
+---
+
+<header class="d-flex fd-column g4">
+  <h1>Visibility</h1>
+  <p>Atomic classes for managing an element’s visibility properties.</p>
+</header>
+
+<section>
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="classes">Classes</h2>
+    <a href="#classes">🔗</a>
+  </header>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.v-visible</code></th>
+        <td><code>visibility: visible;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.v-hidden</code></th>
+        <td><code>visibility: hidden;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.sr-only</code></th>
+        <td>Element visible only to screen readers</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <aside>
+    <header class="d-flex ai-center jc-space-between pt6 pb4">
+      <h3 id="visibility-examples">Examples</h3>
+      <a href="#visibility-examples">🔗</a>
+    </header>
+    <pre><code>&lt;div class="v-visible"&gt;&lt;/div&gt;
+&lt;div class="v-hidden"&gt;&lt;/div&gt;
+&lt;div class="sr-only"&gt;&lt;/div&gt;</code></pre>
+    <div class="preview d-flex g4">
+      <div class="v-visible bg-light-200 p2">.v-visible</div>
+      <div class="v-hidden">.v-hidden</div>
+      <div class="sr-only">.sr-only</div>
+    </div>
+  </aside>
+</section>

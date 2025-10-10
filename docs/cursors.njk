@@ -1,0 +1,107 @@
+---
+layout: base.njk
+title: Cursors
+---
+
+<header class="d-flex fd-column g4">
+  <h1>Cursors</h1>
+  <p>Atomic classes for managing an element’s cursor properties.</p>
+</header>
+
+<section>
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="classes">Classes</h2>
+    <a href="#classes">🔗</a>
+  </header>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.c-auto</code></th>
+        <td><code>cursor: auto;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.c-default</code></th>
+        <td><code>cursor: default;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.c-pointer</code></th>
+        <td><code>cursor: pointer;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.c-wait</code></th>
+        <td><code>cursor: wait;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.c-move</code></th>
+        <td><code>cursor: move;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.c-not-allowed</code></th>
+        <td><code>cursor: not-allowed;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.c-help</code></th>
+        <td><code>cursor: help;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.c-text</code></th>
+        <td><code>cursor: text;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.c-grab</code></th>
+        <td><code>cursor: grab;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.c-grabbing</code></th>
+        <td><code>cursor: grabbing;</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <aside>
+    <header class="d-flex ai-center jc-space-between pt6 pb4">
+      <h3 id="cursor-examples">Examples</h3>
+      <a href="#cursor-examples">🔗</a>
+    </header>
+    <pre><code>&lt;div class="c-auto"&gt;Auto&lt;/div&gt;
+&lt;div class="c-default"&gt;Default&lt;/div&gt;
+&lt;div class="c-pointer"&gt;Pointer&lt;/div&gt;
+&lt;div class="c-wait"&gt;Wait&lt;/div&gt;
+&lt;div class="c-move"&gt;Move&lt;/div&gt;
+&lt;div class="c-not-allowed"&gt;Not allowed&lt;/div&gt;
+&lt;div class="c-help"&gt;Help&lt;/div&gt;
+&lt;div class="c-text"&gt;Text&lt;/div&gt;
+&lt;div class="c-grab"&gt;Grab&lt;/div&gt;
+&lt;div class="c-grabbing"&gt;Grabbing&lt;/div&gt;</code></pre>
+    <div class="preview">
+      <ul class="d-grid grid__3 g4">
+        <li class="bg-light p2 c-auto">.c-auto</li>
+        <li class="bg-light p2 c-default">.c-default</li>
+        <li class="bg-light p2 c-pointer">.c-pointer</li>
+        <li class="bg-light p2 c-wait">.c-wait</li>
+        <li class="bg-light p2 c-move">.c-move</li>
+        <li class="bg-light p2 c-not-allowed">.c-not-allowed</li>
+        <li class="bg-light p2 c-help">.c-help</li>
+        <li class="bg-light p2 c-text">.c-text</li>
+        <li class="bg-light p2 c-grab">.c-grab</li>
+        <li class="bg-light p2 c-grabbing">.c-grabbing</li>
+      </ul>
+    </div>
+  </aside>
+</section>
+
+<section>
+  <h2 id="customization">Customization</h2>
+  <p>Override cursor variables:</p>
+
+  <div class="bg-light-025 p4 bar-md">
+    <pre><code>$cursors: auto, default, pointer, wait, move, not-allowed, help, text, grab, grabbing;</code></pre>
+  </div>
+</section>

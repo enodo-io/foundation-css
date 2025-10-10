@@ -1,0 +1,10 @@
+@forward "../variables/vertical-aligns";
+@use "../variables/vertical-aligns" as *;
+
+.va {
+  @each $align in $vertical-aligns {
+    &-#{$align} {
+      vertical-align: $align !important;
+    }
+  }
+}

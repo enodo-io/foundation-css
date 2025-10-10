@@ -1,0 +1,27 @@
+@forward "../variables/opacities";
+@use "sass:math";
+@use "../variables/opacities" as *;
+
+.o {
+  @each $opacity in $opacities {
+    &#{$opacity} {
+      opacity: math.div($opacity, 100) !important;
+    }
+  }
+}
+
+.h\:o {
+  @each $opacity in $opacities-hover {
+    &#{$opacity}:hover {
+      opacity: math.div($opacity, 100) !important;
+    }
+  }
+}
+
+.f\:o {
+  @each $opacity in $opacities-focus {
+    &#{$opacity}:focus {
+      opacity: math.div($opacity, 100) !important;
+    }
+  }
+}

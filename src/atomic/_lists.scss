@@ -1,0 +1,16 @@
+@forward "../variables/lists";
+@use "../variables/lists" as *;
+
+.list {
+  @each $style in $list-styles {
+    &-#{$style} {
+      list-style-type: $style !important;
+    }
+  }
+
+  @each $position in $list-positions {
+    &-#{$position} {
+      list-style-position: $position !important;
+    }
+  }
+}

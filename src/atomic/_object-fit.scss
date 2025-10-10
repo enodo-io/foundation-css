@@ -1,0 +1,10 @@
+@forward "../variables/object-fit";
+@use "../variables/object-fit" as *;
+
+.of {
+  @each $fit in $object-fit {
+    &-#{$fit} {
+      object-fit: $fit !important;
+    }
+  }
+}

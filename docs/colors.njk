@@ -1,0 +1,534 @@
+---
+layout: base.njk
+title: Colors
+---
+
+<section class="d-flex fd-column g6">
+  <header class="d-flex fd-column g4">
+    <h1 class="fs-canon fw-bold fc-dark">Colors</h1>
+    <p class="fs-paragon fc-light-700 lh-relaxed">
+      Foundation CSS provides a comprehensive set of color utility classes for text, backgrounds,
+      and borders. All colors are designed with accessibility in mind and follow semantic naming
+      conventions.
+    </p>
+  </header>
+</section>
+
+<section class="d-flex fd-column g6">
+  <header class="d-flex ai-center jc-space-between">
+    <h2 id="text-colors">Text Colors</h2>
+    <a href="#text-colors">#</a>
+  </header>
+
+  <div class="d-flex fd-column g4">
+    <p class="fc-light-700 lh-relaxed">
+      Use text color classes to apply colors to text elements. All classes support hover and focus
+      states.
+    </p>
+
+    <div class="bg-light-025 p4 bar-md">
+      <h3 class="fs-h4 fw-bold mb3">Usage</h3>
+      <pre><code>&lt;p class="fc-green-400"&gt;Success message&lt;/p&gt;
+&lt;p class="fc-red-500"&gt;Error message&lt;/p&gt;
+&lt;p class="fc-blue-600 fw-bold"&gt;Important information&lt;/p&gt;</code></pre>
+    </div>
+
+    <div class="d-grid grid__1 md:grid__2 lg:grid__3 g4">
+      <div class="d-flex fd-column g3 p4 bg-light-025 bar-md">
+        <h3 class="fs-h4 fw-bold">Light Text</h3>
+        <div class="d-flex fd-column g2">
+          <p class="fc-light">White</p>
+          <p class="fc-light-025">Lightest text (025)</p>
+          <p class="fc-light-050">Very light text (050)</p>
+          <p class="fc-light-075">Light text (075)</p>
+          <p class="fc-light-100">Main light text (100)</p>
+          <p class="fc-light-200">Light text (200)</p>
+          <p class="fc-light-300">Medium light text</p>
+          <p class="fc-light-400">Medium text</p>
+          <p class="fc-light-500 fw-bold">Secondary text</p>
+          <p class="fc-light-600 fw-bold">Primary text</p>
+          <p class="fc-light-700 fw-bold">Dark text</p>
+          <p class="fc-light-800 fw-bold">Medium Dark text</p>
+          <p class="fc-light-900 fw-bold">Darkest text</p>
+        </div>
+      </div>
+
+      <div class="d-flex fd-column g3 p4 bg-light-025 bar-md">
+        <h3 class="fs-h4 fw-bold">Green Text</h3>
+        <div class="d-flex fd-column g2">
+          <p class="fc-green-100">Light green text</p>
+          <p class="fc-green-200">Lighter green text</p>
+          <p class="fc-green-300">Light green text</p>
+          <p class="fc-green-400 fw-bold">Main green text</p>
+          <p class="fc-green-500 fw-bold">Dark green text</p>
+          <p class="fc-green-600 fw-bold">Darkest green text</p>
+        </div>
+      </div>
+
+      <div class="d-flex fd-column g3 p4 bg-light-025 bar-md">
+        <h3 class="fs-h4 fw-bold">Red Text</h3>
+        <div class="d-flex fd-column g2">
+          <p class="fc-red-100">Light red text</p>
+          <p class="fc-red-200">Lighter red text</p>
+          <p class="fc-red-300">Light red text</p>
+          <p class="fc-red-400 fw-bold">Main red text</p>
+          <p class="fc-red-500 fw-bold">Dark red text</p>
+          <p class="fc-red-600 fw-bold">Darkest red text</p>
+        </div>
+      </div>
+
+      <div class="d-flex fd-column g3 p4 bg-light-025 bar-md">
+        <h3 class="fs-h4 fw-bold">Blue Text</h3>
+        <div class="d-flex fd-column g2">
+          <p class="fc-blue-100">Light blue text</p>
+          <p class="fc-blue-200">Lighter blue text</p>
+          <p class="fc-blue-300">Light blue text</p>
+          <p class="fc-blue-400 fw-bold">Main blue text</p>
+          <p class="fc-blue-500 fw-bold">Dark blue text</p>
+          <p class="fc-blue-600 fw-bold">Darkest blue text</p>
+        </div>
+      </div>
+
+      <div class="d-flex fd-column g3 p4 bg-light-025 bar-md">
+        <h3 class="fs-h4 fw-bold">Orange Text</h3>
+        <div class="d-flex fd-column g2">
+          <p class="fc-orange-100">Light orange text</p>
+          <p class="fc-orange-200">Lighter orange text</p>
+          <p class="fc-orange-300">Light orange text</p>
+          <p class="fc-orange-400 fw-bold">Main orange text</p>
+          <p class="fc-orange-500 fw-bold">Dark orange text</p>
+          <p class="fc-orange-600 fw-bold">Darkest orange text</p>
+        </div>
+      </div>
+
+      <div class="d-flex fd-column g3 p4 bg-light-025 bar-md">
+        <h3 class="fs-h4 fw-bold">Purple Text</h3>
+        <div class="d-flex fd-column g2">
+          <p class="fc-purple-100">Light purple text</p>
+          <p class="fc-purple-200">Lighter purple text</p>
+          <p class="fc-purple-300">Light purple text</p>
+          <p class="fc-purple-400 fw-bold">Main purple text</p>
+          <p class="fc-purple-500 fw-bold">Dark purple text</p>
+          <p class="fc-purple-600 fw-bold">Darkest purple text</p>
+        </div>
+      </div>
+
+      <div class="d-flex fd-column g3 p4 bg-light-025 bar-md">
+        <h3 class="fs-h4 fw-bold">Teal Text</h3>
+        <div class="d-flex fd-column g2">
+          <p class="fc-teal-100">Light teal text</p>
+          <p class="fc-teal-200">Lighter teal text</p>
+          <p class="fc-teal-300">Light teal text</p>
+          <p class="fc-teal-400 fw-bold">Main teal text</p>
+          <p class="fc-teal-500 fw-bold">Dark teal text</p>
+          <p class="fc-teal-600 fw-bold">Darkest teal text</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="d-flex fd-column g6">
+  <header class="d-flex ai-center jc-space-between">
+    <h2 id="background-colors">Background Colors</h2>
+    <a href="#background-colors">#</a>
+  </header>
+
+  <div class="d-flex fd-column g4">
+    <p class="fc-light-700 lh-relaxed">
+      Use background color classes to apply colors to background elements. Perfect for cards,
+      alerts, and section backgrounds.
+    </p>
+
+    <div class="bg-light-025 p4 bar-md">
+      <h3 class="fs-h4 fw-bold mb3">Usage</h3>
+      <pre><code>&lt;div class="bg-green-100 p4 bar-md"&gt;
+  &lt;p class="fc-green-600"&gt;Success message&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="bg-red-100 p4 bar-md"&gt;
+  &lt;p class="fc-red-600"&gt;Error message&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="d-grid grid__1 md:grid__2 lg:grid__3 g4">
+      <div class="d-flex fd-column g3 p4 bg-white bar-md bs-sm">
+        <h3 class="fs-h4 fw-bold fc-light-600">Light Backgrounds</h3>
+        <div class="d-flex fd-column g2">
+          <div class="p3 bg-light bar-sm">
+            <p class="fc-light-600 fs-sm">White background</p>
+          </div>
+          <div class="p3 bg-light-025 bar-sm">
+            <p class="fc-light-600 fs-sm">Lightest background (025)</p>
+          </div>
+          <div class="p3 bg-light-050 bar-sm">
+            <p class="fc-light-600 fs-sm">Very light background (050)</p>
+          </div>
+          <div class="p3 bg-light-075 bar-sm">
+            <p class="fc-light-600 fs-sm">Light background (075)</p>
+          </div>
+          <div class="p3 bg-light-100 bar-sm">
+            <p class="fc-light-600 fs-sm">Main light background (100)</p>
+          </div>
+          <div class="p3 bg-light-200 bar-sm">
+            <p class="fc-light-600 fs-sm">Light background (200)</p>
+          </div>
+          <div class="p3 bg-light-300 bar-sm">
+            <p class="fc-light-600 fs-sm">Medium light background</p>
+          </div>
+          <div class="p3 bg-light-400 bar-sm">
+            <p class="fc-light fs-sm">Medium background</p>
+          </div>
+          <div class="p3 bg-light-500 bar-sm">
+            <p class="fc-light fs-sm">Dark background</p>
+          </div>
+          <div class="p3 bg-light-600 bar-sm">
+            <p class="fc-light fs-sm">Darker background</p>
+          </div>
+          <div class="p3 bg-light-700 bar-sm">
+            <p class="fc-light fs-sm">Dark background (700)</p>
+          </div>
+          <div class="p3 bg-light-800 bar-sm">
+            <p class="fc-light fs-sm">Medium Dark background (800)</p>
+          </div>
+          <div class="p3 bg-light-900 bar-sm">
+            <p class="fc-light fs-sm">Darkest background (900)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex fd-column g3 p4 bg-green-100 bar-md">
+        <h3 class="fs-h4 fw-bold fc-green-600">Green Backgrounds</h3>
+        <div class="d-flex fd-column g2">
+          <div class="p3 bg-green-100 bar-sm">
+            <p class="fc-green-600 fs-sm">Light green background</p>
+          </div>
+          <div class="p3 bg-green-200 bar-sm">
+            <p class="fc-green-600 fs-sm">Lighter green background</p>
+          </div>
+          <div class="p3 bg-green-300 bar-sm">
+            <p class="fc-green-600 fs-sm">Light green background</p>
+          </div>
+          <div class="p3 bg-green-400 bar-sm">
+            <p class="fc-green-100 fs-sm">Main green background</p>
+          </div>
+          <div class="p3 bg-green-500 bar-sm">
+            <p class="fc-green-100 fs-sm">Dark green background</p>
+          </div>
+          <div class="p3 bg-green-600 bar-sm">
+            <p class="fc-green-100 fs-sm">Darkest green background</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex fd-column g3 p4 bg-red-100 bar-md">
+        <h3 class="fs-h4 fw-bold fc-red-600">Red Backgrounds</h3>
+        <div class="d-flex fd-column g2">
+          <div class="p3 bg-red-100 bar-sm">
+            <p class="fc-red-600 fs-sm">Light red background</p>
+          </div>
+          <div class="p3 bg-red-200 bar-sm">
+            <p class="fc-red-600 fs-sm">Lighter red background</p>
+          </div>
+          <div class="p3 bg-red-300 bar-sm">
+            <p class="fc-red-600 fs-sm">Light red background</p>
+          </div>
+          <div class="p3 bg-red-400 bar-sm">
+            <p class="fc-red-100 fs-sm">Main red background</p>
+          </div>
+          <div class="p3 bg-red-500 bar-sm">
+            <p class="fc-red-100 fs-sm">Dark red background</p>
+          </div>
+          <div class="p3 bg-red-600 bar-sm">
+            <p class="fc-red-100 fs-sm">Darkest red background</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex fd-column g3 p4 bg-blue-100 bar-md">
+        <h3 class="fs-h4 fw-bold fc-blue-600">Blue Backgrounds</h3>
+        <div class="d-flex fd-column g2">
+          <div class="p3 bg-blue-100 bar-sm">
+            <p class="fc-blue-600 fs-sm">Light blue background</p>
+          </div>
+          <div class="p3 bg-blue-200 bar-sm">
+            <p class="fc-blue-600 fs-sm">Lighter blue background</p>
+          </div>
+          <div class="p3 bg-blue-300 bar-sm">
+            <p class="fc-blue-600 fs-sm">Light blue background</p>
+          </div>
+          <div class="p3 bg-blue-400 bar-sm">
+            <p class="fc-blue-100 fs-sm">Main blue background</p>
+          </div>
+          <div class="p3 bg-blue-500 bar-sm">
+            <p class="fc-blue-100 fs-sm">Dark blue background</p>
+          </div>
+          <div class="p3 bg-blue-600 bar-sm">
+            <p class="fc-blue-100 fs-sm">Darkest blue background</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="d-flex fd-column g6">
+  <header class="d-flex ai-center jc-space-between">
+    <h2 id="border-colors">Border Colors</h2>
+    <a href="#border-colors">#</a>
+  </header>
+
+  <div class="d-flex fd-column g4">
+    <p class="fc-light-700 lh-relaxed">
+      Use border color classes to apply colors to border elements. Great for form inputs, cards, and
+      dividers.
+    </p>
+
+    <div class="bg-light-025 p4 bar-md">
+      <h3 class="fs-h4 fw-bold mb3">Usage</h3>
+      <pre><code>&lt;input class="bc-green-300 bar-sm p3" type="text" placeholder="Success input"&gt;
+&lt;div class="bc-red-300 bs-sm p4 bar-md"&gt;Error card&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="d-grid grid__1 md:grid__2 g4">
+      <div class="d-flex fd-column g3 p4 bg-light-025 bar-md">
+        <h3 class="fs-h4 fw-bold">Green Borders</h3>
+        <div class="d-flex fd-column g2">
+          <div class="p3 bg-white bc-green-100 bs-sm bar-sm">
+            <p class="fc-light-600 fs-sm">Light green border</p>
+          </div>
+          <div class="p3 bg-white bc-green-200 bs-sm bar-sm">
+            <p class="fc-light-600 fs-sm">Lighter green border</p>
+          </div>
+          <div class="p3 bg-white bc-green-300 bs-sm bar-sm">
+            <p class="fc-light-600 fs-sm">Light green border</p>
+          </div>
+          <div class="p3 bg-white bc-green-400 bs-sm bar-sm">
+            <p class="fc-light-600 fs-sm">Main green border</p>
+          </div>
+          <div class="p3 bg-white bc-green-500 bs-sm bar-sm">
+            <p class="fc-light-600 fs-sm">Dark green border</p>
+          </div>
+          <div class="p3 bg-white bc-green-600 bs-sm bar-sm">
+            <p class="fc-light-600 fs-sm">Darkest green border</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex fd-column g3 p4 bg-light-025 bar-md">
+        <h3 class="fs-h4 fw-bold">Blue Borders</h3>
+        <div class="d-flex fd-column g2">
+          <div class="p3 bg-white bc-blue-100 bs-sm bar-sm">
+            <p class="fc-light-600 fs-sm">Light blue border</p>
+          </div>
+          <div class="p3 bg-white bc-blue-200 bs-sm bar-sm">
+            <p class="fc-light-600 fs-sm">Lighter blue border</p>
+          </div>
+          <div class="p3 bg-white bc-blue-300 bs-sm bar-sm">
+            <p class="fc-light-600 fs-sm">Light blue border</p>
+          </div>
+          <div class="p3 bg-white bc-blue-400 bs-sm bar-sm">
+            <p class="fc-light-600 fs-sm">Main blue border</p>
+          </div>
+          <div class="p3 bg-white bc-blue-500 bs-sm bar-sm">
+            <p class="fc-light-600 fs-sm">Dark blue border</p>
+          </div>
+          <div class="p3 bg-white bc-blue-600 bs-sm bar-sm">
+            <p class="fc-light-600 fs-sm">Darkest blue border</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="d-flex fd-column g6">
+  <header class="d-flex ai-center jc-space-between">
+    <h2 id="interactive-states">Interactive States</h2>
+    <a href="#interactive-states">#</a>
+  </header>
+
+  <div class="d-flex fd-column g4">
+    <p class="fc-light-700 lh-relaxed">
+      All color classes support hover and focus states using the <code>h:</code> and
+      <code>f:</code> prefixes.
+    </p>
+
+    <div class="bg-light-025 p4 bar-md">
+      <h3 class="fs-h4 fw-bold mb3">Interactive Examples</h3>
+      <pre><code>&lt;button class="bg-blue-400 fc-light p3 bar-sm h:bg-blue-500 f:bg-blue-600"&gt;
+  Interactive Button
+&lt;/button&gt;
+
+&lt;a href="#" class="fc-blue-400 h:fc-blue-500 f:fc-blue-600"&gt;
+  Interactive Link
+&lt;/a&gt;</code></pre>
+    </div>
+
+    <div class="d-flex g4">
+      <button class="bg-blue-400 fc-light p3 bar-sm h:bg-blue-500 f:bg-blue-600 t">Hover me</button>
+      <a
+        href="#"
+        class="fc-blue-400 h:fc-blue-500 f:fc-blue-600 p3 bar-sm bg-light-100 h:bg-light-200 t"
+      >
+        Hover link
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="d-flex fd-column g6">
+  <header class="d-flex ai-center jc-space-between">
+    <h2 id="semantic-usage">Semantic Usage</h2>
+    <a href="#semantic-usage">#</a>
+  </header>
+
+  <div class="d-flex fd-column g4">
+    <p class="fc-light-700 lh-relaxed">
+      Use colors semantically to convey meaning and provide clear visual feedback to users.
+    </p>
+
+    <div class="d-grid grid__1 md:grid__2 g4">
+      <div class="d-flex fd-column g3 p4 bg-green-100 bar-md">
+        <h3 class="fs-h4 fw-bold fc-green-600">Success States</h3>
+        <div class="d-flex fd-column g2">
+          <div class="p3 bg-green-100 bar-sm">
+            <p class="fc-green-600 fs-sm">Success message</p>
+          </div>
+          <div class="p3 bg-green-200 bar-sm">
+            <p class="fc-green-600 fs-sm">Confirmation</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex fd-column g3 p4 bg-red-100 bar-md">
+        <h3 class="fs-h4 fw-bold fc-red-600">Error States</h3>
+        <div class="d-flex fd-column g2">
+          <div class="p3 bg-red-100 bar-sm">
+            <p class="fc-red-600 fs-sm">Error message</p>
+          </div>
+          <div class="p3 bg-red-200 bar-sm">
+            <p class="fc-red-600 fs-sm">Validation error</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex fd-column g3 p4 bg-yellow-100 bar-md">
+        <h3 class="fs-h4 fw-bold fc-yellow-600">Warning States</h3>
+        <div class="d-flex fd-column g2">
+          <div class="p3 bg-yellow-100 bar-sm">
+            <p class="fc-yellow-600 fs-sm">Warning message</p>
+          </div>
+          <div class="p3 bg-yellow-200 bar-sm">
+            <p class="fc-yellow-600 fs-sm">Caution notice</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex fd-column g3 p4 bg-blue-100 bar-md">
+        <h3 class="fs-h4 fw-bold fc-blue-600">Information States</h3>
+        <div class="d-flex fd-column g2">
+          <div class="p3 bg-blue-100 bar-sm">
+            <p class="fc-blue-600 fs-sm">Info message</p>
+          </div>
+          <div class="p3 bg-blue-200 bar-sm">
+            <p class="fc-blue-600 fs-sm">Help text</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="d-flex fd-column g6">
+  <header class="d-flex ai-center jc-space-between">
+    <h2 id="best-practices">Best Practices</h2>
+    <a href="#best-practices">#</a>
+  </header>
+
+  <div class="d-flex fd-column g4">
+    <div class="d-grid grid__1 md:grid__2 g4">
+      <div class="d-flex fd-column g3 p4 bg-green-100 bar-md">
+        <h3 class="fs-h4 fw-bold fc-green-600">Do</h3>
+        <ul class="list-unstyled fc-light-700 lh-relaxed">
+          <li class="mb2">• Use semantic colors for their intended purpose</li>
+          <li class="mb2">• Test color combinations for accessibility</li>
+          <li class="mb2">• Use consistent color stops across your design</li>
+          <li class="mb2">• Provide sufficient contrast for text</li>
+          <li class="mb2">• Use hover and focus states for interactivity</li>
+        </ul>
+      </div>
+
+      <div class="d-flex fd-column g3 p4 bg-red-100 bar-md">
+        <h3 class="fs-h4 fw-bold fc-red-600">Don't</h3>
+        <ul class="list-unstyled fc-light-700 lh-relaxed">
+          <li class="mb2">• Use red for non-error states</li>
+          <li class="mb2">• Use low contrast color combinations</li>
+          <li class="mb2">• Mix different color systems</li>
+          <li class="mb2">• Use too many colors in one interface</li>
+          <li class="mb2">• Ignore accessibility guidelines</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-light-025 p4 bar-md">
+      <h3 class="fs-h4 fw-bold mb3">Color Accessibility Tips</h3>
+      <ul class="list-unstyled fc-light-700 lh-relaxed">
+        <li class="mb2">
+          • <strong>Test contrast:</strong> Use tools like WebAIM's contrast checker
+        </li>
+        <li class="mb2">
+          • <strong>Don't rely on color alone:</strong> Combine with icons, text, or patterns
+        </li>
+        <li class="mb2">
+          • <strong>Consider colorblind users:</strong> Ensure information is accessible without
+          color
+        </li>
+        <li class="mb2">
+          • <strong>Use consistent patterns:</strong> Establish clear color meanings across your app
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="d-flex fd-column g6">
+  <header class="d-flex ai-center jc-space-between">
+    <h2 id="customization">Customization</h2>
+    <a href="#customization">#</a>
+  </header>
+
+  <div class="d-flex fd-column g4">
+    <p class="fc-light-700 lh-relaxed">Override color variables to customize your theme:</p>
+
+    <div class="bg-light-025 p4 bar-md">
+      <pre><code>$colors: (
+  light: (
+    "main": #fff,
+    "025": #f9f9f9,
+    "050": #f1f2f7,
+    "075": #eaecf2,
+    "100": #e1e3e8,
+    "200": #c8c8d5,
+    "300": #a9a9bf,
+    "400": #8b8da8,
+    "500": #6b6e94,
+    "600": #4f517d,
+    "700": #30336b,
+    "800": #27294f,
+    "900": #181a34,
+  ),
+  green: (
+    "main": #4bdc9f,
+    "100": #e8f8f2,
+    "200": #d1f1e5,
+    "300": #9ee6c7,
+    "400": #4bdc9f,
+    "500": #2bc885,
+    "600": #1a8f5f,
+  ),
+  // ... other colors
+);</code></pre>
+    </div>
+  </div>
+</section>

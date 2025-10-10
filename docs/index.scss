@@ -1,0 +1,72 @@
+@use "../src/index";
+
+header {
+  a, a:hover { text-decoration: none; }
+}
+
+aside nav {
+  ul li a {
+    color: var(--light-900);
+    transition: all 0.2s;
+  }
+  ul li a:hover {
+    color: var(--green);
+  }
+}
+
+section {
+  padding: 1.5rem;
+  border: 2px solid var(--light-075);
+  border-radius: 8px;
+}
+
+h2, h3 {
+  color: var(--green);
+  margin: 0;
+}
+
+a {
+  color: var(--green);
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+table {
+  border-spacing: 0;
+  text-align: left;
+  thead th {
+    border-bottom: 1px solid var(--light-500);
+  }
+  th, td { padding: 8px; }
+  th {
+    font-weight: 700;
+  }
+}
+
+code {
+  padding: 4px 8px;
+  background: var(--light-050);
+  font-size: 0.875rem;
+  border-radius: 3px;
+}
+
+pre, .preview {
+  background: var(--light-050);
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+pre code {
+  padding:0;
+  background: transparent;
+}
+
+// aside {
+//   display: block;
+//   .preview {
+
+
+//   }
+// }

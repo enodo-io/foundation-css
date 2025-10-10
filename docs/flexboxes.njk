@@ -1,0 +1,846 @@
+---
+layout: base.njk
+title: Flexboxes
+---
+
+<header class="d-flex fd-column g4">
+  <h1>Flexboxes</h1>
+  <p>
+    Comprehensive utility classes for creating flexible layouts. Foundation CSS provides extensive
+    flexbox utilities to build responsive, adaptable interfaces without custom CSS.
+  </p>
+</header>
+
+<section>
+  <h2 id="basic-flex">Basic Flex Layout</h2>
+  <p>
+    A flex layout is initiated with the <code>.d-flex</code> class. By default,
+    <code>display: flex;</code> creates a non-wrapping row. Use <code>.fd-column</code> to create a
+    column layout.
+  </p>
+
+  <h3>Basic Examples</h3>
+  <div class="preview bg-light p4 br-sm">
+    <div class="d-flex g2 mb4">
+      <div class="bg-blue fc-white p2">Flex item 1</div>
+      <div class="bg-green fc-white p2">Flex item 2</div>
+      <div class="bg-purple fc-white p2">Flex item 3</div>
+    </div>
+
+    <div class="d-flex fd-column g2">
+      <div class="bg-blue fc-white p2">Flex item 1</div>
+      <div class="bg-green fc-white p2">Flex item 2</div>
+      <div class="bg-purple fc-white p2">Flex item 3</div>
+    </div>
+  </div>
+
+  <pre><code>&lt;div class="d-flex"&gt;
+  &lt;div&gt;Flex item 1&lt;/div&gt;
+  &lt;div&gt;Flex item 2&lt;/div&gt;
+  &lt;div&gt;Flex item 3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="d-flex fd-column"&gt;
+  &lt;div&gt;Flex item 1&lt;/div&gt;
+  &lt;div&gt;Flex item 2&lt;/div&gt;
+  &lt;div&gt;Flex item 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</section>
+
+<section>
+  <h2 id="flex-direction">Flex Direction</h2>
+  <p>Control the direction of flex items using direction classes.</p>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.fd-row</code></th>
+        <td><code>flex-direction: row;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.fd-row-reverse</code></th>
+        <td><code>flex-direction: row-reverse;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.fd-column</code></th>
+        <td><code>flex-direction: column;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.fd-column-reverse</code></th>
+        <td><code>flex-direction: column-reverse;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Flex Direction Examples</h3>
+  <div class="preview bg-light p4 br-sm">
+    <div class="d-flex fd-column g4">
+      <div>
+        <h4>.fd-row</h4>
+        <div class="d-flex g2">
+          <div class="bg-blue fc-white p2">1</div>
+          <div class="bg-green fc-white p2">2</div>
+          <div class="bg-purple fc-white p2">3</div>
+        </div>
+      </div>
+
+      <div>
+        <h4>.fd-row-reverse</h4>
+        <div class="d-flex fd-row-reverse g2">
+          <div class="bg-blue fc-white p2">1</div>
+          <div class="bg-green fc-white p2">2</div>
+          <div class="bg-purple fc-white p2">3</div>
+        </div>
+      </div>
+
+      <div>
+        <h4>.fd-column</h4>
+        <div class="d-flex fd-column g2">
+          <div class="bg-blue fc-white p2">1</div>
+          <div class="bg-green fc-white p2">2</div>
+          <div class="bg-purple fc-white p2">3</div>
+        </div>
+      </div>
+
+      <div>
+        <h4>.fd-column-reverse</h4>
+        <div class="d-flex fd-column-reverse g2">
+          <div class="bg-blue fc-white p2">1</div>
+          <div class="bg-green fc-white p2">2</div>
+          <div class="bg-purple fc-white p2">3</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 id="flex-wrap">Flex Wrap</h2>
+  <p>Control how flex items wrap when they exceed the container width.</p>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.fw-wrap</code></th>
+        <td><code>flex-wrap: wrap;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.fw-wrap-reverse</code></th>
+        <td><code>flex-wrap: wrap-reverse;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.fw-nowrap</code></th>
+        <td><code>flex-wrap: nowrap;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Flex Wrap Examples</h3>
+  <div class="preview bg-light p4 br-sm">
+    <div class="d-flex fd-column g4">
+      <div>
+        <h4>.fw-wrap</h4>
+        <div class="d-flex fw-wrap g2">
+          <div class="bg-blue fc-white p2 ws3">Item 1</div>
+          <div class="bg-green fc-white p2 ws3">Item 2</div>
+          <div class="bg-purple fc-white p2 ws3">Item 3</div>
+          <div class="bg-orange fc-white p2 ws3">Item 4</div>
+        </div>
+      </div>
+
+      <div>
+        <h4>.fw-nowrap</h4>
+        <div class="d-flex fw-nowrap g2" style="width: 300px; overflow-x: auto;">
+          <div class="bg-blue fc-white p2 ws3">Item 1</div>
+          <div class="bg-green fc-white p2 ws3">Item 2</div>
+          <div class="bg-purple fc-white p2 ws3">Item 3</div>
+          <div class="bg-orange fc-white p2 ws3">Item 4</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 id="flex-flow">Flex Flow</h2>
+  <p>Combined flex-direction and flex-wrap properties for shorthand control.</p>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.ff-row-wrap</code></th>
+        <td><code>flex-flow: row wrap;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ff-row-nowrap</code></th>
+        <td><code>flex-flow: row nowrap;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ff-row-reverse-wrap</code></th>
+        <td><code>flex-flow: row-reverse wrap;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ff-row-reverse-nowrap</code></th>
+        <td><code>flex-flow: row-reverse nowrap;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ff-column-wrap</code></th>
+        <td><code>flex-flow: column wrap;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ff-column-nowrap</code></th>
+        <td><code>flex-flow: column nowrap;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ff-column-reverse-wrap</code></th>
+        <td><code>flex-flow: column-reverse wrap;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ff-column-reverse-nowrap</code></th>
+        <td><code>flex-flow: column-reverse nowrap;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2 id="justify-content">Justify Content</h2>
+  <p>
+    Control the alignment of flex items along the main axis (horizontal in row, vertical in column).
+  </p>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.jc-center</code></th>
+        <td><code>justify-content: center;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.jc-end</code></th>
+        <td><code>justify-content: flex-end;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.jc-space-around</code></th>
+        <td><code>justify-content: space-around;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.jc-space-between</code></th>
+        <td><code>justify-content: space-between;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.jc-space-evenly</code></th>
+        <td><code>justify-content: space-evenly;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.jc-start</code></th>
+        <td><code>justify-content: flex-start;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Justify Content Examples</h3>
+  <div class="preview bg-light p4 br-sm">
+    <div class="d-flex fd-column g4">
+      <div>
+        <h4>.jc-center</h4>
+        <div class="d-flex jc-center g2">
+          <div class="bg-blue fc-white p2">Item 1</div>
+          <div class="bg-green fc-white p2">Item 2</div>
+        </div>
+      </div>
+
+      <div>
+        <h4>.jc-space-between</h4>
+        <div class="d-flex jc-space-between g2">
+          <div class="bg-blue fc-white p2">Item 1</div>
+          <div class="bg-green fc-white p2">Item 2</div>
+          <div class="bg-purple fc-white p2">Item 3</div>
+        </div>
+      </div>
+
+      <div>
+        <h4>.jc-space-around</h4>
+        <div class="d-flex jc-space-around g2">
+          <div class="bg-blue fc-white p2">Item 1</div>
+          <div class="bg-green fc-white p2">Item 2</div>
+          <div class="bg-purple fc-white p2">Item 3</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 id="align-items">Align Items</h2>
+  <p>
+    Control the alignment of flex items along the cross axis (vertical in row, horizontal in
+    column).
+  </p>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.ai-baseline</code></th>
+        <td><code>align-items: baseline;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ai-center</code></th>
+        <td><code>align-items: center;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ai-end</code></th>
+        <td><code>align-items: flex-end;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ai-start</code></th>
+        <td><code>align-items: flex-start;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ai-stretch</code></th>
+        <td><code>align-items: stretch;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Align Items Examples</h3>
+  <div class="preview bg-light p4 br-sm">
+    <div class="d-flex fd-column g4">
+      <div>
+        <h4>.ai-center</h4>
+        <div class="d-flex ai-center g2" style="height: 80px;">
+          <div class="bg-blue fc-white p2">Item 1</div>
+          <div class="bg-green fc-white p4">Item 2</div>
+          <div class="bg-purple fc-white p2">Item 3</div>
+        </div>
+      </div>
+
+      <div>
+        <h4>.ai-stretch</h4>
+        <div class="d-flex ai-stretch g2" style="height: 80px;">
+          <div class="bg-blue fc-white p2">Item 1</div>
+          <div class="bg-green fc-white p4">Item 2</div>
+          <div class="bg-purple fc-white p2">Item 3</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 id="align-content">Align Content</h2>
+  <p>Control the alignment of wrapped flex lines when there's extra space in the cross axis.</p>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.ac-center</code></th>
+        <td><code>align-content: center;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ac-end</code></th>
+        <td><code>align-content: flex-end;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ac-space-around</code></th>
+        <td><code>align-content: space-around;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ac-space-between</code></th>
+        <td><code>align-content: space-between;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ac-start</code></th>
+        <td><code>align-content: flex-start;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ac-stretch</code></th>
+        <td><code>align-content: stretch;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2 id="align-self">Align Self</h2>
+  <p>Override the align-items value for individual flex items.</p>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.as-auto</code></th>
+        <td><code>align-self: auto;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.as-baseline</code></th>
+        <td><code>align-self: baseline;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.as-center</code></th>
+        <td><code>align-self: center;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.as-end</code></th>
+        <td><code>align-self: flex-end;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.as-start</code></th>
+        <td><code>align-self: flex-start;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.as-stretch</code></th>
+        <td><code>align-self: stretch;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Align Self Examples</h3>
+  <div class="preview bg-light p4 br-sm">
+    <div class="d-flex ai-start g2" style="height: 120px;">
+      <div class="bg-blue fc-white p2">Default</div>
+      <div class="bg-green fc-white p2 as-center">.as-center</div>
+      <div class="bg-purple fc-white p2 as-end">.as-end</div>
+      <div class="bg-orange fc-white p2 as-stretch">.as-stretch</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 id="flex-grow-shrink">Flex Grow & Shrink</h2>
+  <p>Control how flex items grow and shrink within a flex container.</p>
+
+  <h3>Flex Classes</h3>
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.fl0</code></th>
+        <td><code>flex: 0 auto;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.fl1</code></th>
+        <td><code>flex: 1 auto;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.fl2</code></th>
+        <td><code>flex: 2 auto;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.fl3</code></th>
+        <td><code>flex: 3 auto;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.fl4</code></th>
+        <td><code>flex: 4 auto;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.fl5</code></th>
+        <td><code>flex: 5 auto;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.fl-none</code></th>
+        <td><code>flex: none;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.fl-equal</code></th>
+        <td><code>flex: 1 1 0;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Flex Grow Classes</h3>
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.fl-grow0</code></th>
+        <td><code>flex-grow: 0;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.fl-grow1</code></th>
+        <td><code>flex-grow: 1;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.fl-grow2</code></th>
+        <td><code>flex-grow: 2;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.fl-grow3</code></th>
+        <td><code>flex-grow: 3;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.fl-grow4</code></th>
+        <td><code>flex-grow: 4;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.fl-grow5</code></th>
+        <td><code>flex-grow: 5;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Flex Shrink Classes</h3>
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.fl-shrink0</code></th>
+        <td><code>flex-shrink: 0;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.fl-shrink1</code></th>
+        <td><code>flex-shrink: 1;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.fl-shrink2</code></th>
+        <td><code>flex-shrink: 2;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.fl-shrink3</code></th>
+        <td><code>flex-shrink: 3;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.fl-shrink4</code></th>
+        <td><code>flex-shrink: 4;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.fl-shrink5</code></th>
+        <td><code>flex-shrink: 5;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Flex Examples</h3>
+  <div class="preview bg-light p4 br-sm">
+    <div class="d-flex fd-column g4">
+      <div>
+        <h4>.fl1 (grows to fill space)</h4>
+        <div class="d-flex g2">
+          <div class="bg-blue fc-white p2">Fixed</div>
+          <div class="bg-green fc-white p2 fl1">Flexible</div>
+          <div class="bg-purple fc-white p2">Fixed</div>
+        </div>
+      </div>
+
+      <div>
+        <h4>.fl-equal (equal sizes)</h4>
+        <div class="d-flex g2">
+          <div class="bg-blue fc-white p2 fl-equal">Equal</div>
+          <div class="bg-green fc-white p2 fl-equal">Equal</div>
+          <div class="bg-purple fc-white p2 fl-equal">Equal</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 id="order">Order</h2>
+  <p>Control the order of flex items without changing the HTML structure.</p>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.order-first</code></th>
+        <td><code>order: -1;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.order-last</code></th>
+        <td><code>order: 1;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Order Examples</h3>
+  <div class="preview bg-light p4 br-sm">
+    <div class="d-flex fd-column g4">
+      <div>
+        <h4>Default order</h4>
+        <div class="d-flex g2">
+          <div class="bg-blue fc-white p2">Item 1</div>
+          <div class="bg-green fc-white p2">Item 2</div>
+          <div class="bg-purple fc-white p2">Item 3</div>
+        </div>
+      </div>
+
+      <div>
+        <h4>With .order-first</h4>
+        <div class="d-flex g2">
+          <div class="bg-blue fc-white p2">Item 1</div>
+          <div class="bg-green fc-white p2">Item 2</div>
+          <div class="bg-purple fc-white p2 order-first">Item 3 (.order-first)</div>
+        </div>
+      </div>
+
+      <div>
+        <h4>With .order-last</h4>
+        <div class="d-flex g2">
+          <div class="bg-blue fc-white p2 order-last">Item 1 (.order-last)</div>
+          <div class="bg-green fc-white p2">Item 2</div>
+          <div class="bg-purple fc-white p2">Item 3</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 id="usage-examples">Usage Examples</h2>
+
+  <h3>Card Layout with Flexbox</h3>
+  <pre><code>&lt;div class="d-flex fd-column g4"&gt;
+  &lt;div class="bg-white bs-md br-lg p6"&gt;
+    &lt;h3 class="fs-h3 fw-bold mb3"&gt;Card Title&lt;/h3&gt;
+    &lt;p class="fc-light-700 mb4 fl1"&gt;Card content that grows.&lt;/p&gt;
+    &lt;div class="d-flex jc-space-between ai-center"&gt;
+      &lt;span class="fs-pica fc-light-500"&gt;Footer&lt;/span&gt;
+      &lt;button class="btn btn--primary"&gt;Action&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+  <h3>Responsive Navigation</h3>
+  <pre><code>&lt;nav class="d-flex fd-column sm:fd-row ai-center jc-space-between p4"&gt;
+  &lt;div class="logo"&gt;Brand&lt;/div&gt;
+  &lt;div class="d-flex fd-column sm:fd-row g2"&gt;
+    &lt;a href="#"&gt;Home&lt;/a&gt;
+    &lt;a href="#"&gt;About&lt;/a&gt;
+    &lt;a href="#"&gt;Contact&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+
+  <h3>Centered Content</h3>
+  <pre><code>&lt;div class="d-flex jc-center ai-center" style="height: 400px;"&gt;
+  &lt;div class="bg-white p6 br-lg bs-md"&gt;
+    &lt;h2 class="fs-h2 fw-bold mb4 ta-center"&gt;Centered Content&lt;/h2&gt;
+    &lt;p class="ta-center"&gt;This content is perfectly centered.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+  <h3>Button Group</h3>
+  <pre><code>&lt;div class="d-flex g2"&gt;
+  &lt;button class="btn btn--secondary fl1"&gt;Cancel&lt;/button&gt;
+  &lt;button class="btn btn--primary fl1"&gt;Save&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+  <h3>Responsive Sidebar Layout</h3>
+  <pre><code>&lt;div class="d-flex fd-column lg:fd-row g4"&gt;
+  &lt;aside class="ws3 lg:ws3"&gt;
+    &lt;!-- Sidebar content --&gt;
+  &lt;/aside&gt;
+  &lt;main class="fl1"&gt;
+    &lt;!-- Main content that grows --&gt;
+  &lt;/main&gt;
+&lt;/div&gt;</code></pre>
+</section>
+
+<section>
+  <h2 id="best-practices">Best Practices</h2>
+
+  <div class="d-flex fd-column g4">
+    <div class="bg-green-025 p4 br-md">
+      <h4 class="fc-green fw-bold mb3">✅ Do</h4>
+      <ul class="list-unstyled fc-light-700">
+        <li class="mb2">• Use flexbox for one-dimensional layouts (row or column)</li>
+        <li class="mb2">• Combine with gap classes for consistent spacing</li>
+        <li class="mb2">• Use responsive flex direction for mobile-first design</li>
+        <li class="mb2">• Leverage flex-grow for flexible content areas</li>
+        <li class="mb2">• Use justify-content and align-items for precise positioning</li>
+        <li class="mb2">• Consider using order for responsive reordering</li>
+      </ul>
+    </div>
+
+    <div class="bg-red-025 p4 br-md">
+      <h4 class="fc-red fw-bold mb3">❌ Don't</h4>
+      <ul class="list-unstyled fc-light-700">
+        <li class="mb2">• Use flexbox when CSS Grid is more appropriate</li>
+        <li class="mb2">• Overuse flex-grow without considering content needs</li>
+        <li class="mb2">• Ignore responsive considerations for flex direction</li>
+        <li class="mb2">• Mix flexbox with float or absolute positioning unnecessarily</li>
+        <li class="mb2">• Forget about accessibility when reordering content</li>
+        <li class="mb2">• Use complex flex properties when simple ones suffice</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>When to Use Flexbox vs Grid</h3>
+
+  <div class="bg-light-025 p4 br-md">
+    <h4>Use Flexbox for:</h4>
+    <ul class="list-unstyled fc-light-700">
+      <li class="mb2">• Navigation bars and menus</li>
+      <li class="mb2">• Button groups and form controls</li>
+      <li class="mb2">• Card layouts with flexible content</li>
+      <li class="mb2">• Centering content (horizontal and vertical)</li>
+      <li class="mb2">• One-dimensional layouts (either row or column)</li>
+    </ul>
+
+    <h4 class="mt4">Use CSS Grid for:</h4>
+    <ul class="list-unstyled fc-light-700">
+      <li class="mb2">• Two-dimensional layouts (rows and columns)</li>
+      <li class="mb2">• Complex page layouts</li>
+      <li class="mb2">• Image galleries and card grids</li>
+      <li class="mb2">• When you need precise control over item placement</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2 id="conditional-classes">Conditional Classes</h2>
+  <p>Many flexbox classes support responsive breakpoints and state modifiers:</p>
+
+  <h3>Responsive Examples</h3>
+  <pre><code>&lt;!-- Responsive flex direction --&gt;
+&lt;div class="d-flex fd-column sm:fd-row g4"&gt;
+  &lt;!-- Column on mobile, row on tablet and up --&gt;
+&lt;/div&gt;
+
+&lt;!-- Responsive justify content --&gt;
+&lt;nav class="d-flex jc-center sm:jc-space-between"&gt;
+  &lt;!-- Centered on mobile, space-between on tablet and up --&gt;
+&lt;/nav&gt;</code></pre>
+
+  <h3>State Modifiers</h3>
+  <pre><code>&lt;!-- Hover effects --&gt;
+&lt;button class="d-flex ai-center jc-center p3 h:p4 t"&gt;
+  &lt;!-- Padding increases on hover --&gt;
+&lt;/button&gt;
+
+&lt;!-- Focus states --&gt;
+&lt;div class="d-flex f:fd-column"&gt;
+  &lt;!-- Changes to column direction on focus --&gt;
+&lt;/div&gt;</code></pre>
+</section>

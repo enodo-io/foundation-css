@@ -1,0 +1,14 @@
+$z-indexes: (
+  hide: -1,
+  base: 0,
+  selected: 25,
+  active: 50,
+  dropdown: 1000,
+  popover: 2000,
+  tooltip: 3000,
+  banner: 4000,
+  nav: 5000,
+  nav-fixed: 5050,
+  modal-bg: 9000,
+  modal: 9050,
+) !default;

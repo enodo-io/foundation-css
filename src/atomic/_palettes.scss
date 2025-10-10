@@ -1,0 +1,17 @@
+@use "../variables/colors" as *;
+
+@mixin makePalette($name, $colors) {
+  @each $stop, $color in $colors {
+    @if $stop == "main" {
+      --#{"" + $name}: #{$color};
+    } @else {
+      --#{"" + $name}-#{$stop}: #{$color};
+    }
+  }
+}
+
+:root {
+  @each $name, $colors in $colors {
+    @include makePalette($name, $colors);
+  }
+}

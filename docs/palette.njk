@@ -1,0 +1,875 @@
+---
+layout: base.njk
+title: Color Palette
+---
+
+<section class="d-flex fd-column g6">
+  <header class="d-flex fd-column g4">
+    <h1 class="fs-canon fw-bold fc-dark">Color Palette</h1>
+    <p class="fs-paragon fc-light-700 lh-relaxed">
+      Foundation CSS provides a comprehensive color system designed for accessibility, consistency,
+      and flexibility. Our palette is built with semantic meaning and follows modern design
+      principles.
+    </p>
+  </header>
+
+  <div class="bg-light-025 p6 bar-lg">
+    <h2 class="fs-h3 fw-bold mb4">Design Philosophy</h2>
+    <p class="fc-light-700 lh-relaxed mb4">
+      Our color system is inspired by
+      <a
+        href="https://stackoverflow.design/product/foundation/color-fundamentals/"
+        target="_blank"
+        rel="noopener"
+        class="fc-blue h:underline"
+        >Stack Overflow's Stacks design system</a
+      >
+      and follows established color theory principles. Each color has been carefully crafted to
+      ensure:
+    </p>
+    <ul class="list-unstyled fc-light-700 lh-relaxed">
+      <li class="mb2">
+        • <strong>Accessibility</strong> - WCAG AA compliance for text and interactive elements
+      </li>
+      <li class="mb2">• <strong>Consistency</strong> - Harmonious relationships between colors</li>
+      <li class="mb2">
+        • <strong>Flexibility</strong> - Easy customization through SCSS variables
+      </li>
+      <li class="mb2">• <strong>Semantic meaning</strong> - Colors convey purpose and hierarchy</li>
+    </ul>
+  </div>
+</section>
+
+<section class="d-flex fd-column g6">
+  <header class="d-flex ai-center jc-space-between">
+    <h2 id="color-stops">Color Stops</h2>
+    <a href="#color-stops">#</a>
+  </header>
+
+  <div class="d-flex fd-column g4">
+    <p class="fc-light-700 lh-relaxed">
+      Each color in our palette includes 6 stops (100-600) that provide a range from light to dark.
+      The 400 stop represents the main color, with lighter variants (100-300) and darker variants
+      (500-600).
+    </p>
+
+    <div class="bg-light-025 p4 bar-md">
+      <h3 class="fs-h4 fw-bold mb3">Color Generation</h3>
+      <p class="fc-light-700 mb3">
+        Our color stops are generated using systematic color theory principles. For consistent
+        results, you can use tools like
+        <a href="https://colorbox.io/" target="_blank" rel="noopener" class="fc-blue h:underline"
+          >ColorBox</a
+        >
+        to create harmonious color scales.
+      </p>
+      <p class="fc-light-700">
+        <strong>Pro tip:</strong> When creating custom color scales, maintain consistent saturation
+        and brightness curves to ensure visual harmony across your palette.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="d-flex fd-column g6">
+  <header class="d-flex ai-center jc-space-between">
+    <h2 id="neutral-colors">Neutral Colors</h2>
+    <a href="#neutral-colors">#</a>
+  </header>
+
+  <div class="d-flex fd-column g4">
+    <p class="fc-light-700 lh-relaxed">
+      The neutral palette consists of light grays and provides the foundation for text, backgrounds,
+      and subtle UI elements.
+    </p>
+
+    <div class="d-grid grid__1 md:grid__2 lg:grid__3 g4">
+      <div class="d-flex fd-column g2 p3 bg-light bar-md bs-sm">
+        <div class="d-flex ai-center jc-space-between">
+          <span class="fs-sm fw-bold">Light</span>
+          <code class="fs-xs fc-light-900">#ffffff</code>
+        </div>
+        <div class="w100 h6 bg-light-025 bar-sm"></div>
+        <p class="fs-xs fc-light-900">Lightest background</p>
+      </div>
+      <div class="d-flex fd-column g2 p3 bg-light-025 bar-md bs-sm">
+        <div class="d-flex ai-center jc-space-between">
+          <span class="fs-sm fw-bold">Light 025</span>
+          <code class="fs-xs fc-light-900">#f9f9f9</code>
+        </div>
+        <div class="w100 h6 bg-light-025 bar-sm"></div>
+        <p class="fs-xs fc-light-900">Lightest background</p>
+      </div>
+      <div class="d-flex fd-column g2 p3 bg-light-050 bar-md bs-sm">
+        <div class="d-flex ai-center jc-space-between">
+          <span class="fs-sm fw-bold">Light 050</span>
+          <code class="fs-xs fc-light-900">#f1f2f7</code>
+        </div>
+        <div class="w100 h6 bg-light-050 bar-sm"></div>
+        <p class="fs-xs fc-light-900">Very light background</p>
+      </div>
+      <div class="d-flex fd-column g2 p3 bg-light-075 bar-md bs-sm">
+        <div class="d-flex ai-center jc-space-between">
+          <span class="fs-sm fw-bold">Light 075</span>
+          <code class="fs-xs fc-light-900">#eaecf2</code>
+        </div>
+        <div class="w100 h6 bg-light-075 bar-sm"></div>
+        <p class="fs-xs fc-light-900">Light background</p>
+      </div>
+      <div class="d-flex fd-column g2 p3 bg-light-100 bar-md bs-sm">
+        <div class="d-flex ai-center jc-space-between">
+          <span class="fs-sm fw-bold">Light 100</span>
+          <code class="fs-xs fc-light-900">#e1e3e8</code>
+        </div>
+        <div class="w100 h6 bg-light-100 bar-sm"></div>
+        <p class="fs-xs fc-light-900">Main light background</p>
+      </div>
+      <div class="d-flex fd-column g2 p3 bg-light-200 bar-md bs-sm">
+        <div class="d-flex ai-center jc-space-between">
+          <span class="fs-sm fw-bold">Light 200</span>
+          <code class="fs-xs fc-light-900">#c8c8d5</code>
+        </div>
+        <div class="w100 h6 bg-light-200 bar-sm"></div>
+        <p class="fs-xs fc-light-900">Light borders and dividers</p>
+      </div>
+      <div class="d-flex fd-column g2 p3 bg-light-300 bar-md bs-sm">
+        <div class="d-flex ai-center jc-space-between">
+          <span class="fs-sm fw-bold">Light 300</span>
+          <code class="fs-xs fc-light-900">#a9a9bf</code>
+        </div>
+        <div class="w100 h6 bg-light-300 bar-sm"></div>
+        <p class="fs-xs fc-light-900">Medium light borders</p>
+      </div>
+      <div class="d-flex fd-column g2 p3 bg-light-400 bar-md bs-sm">
+        <div class="d-flex ai-center jc-space-between">
+          <span class="fs-sm fw-bold">Light 400</span>
+          <code class="fs-xs fc-light-900">#8b8da8</code>
+        </div>
+        <div class="w100 h6 bg-light-400 bar-sm"></div>
+        <p class="fs-xs fc-light-900">Medium borders and dividers</p>
+      </div>
+      <div class="d-flex fd-column g2 p3 bg-light-500 bar-md bs-sm">
+        <div class="d-flex ai-center jc-space-between">
+          <span class="fs-sm fw-bold fc-light-900">Light 500</span>
+          <code class="fs-xs fc-light-900">#6b6e94</code>
+        </div>
+        <div class="w100 h6 bg-light-500 bar-sm"></div>
+        <p class="fs-xs fc-light-900">Secondary text and icons</p>
+      </div>
+      <div class="d-flex fd-column g2 p3 bg-light-600 bar-md bs-sm">
+        <div class="d-flex ai-center jc-space-between">
+          <span class="fs-sm fw-bold fc-light-100">Light 600</span>
+          <code class="fs-xs fc-light-900">#4f517d</code>
+        </div>
+        <div class="w100 h6 bg-light-600 bar-sm"></div>
+        <p class="fs-xs fc-light">Primary text and headings</p>
+      </div>
+      <div class="d-flex fd-column g2 p3 bg-light-700 bar-md bs-sm">
+        <div class="d-flex ai-center jc-space-between">
+          <span class="fs-sm fw-bold fc-light-100">Light 700</span>
+          <code class="fs-xs fc-light-900">#30336b</code>
+        </div>
+        <div class="w100 h6 bg-light-700 bar-sm"></div>
+        <p class="fs-xs fc-light">Dark text and emphasis</p>
+      </div>
+      <div class="d-flex fd-column g2 p3 bg-light-800 bar-md bs-sm">
+        <div class="d-flex ai-center jc-space-between">
+          <span class="fs-sm fw-bold fc-light-100">Light 800</span>
+          <code class="fs-xs fc-light-900">#27294f</code>
+        </div>
+        <div class="w100 h6 bg-light-800 bar-sm"></div>
+        <p class="fs-xs fc-light">Dark text and emphasis</p>
+      </div>
+      <div class="d-flex fd-column g2 p3 bg-light-900 bar-md bs-sm">
+        <div class="d-flex ai-center jc-space-between">
+          <span class="fs-sm fw-bold fc-light-100">Light 900</span>
+          <code class="fs-xs fc-light-900">#181a34</code>
+        </div>
+        <div class="w100 h6 bg-light-900 bar-sm"></div>
+        <p class="fs-xs fc-light">Darkest text and headings</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="d-flex fd-column g6">
+  <header class="d-flex ai-center jc-space-between">
+    <h2 id="color-palette">Complete Color Palette</h2>
+    <a href="#color-palette">#</a>
+  </header>
+
+  <div class="d-flex fd-column g4">
+    <p class="fc-light-700 lh-relaxed">
+      Foundation CSS provides a comprehensive color palette with 8 color families. The light palette
+      contains 10 stops (025-900) for fine-grained control, while other colors contain 6 stops
+      (100). All colors have been tested for accessibility compliance and optimal contrast ratios.
+    </p>
+
+    <!-- Light Colors -->
+    <div class="d-flex fd-column g4">
+      <h3 class="fs-h3 fw-bold fc-light-700">Light Palette</h3>
+      <div class="d-grid grid__1 md:grid__2 lg:grid__3 g3">
+        <div class="d-flex fd-column g2 p3 bg-light bar-md bs-sm">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Light</span>
+            <code class="fs-xs fc-light-900">#ffffff</code>
+          </div>
+          <div class="w100 h6 bg-light-025 bar-sm"></div>
+          <p class="fs-xs fc-light-900">Lightest background</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-light-025 bar-md bs-sm">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Light 025</span>
+            <code class="fs-xs fc-light-900">#f9f9f9</code>
+          </div>
+          <div class="w100 h6 bg-light-025 bar-sm"></div>
+          <p class="fs-xs fc-light-900">Lightest background</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-light-050 bar-md bs-sm">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Light 050</span>
+            <code class="fs-xs fc-light-900">#f1f2f7</code>
+          </div>
+          <div class="w100 h6 bg-light-050 bar-sm"></div>
+          <p class="fs-xs fc-light-900">Very light background</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-light-075 bar-md bs-sm">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Light 075</span>
+            <code class="fs-xs fc-light-900">#eaecf2</code>
+          </div>
+          <div class="w100 h6 bg-light-075 bar-sm"></div>
+          <p class="fs-xs fc-light-900">Light background</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-light-100 bar-md bs-sm">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Light 100</span>
+            <code class="fs-xs fc-light-900">#e1e3e8</code>
+          </div>
+          <div class="w100 h6 bg-light-100 bar-sm"></div>
+          <p class="fs-xs fc-light-900">Main light background</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-light-200 bar-md bs-sm">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Light 200</span>
+            <code class="fs-xs fc-light-900">#c8c8d5</code>
+          </div>
+          <div class="w100 h6 bg-light-200 bar-sm"></div>
+          <p class="fs-xs fc-light-900">Light borders and dividers</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-light-300 bar-md bs-sm">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Light 300</span>
+            <code class="fs-xs fc-light-900">#a9a9bf</code>
+          </div>
+          <div class="w100 h6 bg-light-300 bar-sm"></div>
+          <p class="fs-xs fc-light-900">Medium light borders</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-light-400 bar-md bs-sm">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Light 400</span>
+            <code class="fs-xs fc-light-900">#8b8da8</code>
+          </div>
+          <div class="w100 h6 bg-light-400 bar-sm"></div>
+          <p class="fs-xs fc-light-900">Medium borders and dividers</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-light-500 bar-md bs-sm">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold fc-light-900">Light 500</span>
+            <code class="fs-xs fc-light-900">#6b6e94</code>
+          </div>
+          <div class="w100 h6 bg-light-500 bar-sm"></div>
+          <p class="fs-xs fc-light-900">Secondary text and icons</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-light-600 bar-md bs-sm">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold fc-light-100">Light 600</span>
+            <code class="fs-xs fc-light-900">#4f517d</code>
+          </div>
+          <div class="w100 h6 bg-light-600 bar-sm"></div>
+          <p class="fs-xs fc-light">Primary text and headings</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-light-700 bar-md bs-sm">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold fc-light-100">Light 700</span>
+            <code class="fs-xs fc-light-900">#30336b</code>
+          </div>
+          <div class="w100 h6 bg-light-700 bar-sm"></div>
+          <p class="fs-xs fc-light">Dark text and emphasis</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-light-800 bar-md bs-sm">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold fc-light-100">Light 800</span>
+            <code class="fs-xs fc-light-900">#27294f</code>
+          </div>
+          <div class="w100 h6 bg-light-800 bar-sm"></div>
+          <p class="fs-xs fc-light">Dark text and emphasis</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-light-900 bar-md bs-sm">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold fc-light-100">Light 900</span>
+            <code class="fs-xs fc-light-900">#181a34</code>
+          </div>
+          <div class="w100 h6 bg-light-900 bar-sm"></div>
+          <p class="fs-xs fc-light">Darkest text and headings</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Green Colors -->
+    <div class="d-flex fd-column g4">
+      <h3 class="fs-h3 fw-bold fc-green-600">Green Palette</h3>
+      <div class="d-grid grid__1 md:grid__2 lg:grid__3 g3">
+        <div class="d-flex fd-column g2 p3 bg-green-100 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Green 100</span>
+            <code class="fs-xs fc-light-900">#e8f8f2</code>
+          </div>
+          <div class="w100 h6 bg-green-100 bar-sm"></div>
+          <p class="fs-xs fc-light">Lightest green - backgrounds</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-green-200 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Green 200</span>
+            <code class="fs-xs fc-light-900">#d1f1e5</code>
+          </div>
+          <div class="w100 h6 bg-green-200 bar-sm"></div>
+          <p class="fs-xs fc-light">Light green - subtle elements</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-green-300 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Green 300</span>
+            <code class="fs-xs fc-light-900">#9ee6c7</code>
+          </div>
+          <div class="w100 h6 bg-green-300 bar-sm"></div>
+          <p class="fs-xs fc-light">Medium light - borders</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-green-400 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Green 400</span>
+            <code class="fs-xs fc-light-900">#4bdc9f</code>
+          </div>
+          <div class="w100 h6 bg-green-400 bar-sm"></div>
+          <p class="fs-xs fc-light">Main green - primary actions</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-green-500 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Green 500</span>
+            <code class="fs-xs fc-light-900">#2bc885</code>
+          </div>
+          <div class="w100 h6 bg-green-500 bar-sm"></div>
+          <p class="fs-xs fc-light">Dark green - hover states</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-green-600 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Green 600</span>
+            <code class="fs-xs fc-light-900">#1a8f5f</code>
+          </div>
+          <div class="w100 h6 bg-green-600 bar-sm"></div>
+          <p class="fs-xs fc-light">Darkest green - active states</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Red Colors -->
+    <div class="d-flex fd-column g4">
+      <h3 class="fs-h3 fw-bold fc-red-600">Red Palette</h3>
+      <div class="d-grid grid__1 md:grid__2 lg:grid__3 g3">
+        <div class="d-flex fd-column g2 p3 bg-red-100 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Red 100</span>
+            <code class="fs-xs fc-light-900">#ffe8e0</code>
+          </div>
+          <div class="w100 h6 bg-red-100 bar-sm"></div>
+          <p class="fs-xs fc-light">Lightest red - backgrounds</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-red-200 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Red 200</span>
+            <code class="fs-xs fc-light-900">#ffd1c2</code>
+          </div>
+          <div class="w100 h6 bg-red-200 bar-sm"></div>
+          <p class="fs-xs fc-light">Light red - subtle elements</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-red-300 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Red 300</span>
+            <code class="fs-xs fc-light-900">#ffb399</code>
+          </div>
+          <div class="w100 h6 bg-red-300 bar-sm"></div>
+          <p class="fs-xs fc-light">Medium light - borders</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-red-400 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Red 400</span>
+            <code class="fs-xs fc-light-900">#ff855c</code>
+          </div>
+          <div class="w100 h6 bg-red-400 bar-sm"></div>
+          <p class="fs-xs fc-light">Main red - primary actions</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-red-500 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Red 500</span>
+            <code class="fs-xs fc-light-900">#ff6b33</code>
+          </div>
+          <div class="w100 h6 bg-red-500 bar-sm"></div>
+          <p class="fs-xs fc-light">Dark red - hover states</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-red-600 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Red 600</span>
+            <code class="fs-xs fc-light-900">#e54d1a</code>
+          </div>
+          <div class="w100 h6 bg-red-600 bar-sm"></div>
+          <p class="fs-xs fc-light">Darkest red - active states</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blue Colors -->
+    <div class="d-flex fd-column g4">
+      <h3 class="fs-h3 fw-bold fc-blue-600">Blue Palette</h3>
+      <div class="d-grid grid__1 md:grid__2 lg:grid__3 g3">
+        <div class="d-flex fd-column g2 p3 bg-blue-100 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Blue 100</span>
+            <code class="fs-xs fc-light-900">#e6f2ff</code>
+          </div>
+          <div class="w100 h6 bg-blue-100 bar-sm"></div>
+          <p class="fs-xs fc-light">Lightest blue - backgrounds</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-blue-200 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Blue 200</span>
+            <code class="fs-xs fc-light-900">#cce5ff</code>
+          </div>
+          <div class="w100 h6 bg-blue-200 bar-sm"></div>
+          <p class="fs-xs fc-light">Light blue - subtle elements</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-blue-300 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Blue 300</span>
+            <code class="fs-xs fc-light-900">#99ccff</code>
+          </div>
+          <div class="w100 h6 bg-blue-300 bar-sm"></div>
+          <p class="fs-xs fc-light">Medium light - borders</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-blue-400 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Blue 400</span>
+            <code class="fs-xs fc-light-900">#4a90e2</code>
+          </div>
+          <div class="w100 h6 bg-blue-400 bar-sm"></div>
+          <p class="fs-xs fc-light">Main blue - primary actions</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-blue-500 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Blue 500</span>
+            <code class="fs-xs fc-light-900">#2e7ce6</code>
+          </div>
+          <div class="w100 h6 bg-blue-500 bar-sm"></div>
+          <p class="fs-xs fc-light">Dark blue - hover states</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-blue-600 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Blue 600</span>
+            <code class="fs-xs fc-light-900">#1a5bb3</code>
+          </div>
+          <div class="w100 h6 bg-blue-600 bar-sm"></div>
+          <p class="fs-xs fc-light">Darkest blue - active states</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Orange Colors -->
+    <div class="d-flex fd-column g4">
+      <h3 class="fs-h3 fw-bold fc-orange-600">Orange Palette</h3>
+      <div class="d-grid grid__1 md:grid__2 lg:grid__3 g3">
+        <div class="d-flex fd-column g2 p3 bg-orange-100 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Orange 100</span>
+            <code class="fs-xs fc-light-900">#fff4e6</code>
+          </div>
+          <div class="w100 h6 bg-orange-100 bar-sm"></div>
+          <p class="fs-xs fc-light">Lightest orange - backgrounds</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-orange-200 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Orange 200</span>
+            <code class="fs-xs fc-light-900">#ffe9cc</code>
+          </div>
+          <div class="w100 h6 bg-orange-200 bar-sm"></div>
+          <p class="fs-xs fc-light">Light orange - subtle elements</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-orange-300 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Orange 300</span>
+            <code class="fs-xs fc-light-900">#ffd699</code>
+          </div>
+          <div class="w100 h6 bg-orange-300 bar-sm"></div>
+          <p class="fs-xs fc-light">Medium light - borders</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-orange-400 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Orange 400</span>
+            <code class="fs-xs fc-light-900">#ffb55c</code>
+          </div>
+          <div class="w100 h6 bg-orange-400 bar-sm"></div>
+          <p class="fs-xs fc-light">Main orange - primary actions</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-orange-500 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Orange 500</span>
+            <code class="fs-xs fc-light-900">#ff9f1f</code>
+          </div>
+          <div class="w100 h6 bg-orange-500 bar-sm"></div>
+          <p class="fs-xs fc-light">Dark orange - hover states</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-orange-600 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Orange 600</span>
+            <code class="fs-xs fc-light-900">#e6850a</code>
+          </div>
+          <div class="w100 h6 bg-orange-600 bar-sm"></div>
+          <p class="fs-xs fc-light">Darkest orange - active states</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Yellow Colors -->
+    <div class="d-flex fd-column g4">
+      <h3 class="fs-h3 fw-bold fc-yellow-600">Yellow Palette</h3>
+      <div class="d-grid grid__1 md:grid__2 lg:grid__3 g3">
+        <div class="d-flex fd-column g2 p3 bg-yellow-100 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Yellow 100</span>
+            <code class="fs-xs fc-light-900">#fffce6</code>
+          </div>
+          <div class="w100 h6 bg-yellow-100 bar-sm"></div>
+          <p class="fs-xs fc-light">Lightest yellow - backgrounds</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-yellow-200 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Yellow 200</span>
+            <code class="fs-xs fc-light-900">#fff9cc</code>
+          </div>
+          <div class="w100 h6 bg-yellow-200 bar-sm"></div>
+          <p class="fs-xs fc-light">Light yellow - subtle elements</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-yellow-300 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Yellow 300</span>
+            <code class="fs-xs fc-light-900">#fff299</code>
+          </div>
+          <div class="w100 h6 bg-yellow-300 bar-sm"></div>
+          <p class="fs-xs fc-light">Medium light - borders</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-yellow-400 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Yellow 400</span>
+            <code class="fs-xs fc-light-900">#ffd749</code>
+          </div>
+          <div class="w100 h6 bg-yellow-400 bar-sm"></div>
+          <p class="fs-xs fc-light">Main yellow - primary actions</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-yellow-500 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Yellow 500</span>
+            <code class="fs-xs fc-light-900">#ffcc1a</code>
+          </div>
+          <div class="w100 h6 bg-yellow-500 bar-sm"></div>
+          <p class="fs-xs fc-light">Dark yellow - hover states</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-yellow-600 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Yellow 600</span>
+            <code class="fs-xs fc-light-900">#e6b800</code>
+          </div>
+          <div class="w100 h6 bg-yellow-600 bar-sm"></div>
+          <p class="fs-xs fc-light">Darkest yellow - active states</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Purple Colors -->
+    <div class="d-flex fd-column g4">
+      <h3 class="fs-h3 fw-bold fc-purple-600">Purple Palette</h3>
+      <div class="d-grid grid__1 md:grid__2 lg:grid__3 g3">
+        <div class="d-flex fd-column g2 p3 bg-purple-100 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Purple 100</span>
+            <code class="fs-xs fc-light-900">#f4e6ff</code>
+          </div>
+          <div class="w100 h6 bg-purple-100 bar-sm"></div>
+          <p class="fs-xs fc-light">Lightest purple - backgrounds</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-purple-200 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Purple 200</span>
+            <code class="fs-xs fc-light-900">#e9ccff</code>
+          </div>
+          <div class="w100 h6 bg-purple-200 bar-sm"></div>
+          <p class="fs-xs fc-light">Light purple - subtle elements</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-purple-300 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Purple 300</span>
+            <code class="fs-xs fc-light-900">#d399ff</code>
+          </div>
+          <div class="w100 h6 bg-purple-300 bar-sm"></div>
+          <p class="fs-xs fc-light">Medium light - borders</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-purple-400 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Purple 400</span>
+            <code class="fs-xs fc-light-900">#da93f3</code>
+          </div>
+          <div class="w100 h6 bg-purple-400 bar-sm"></div>
+          <p class="fs-xs fc-light">Main purple - primary actions</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-purple-500 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Purple 500</span>
+            <code class="fs-xs fc-light-900">#c266e6</code>
+          </div>
+          <div class="w100 h6 bg-purple-500 bar-sm"></div>
+          <p class="fs-xs fc-light">Dark purple - hover states</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-purple-600 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Purple 600</span>
+            <code class="fs-xs fc-light-900">#a633cc</code>
+          </div>
+          <div class="w100 h6 bg-purple-600 bar-sm"></div>
+          <p class="fs-xs fc-light">Darkest purple - active states</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pink Colors -->
+    <div class="d-flex fd-column g4">
+      <h3 class="fs-h3 fw-bold fc-pink-600">Pink Palette</h3>
+      <div class="d-grid grid__1 md:grid__2 lg:grid__3 g3">
+        <div class="d-flex fd-column g2 p3 bg-pink-100 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Pink 100</span>
+            <code class="fs-xs fc-light-900">#ffe6f0</code>
+          </div>
+          <div class="w100 h6 bg-pink-100 bar-sm"></div>
+          <p class="fs-xs fc-light">Lightest pink - backgrounds</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-pink-200 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Pink 200</span>
+            <code class="fs-xs fc-light-900">#ffcce1</code>
+          </div>
+          <div class="w100 h6 bg-pink-200 bar-sm"></div>
+          <p class="fs-xs fc-light">Light pink - subtle elements</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-pink-300 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Pink 300</span>
+            <code class="fs-xs fc-light-900">#ff99c2</code>
+          </div>
+          <div class="w100 h6 bg-pink-300 bar-sm"></div>
+          <p class="fs-xs fc-light">Medium light - borders</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-pink-400 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Pink 400</span>
+            <code class="fs-xs fc-light-900">#ff92b9</code>
+          </div>
+          <div class="w100 h6 bg-pink-400 bar-sm"></div>
+          <p class="fs-xs fc-light">Main pink - primary actions</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-pink-500 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Pink 500</span>
+            <code class="fs-xs fc-light-900">#ff66a3</code>
+          </div>
+          <div class="w100 h6 bg-pink-500 bar-sm"></div>
+          <p class="fs-xs fc-light">Dark pink - hover states</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-pink-600 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Pink 600</span>
+            <code class="fs-xs fc-light-900">#e6337a</code>
+          </div>
+          <div class="w100 h6 bg-pink-600 bar-sm"></div>
+          <p class="fs-xs fc-light">Darkest pink - active states</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Teal Colors -->
+    <div class="d-flex fd-column g4">
+      <h3 class="fs-h3 fw-bold fc-teal-600">Teal Palette</h3>
+      <div class="d-grid grid__1 md:grid__2 lg:grid__3 g3">
+        <div class="d-flex fd-column g2 p3 bg-teal-100 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Teal 100</span>
+            <code class="fs-xs fc-light-900">#e6faf5</code>
+          </div>
+          <div class="w100 h6 bg-teal-100 bar-sm"></div>
+          <p class="fs-xs fc-light">Lightest teal - backgrounds</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-teal-200 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Teal 200</span>
+            <code class="fs-xs fc-light-900">#ccf5eb</code>
+          </div>
+          <div class="w100 h6 bg-teal-200 bar-sm"></div>
+          <p class="fs-xs fc-light">Light teal - subtle elements</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-teal-300 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Teal 300</span>
+            <code class="fs-xs fc-light-900">#99ebd7</code>
+          </div>
+          <div class="w100 h6 bg-teal-300 bar-sm"></div>
+          <p class="fs-xs fc-light">Medium light - borders</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-teal-400 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Teal 400</span>
+            <code class="fs-xs fc-light-900">#20c997</code>
+          </div>
+          <div class="w100 h6 bg-teal-400 bar-sm"></div>
+          <p class="fs-xs fc-light">Main teal - primary actions</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-teal-500 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Teal 500</span>
+            <code class="fs-xs fc-light-900">#1aa085</code>
+          </div>
+          <div class="w100 h6 bg-teal-500 bar-sm"></div>
+          <p class="fs-xs fc-light">Dark teal - hover states</p>
+        </div>
+        <div class="d-flex fd-column g2 p3 bg-teal-600 bar-md">
+          <div class="d-flex ai-center jc-space-between">
+            <span class="fs-sm fw-bold">Teal 600</span>
+            <code class="fs-xs fc-light-900">#147a66</code>
+          </div>
+          <div class="w100 h6 bg-teal-600 bar-sm"></div>
+          <p class="fs-xs fc-light">Darkest teal - active states</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="d-flex fd-column g6">
+  <header class="d-flex ai-center jc-space-between">
+    <h2 id="accessibility">Accessibility</h2>
+    <a href="#accessibility">#</a>
+  </header>
+
+  <div class="d-flex fd-column g4">
+    <p class="fc-light-700 lh-relaxed">
+      All colors in our palette have been tested for accessibility compliance. We follow WCAG AA
+      guidelines to ensure sufficient contrast ratios for text and interactive elements.
+    </p>
+
+    <div class="bg-light-025 p4 bar-md">
+      <h3 class="fs-h4 fw-bold mb3">Contrast Guidelines</h3>
+      <ul class="list-unstyled fc-light-700 lh-relaxed">
+        <li class="mb2">• <strong>Normal text:</strong> Minimum 4.5:1 contrast ratio</li>
+        <li class="mb2">• <strong>Large text:</strong> Minimum 3:1 contrast ratio</li>
+        <li class="mb2">• <strong>Interactive elements:</strong> Minimum 3:1 contrast ratio</li>
+        <li class="mb2">• <strong>Focus indicators:</strong> Minimum 3:1 contrast ratio</li>
+      </ul>
+    </div>
+
+    <div class="bg-green-100 p4 bar-md">
+      <h3 class="fs-h4 fw-bold fc-green-600 mb3">Best Practices</h3>
+      <ul class="list-unstyled fc-light-700 lh-relaxed">
+        <li class="mb2">• Use light colors (100-300) for backgrounds and subtle elements</li>
+        <li class="mb2">• Use medium colors (400) for primary text and main elements</li>
+        <li class="mb2">• Use dark colors (500-600) for headings and strong emphasis</li>
+        <li class="mb2">• Test your color combinations with accessibility tools</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="d-flex fd-column g6">
+  <header class="d-flex ai-center jc-space-between">
+    <h2 id="customization">Customization</h2>
+    <a href="#customization">#</a>
+  </header>
+
+  <div class="d-flex fd-column g4">
+    <p class="fc-light-700 lh-relaxed">
+      Foundation CSS colors are fully customizable through SCSS variables. You can override the
+      entire palette or modify individual colors to match your brand.
+    </p>
+
+    <div class="bg-light-025 p4 bar-md">
+      <h3 class="fs-h4 fw-bold mb3">Custom Color Palette</h3>
+      <p class="fc-light-700 mb3">
+        To customize colors, override the <code>$colors</code> map in your SCSS:
+      </p>
+      <pre><code>@use "@enodo/foundation-css" with (
+  $colors: (
+    primary: (
+      "main": #your-brand-color,
+      "100": #lightest-variant,
+      "200": #lighter-variant,
+      "300": #light-variant,
+      "400": #your-brand-color,
+      "500": #dark-variant,
+      "600": #darkest-variant,
+    ),
+    // ... other colors
+  )
+);</code></pre>
+    </div>
+
+    <div class="bg-blue-100 p4 bar-md">
+      <h3 class="fs-h4 fw-bold fc-blue-600 mb3">Color Generation Tips</h3>
+      <ul class="list-unstyled fc-light-700 lh-relaxed">
+        <li class="mb2">
+          • Use
+          <a href="https://colorbox.io/" target="_blank" rel="noopener" class="fc-blue h:underline"
+            >ColorBox</a
+          >
+          for systematic color scale generation
+        </li>
+        <li class="mb2">• Maintain consistent saturation and brightness curves</li>
+        <li class="mb2">• Test all color combinations for accessibility</li>
+        <li class="mb2">• Consider both light and dark mode variations</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="d-flex fd-column g6">
+  <header class="d-flex ai-center jc-space-between">
+    <h2 id="usage-examples">Usage Examples</h2>
+    <a href="#usage-examples">#</a>
+  </header>
+
+  <div class="d-flex fd-column g4">
+    <div class="d-grid grid__1 md:grid__2 g4">
+      <div class="d-flex fd-column g3 p4 bg-light-025 bar-md">
+        <h3 class="fs-h4 fw-bold">Text Colors</h3>
+        <p class="fc-light-400">Light text for subtle information</p>
+        <p class="fc-light-500">Medium text for regular content</p>
+        <p class="fc-light-100 fw-bold">Dark text for headings</p>
+      </div>
+
+      <div class="d-flex fd-column g3 p4 bg-light-025 bar-md">
+        <h3 class="fs-h4 fw-bold">Background Colors</h3>
+        <div class="p3 bg-green-100 bar-sm mb2">
+          <p class="fc-green-600 fw-bold">Success message</p>
+        </div>
+        <div class="p3 bg-red-100 bar-sm mb2">
+          <p class="fc-red-600 fw-bold">Error message</p>
+        </div>
+        <div class="p3 bg-blue-100 bar-sm">
+          <p class="fc-blue-600 fw-bold">Info message</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,175 @@
+---
+layout: base.njk
+title: Positions
+---
+
+<header class="d-flex fd-column g4">
+  <h1>Position</h1>
+  <p>Atomic classes for managing a element's position properties.</p>
+</header>
+
+<section>
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="classes">Classes</h2>
+    <a href="#classes">🔗</a>
+  </header>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Responsiveness</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.ps-static</code></th>
+        <td><code>position: static;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ps-relative</code></th>
+        <td><code>position: relative;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ps-absolute</code></th>
+        <td><code>position: absolute;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ps-fixed</code></th>
+        <td><code>position: fixed;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ps-sticky</code></th>
+        <td><code>position: sticky;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ps-unset</code></th>
+        <td><code>position: unset;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <aside>
+    <header class="d-flex ai-center jc-space-between pt6 pb4">
+      <h3 id="position-examples">Examples</h3>
+      <a href="#position-examples">🔗</a>
+    </header>
+    <pre><code>&lt;div class="ps-static"&gt;&lt;/div&gt;
+&lt;div class="ps-relative"&gt;&lt;/div&gt;
+&lt;div class="ps-absolute"&gt;&lt;/div&gt;
+&lt;div class="ps-fixed"&gt;&lt;/div&gt;
+&lt;div class="ps-sticky"&gt;&lt;/div&gt;
+&lt;div class="ps-unset"&gt;&lt;/div&gt;</code></pre>
+
+    <div class="preview overflow-auto hmx2">
+      <div class="ps-relative d-flex">
+        <div class="ps-static p1 ws1 hs1 bg-light ba">.ps-static</div>
+        <div class="ps-relative p1 ws1 hs4 t8 l8 bg-light ba">.ps-relative .t8 .l8</div>
+        <div class="ps-absolute p1 ws1 hs2 t10 r8 bg-light ba">.ps-absolute .t10 .r8</div>
+        <div class="ps-sticky p1 ws1 hs2 t6 bg-light ba">.ps-sticky .t6</div>
+      </div>
+    </div>
+  </aside>
+</section>
+
+<section>
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="coordinates">Coordinates</h2>
+    <a href="#coordinates">🔗</a>
+  </header>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Responsiveness</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.t[SU]</code></th>
+        <td><code>top: [SU];</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.r[SU]</code></th>
+        <td><code>right: [SU];</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.b[SU]</code></th>
+        <td><code>bottom: [SU];</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.l[SU]</code></th>
+        <td><code>left: [SU];</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.i[SU]</code></th>
+        <td><code>inset: [SU];</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.tn[SU]</code></th>
+        <td><code>top: -[SU];</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.rn[SU]</code></th>
+        <td><code>right: -[SU];</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.bn[SU]</code></th>
+        <td><code>bottom: -[SU];</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ln[SU]</code></th>
+        <td><code>left: -[SU];</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <aside>
+    <header class="d-flex ai-center jc-space-between pt6 pb4">
+      <h3 id="coordinate-examples">Coordinate examples</h3>
+      <a href="#coordinate-examples">🔗</a>
+    </header>
+    <pre><code>&lt;div class="ps-absolute i12"&gt;&lt;/div&gt;
+&lt;div class="ps-absolute t3 l3"&gt;&lt;/div&gt;
+&lt;div class="ps-absolute t8 r6"&gt;&lt;/div&gt;
+&lt;div class="ps-absolute b8 l8"&gt;&lt;/div&gt;
+&lt;div class="ps-absolute bn6 rn6"&gt;&lt;/div&gt;</code></pre>
+
+    <div class="preview overflow-visible">
+      <div class="ps-relative d-flex hs4">
+        <div class="ps-absolute i12 p2 bg-light ba">.i12</div>
+        <div class="ps-absolute t3 l3 p2 bg-light ba">.t3 .l3</div>
+        <div class="ps-absolute t8 r6 p2 bg-light ba">.t8 .r6</div>
+        <div class="ps-absolute b8 l8 p2 bg-light ba">.b8 .l8</div>
+        <div class="ps-absolute bn7 rn6 p2 bg-light ba">.bn7 .rn6</div>
+      </div>
+    </div>
+  </aside>
+</section>
+
+<section>
+  <h2 id="customization">Customization</h2>
+  <p>Override position variables:</p>
+
+  <div class="bg-light-025 p4 bar-md">
+    <pre><code>$positions: absolute, fixed, relative, static, sticky, unset;</code></pre>
+  </div>
+</section>

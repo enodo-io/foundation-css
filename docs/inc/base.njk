@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }} - Enodo Foundation.css</title>
+    <link rel="stylesheet" href="/foundation-css/assets/styles.css" />
+  </head>
+  <body>
+    {% include "header.njk" %}
+
+    <div class="d-flex fd-row g2">
+      {% include "sidebar.njk" %}
+
+      <main class="d-flex fd-column g8 ws9 wmx100 md:mx-auto p2 md:px0">{{ content | safe }}</main>
+    </div>
+
+    {% include "footer.njk" %}
+
+    <script>
+      const burger = document.getElementById('burger');
+      const menu = document.getElementById('sidebar');
+      let isExpanded = false;
+
+      function toggleMenu() {
+        isExpanded = !isExpanded;
+        burger.setAttribute('aria-expanded', String(!isExpanded));
+        menu.hidden = isExpanded;
+        if (isExpanded) {
+          menu.classList.remove('d-none');
+          menu.classList.add('d-block');
+          menu.classList.add('ps-fixed');
+        } else {
+          menu.classList.add('d-none');
+          menu.classList.remove('d-block');
+          menu.classList.remove('ps-fixed');
+        }
+      }
+
+      burger.addEventListener('click', toggleMenu);
+
+      burger.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleMenu();
+        } else if (e.key === 'Escape' && !menu.hidden) {
+          e.preventDefault();
+          toggleMenu();
+          burger.focus();
+        }
+      });
+    </script>
+  </body>
+</html>

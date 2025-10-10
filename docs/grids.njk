@@ -1,0 +1,1188 @@
+---
+layout: base.njk
+title: Grids
+---
+
+<header class="d-flex fd-column g4">
+  <h1>Grids</h1>
+  <p>
+    CSS Grid is the most powerful layout system available in CSS. It has two dimensions, meaning it
+    can handle both columns and rows simultaneously, unlike flex layouts which can only do one at a
+    time.
+  </p>
+</header>
+
+<section>
+  <h2 id="overview">Overview</h2>
+  <p>
+    Applying <code>.d-grid</code> to a container will lay out its children according to the CSS Grid
+    layout spec. Adding atomic modifying classes will change the layout's behavior. Applying classes
+    to individual grid items will change that cell's behavior.
+  </p>
+
+  <h3>Basic Grid Example</h3>
+  <div class="preview bg-light p4 br-sm">
+    <div class="d-grid grid__3 g4">
+      <div class="bg-blue fc-white p3 ta-center">Grid item 1</div>
+      <div class="bg-green fc-white p3 ta-center">Grid item 2</div>
+      <div class="bg-purple fc-white p3 ta-center">Grid item 3</div>
+      <div class="bg-orange fc-white p3 ta-center">Grid item 4</div>
+      <div class="bg-red fc-white p3 ta-center">Grid item 5</div>
+      <div class="bg-teal fc-white p3 ta-center">Grid item 6</div>
+    </div>
+  </div>
+
+  <pre><code>&lt;div class="d-grid grid__3 g4"&gt;
+  &lt;div class="bg-blue fc-white p3 ta-center"&gt;Grid item 1&lt;/div&gt;
+  &lt;div class="bg-green fc-white p3 ta-center"&gt;Grid item 2&lt;/div&gt;
+  &lt;div class="bg-purple fc-white p3 ta-center"&gt;Grid item 3&lt;/div&gt;
+  &lt;div class="bg-orange fc-white p3 ta-center"&gt;Grid item 4&lt;/div&gt;
+  &lt;div class="bg-red fc-white p3 ta-center"&gt;Grid item 5&lt;/div&gt;
+  &lt;div class="bg-teal fc-white p3 ta-center"&gt;Grid item 6&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</section>
+
+<section>
+  <h2 id="columns">Columns</h2>
+  <p>
+    To define a discrete number of columns in your grid layout, you can add a
+    <code>grid__[x]</code> modifying class.
+  </p>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Definition</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.grid__1</code></th>
+        <td><code>grid-template-columns: repeat(1, minmax(0, 1fr));</code></td>
+        <td>Creates a grid layout with 1 column</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid__2</code></th>
+        <td><code>grid-template-columns: repeat(2, minmax(0, 1fr));</code></td>
+        <td>Creates a grid layout with 2 columns</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid__3</code></th>
+        <td><code>grid-template-columns: repeat(3, minmax(0, 1fr));</code></td>
+        <td>Creates a grid layout with 3 columns</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid__4</code></th>
+        <td><code>grid-template-columns: repeat(4, minmax(0, 1fr));</code></td>
+        <td>Creates a grid layout with 4 columns</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid__5</code></th>
+        <td><code>grid-template-columns: repeat(5, minmax(0, 1fr));</code></td>
+        <td>Creates a grid layout with 5 columns</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid__6</code></th>
+        <td><code>grid-template-columns: repeat(6, minmax(0, 1fr));</code></td>
+        <td>Creates a grid layout with 6 columns</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid__7</code></th>
+        <td><code>grid-template-columns: repeat(7, minmax(0, 1fr));</code></td>
+        <td>Creates a grid layout with 7 columns</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid__8</code></th>
+        <td><code>grid-template-columns: repeat(8, minmax(0, 1fr));</code></td>
+        <td>Creates a grid layout with 8 columns</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid__9</code></th>
+        <td><code>grid-template-columns: repeat(9, minmax(0, 1fr));</code></td>
+        <td>Creates a grid layout with 9 columns</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid__10</code></th>
+        <td><code>grid-template-columns: repeat(10, minmax(0, 1fr));</code></td>
+        <td>Creates a grid layout with 10 columns</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid__11</code></th>
+        <td><code>grid-template-columns: repeat(11, minmax(0, 1fr));</code></td>
+        <td>Creates a grid layout with 11 columns</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid__12</code></th>
+        <td><code>grid-template-columns: repeat(12, minmax(0, 1fr));</code></td>
+        <td>Creates a grid layout with 12 columns</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Column Examples</h3>
+  <div class="preview bg-light p4 br-sm">
+    <div class="d-flex fd-column g4">
+      <div>
+        <h4>.grid__1</h4>
+        <div class="d-grid grid__1 g2">
+          <div class="bg-blue fc-white p2 ta-center">1</div>
+        </div>
+      </div>
+
+      <div>
+        <h4>.grid__2</h4>
+        <div class="d-grid grid__2 g2">
+          <div class="bg-blue fc-white p2 ta-center">1</div>
+          <div class="bg-green fc-white p2 ta-center">2</div>
+        </div>
+      </div>
+
+      <div>
+        <h4>.grid__3</h4>
+        <div class="d-grid grid__3 g2">
+          <div class="bg-blue fc-white p2 ta-center">1</div>
+          <div class="bg-green fc-white p2 ta-center">2</div>
+          <div class="bg-purple fc-white p2 ta-center">3</div>
+        </div>
+      </div>
+
+      <div>
+        <h4>.grid__4</h4>
+        <div class="d-grid grid__4 g2">
+          <div class="bg-blue fc-white p2 ta-center">1</div>
+          <div class="bg-green fc-white p2 ta-center">2</div>
+          <div class="bg-purple fc-white p2 ta-center">3</div>
+          <div class="bg-orange fc-white p2 ta-center">4</div>
+        </div>
+      </div>
+
+      <div>
+        <h4>.grid__6</h4>
+        <div class="d-grid grid__6 g2">
+          <div class="bg-blue fc-white p2 ta-center">1</div>
+          <div class="bg-green fc-white p2 ta-center">2</div>
+          <div class="bg-purple fc-white p2 ta-center">3</div>
+          <div class="bg-orange fc-white p2 ta-center">4</div>
+          <div class="bg-red fc-white p2 ta-center">5</div>
+          <div class="bg-teal fc-white p2 ta-center">6</div>
+        </div>
+      </div>
+
+      <div>
+        <h4>.grid__12</h4>
+        <div class="d-grid grid__12 g1">
+          <div class="bg-blue fc-white p1 ta-center">1</div>
+          <div class="bg-green fc-white p1 ta-center">2</div>
+          <div class="bg-purple fc-white p1 ta-center">3</div>
+          <div class="bg-orange fc-white p1 ta-center">4</div>
+          <div class="bg-red fc-white p1 ta-center">5</div>
+          <div class="bg-teal fc-white p1 ta-center">6</div>
+          <div class="bg-yellow fc-white p1 ta-center">7</div>
+          <div class="bg-pink fc-white p1 ta-center">8</div>
+          <div class="bg-indigo fc-white p1 ta-center">9</div>
+          <div class="bg-gray fc-white p1 ta-center">10</div>
+          <div class="bg-cyan fc-white p1 ta-center">11</div>
+          <div class="bg-lime fc-white p1 ta-center">12</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 id="column-row-spans">Column and Row Spans</h2>
+  <p>
+    You can apply <code>grid--col[x]</code> to your columns, and <code>grid--row[x]</code> to your
+    rows to span a specific number of columns or rows.
+  </p>
+
+  <h3>Column Spanning Classes</h3>
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Definition</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.grid--col-all</code></th>
+        <td><code>grid-column: 1 / -1;</code></td>
+        <td>Span all the columns</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col1</code></th>
+        <td><code>grid-column: span 1;</code></td>
+        <td>Span 1 column</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col2</code></th>
+        <td><code>grid-column: span 2;</code></td>
+        <td>Span 2 columns</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col3</code></th>
+        <td><code>grid-column: span 3;</code></td>
+        <td>Span 3 columns</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col4</code></th>
+        <td><code>grid-column: span 4;</code></td>
+        <td>Span 4 columns</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col5</code></th>
+        <td><code>grid-column: span 5;</code></td>
+        <td>Span 5 columns</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col6</code></th>
+        <td><code>grid-column: span 6;</code></td>
+        <td>Span 6 columns</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col7</code></th>
+        <td><code>grid-column: span 7;</code></td>
+        <td>Span 7 columns</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col8</code></th>
+        <td><code>grid-column: span 8;</code></td>
+        <td>Span 8 columns</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col9</code></th>
+        <td><code>grid-column: span 9;</code></td>
+        <td>Span 9 columns</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col10</code></th>
+        <td><code>grid-column: span 10;</code></td>
+        <td>Span 10 columns</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col11</code></th>
+        <td><code>grid-column: span 11;</code></td>
+        <td>Span 11 columns</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col12</code></th>
+        <td><code>grid-column: span 12;</code></td>
+        <td>Span 12 columns</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Row Spanning Classes</h3>
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Definition</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.grid--row-all</code></th>
+        <td><code>grid-row: 1 / -1;</code></td>
+        <td>Span all the rows</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row1</code></th>
+        <td><code>grid-row: span 1;</code></td>
+        <td>Span 1 row</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row2</code></th>
+        <td><code>grid-row: span 2;</code></td>
+        <td>Span 2 rows</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row3</code></th>
+        <td><code>grid-row: span 3;</code></td>
+        <td>Span 3 rows</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row4</code></th>
+        <td><code>grid-row: span 4;</code></td>
+        <td>Span 4 rows</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row5</code></th>
+        <td><code>grid-row: span 5;</code></td>
+        <td>Span 5 rows</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row6</code></th>
+        <td><code>grid-row: span 6;</code></td>
+        <td>Span 6 rows</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row7</code></th>
+        <td><code>grid-row: span 7;</code></td>
+        <td>Span 7 rows</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row8</code></th>
+        <td><code>grid-row: span 8;</code></td>
+        <td>Span 8 rows</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row9</code></th>
+        <td><code>grid-row: span 9;</code></td>
+        <td>Span 9 rows</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row10</code></th>
+        <td><code>grid-row: span 10;</code></td>
+        <td>Span 10 rows</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row11</code></th>
+        <td><code>grid-row: span 11;</code></td>
+        <td>Span 11 rows</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row12</code></th>
+        <td><code>grid-row: span 12;</code></td>
+        <td>Span 12 rows</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Span Examples</h3>
+  <div class="preview bg-light p4 br-sm">
+    <div class="d-flex fd-column g4">
+      <div>
+        <h4>Column spans</h4>
+        <div class="d-grid grid__6 g2">
+          <div class="bg-blue fc-white p2 ta-center grid--col2">2 cols</div>
+          <div class="bg-green fc-white p2 ta-center">1 col</div>
+          <div class="bg-purple fc-white p2 ta-center">1 col</div>
+          <div class="bg-orange fc-white p2 ta-center">1 col</div>
+          <div class="bg-red fc-white p2 ta-center grid--col3">3 cols</div>
+        </div>
+      </div>
+
+      <div>
+        <h4>Row spans</h4>
+        <div class="d-grid grid__4 g2" style="grid-template-rows: repeat(3, 60px);">
+          <div class="bg-blue fc-white p2 ta-center grid--row2">2 rows</div>
+          <div class="bg-green fc-white p2 ta-center">1 row</div>
+          <div class="bg-purple fc-white p2 ta-center">1 row</div>
+          <div class="bg-orange fc-white p2 ta-center">1 row</div>
+          <div class="bg-red fc-white p2 ta-center">1 row</div>
+          <div class="bg-teal fc-white p2 ta-center">1 row</div>
+          <div class="bg-yellow fc-white p2 ta-center">1 row</div>
+          <div class="bg-pink fc-white p2 ta-center">1 row</div>
+        </div>
+      </div>
+
+      <div>
+        <h4>Combined spans</h4>
+        <div class="d-grid grid__4 g2" style="grid-template-rows: repeat(3, 60px);">
+          <div class="bg-blue fc-white p2 ta-center grid--col2 grid--row2">2×2</div>
+          <div class="bg-green fc-white p2 ta-center">1×1</div>
+          <div class="bg-purple fc-white p2 ta-center">1×1</div>
+          <div class="bg-orange fc-white p2 ta-center">1×1</div>
+          <div class="bg-red fc-white p2 ta-center">1×1</div>
+          <div class="bg-teal fc-white p2 ta-center">1×1</div>
+          <div class="bg-yellow fc-white p2 ta-center">1×1</div>
+          <div class="bg-pink fc-white p2 ta-center">1×1</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 id="autoflow">Auto Flow</h2>
+  <p>Control how grid items are automatically placed in the grid using auto flow classes.</p>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Definition</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.g-af-dense</code></th>
+        <td><code>grid-auto-flow: dense;</code></td>
+        <td>Fill holes in the grid</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.g-af-row</code></th>
+        <td><code>grid-auto-flow: row;</code></td>
+        <td>Fill grid row by row (default)</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.g-af-column</code></th>
+        <td><code>grid-auto-flow: column;</code></td>
+        <td>Fill grid column by column</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Auto Flow Examples</h3>
+  <div class="preview bg-light p4 br-sm">
+    <div class="d-flex fd-column g4">
+      <div>
+        <h4>.g-af-row (default)</h4>
+        <div class="d-grid grid__3 g-af-row g2">
+          <div class="bg-blue fc-white p2 ta-center">1</div>
+          <div class="bg-green fc-white p2 ta-center grid--col2">2 (spans 2)</div>
+          <div class="bg-purple fc-white p2 ta-center">3</div>
+          <div class="bg-orange fc-white p2 ta-center">4</div>
+        </div>
+      </div>
+
+      <div>
+        <h4>.g-af-column</h4>
+        <div class="d-grid grid__3 g-af-column g2" style="grid-template-rows: repeat(4, 60px);">
+          <div class="bg-blue fc-white p2 ta-center">1</div>
+          <div class="bg-green fc-white p2 ta-center grid--row2">2 (spans 2)</div>
+          <div class="bg-purple fc-white p2 ta-center">3</div>
+          <div class="bg-orange fc-white p2 ta-center">4</div>
+        </div>
+      </div>
+
+      <div>
+        <h4>.g-af-dense</h4>
+        <div class="d-grid grid__3 g-af-dense g2">
+          <div class="bg-blue fc-white p2 ta-center">1</div>
+          <div class="bg-green fc-white p2 ta-center grid--col2">2 (spans 2)</div>
+          <div class="bg-purple fc-white p2 ta-center">3</div>
+          <div class="bg-orange fc-white p2 ta-center">4</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 id="start-end">Start and End</h2>
+  <p>Control the exact positioning of grid items using start and end classes.</p>
+
+  <h3>Column Start and End Classes</h3>
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Definition</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.grid--col-start1</code></th>
+        <td><code>grid-column-start: 1;</code></td>
+        <td>Start at the 1st column</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col-start2</code></th>
+        <td><code>grid-column-start: 2;</code></td>
+        <td>Start at the 2nd column</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col-start3</code></th>
+        <td><code>grid-column-start: 3;</code></td>
+        <td>Start at the 3rd column</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col-start4</code></th>
+        <td><code>grid-column-start: 4;</code></td>
+        <td>Start at the 4th column</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col-start5</code></th>
+        <td><code>grid-column-start: 5;</code></td>
+        <td>Start at the 5th column</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col-start6</code></th>
+        <td><code>grid-column-start: 6;</code></td>
+        <td>Start at the 6th column</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col-start7</code></th>
+        <td><code>grid-column-start: 7;</code></td>
+        <td>Start at the 7th column</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col-start8</code></th>
+        <td><code>grid-column-start: 8;</code></td>
+        <td>Start at the 8th column</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col-start9</code></th>
+        <td><code>grid-column-start: 9;</code></td>
+        <td>Start at the 9th column</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col-start10</code></th>
+        <td><code>grid-column-start: 10;</code></td>
+        <td>Start at the 10th column</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col-start11</code></th>
+        <td><code>grid-column-start: 11;</code></td>
+        <td>Start at the 11th column</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col-start12</code></th>
+        <td><code>grid-column-start: 12;</code></td>
+        <td>Start at the 12th column</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Column End Classes</h3>
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Definition</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.grid--col-end2</code></th>
+        <td><code>grid-column-end: 2;</code></td>
+        <td>End at the start of 2nd column</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col-end3</code></th>
+        <td><code>grid-column-end: 3;</code></td>
+        <td>End at the start of 3rd column</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col-end4</code></th>
+        <td><code>grid-column-end: 4;</code></td>
+        <td>End at the start of 4th column</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col-end5</code></th>
+        <td><code>grid-column-end: 5;</code></td>
+        <td>End at the start of 5th column</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col-end6</code></th>
+        <td><code>grid-column-end: 6;</code></td>
+        <td>End at the start of 6th column</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col-end7</code></th>
+        <td><code>grid-column-end: 7;</code></td>
+        <td>End at the start of 7th column</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col-end8</code></th>
+        <td><code>grid-column-end: 8;</code></td>
+        <td>End at the start of 8th column</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col-end9</code></th>
+        <td><code>grid-column-end: 9;</code></td>
+        <td>End at the start of 9th column</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col-end10</code></th>
+        <td><code>grid-column-end: 10;</code></td>
+        <td>End at the start of 10th column</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col-end11</code></th>
+        <td><code>grid-column-end: 11;</code></td>
+        <td>End at the start of 11th column</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col-end12</code></th>
+        <td><code>grid-column-end: 12;</code></td>
+        <td>End at the start of 12th column</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--col-end13</code></th>
+        <td><code>grid-column-end: 13;</code></td>
+        <td>End at the start of 13th column</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Row Start and End Classes</h3>
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Definition</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.grid--row-start1</code></th>
+        <td><code>grid-row-start: 1;</code></td>
+        <td>Start at the 1st row</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row-start2</code></th>
+        <td><code>grid-row-start: 2;</code></td>
+        <td>Start at the 2nd row</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row-start3</code></th>
+        <td><code>grid-row-start: 3;</code></td>
+        <td>Start at the 3rd row</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row-start4</code></th>
+        <td><code>grid-row-start: 4;</code></td>
+        <td>Start at the 4th row</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row-start5</code></th>
+        <td><code>grid-row-start: 5;</code></td>
+        <td>Start at the 5th row</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row-start6</code></th>
+        <td><code>grid-row-start: 6;</code></td>
+        <td>Start at the 6th row</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row-start7</code></th>
+        <td><code>grid-row-start: 7;</code></td>
+        <td>Start at the 7th row</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row-start8</code></th>
+        <td><code>grid-row-start: 8;</code></td>
+        <td>Start at the 8th row</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row-start9</code></th>
+        <td><code>grid-row-start: 9;</code></td>
+        <td>Start at the 9th row</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row-start10</code></th>
+        <td><code>grid-row-start: 10;</code></td>
+        <td>Start at the 10th row</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row-start11</code></th>
+        <td><code>grid-row-start: 11;</code></td>
+        <td>Start at the 11th row</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row-start12</code></th>
+        <td><code>grid-row-start: 12;</code></td>
+        <td>Start at the 12th row</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Row End Classes</h3>
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Definition</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.grid--row-end2</code></th>
+        <td><code>grid-row-end: 2;</code></td>
+        <td>End at the start of 2nd row</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row-end3</code></th>
+        <td><code>grid-row-end: 3;</code></td>
+        <td>End at the start of 3rd row</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row-end4</code></th>
+        <td><code>grid-row-end: 4;</code></td>
+        <td>End at the start of 4th row</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row-end5</code></th>
+        <td><code>grid-row-end: 5;</code></td>
+        <td>End at the start of 5th row</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row-end6</code></th>
+        <td><code>grid-row-end: 6;</code></td>
+        <td>End at the start of 6th row</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row-end7</code></th>
+        <td><code>grid-row-end: 7;</code></td>
+        <td>End at the start of 7th row</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row-end8</code></th>
+        <td><code>grid-row-end: 8;</code></td>
+        <td>End at the start of 8th row</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row-end9</code></th>
+        <td><code>grid-row-end: 9;</code></td>
+        <td>End at the start of 9th row</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row-end10</code></th>
+        <td><code>grid-row-end: 10;</code></td>
+        <td>End at the start of 10th row</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row-end11</code></th>
+        <td><code>grid-row-end: 11;</code></td>
+        <td>End at the start of 11th row</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row-end12</code></th>
+        <td><code>grid-row-end: 12;</code></td>
+        <td>End at the start of 12th row</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid--row-end13</code></th>
+        <td><code>grid-row-end: 13;</code></td>
+        <td>End at the start of 13th row</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Start and End Examples</h3>
+  <div class="preview bg-light p4 br-sm">
+    <div class="d-flex fd-column g4">
+      <div>
+        <h4>Column positioning</h4>
+        <div class="d-grid grid__4 g2">
+          <div class="bg-blue fc-white p2 ta-center grid--col-start2 grid--col-end4">Col 2-4</div>
+          <div class="bg-green fc-white p2 ta-center">1</div>
+          <div class="bg-purple fc-white p2 ta-center">2</div>
+          <div class="bg-orange fc-white p2 ta-center">3</div>
+          <div class="bg-red fc-white p2 ta-center">4</div>
+        </div>
+      </div>
+
+      <div>
+        <h4>Row positioning</h4>
+        <div class="d-grid grid__3 g2" style="grid-template-rows: repeat(4, 60px);">
+          <div class="bg-blue fc-white p2 ta-center grid--row-start2 grid--row-end4">Row 2-4</div>
+          <div class="bg-green fc-white p2 ta-center">1</div>
+          <div class="bg-purple fc-white p2 ta-center">2</div>
+          <div class="bg-orange fc-white p2 ta-center">3</div>
+          <div class="bg-red fc-white p2 ta-center">4</div>
+          <div class="bg-teal fc-white p2 ta-center">5</div>
+          <div class="bg-yellow fc-white p2 ta-center">6</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 id="alignment">Alignment</h2>
+  <p>
+    On the grid container, you can apply <code>align-items</code> to the y axis and
+    <code>justify-items</code> to the x axis. On individual items, you can apply
+    <code>align-self</code> on the y axis, and <code>justify-self</code> on the x axis.
+  </p>
+
+  <h3>Container Alignment Classes</h3>
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Definition</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.ji-auto</code></th>
+        <td><code>justify-items: auto;</code></td>
+        <td>Use the parent's justify value</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ji-center</code></th>
+        <td><code>justify-items: center;</code></td>
+        <td>Center items along the x axis</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ji-start</code></th>
+        <td><code>justify-items: start;</code></td>
+        <td>Align items to the left</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ji-end</code></th>
+        <td><code>justify-items: end;</code></td>
+        <td>Align items to the right</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ji-stretch</code></th>
+        <td><code>justify-items: stretch;</code></td>
+        <td>Stretch items to fill available space</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ji-unset</code></th>
+        <td><code>justify-items: unset;</code></td>
+        <td>Remove any justification</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Item Self-Alignment Classes</h3>
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Definition</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.js-auto</code></th>
+        <td><code>justify-self: auto;</code></td>
+        <td>Use the parent's justify value</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.js-center</code></th>
+        <td><code>justify-self: center;</code></td>
+        <td>Center item along the x axis</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.js-start</code></th>
+        <td><code>justify-self: start;</code></td>
+        <td>Align item to the left</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.js-end</code></th>
+        <td><code>justify-self: end;</code></td>
+        <td>Align item to the right</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.js-stretch</code></th>
+        <td><code>justify-self: stretch;</code></td>
+        <td>Stretch item to fill available space</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.js-unset</code></th>
+        <td><code>justify-self: unset;</code></td>
+        <td>Remove any justification</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Alignment Examples</h3>
+  <div class="preview bg-light p4 br-sm">
+    <div class="d-flex fd-column g4">
+      <div>
+        <h4>Default alignment</h4>
+        <div class="d-grid grid__3 g2" style="height: 120px;">
+          <div class="bg-blue fc-white p2 ta-center">1</div>
+          <div class="bg-green fc-white p2 ta-center">2</div>
+          <div class="bg-purple fc-white p2 ta-center">3</div>
+          <div class="bg-orange fc-white p2 ta-center">4</div>
+          <div class="bg-red fc-white p2 ta-center">5</div>
+          <div class="bg-teal fc-white p2 ta-center">6</div>
+        </div>
+      </div>
+
+      <div>
+        <h4>.ji-center .ai-center</h4>
+        <div class="d-grid grid__3 ji-center ai-center g2" style="height: 120px;">
+          <div class="bg-blue fc-white p2 ta-center">1</div>
+          <div class="bg-green fc-white p2 ta-center as-start">2 (.as-start)</div>
+          <div class="bg-purple fc-white p2 ta-center as-stretch">3 (.as-stretch)</div>
+          <div class="bg-orange fc-white p2 ta-center js-end">4 (.js-end)</div>
+          <div class="bg-red fc-white p2 ta-center">5</div>
+          <div class="bg-teal fc-white p2 ta-center">6</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 id="usage-examples">Usage Examples</h2>
+
+  <h3>Responsive Grid Layout</h3>
+  <pre><code>&lt;div class="d-grid grid__1 sm:grid__2 md:grid__3 lg:grid__4 g4"&gt;
+  &lt;div class="bg-white bs-md br-lg p4"&gt;
+    &lt;h3 class="fs-h3 fw-bold mb3"&gt;Card Title&lt;/h3&gt;
+    &lt;p class="fc-light-700"&gt;Card content goes here.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;!-- More cards --&gt;
+&lt;/div&gt;</code></pre>
+
+  <h3>Complex Grid Layout</h3>
+  <pre><code>&lt;div class="d-grid grid__4 g4"&gt;
+  &lt;header class="grid--col-all bg-blue fc-white p4"&gt;
+    &lt;h1 class="fs-h2 fw-bold"&gt;Page Header&lt;/h1&gt;
+  &lt;/header&gt;
+  
+  &lt;aside class="grid--col1 bg-light p4"&gt;
+    &lt;h2 class="fs-h4 fw-bold mb3"&gt;Sidebar&lt;/h2&gt;
+    &lt;nav class="d-flex fd-column g2"&gt;
+      &lt;a href="#"&gt;Link 1&lt;/a&gt;
+      &lt;a href="#"&gt;Link 2&lt;/a&gt;
+      &lt;a href="#"&gt;Link 3&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/aside&gt;
+  
+  &lt;main class="grid--col2 grid--col3 bg-white p4"&gt;
+    &lt;h2 class="fs-h3 fw-bold mb4"&gt;Main Content&lt;/h2&gt;
+    &lt;p&gt;Main content area with multiple paragraphs...&lt;/p&gt;
+  &lt;/main&gt;
+  
+  &lt;aside class="grid--col4 bg-light p4"&gt;
+    &lt;h3 class="fs-h4 fw-bold mb3"&gt;Right Sidebar&lt;/h3&gt;
+    &lt;p&gt;Additional content or widgets.&lt;/p&gt;
+  &lt;/aside&gt;
+&lt;/div&gt;</code></pre>
+
+  <h3>Grid with Gaps</h3>
+  <pre><code>&lt;div class="d-grid grid__3 g4"&gt;
+  &lt;div class="bg-blue fc-white p3 ta-center"&gt;Item 1&lt;/div&gt;
+  &lt;div class="bg-green fc-white p3 ta-center"&gt;Item 2&lt;/div&gt;
+  &lt;div class="bg-purple fc-white p3 ta-center"&gt;Item 3&lt;/div&gt;
+  &lt;div class="bg-orange fc-white p3 ta-center grid--col2"&gt;Item 4 (spans 2)&lt;/div&gt;
+  &lt;div class="bg-red fc-white p3 ta-center"&gt;Item 5&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+  <h3>Image Gallery</h3>
+  <pre><code>&lt;div class="d-grid grid__2 sm:grid__3 md:grid__4 g2"&gt;
+  &lt;div class="bg-light p4 ta-center"&gt;
+    &lt;img src="image1.jpg" alt="Gallery image 1" class="w100 br-sm"&gt;
+  &lt;/div&gt;
+  &lt;div class="bg-light p4 ta-center"&gt;
+    &lt;img src="image2.jpg" alt="Gallery image 2" class="w100 br-sm"&gt;
+  &lt;/div&gt;
+  &lt;!-- More images --&gt;
+&lt;/div&gt;</code></pre>
+
+  <h3>Dashboard Layout</h3>
+  <pre><code>&lt;div class="d-grid grid__12 g4"&gt;
+  &lt;div class="grid--col-all grid--row1 bg-blue fc-white p4"&gt;
+    &lt;h1 class="fs-h2 fw-bold"&gt;Dashboard&lt;/h1&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="grid--col1 grid--col4 grid--row2 bg-light p4"&gt;
+    &lt;h2 class="fs-h4 fw-bold mb3"&gt;Stats&lt;/h2&gt;
+    &lt;div class="d-flex fd-column g2"&gt;
+      &lt;div class="bg-white p3 br-sm"&gt;Metric 1&lt;/div&gt;
+      &lt;div class="bg-white p3 br-sm"&gt;Metric 2&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="grid--col5 grid--col12 grid--row2 bg-white p4"&gt;
+    &lt;h2 class="fs-h4 fw-bold mb3"&gt;Main Content&lt;/h2&gt;
+    &lt;p&gt;Dashboard main content area.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</section>
+
+<section>
+  <h2 id="best-practices">Best Practices</h2>
+
+  <div class="d-flex fd-column g4">
+    <div class="bg-green-025 p4 br-md">
+      <h4 class="fc-green fw-bold mb3">✅ Do</h4>
+      <ul class="list-unstyled fc-light-700">
+        <li class="mb2">• Use CSS Grid for two-dimensional layouts (rows and columns)</li>
+        <li class="mb2">• Combine with gap classes for consistent spacing</li>
+        <li class="mb2">• Use responsive grid classes for mobile-first design</li>
+        <li class="mb2">• Leverage column and row spans for complex layouts</li>
+        <li class="mb2">• Use start/end classes for precise positioning</li>
+        <li class="mb2">• Consider auto-flow for dynamic content placement</li>
+      </ul>
+    </div>
+
+    <div class="bg-red-025 p4 br-md">
+      <h4 class="fc-red fw-bold mb3">❌ Don't</h4>
+      <ul class="list-unstyled fc-light-700">
+        <li class="mb2">• Use CSS Grid for simple one-dimensional layouts (use Flexbox instead)</li>
+        <li class="mb2">• Overuse complex positioning when simple spans suffice</li>
+        <li class="mb2">• Ignore responsive considerations for grid columns</li>
+        <li class="mb2">• Mix grid with float or absolute positioning unnecessarily</li>
+        <li class="mb2">• Forget about accessibility when reordering content</li>
+        <li class="mb2">• Use too many grid lines for simple layouts</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>When to Use CSS Grid vs Flexbox</h3>
+
+  <div class="bg-light-025 p4 br-md">
+    <h4>Use CSS Grid for:</h4>
+    <ul class="list-unstyled fc-light-700">
+      <li class="mb2">• Two-dimensional layouts (rows and columns)</li>
+      <li class="mb2">• Complex page layouts (headers, sidebars, main content)</li>
+      <li class="mb2">• Image galleries and card grids</li>
+      <li class="mb2">• Dashboard and admin interfaces</li>
+      <li class="mb2">• When you need precise control over item placement</li>
+    </ul>
+
+    <h4 class="mt4">Use Flexbox for:</h4>
+    <ul class="list-unstyled fc-light-700">
+      <li class="mb2">• One-dimensional layouts (either row or column)</li>
+      <li class="mb2">• Navigation bars and menus</li>
+      <li class="mb2">• Button groups and form controls</li>
+      <li class="mb2">• Centering content (horizontal and vertical)</li>
+      <li class="mb2">• Flexible component layouts</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2 id="conditional-classes">Conditional Classes</h2>
+  <p>
+    All grid classes support responsive breakpoints and can be combined with other conditional
+    classes:
+  </p>
+
+  <h3>Responsive Examples</h3>
+  <pre><code>&lt;!-- Responsive grid columns --&gt;
+&lt;div class="d-grid grid__1 sm:grid__2 md:grid__3 lg:grid__4 g4"&gt;
+  &lt;!-- 1 column on mobile, 2 on tablet, 3 on desktop, 4 on large screens --&gt;
+&lt;/div&gt;
+
+&lt;!-- Responsive column spans --&gt;
+&lt;div class="d-grid grid__4 g4"&gt;
+  &lt;div class="grid--col-all sm:grid--col2 md:grid--col1"&gt;
+    &lt;!-- Full width on mobile, 2 columns on tablet, 1 column on desktop --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+  <h3>State Modifiers</h3>
+  <pre><code>&lt;!-- Hover effects on grid items --&gt;
+&lt;div class="d-grid grid__3 g4"&gt;
+  &lt;div class="bg-light p4 h:bg-blue h:fc-white t"&gt;
+    &lt;!-- Changes background and text color on hover --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</section>

@@ -1,0 +1,16 @@
+@forward "../variables/breakpoints";
+@use "../variables/breakpoints" as *;
+
+@mixin responsify($prefix) {
+  .#{$prefix} {
+    @content;
+  }
+
+  @each $namespace, $breakpoint in $breakpoints {
+    @media (min-width: $breakpoint) {
+      .#{$namespace}\:#{$prefix} {
+        @content;
+      }
+    }
+  }
+}

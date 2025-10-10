@@ -1,0 +1,101 @@
+---
+layout: base.njk
+title: Vertical Alignment
+---
+
+<header class="d-flex fd-column g4">
+  <h1>Vertical Alignment</h1>
+  <p>Atomic classes for managing an element’s vertical-align properties.</p>
+</header>
+
+<section>
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="classes">Classes</h2>
+    <a href="#classes">🔗</a>
+  </header>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.va-baseline</code></th>
+        <td><code>vertical-align: baseline;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.va-bottom</code></th>
+        <td><code>vertical-align: bottom;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.va-middle</code></th>
+        <td><code>vertical-align: middle;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.va-sub</code></th>
+        <td><code>vertical-align: sub;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.va-super</code></th>
+        <td><code>vertical-align: super;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.va-text-bottom</code></th>
+        <td><code>vertical-align: text-bottom;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.va-text-top</code></th>
+        <td><code>vertical-align: text-top;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.va-top</code></th>
+        <td><code>vertical-align: top;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.va-unset</code></th>
+        <td><code>vertical-align: unset;</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <aside>
+    <header class="d-flex ai-center jc-space-between pt6 pb4">
+      <h3 id="vertical-align-examples">Examples</h3>
+      <a href="#vertical-align-examples">🔗</a>
+    </header>
+    <pre><code>&lt;div class="va-baseline"&gt;&lt;/div&gt;
+&lt;div class="va-bottom"&gt;&lt;/div&gt;
+&lt;div class="va-middle"&gt;&lt;/div&gt;
+&lt;div class="va-sub"&gt;&lt;/div&gt;
+&lt;div class="va-super"&gt;&lt;/div&gt;
+&lt;div class="va-text-bottom"&gt;&lt;/div&gt;
+&lt;div class="va-text-top"&gt;&lt;/div&gt;
+&lt;div class="va-top"&gt;&lt;/div&gt;
+&lt;div class="va-unset"&gt;&lt;/div&gt;</code></pre>
+    <div class="preview overflow-auto">
+      <div class="ws12">
+        <div class="va-baseline hs2 d-inline p2 bg-light">.va-baseline</div>
+        <div class="va-bottom hs2 d-inline p2 bg-light">.va-bottom</div>
+        <div class="va-middle hs2 d-inline p2 bg-light">.va-middle</div>
+        <div class="va-sub hs2 d-inline p2 bg-light">.va-sub</div>
+        <div class="va-super hs2 d-inline p2 bg-light">.va-super</div>
+        <div class="va-text-bottom hs2 d-inline p2 bg-light">.va-text-bottom</div>
+        <div class="va-text-top hs2 d-inline p2 bg-light">.va-text-top</div>
+        <div class="va-top hs2 d-inline p2 bg-light">.va-top</div>
+        <div class="va-unset hs2 d-inline p2 bg-light">.va-unset</div>
+      </div>
+    </div>
+  </aside>
+</section>
+
+<section>
+  <h2 id="customization">Customization</h2>
+  <p>Override vertical-align variables:</p>
+
+  <div class="bg-light-025 p4 bar-md">
+    <pre><code>$vertical-aligns: baseline, bottom, middle, sub, super, text-bottom, text-top, top, unset;</code></pre>
+  </div>
+</section>

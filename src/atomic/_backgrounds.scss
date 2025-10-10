@@ -1,0 +1,34 @@
+@forward "../variables/backgrounds";
+@use "sass:map";
+@use "../variables/backgrounds" as *;
+@use "../functions/replace" as *;
+
+.bg {
+  @each $size in map.get($backgrounds, size) {
+    &-#{$size} {
+      background-size: $size !important;
+    }
+  }
+
+  @each $repeat in map.get($backgrounds, repeat) {
+    &-#{$repeat} {
+      background-repeat: $repeat !important;
+    }
+  }
+
+  @each $position in map.get($backgrounds, position) {
+    &-#{$position} {
+      background-position: replace($position, "-", " ") !important;
+    }
+  }
+
+  @each $attachment in map.get($backgrounds, attachment) {
+    &-#{$attachment} {
+      background-attachment: $attachment !important;
+    }
+  }
+
+  &-image-none {
+    background-image: none !important;
+  }
+}

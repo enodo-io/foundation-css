@@ -1,0 +1,889 @@
+---
+layout: base.njk
+title: Width & Height
+---
+
+<header class="d-flex fd-column g4">
+  <h1>Width & Height</h1>
+  <p>
+    Atomic classes for controlling element dimensions using percentage-based widths & heights,
+    spacing unit-based widths & heights, and max/min constraints.
+  </p>
+</header>
+
+<section>
+  <h2 id="percentage-widths">Percentage Widths</h2>
+  <p>Width classes based on percentage values for flexible layouts.</p>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.w0</code></th>
+        <td><code>width: 0;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.w10</code></th>
+        <td><code>width: 10%;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.w20</code></th>
+        <td><code>width: 20%;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.w25</code></th>
+        <td><code>width: 25%;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.w30</code></th>
+        <td><code>width: 30%;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.w33</code></th>
+        <td><code>width: 33.3333%;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.w40</code></th>
+        <td><code>width: 40%;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.w50</code></th>
+        <td><code>width: 50%;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.w60</code></th>
+        <td><code>width: 60%;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.w66</code></th>
+        <td><code>width: 66.6667%;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.w70</code></th>
+        <td><code>width: 70%;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.w75</code></th>
+        <td><code>width: 75%;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.w80</code></th>
+        <td><code>width: 80%;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.w90</code></th>
+        <td><code>width: 90%;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.w100</code></th>
+        <td><code>width: 100%;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.w-auto</code></th>
+        <td><code>width: auto;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Examples</h3>
+  <div class="preview bg-light p4 br-sm">
+    <div class="d-flex fd-column g2">
+      <div class="d-flex g2">
+        <div class="bg-blue fc-white p2 w25">.w25</div>
+        <div class="bg-green fc-white p2 w50">.w50</div>
+        <div class="bg-purple fc-white p2 w25">.w25</div>
+      </div>
+      <div class="d-flex g2">
+        <div class="bg-blue fc-white p2 w33">.w33</div>
+        <div class="bg-green fc-white p2 w33">.w33</div>
+        <div class="bg-purple fc-white p2 w33">.w33</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 id="spacing-unit-widths">Spacing Unit Widths</h2>
+  <p>
+    Width classes based on Foundation CSS spacing units. These are calculated using
+    <code>$su-step</code> (84px at default font size) and provide consistent sizing across your
+    design system.
+  </p>
+
+  <aside class="bg-light-025 p4 br-md mb4">
+    <h4>About Spacing Unit Widths</h4>
+    <p class="mb2">
+      Spacing unit widths are based on <code>$su-full</code> (1008px) divided by 12, creating a
+      12-column grid system. Each <code>$su-step</code> equals approximately 84px at the default
+      font size.
+    </p>
+    <p>
+      These widths automatically adjust with font size changes, maintaining proportional
+      relationships across different screen sizes.
+    </p>
+  </aside>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Approximate Size</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.ws1</code></th>
+        <td><code>width: 84px;</code></td>
+        <td>1/12 of container</td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ws2</code></th>
+        <td><code>width: 168px;</code></td>
+        <td>2/12 of container</td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ws3</code></th>
+        <td><code>width: 252px;</code></td>
+        <td>3/12 of container</td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ws4</code></th>
+        <td><code>width: 336px;</code></td>
+        <td>4/12 of container</td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ws5</code></th>
+        <td><code>width: 420px;</code></td>
+        <td>5/12 of container</td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ws6</code></th>
+        <td><code>width: 504px;</code></td>
+        <td>6/12 of container</td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ws7</code></th>
+        <td><code>width: 588px;</code></td>
+        <td>7/12 of container</td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ws8</code></th>
+        <td><code>width: 672px;</code></td>
+        <td>8/12 of container</td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ws9</code></th>
+        <td><code>width: 756px;</code></td>
+        <td>9/12 of container</td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ws10</code></th>
+        <td><code>width: 840px;</code></td>
+        <td>10/12 of container</td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ws11</code></th>
+        <td><code>width: 924px;</code></td>
+        <td>11/12 of container</td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ws12</code></th>
+        <td><code>width: 1008px;</code></td>
+        <td>12/12 of container</td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Examples</h3>
+  <div class="preview bg-light p4 br-sm">
+    <div class="d-flex fd-column g2">
+      <div class="d-flex g2">
+        <div class="bg-blue fc-white p2 ws3">.ws3</div>
+        <div class="bg-green fc-white p2 ws6">.ws6</div>
+        <div class="bg-purple fc-white p2 ws3">.ws3</div>
+      </div>
+      <div class="d-flex g2">
+        <div class="bg-blue fc-white p2 ws4">.ws4</div>
+        <div class="bg-green fc-white p2 ws8">.ws8</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 id="max-width">Max Width</h2>
+  <p>Maximum width constraints using both spacing units and percentage values.</p>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.wmx1</code></th>
+        <td><code>max-width: 84px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmx2</code></th>
+        <td><code>max-width: 168px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmx3</code></th>
+        <td><code>max-width: 252px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmx4</code></th>
+        <td><code>max-width: 336px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmx5</code></th>
+        <td><code>max-width: 420px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmx6</code></th>
+        <td><code>max-width: 504px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmx7</code></th>
+        <td><code>max-width: 588px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmx8</code></th>
+        <td><code>max-width: 672px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmx9</code></th>
+        <td><code>max-width: 756px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmx10</code></th>
+        <td><code>max-width: 840px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmx11</code></th>
+        <td><code>max-width: 924px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmx12</code></th>
+        <td><code>max-width: 1008px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmx25</code></th>
+        <td><code>max-width: 25%;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmx50</code></th>
+        <td><code>max-width: 50%;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmx75</code></th>
+        <td><code>max-width: 75%;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmx100</code></th>
+        <td><code>max-width: 100%;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmx-initial</code></th>
+        <td><code>max-width: initial;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Examples</h3>
+  <div class="preview bg-light p4 br-sm">
+    <div class="d-flex fd-column g4">
+      <div class="bg-blue fc-white p2 wmx6">.wmx6 (max-width: 504px)</div>
+      <div class="bg-green fc-white p2 wmx50">.wmx50 (max-width: 50%)</div>
+      <div class="bg-purple fc-white p2 wmx75">.wmx75 (max-width: 75%)</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 id="min-width">Min Width</h2>
+  <p>Minimum width constraints using both spacing units and percentage values.</p>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.wmn0</code></th>
+        <td><code>min-width: 0;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmn1</code></th>
+        <td><code>min-width: 84px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmn2</code></th>
+        <td><code>min-width: 168px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmn3</code></th>
+        <td><code>min-width: 252px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmn4</code></th>
+        <td><code>min-width: 336px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmn5</code></th>
+        <td><code>min-width: 420px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmn6</code></th>
+        <td><code>min-width: 504px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmn7</code></th>
+        <td><code>min-width: 588px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmn8</code></th>
+        <td><code>min-width: 672px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmn9</code></th>
+        <td><code>min-width: 756px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmn10</code></th>
+        <td><code>min-width: 840px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmn11</code></th>
+        <td><code>min-width: 924px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmn12</code></th>
+        <td><code>min-width: 1008px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmn25</code></th>
+        <td><code>min-width: 25%;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmn50</code></th>
+        <td><code>min-width: 50%;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmn75</code></th>
+        <td><code>min-width: 75%;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmn100</code></th>
+        <td><code>min-width: 100%;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.wmn-initial</code></th>
+        <td><code>min-width: initial;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Examples</h3>
+  <div class="preview bg-light p4 br-sm">
+    <div class="d-flex fd-column g4">
+      <div class="bg-blue fc-white p2 wmn6">.wmn6 (min-width: 504px)</div>
+      <div class="bg-green fc-white p2 wmn50">.wmn50 (min-width: 50%)</div>
+      <div class="bg-purple fc-white p2 wmn75">.wmn75 (min-width: 75%)</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 id="height">Height</h2>
+  <p>Height classes for controlling element vertical dimensions.</p>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.h0</code></th>
+        <td><code>height: 0;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.h100</code></th>
+        <td><code>height: 100%;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.h-auto</code></th>
+        <td><code>height: auto;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.h-screen</code></th>
+        <td><code>height: 100vh;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Examples</h3>
+  <div class="preview bg-light p4 br-sm">
+    <div class="d-flex g2" style="height: 200px;">
+      <div class="bg-blue fc-white p2 h100 d-flex ai-center jc-center">.h100</div>
+      <div class="bg-green fc-white p2 h-auto d-flex ai-center jc-center">.h-auto</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 id="spacing-unit-heights">Spacing Unit Heights</h2>
+  <p>Height classes based on Foundation CSS spacing units, providing consistent vertical sizing.</p>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Approximate Size</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.hs1</code></th>
+        <td><code>height: 84px;</code></td>
+        <td>1/12 of container</td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hs2</code></th>
+        <td><code>height: 168px;</code></td>
+        <td>2/12 of container</td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hs3</code></th>
+        <td><code>height: 252px;</code></td>
+        <td>3/12 of container</td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hs4</code></th>
+        <td><code>height: 336px;</code></td>
+        <td>4/12 of container</td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hs5</code></th>
+        <td><code>height: 420px;</code></td>
+        <td>5/12 of container</td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hs6</code></th>
+        <td><code>height: 504px;</code></td>
+        <td>6/12 of container</td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hs7</code></th>
+        <td><code>height: 588px;</code></td>
+        <td>7/12 of container</td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hs8</code></th>
+        <td><code>height: 672px;</code></td>
+        <td>8/12 of container</td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hs9</code></th>
+        <td><code>height: 756px;</code></td>
+        <td>9/12 of container</td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hs10</code></th>
+        <td><code>height: 840px;</code></td>
+        <td>10/12 of container</td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hs11</code></th>
+        <td><code>height: 924px;</code></td>
+        <td>11/12 of container</td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hs12</code></th>
+        <td><code>height: 1008px;</code></td>
+        <td>12/12 of container</td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Examples</h3>
+  <div class="preview bg-light p4 br-sm">
+    <div class="d-flex g2">
+      <div class="bg-blue fc-white p2 hs3 d-flex ai-center jc-center">.hs3</div>
+      <div class="bg-green fc-white p2 hs6 d-flex ai-center jc-center">.hs6</div>
+      <div class="bg-purple fc-white p2 hs9 d-flex ai-center jc-center">.hs9</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 id="max-height">Max Height</h2>
+  <p>Maximum height constraints using spacing units.</p>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.hmx1</code></th>
+        <td><code>max-height: 84px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hmx2</code></th>
+        <td><code>max-height: 168px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hmx3</code></th>
+        <td><code>max-height: 252px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hmx4</code></th>
+        <td><code>max-height: 336px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hmx5</code></th>
+        <td><code>max-height: 420px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hmx6</code></th>
+        <td><code>max-height: 504px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hmx7</code></th>
+        <td><code>max-height: 588px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hmx8</code></th>
+        <td><code>max-height: 672px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hmx9</code></th>
+        <td><code>max-height: 756px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hmx10</code></th>
+        <td><code>max-height: 840px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hmx11</code></th>
+        <td><code>max-height: 924px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hmx12</code></th>
+        <td><code>max-height: 1008px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hmx100</code></th>
+        <td><code>max-height: 100%;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hmx-initial</code></th>
+        <td><code>max-height: initial;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Examples</h3>
+  <div class="preview bg-light p4 br-sm">
+    <div class="d-flex fd-column g4">
+      <div class="bg-blue fc-white p2 hmx3 overflow-auto">
+        <p>
+          This content has a max-height of 252px. If the content exceeds this height, it will
+          scroll.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua.
+        </p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+      </div>
+      <div class="bg-green fc-white p2 hmx6 overflow-auto">
+        <p>This content has a max-height of 504px.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 id="min-height">Min Height</h2>
+  <p>Minimum height constraints using spacing units.</p>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.hmn1</code></th>
+        <td><code>min-height: 84px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hmn2</code></th>
+        <td><code>min-height: 168px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hmn3</code></th>
+        <td><code>min-height: 252px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hmn4</code></th>
+        <td><code>min-height: 336px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hmn5</code></th>
+        <td><code>min-height: 420px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hmn6</code></th>
+        <td><code>min-height: 504px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hmn7</code></th>
+        <td><code>min-height: 588px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hmn8</code></th>
+        <td><code>min-height: 672px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hmn9</code></th>
+        <td><code>min-height: 756px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hmn10</code></th>
+        <td><code>min-height: 840px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hmn11</code></th>
+        <td><code>min-height: 924px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hmn12</code></th>
+        <td><code>min-height: 1008px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hmn100</code></th>
+        <td><code>min-height: 100%;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.hmn-initial</code></th>
+        <td><code>min-height: initial;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Examples</h3>
+  <div class="preview bg-light p4 br-sm">
+    <div class="d-flex fd-column g4">
+      <div class="bg-blue fc-white p2 hmn3 d-flex ai-center jc-center">
+        .hmn3 (min-height: 252px)
+      </div>
+      <div class="bg-green fc-white p2 hmn6 d-flex ai-center jc-center">
+        .hmn6 (min-height: 504px)
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 id="usage-examples">Usage Examples</h2>
+
+  <h3>Responsive Card Layout</h3>
+  <pre><code>&lt;div class="d-grid grid__1 sm:grid__2 lg:grid__3 g4"&gt;
+  &lt;div class="bg-white bs-md br-lg p4 w100"&gt;
+    &lt;h3 class="fs-h3 fw-bold mb3"&gt;Card Title&lt;/h3&gt;
+    &lt;p class="fc-light-700"&gt;Card content with consistent width.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+  <h3>Sidebar with Fixed Width</h3>
+  <pre><code>&lt;div class="d-flex g4"&gt;
+  &lt;aside class="ws3 bg-light p4"&gt;
+    &lt;!-- Sidebar with fixed width of 3 spacing units --&gt;
+  &lt;/aside&gt;
+  &lt;main class="fl1 p4"&gt;
+    &lt;!-- Main content that takes remaining space --&gt;
+  &lt;/main&gt;
+&lt;/div&gt;</code></pre>
+
+  <h3>Modal with Max Width</h3>
+  <pre><code>&lt;div class="bg-white bs-lg br-lg p6 wmx8"&gt;
+  &lt;h2 class="fs-h2 fw-bold mb4"&gt;Modal Title&lt;/h2&gt;
+  &lt;p class="fc-light-700 mb4"&gt;Modal content with constrained width.&lt;/p&gt;
+  &lt;button class="btn btn--primary"&gt;Close&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+  <h3>Hero Section with Full Height</h3>
+  <pre><code>&lt;section class="h-screen bg-blue fc-white d-flex ai-center jc-center"&gt;
+  &lt;div class="ta-center wmx8"&gt;
+    &lt;h1 class="fs-canon fw-bold mb4"&gt;Hero Title&lt;/h1&gt;
+    &lt;p class="fs-paragon mb6"&gt;Hero description with full viewport height.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</section>
+
+<section>
+  <h2 id="best-practices">Best Practices</h2>
+
+  <div class="d-flex fd-column g4">
+    <div class="bg-green-025 p4 br-md">
+      <h4 class="fc-green fw-bold mb3">✅ Do</h4>
+      <ul class="list-unstyled fc-light-700">
+        <li class="mb2">• Use percentage widths for flexible layouts</li>
+        <li class="mb2">• Use spacing unit widths for consistent sizing</li>
+        <li class="mb2">• Combine max-width with percentage for responsive containers</li>
+        <li class="mb2">• Use min-height for ensuring content visibility</li>
+        <li class="mb2">• Consider viewport units (h-screen) for full-height sections</li>
+      </ul>
+    </div>
+
+    <div class="bg-red-025 p4 br-md">
+      <h4 class="fc-red fw-bold mb3">❌ Don't</h4>
+      <ul class="list-unstyled fc-light-700">
+        <li class="mb2">• Mix too many different width approaches in one layout</li>
+        <li class="mb2">• Use fixed widths without considering mobile devices</li>
+        <li class="mb2">• Set heights without considering content overflow</li>
+        <li class="mb2">• Use 100vh without accounting for mobile browser UI</li>
+        <li class="mb2">• Forget about responsive behavior with conditional classes</li>
+      </ul>
+    </div>
+  </div>
+</section>

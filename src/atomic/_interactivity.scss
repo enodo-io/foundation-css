@@ -1,0 +1,26 @@
+@forward "../variables/interactivity";
+@use "../variables/interactivity" as *;
+
+.pe {
+  @each $event in $pointer-events {
+    &-#{$event} {
+      pointer-events: $event;
+    }
+  }
+}
+
+.us {
+  @each $select in $user-selects {
+    &-#{$select} {
+      user-select: $select;
+    }
+  }
+}
+
+.ud {
+  @each $drag in $user-drags {
+    &-#{$drag} {
+      -webkit-user-drag: $drag;
+    }
+  }
+}

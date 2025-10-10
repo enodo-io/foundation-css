@@ -1,0 +1,325 @@
+@forward "../variables/borders";
+@use "sass:map";
+@use "../variables/borders" as *;
+@use "../variables/spacing-units" as *;
+@use "../functions/responsify" as *;
+@use "../functions/px2rem" as *;
+
+@include responsify("b") {
+  &a {
+    border-style: solid !important;
+    border-width: 1px !important;
+  }
+
+  &t {
+    border-top-style: solid !important;
+    border-top-width: 1px !important;
+  }
+
+  &r {
+    border-right-style: solid !important;
+    border-right-width: 1px !important;
+  }
+
+  &b {
+    border-bottom-style: solid !important;
+    border-bottom-width: 1px !important;
+  }
+
+  &l {
+    border-left-style: solid !important;
+    border-left-width: 1px !important;
+  }
+}
+
+.bx {
+  @extend .bls-solid;
+  @extend .brs-solid;
+  @extend .bxw1;
+}
+
+.by {
+  @extend .bts-solid;
+  @extend .bbs-solid;
+  @extend .byw1;
+}
+
+// All Sides
+@include responsify("baw") {
+  &0 {
+    border-width: 0 !important;
+  }
+}
+
+.baw {
+  &1 {
+    border-width: 1px !important;
+  }
+
+  &2 {
+    border-width: 2px !important;
+  }
+
+  &3 {
+    border-width: 4px !important;
+  }
+}
+
+// Top
+@include responsify("btw") {
+  &0 {
+    border-top-width: 0 !important;
+  }
+}
+
+.btw {
+  &1 {
+    border-top-width: 1px !important;
+  }
+
+  &2 {
+    border-top-width: 2px !important;
+  }
+
+  &3 {
+    border-top-width: 4px !important;
+  }
+}
+
+// Right
+@include responsify("brw") {
+  &0 {
+    border-right-width: 0 !important;
+  }
+}
+
+.brw {
+  &1 {
+    border-right-width: 1px !important;
+  }
+
+  &2 {
+    border-right-width: 2px !important;
+  }
+
+  &3 {
+    border-right-width: 4px !important;
+  }
+}
+
+// Bottom
+@include responsify("bbw") {
+  &0 {
+    border-bottom-width: 0 !important;
+  }
+}
+
+.bbw {
+  &1 {
+    border-bottom-width: 1px !important;
+  }
+
+  &2 {
+    border-bottom-width: 2px !important;
+  }
+
+  &3 {
+    border-bottom-width: 4px !important;
+  }
+}
+
+// Left
+@include responsify("blw") {
+  &0 {
+    border-left-width: 0 !important;
+  }
+}
+
+.blw {
+  &1 {
+    border-left-width: 1px !important;
+  }
+
+  &2 {
+    border-left-width: 2px !important;
+  }
+
+  &3 {
+    border-left-width: 4px !important;
+  }
+}
+
+//  $$  Y-Axis Border
+.byw {
+  &0 {
+    @extend .btw0;
+    @extend .bbw0;
+  }
+
+  &1 {
+    @extend .btw1;
+    @extend .bbw1;
+  }
+
+  &2 {
+    @extend .btw2;
+    @extend .bbw2;
+  }
+
+  &3 {
+    @extend .btw3;
+    @extend .bbw3;
+  }
+}
+
+//  $$  X-Axis Border
+.bxw {
+  &0 {
+    @extend .brw0;
+    @extend .blw0;
+  }
+
+  &1 {
+    @extend .brw1;
+    @extend .blw1;
+  }
+
+  &2 {
+    @extend .brw2;
+    @extend .blw2;
+  }
+
+  &3 {
+    @extend .brw3;
+    @extend .blw3;
+  }
+}
+
+// STYLE
+
+// All Sides
+.bas-solid {
+  border-style: solid !important;
+}
+
+.bas-dashed {
+  border-style: dashed !important;
+}
+
+// Top
+.bts-solid {
+  border-top-style: solid !important;
+}
+
+.bts-dashed {
+  border-top-style: dashed !important;
+}
+
+// Right
+.brs-solid {
+  border-right-style: solid !important;
+}
+
+.brs-dashed {
+  border-right-style: dashed !important;
+}
+
+// Bottom
+.bbs-solid {
+  border-bottom-style: solid !important;
+}
+
+.bbs-dashed {
+  border-bottom-style: dashed !important;
+}
+
+// Left
+.bls-solid {
+  border-left-style: solid !important;
+}
+
+.bls-dashed {
+  border-left-style: dashed !important;
+}
+
+// RADIUS
+
+// All
+.bar {
+  @each $name, $size in $borders {
+    &-#{$name} {
+      border-radius: px2rem($size) !important;
+    }
+  }
+
+  &-circle {
+    border-radius: 100% !important;
+  }
+}
+
+// Top Left Corner
+.btlr,
+.btr,
+.blr {
+  &0 {
+    border-top-left-radius: 0 !important;
+  }
+
+  @each $name, $size in $borders {
+    &-#{$name} {
+      border-top-left-radius: px2rem($size) !important;
+    }
+  }
+}
+
+// Top Right Corner
+.btrr,
+.btr,
+.brr {
+  &0 {
+    border-top-right-radius: 0 !important;
+  }
+
+  @each $name, $size in $borders {
+    &-#{$name} {
+      border-top-right-radius: px2rem($size) !important;
+    }
+  }
+}
+
+// Bottom Left Corner
+.bblr,
+.bbr,
+.blr {
+  &0 {
+    border-bottom-left-radius: 0 !important;
+  }
+
+  @each $name, $size in $borders {
+    &-#{$name} {
+      border-bottom-left-radius: px2rem($size) !important;
+    }
+  }
+}
+
+// Bottom Right Corner
+.bbrr,
+.bbr,
+.brr {
+  &0 {
+    border-bottom-right-radius: 0 !important;
+  }
+
+  @each $name, $size in $borders {
+    &-#{$name} {
+      border-bottom-right-radius: px2rem($size) !important;
+    }
+  }
+}
+
+// All sides
+@include responsify("bar") {
+  &0 {
+    border-radius: 0 !important;
+  }
+}

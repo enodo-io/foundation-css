@@ -1,0 +1,70 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+*.css.map
+
+# Generated CSS in examples (auto-compiled from Sass)
+docs/assets/styles.css
+docs/assets/*.css
+docs/assets/*.css.map
+
+# Package files
+*.tgz
+*.tar.gz
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+\#*\#
+.#*
+.project
+.settings/
+.classpath
+*.sublime-project
+*.sublime-workspace
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+.sass-cache/
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Build artifacts
+build/
+out/
+
+# Misc
+*.bak
+*.orig

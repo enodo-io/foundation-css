@@ -1,0 +1,49 @@
+.overflow {
+  &-auto {
+    overflow: auto !important;
+  }
+
+  &-x-auto {
+    overflow-x: auto !important;
+  }
+
+  &-y-auto {
+    overflow-y: auto !important;
+  }
+
+  &-hidden {
+    overflow: hidden !important;
+  }
+
+  &-x-hidden {
+    overflow-x: hidden !important;
+  }
+
+  &-y-hidden {
+    overflow-y: hidden !important;
+  }
+
+  &-scroll {
+    overflow: scroll !important;
+  }
+
+  &-x-scroll {
+    overflow-x: scroll !important;
+  }
+
+  &-y-scroll {
+    overflow-y: scroll !important;
+  }
+
+  &-visible {
+    overflow: visible !important;
+  }
+
+  &-auto,
+  &-x-auto,
+  &-y-auto {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

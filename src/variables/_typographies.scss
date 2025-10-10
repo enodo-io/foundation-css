@@ -1,0 +1,292 @@
+$font-families: (
+  sans: (
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    "Roboto",
+    "Helvetica Neue",
+    "Arial",
+    "Noto Sans",
+    "Liberation Sans",
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji",
+  ),
+  mono: (
+    "SFMono-Regular",
+    "Consolas",
+    "Liberation Mono",
+    "Menlo",
+    "Courier",
+    monospace,
+  ),
+) !default;
+$base-font-size: 16px !default;
+$font-sizes:
+  atlas, elephant, imperial, royal, foolscap, canon, trafalgar, paragon, double-pica, great-primer,
+  body-copy, pica, long-primer, brevier, minion !default;
+$font-weights: 300, 400, 500, 600, 700, 800, 900 !default;
+$font-styles: normal, italic, unset !default;
+$text-aligns: left, center, right, justify, unset !default;
+$text-decorations: none, underline, line-through !default;
+$text-transforms: capitalize, lowercase, uppercase, none, unset !default;
+$white-spaces: normal, nowrap, pre, pre-wrap, pre-line, unset !default;
+$word-breaks: normal, break-all, keep-all, inherit, initial, unset !default;
+$overflow-wraps: normal, break-word, inherit, initial, unset !default;
+$word-wraps: break-word !default;
+$hyphens: none, auto, unset !default;
+$font-sizes-map: (
+  feature-phone: (
+    atlas: (
+      size: 78px,
+      line-height: 84px,
+    ),
+    elephant: (
+      size: 60px,
+      line-height: 64px,
+    ),
+    imperial: (
+      size: 50px,
+      line-height: 54px,
+    ),
+    royal: (
+      size: 40px,
+      line-height: 44px,
+    ),
+    foolscap: (
+      size: 32px,
+      line-height: 36px,
+    ),
+    canon: (
+      size: 28px,
+      line-height: 32px,
+    ),
+    trafalgar: (
+      size: 20px,
+      line-height: 24px,
+    ),
+    paragon: (
+      size: 20px,
+      line-height: 24px,
+    ),
+    double-pica: (
+      size: 20px,
+      line-height: 24px,
+    ),
+    great-primer: (
+      size: 18px,
+      line-height: 22px,
+    ),
+    body-copy: (
+      size: 15px,
+      line-height: 20px,
+    ),
+    pica: (
+      size: 15px,
+      line-height: 20px,
+    ),
+    long-primer: (
+      size: 15px,
+      line-height: 18px,
+    ),
+    brevier: (
+      size: 14px,
+      line-height: 16px,
+    ),
+    minion: (
+      size: 12px,
+      line-height: 16px,
+    ),
+  ),
+
+  smartphone: (
+    atlas: (
+      size: 96px,
+      line-height: 104px,
+    ),
+    elephant: (
+      size: 78px,
+      line-height: 84px,
+    ),
+    imperial: (
+      size: 64px,
+      line-height: 72px,
+    ),
+    royal: (
+      size: 52px,
+      line-height: 60px,
+    ),
+    foolscap: (
+      size: 40px,
+      line-height: 44px,
+    ),
+    canon: (
+      size: 32px,
+      line-height: 36px,
+    ),
+    trafalgar: (
+      size: 24px,
+      line-height: 28px,
+    ),
+    paragon: (
+      size: 22px,
+      line-height: 26px,
+    ),
+    double-pica: (
+      size: 20px,
+      line-height: 24px,
+    ),
+    great-primer: (
+      size: 18px,
+      line-height: 22px,
+    ),
+    body-copy: (
+      size: 16px,
+      line-height: 22px,
+    ),
+    pica: (
+      size: 16px,
+      line-height: 20px,
+    ),
+    long-primer: (
+      size: 15px,
+      line-height: 18px,
+    ),
+    brevier: (
+      size: 14px,
+      line-height: 18px,
+    ),
+    minion: (
+      size: 12px,
+      line-height: 16px,
+    ),
+  ),
+
+  tablet: (
+    atlas: (
+      size: 192px,
+      line-height: 208px,
+    ),
+    elephant: (
+      size: 156px,
+      line-height: 170px,
+    ),
+    imperial: (
+      size: 124px,
+      line-height: 136px,
+    ),
+    royal: (
+      size: 94px,
+      line-height: 104px,
+    ),
+    foolscap: (
+      size: 72px,
+      line-height: 80px,
+    ),
+    canon: (
+      size: 52px,
+      line-height: 56px,
+    ),
+    trafalgar: (
+      size: 36px,
+      line-height: 40px,
+    ),
+    paragon: (
+      size: 28px,
+      line-height: 32px,
+    ),
+    double-pica: (
+      size: 26px,
+      line-height: 30px,
+    ),
+    great-primer: (
+      size: 21px,
+      line-height: 24px,
+    ),
+    body-copy: (
+      size: 18px,
+      line-height: 24px,
+    ),
+    pica: (
+      size: 18px,
+      line-height: 22px,
+    ),
+    long-primer: (
+      size: 15px,
+      line-height: 20px,
+    ),
+    brevier: (
+      size: 14px,
+      line-height: 18px,
+    ),
+    minion: (
+      size: 13px,
+      line-height: 16px,
+    ),
+  ),
+
+  desktop: (
+    atlas: (
+      size: 140px,
+      line-height: 148px,
+    ),
+    elephant: (
+      size: 116px,
+      line-height: 124px,
+    ),
+    imperial: (
+      size: 96px,
+      line-height: 104px,
+    ),
+    royal: (
+      size: 76px,
+      line-height: 84px,
+    ),
+    foolscap: (
+      size: 56px,
+      line-height: 60px,
+    ),
+    canon: (
+      size: 44px,
+      line-height: 48px,
+    ),
+    trafalgar: (
+      size: 32px,
+      line-height: 36px,
+    ),
+    paragon: (
+      size: 28px,
+      line-height: 32px,
+    ),
+    double-pica: (
+      size: 24px,
+      line-height: 28px,
+    ),
+    great-primer: (
+      size: 20px,
+      line-height: 24px,
+    ),
+    body-copy: (
+      size: 16px,
+      line-height: 22px,
+    ),
+    pica: (
+      size: 16px,
+      line-height: 20px,
+    ),
+    long-primer: (
+      size: 14px,
+      line-height: 18px,
+    ),
+    brevier: (
+      size: 13px,
+      line-height: 16px,
+    ),
+    minion: (
+      size: 12px,
+      line-height: 16px,
+    ),
+  ),
+) !default;

@@ -1,0 +1,153 @@
+---
+layout: base.njk
+title: Z-Indexes
+---
+
+<header class="d-flex fd-column g4">
+  <h1>Z-Indexes</h1>
+  <p>Atomic classes for managing an element’s z-index properties.</p>
+</header>
+
+<section>
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="classes">Classes</h2>
+    <a href="#classes">🔗</a>
+  </header>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.z-hide</code></th>
+        <td><code>z-index: -1;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.z-base</code></th>
+        <td><code>z-index: 0;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.z-selected</code></th>
+        <td><code>z-index: 25;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.z-active</code></th>
+        <td><code>z-index: 50;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.z-dropdown</code></th>
+        <td><code>z-index: 1000;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.z-popover</code></th>
+        <td><code>z-index: 2000;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.z-tooltip</code></th>
+        <td><code>z-index: 3000;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.z-banner</code></th>
+        <td><code>z-index: 4000;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.z-nav</code></th>
+        <td><code>z-index: 5000;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.z-nav-fixed</code></th>
+        <td><code>z-index: 5050;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.z-modal-bg</code></th>
+        <td><code>z-index: 9000;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.z-modal</code></th>
+        <td><code>z-index: 9050;</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <aside>
+    <header class="d-flex ai-center jc-space-between pt6 pb4">
+      <h3 id="z-index-examples">Examples</h3>
+      <a href="#z-index-examples">🔗</a>
+    </header>
+    <pre><code>&lt;div class="z-base"&gt;&lt;/div&gt;
+&lt;div class="z-hide"&gt;&lt;/div&gt;
+&lt;div class="z-selected"&gt;&lt;/div&gt;
+&lt;div class="z-active"&gt;&lt;/div&gt;
+&lt;div class="z-dropdown"&gt;&lt;/div&gt;
+&lt;div class="z-popover"&gt;&lt;/div&gt;
+&lt;div class="z-tooltip"&gt;&lt;/div&gt;
+&lt;div class="z-banner"&gt;&lt;/div&gt;
+&lt;div class="z-nav"&gt;&lt;/div&gt;
+&lt;div class="z-nav-fixed"&gt;&lt;/div&gt;
+&lt;div class="z-modal-bg"&gt;&lt;/div&gt;
+&lt;div class="z-modal"&gt;&lt;/div&gt;</code></pre>
+
+    <div class="preview ps-relative hs6 ba bc-light-050 ws-nowrap" style="background:transparent;">
+      <div class="z-base ps-absolute p2 hs1 ws1 bg-light ba">.z-base</div>
+      <div class="z-hide ps-absolute p2 hs1 ws1 bg-light ba" style="top:32px;left:32px">
+        .z-hide
+      </div>
+      <div class="z-selected ps-absolute p2 hs1 ws1 bg-light ba" style="top:64px;left:64px">
+        .z-selected
+      </div>
+      <div class="z-active ps-absolute p2 hs1 ws1 bg-light ba" style="top:96px;left:96px">
+        .z-active
+      </div>
+      <div class="z-dropdown ps-absolute p2 hs1 ws1 bg-light ba" style="top:128px;left:128px">
+        .z-dropdown
+      </div>
+      <div class="z-popover ps-absolute p2 hs1 ws1 bg-light ba" style="top:160px;left:160px">
+        .z-popover
+      </div>
+      <div class="z-tooltip ps-absolute p2 hs1 ws1 bg-light ba" style="top:192px;left:192px">
+        .z-tooltip
+      </div>
+      <div class="z-banner ps-absolute p2 hs1 ws1 bg-light ba" style="top:224px;left:224px">
+        .z-banner
+      </div>
+      <div class="z-nav ps-absolute p2 hs1 ws1 bg-light ba" style="top:256px;left:256px">
+        .z-nav
+      </div>
+      <div class="z-nav-fixed ps-absolute p2 hs1 ws1 bg-light ba" style="top:288px;left:288px">
+        .z-nav-fixed
+      </div>
+      <div class="z-modal-bg ps-absolute p2 hs1 ws1 bg-light ba" style="top:320px;left:320px">
+        .z-modal-bg
+      </div>
+      <div class="z-modal ps-absolute p2 hs1 ws1 bg-light ba" style="top:352px;left:352px">
+        .z-modal
+      </div>
+    </div>
+  </aside>
+</section>
+
+<section>
+  <h2 id="customization">Customization</h2>
+  <p>Override z-index variables:</p>
+
+  <div class="bg-light-025 p4 bar-md">
+    <pre><code>$z-indexes: (
+  hide: -1,
+  base: 0,
+  selected: 25,
+  active: 50,
+  dropdown: 1000,
+  popover: 2000,
+  tooltip: 3000,
+  banner: 4000,
+  nav: 5000,
+  nav-fixed: 5050,
+  modal-bg: 9000,
+  modal: 9050,
+);</code></pre>
+  </div>
+</section>

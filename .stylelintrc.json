@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss"
+  ],
+  "rules": {
+    "alpha-value-notation": "number",
+    "color-function-notation": "legacy",
+    "declaration-block-no-redundant-longhand-properties": null,
+    "no-descending-specificity": null,
+    "property-no-vendor-prefix": null,
+    "selector-class-pattern": null,
+    "scss/at-extend-no-missing-placeholder": null,
+    "scss/at-function-pattern": null,
+    "scss/at-import-partial-extension": null,
+    "scss/at-mixin-pattern": null,
+    "scss/dollar-variable-pattern": null,
+    "scss/operator-no-newline-after": null,
+    "scss/percent-placeholder-pattern": null,
+    "selector-no-vendor-prefix": null,
+    "value-no-vendor-prefix": null
+  }
+}

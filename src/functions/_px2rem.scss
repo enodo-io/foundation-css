@@ -1,0 +1,26 @@
+@use "sass:meta";
+@use "sass:math";
+@use "sass:list";
+@use "../variables/typographies" as *;
+
+@function px2rem($value) {
+  @if $value == 0 {
+    @return 0;
+  }
+
+  @if meta.type-of($value) == list {
+    $result: ();
+
+    @each $e in $value {
+      $result: list.append($result, px2rem($e));
+    }
+
+    @return $result;
+  }
+
+  @return if(
+    meta.type-of($value) == number and math.unit($value) == px,
+    math.div($value, $base-font-size) * 1rem,
+    $value
+  );
+}

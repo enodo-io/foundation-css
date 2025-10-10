@@ -1,0 +1,34 @@
+@forward "../variables/colors";
+@use "../variables/colors" as *;
+
+@mixin setProperty($property, $namespace, $name, $colors) {
+  @each $stop, $color in $colors {
+    @if $stop == "main" {
+      .#{$namespace}-#{"" + $name},
+      .h\:#{$namespace}-#{"" + $name}:hover,
+      .f\:#{$namespace}-#{"" + $name}:focus {
+        #{$property}: var(#{"--" + $name}) !important;
+      }
+    } @else {
+      .#{$namespace}-#{"" + $name}-#{$stop},
+      .h\:#{$namespace}-#{"" + $name}-#{$stop}:hover,
+      .f\:#{$namespace}-#{"" + $name}-#{$stop}:focus {
+        #{$property}: var(#{"--" + $name}-#{$stop}) !important;
+      }
+    }
+  }
+}
+
+@each $name, $colors in $colors {
+  @include setProperty("color", "fc", $name, $colors);
+  @include setProperty("background-color", "bg", $name, $colors);
+  @include setProperty("border-color", "bc", $name, $colors);
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+.bc-transparent {
+  border-color: transparent !important;
+}

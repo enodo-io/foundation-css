@@ -1,0 +1,22 @@
+@use "sass:math";
+
+$spacing-units: (
+  1: 4px,
+  2: 8px,
+  3: 12px,
+  4: 16px,
+  5: 20px,
+  6: 24px,
+  7: 32px,
+  8: 40px,
+  9: 48px,
+  10: 56px,
+  11: 64px,
+  12: 72px,
+  13: 80px,
+  14: 120px,
+  15: 160px,
+  16: 200px,
+) !default;
+$su-full: 1008px !default; // 996
+$su-step: math.div($su-full, 12) !default;

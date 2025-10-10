@@ -1,0 +1,259 @@
+---
+layout: base.njk
+title: Conditional Classes
+---
+
+<header class="d-flex fd-column g4">
+  <h1>Conditional Classes</h1>
+  <p>Utility classes that apply conditionally based on breakpoints, hover and focus states.</p>
+</header>
+
+<section>
+  <h2 id="breakpoints">Responsive Breakpoints</h2>
+  <p>
+    Foundation.css uses a mobile-first approach with progressive breakpoints. By default, all
+    classes apply to all screens. Conditional prefixes allow you to apply styles only from certain
+    screen sizes.
+  </p>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Prefix</th>
+        <th scope="col">Breakpoint</th>
+        <th scope="col">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">None</th>
+        <td><code>0px+</code></td>
+        <td>Applies to all screens (mobile-first)</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>sm:</code></th>
+        <td><code>600px+</code></td>
+        <td>Tablets and larger screens</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>md:</code></th>
+        <td><code>1008px+</code></td>
+        <td>Medium screens and larger</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>lg:</code></th>
+        <td><code>1280px+</code></td>
+        <td>Large screens and larger</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Usage Examples</h3>
+  <pre><code>&lt;!-- Responsive layout --&gt;
+&lt;div class="d-block sm:d-flex md:d-grid lg:d-inline-flex"&gt;
+  &lt;!-- Mobile: block --&gt;
+  &lt;!-- 600px+: flex --&gt;
+  &lt;!-- 1008px+: grid --&gt;
+  &lt;!-- 1280px+: inline-flex --&gt;
+&lt;/div&gt;
+
+&lt;!-- Adaptive spacing --&gt;
+&lt;div class="p2 sm:p4 md:p6 lg:p8"&gt;
+  &lt;!-- Padding increases with screen size --&gt;
+&lt;/div&gt;
+
+&lt;!-- Responsive grid --&gt;
+&lt;div class="d-grid grid__1 sm:grid__2 md:grid__3 lg:grid__4 g4"&gt;
+  &lt;!-- 1 column on mobile, 2 on tablet, 3 on desktop, 4 on large screen --&gt;
+&lt;/div&gt;</code></pre>
+</section>
+
+<section>
+  <h2 id="hover">Hover Classes</h2>
+  <p>Classes with the <code>h:</code> prefix apply only when hovering over the element.</p>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Prefix</th>
+        <th scope="col">Behavior</th>
+        <th scope="col">Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>h:</code></th>
+        <td>Applies on hover</td>
+        <td><code>.h:bg-green:hover</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Usage Examples</h3>
+  <pre><code>&lt;!-- Button with hover effect --&gt;
+&lt;button class="bg-light h:bg-green h:fc-white t"&gt;
+  Interactive Button
+&lt;/button&gt;
+
+&lt;!-- Card with hover effect --&gt;
+&lt;div class="bg-white bs-sm h:bs-lg t"&gt;
+  &lt;!-- Shadow intensifies on hover --&gt;
+&lt;/div&gt;
+
+&lt;!-- Link with color change --&gt;
+&lt;a href="#" class="fc-blue h:fc-green h:underline"&gt;
+  Link with hover effect
+&lt;/a&gt;</code></pre>
+
+  <aside>
+    <h3>Available Hover Classes</h3>
+    <div class="d-grid grid__2 g4">
+      <div>
+        <h4>Colors</h4>
+        <ul class="list-unstyled">
+          <li><code>.h:bg-*</code> - Background colors</li>
+          <li><code>.h:fc-*</code> - Text colors</li>
+          <li><code>.h:bc-*</code> - Border colors</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visual Effects</h4>
+        <ul class="list-unstyled">
+          <li><code>.h:bs-*</code> - Box shadows</li>
+          <li><code>.h:o*</code> - Opacity</li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+</section>
+
+<section>
+  <h2 id="focus">Focus Classes</h2>
+  <p>
+    Classes with the <code>f:</code> prefix apply only when the element has focus (keyboard
+    navigation, click, etc.).
+  </p>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Prefix</th>
+        <th scope="col">Behavior</th>
+        <th scope="col">Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>f:</code></th>
+        <td>Applies on focus</td>
+        <td><code>.f:bc-blue:focus</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Usage Examples</h3>
+  <pre><code>&lt;!-- Input field with visible focus --&gt;
+&lt;input type="text" class="bc-light f:bc-blue f:bs-sm"
+       placeholder="Enter text"&gt;
+
+&lt;!-- Button with focus state --&gt;
+&lt;button class="bg-light f:bg-blue f:fc-white"&gt;
+  Accessible Button
+&lt;/button&gt;
+
+&lt;!-- Link with focus for keyboard navigation --&gt;
+&lt;a href="#" class="fc-blue f:fc-green f:underline"&gt;
+  Accessible Link
+&lt;/a&gt;</code></pre>
+
+  <aside>
+    <h3>Available Focus Classes</h3>
+    <div class="d-grid grid__2 g4">
+      <div>
+        <h4>Colors</h4>
+        <ul class="list-unstyled">
+          <li><code>.f:bg-*</code> - Background colors</li>
+          <li><code>.f:fc-*</code> - Text colors</li>
+          <li><code>.f:bc-*</code> - Border colors</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visual Effects</h4>
+        <ul class="list-unstyled">
+          <li><code>.f:o*</code> - Opacity</li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+</section>
+
+<section>
+  <h2 id="combinations">Conditional Class Combinations</h2>
+  <p>You can combine conditional prefixes to create complex and responsive behaviors.</p>
+
+  <h3>Responsive + Hover</h3>
+  <pre><code>&lt;!-- Hover effect that changes based on screen size --&gt;
+&lt;div class="bg-white sm:h:bg-light md:h:bg-blue lg:h:bg-green"&gt;
+  &lt;!-- Mobile: no hover effect --&gt;
+  &lt;!-- 600px+: white hover --&gt;
+  &lt;!-- 1008px+: blue hover --&gt;
+  &lt;!-- 1280px+: green hover --&gt;
+&lt;/div&gt;</code></pre>
+
+  <h3>Responsive + Focus</h3>
+  <pre><code>&lt;!-- Adaptive focus based on screen --&gt;
+&lt;input type="text"
+       class="bc-light sm:f:bc-blue md:f:bc-green lg:f:bc-purple"&gt;</code></pre>
+
+  <h3>Complete Example</h3>
+  <pre><code>&lt;!-- Responsive button with hover and focus states --&gt;
+&lt;button class="
+  bg-light fc-dark
+  sm:bg-blue sm:fc-white
+  md:p4 md:fs-h3
+  lg:p6 lg:fs-h2
+  h:bg-green h:bs-lg
+  sm:h:bg-purple
+  f:bg-orange f:fc-white
+  t
+"&gt;
+  Complete Button
+&lt;/button&gt;</code></pre>
+</section>
+
+<section>
+  <h2 id="best-practices">Best Practices</h2>
+
+  <h3>Mobile-First</h3>
+  <p>Always start by defining styles for mobile, then add larger breakpoints:</p>
+  <pre><code>&lt;!-- ✅ Good --&gt;
+&lt;div class="d-block sm:d-flex md:d-grid"&gt;
+
+&lt;!-- ❌ Avoid --&gt;
+&lt;div class="sm:d-flex md:d-grid d-block"&gt;</code></pre>
+
+  <h3>Accessibility</h3>
+  <p>Always think about users who navigate with the keyboard:</p>
+  <pre><code>&lt;!-- ✅ Good - Visible focus --&gt;
+&lt;button class="bg-blue f:bg-green f:bs-md"&gt;
+
+&lt;!-- ❌ Avoid - No focus --&gt;
+&lt;button class="bg-blue h:bg-green"&gt;</code></pre>
+
+  <h3>Performance</h3>
+  <p>Avoid overloading elements with too many conditional classes:</p>
+  <pre><code>&lt;!-- ✅ Good - Targeted and necessary --&gt;
+&lt;div class="d-grid grid__1 sm:grid__2 md:grid__3"&gt;
+
+&lt;!-- ❌ Avoid - Too many variations --&gt;
+&lt;div class="grid__1 sm:grid__2 md:grid__3 lg:grid__4 xl:grid__5"&gt;</code></pre>
+
+  <h3>Readability</h3>
+  <p>Organize your classes logically:</p>
+  <pre><code>&lt;!-- ✅ Good - Logical and readable --&gt;
+&lt;div class="
+  p2 sm:p4 md:p6
+  bg-white h:bg-light
+  bs-sm h:bs-md
+"&gt;</code></pre>
+</section>

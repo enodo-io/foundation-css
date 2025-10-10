@@ -1,0 +1,210 @@
+@use "../variables/spacing-units" as *;
+@use "../functions/responsify" as *;
+@use "../functions/px2rem" as *;
+
+.w {
+  &0 {
+    width: 0 !important;
+  }
+
+  &10 {
+    width: 10% !important;
+  }
+
+  &20 {
+    width: 20% !important;
+  }
+
+  &30 {
+    width: 30% !important;
+  }
+
+  &40 {
+    width: 40% !important;
+  }
+
+  &50 {
+    width: 50% !important;
+  }
+
+  &60 {
+    width: 60% !important;
+  }
+
+  &70 {
+    width: 70% !important;
+  }
+
+  &80 {
+    width: 80% !important;
+  }
+
+  &90 {
+    width: 90% !important;
+  }
+}
+
+.ws {
+  @for $i from 1 through 12 {
+    &#{ $i } {
+      width: px2rem($su-step * $i) !important;
+    }
+  }
+}
+
+.wmx {
+  @for $i from 1 through 12 {
+    &#{ $i } {
+      max-width: px2rem($su-step * $i) !important;
+    }
+  }
+
+  &25 {
+    max-width: 25% !important;
+  }
+
+  &50 {
+    max-width: 50% !important;
+  }
+
+  &75 {
+    max-width: 75% !important;
+  }
+}
+
+.wmn {
+  &0 {
+    min-width: 0 !important;
+  }
+
+  @for $i from 1 through 12 {
+    &#{ $i } {
+      width: px2rem($su-step * $i) !important;
+    }
+  }
+
+  &25 {
+    min-width: 25% !important;
+  }
+
+  &50 {
+    min-width: 50% !important;
+  }
+
+  &75 {
+    min-width: 75% !important;
+  }
+}
+
+.h {
+  &0 {
+    height: 0 !important;
+  }
+
+  &100 {
+    height: 100% !important;
+  }
+
+  &-auto {
+    height: auto !important;
+  }
+
+  &-screen {
+    height: 100vh !important;
+  }
+}
+
+.hs {
+  @for $i from 1 through 12 {
+    &#{ $i } {
+      height: px2rem($su-step * $i) !important;
+    }
+  }
+}
+
+.hmx {
+  @for $i from 1 through 12 {
+    &#{ $i } {
+      max-height: px2rem($su-step * $i) !important;
+    }
+  }
+}
+
+.hmn {
+  @for $i from 1 through 12 {
+    &#{ $i } {
+      min-height: px2rem($su-step * $i) !important;
+    }
+  }
+}
+
+// responsify
+@include responsify("w") {
+  &25 {
+    width: 25% !important;
+  }
+
+  &33 {
+    width: 33.3333% !important;
+  }
+
+  &50 {
+    width: 50% !important;
+  }
+
+  &66 {
+    width: 66.6667% !important;
+  }
+
+  &75 {
+    width: 75% !important;
+  }
+
+  &100 {
+    width: 100% !important;
+  }
+
+  &-auto {
+    width: auto !important;
+  }
+}
+
+@include responsify("wmx") {
+  &100 {
+    max-width: 100% !important;
+  }
+
+  &-initial {
+    max-width: initial !important;
+  }
+}
+
+@include responsify("wmn") {
+  &100 {
+    min-width: 100% !important;
+  }
+
+  &-initial {
+    min-width: initial !important;
+  }
+}
+
+@include responsify("hmx") {
+  &100 {
+    max-height: 100% !important;
+  }
+
+  &-initial {
+    max-height: initial !important;
+  }
+}
+
+@include responsify("hmn") {
+  &100 {
+    min-height: 100% !important;
+  }
+
+  &-initial {
+    min-height: initial !important;
+  }
+}

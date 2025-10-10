@@ -1,0 +1,27 @@
+@forward "../variables/spacing-units";
+@use "../functions/forge" as *;
+
+// MARGIN
+@include forge-space-units("m", (neg, auto), margin);
+@include forge-space-units("mt", (neg, auto), margin-top);
+@include forge-space-units("mr", (neg, auto), margin-right);
+@include forge-space-units("mb", (neg, auto), margin-bottom);
+@include forge-space-units("ml", (neg, auto), margin-left);
+@include forge-space-units("mx", (neg, auto), margin-right, margin-left);
+@include forge-space-units("my", (neg, auto), margin-top, margin-bottom);
+
+// PADDING
+@include forge-units("p", padding);
+@include forge-units("pt", padding-top);
+@include forge-units("pr", padding-right);
+@include forge-units("pb", padding-bottom);
+@include forge-units("pl", padding-left);
+@include forge-units("px", padding-right, padding-left);
+@include forge-units("py", padding-top, padding-bottom);
+
+// POSITIONING
+@include forge-space-units("t", (neg), top);
+@include forge-space-units("r", (neg), right);
+@include forge-space-units("b", (neg), bottom);
+@include forge-space-units("l", (neg), left);
+@include forge-units("i", inset);

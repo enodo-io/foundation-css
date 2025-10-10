@@ -1,0 +1,13 @@
+.box {
+  &-content {
+    box-sizing: content-box;
+  }
+
+  &-border {
+    box-sizing: border-box;
+  }
+
+  &-unset {
+    box-sizing: unset;
+  }
+}

@@ -1,0 +1,20 @@
+@forward "../variables/box-shadows";
+@use "sass:map";
+@use "../variables/box-shadows" as *;
+@use "../functions/responsify" as *;
+
+@include responsify("bs") {
+  @each $size, $shadow in $box-shadows {
+    &-#{$size} {
+      box-shadow: $shadow !important;
+    }
+  }
+}
+
+.h\:bs {
+  @each $size, $shadow in $box-shadows {
+    &-#{$size}:hover {
+      box-shadow: $shadow !important;
+    }
+  }
+}

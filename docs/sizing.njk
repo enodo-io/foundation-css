@@ -1,0 +1,601 @@
+---
+layout: base.njk
+title: Sizing concepts
+---
+
+<section class="baw0 d-flex fd-column g4 mb0">
+  <h1>Sizing concepts</h1>
+
+  <p>
+    Foundation CSS implements a systematic approach to sizing through
+    <strong>Spacing Units</strong> and <strong>Typography Scale</strong>. These concepts ensure
+    consistency across your design system and provide a common language for designers and
+    developers.
+  </p>
+
+  <p>
+    These sizing concepts are inspired by the
+    <a href="https://www.bbc.com/gel" target="_blank" rel="noopener">BBC GEL guidelines</a>, adapted
+    to work seamlessly with modern web development practices.
+  </p>
+
+  <section id="spacing-units" class="d-flex fd-column g4">
+    <h2>Spacing Units</h2>
+
+    <p>
+      Spacing Units (SU) are a systematic way of applying predefined spacing dimensions to your
+      designs. By using spacing units, you can create consistent layouts and simplify
+      decision-making around margins, padding, and gaps.
+    </p>
+
+    <h3>Foundation CSS Spacing Variables</h3>
+
+    <p>Foundation CSS uses two key variables to define its spacing system:</p>
+
+    <div class="bg-light-025 p4 br-md mb4">
+      <ul class="list-unstyled">
+        <li class="mb3">
+          <strong><code>$su-full: 1008px</code></strong> - The maximum width of the design system's
+          grid container
+        </li>
+        <li>
+          <strong><code>$su-step: 84px</code></strong> - The base spacing unit, calculated as
+          <code>$su-full ÷ 12</code>
+        </li>
+      </ul>
+    </div>
+
+    <p>
+      These variables are used throughout Foundation CSS for width, height, and spacing
+      calculations, ensuring consistency across all components. The 12-column grid system provides a
+      flexible foundation for responsive layouts while maintaining proportional relationships.
+    </p>
+
+    <h3>What are Spacing Units?</h3>
+
+    <p>
+      Spacing units provide a simple, consistent way to define space in your designs. They work
+      similarly to how typography scales work for text sizing, giving you predefined values that
+      work well together.
+    </p>
+
+    <p>
+      Foundation CSS defines space in rem units (relative to the root font size), making your
+      designs compatible with browser text resizing and maintaining high accessibility standards.
+    </p>
+
+    <h3>Spacing Unit Scale</h3>
+
+    <div class="bg-light p4 br-sm">
+      <table class="w100">
+        <thead>
+          <tr>
+            <th class="ta-left">Spacing Unit</th>
+            <th class="ta-right">Size in px</th>
+            <th class="ta-right">Size in rem</th>
+            <th class="ta-left">Usage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1 SU</strong></td>
+            <td class="ta-right">4px</td>
+            <td class="ta-right">0.25rem</td>
+            <td class="fc-light-600">Component spacing only</td>
+          </tr>
+          <tr>
+            <td><strong>2 SU</strong></td>
+            <td class="ta-right">8px</td>
+            <td class="ta-right">0.5rem</td>
+            <td class="fc-light-600">Standard spacing</td>
+          </tr>
+          <tr>
+            <td><strong>3 SU</strong></td>
+            <td class="ta-right">12px</td>
+            <td class="ta-right">0.75rem</td>
+            <td class="fc-light-600">Component spacing only</td>
+          </tr>
+          <tr>
+            <td><strong>4 SU</strong></td>
+            <td class="ta-right">16px</td>
+            <td class="ta-right">1rem</td>
+            <td class="fc-light-600">Standard spacing</td>
+          </tr>
+          <tr>
+            <td><strong>5 SU</strong></td>
+            <td class="ta-right">20px</td>
+            <td class="ta-right">1.25rem</td>
+            <td class="fc-light-600">Component spacing only</td>
+          </tr>
+          <tr>
+            <td><strong>6 SU</strong></td>
+            <td class="ta-right">24px</td>
+            <td class="ta-right">1.5rem</td>
+            <td class="fc-light-600">Standard spacing</td>
+          </tr>
+          <tr>
+            <td><strong>7 SU</strong></td>
+            <td class="ta-right">32px</td>
+            <td class="ta-right">2rem</td>
+            <td class="fc-light-600">Standard spacing</td>
+          </tr>
+          <tr>
+            <td><strong>8 SU</strong></td>
+            <td class="ta-right">40px</td>
+            <td class="ta-right">2.5rem</td>
+            <td class="fc-light-600">Standard spacing</td>
+          </tr>
+          <tr>
+            <td><strong>9 SU</strong></td>
+            <td class="ta-right">48px</td>
+            <td class="ta-right">3rem</td>
+            <td class="fc-light-600">Standard spacing</td>
+          </tr>
+          <tr>
+            <td><strong>10 SU</strong></td>
+            <td class="ta-right">56px</td>
+            <td class="ta-right">3.5rem</td>
+            <td class="fc-light-600">Standard spacing</td>
+          </tr>
+          <tr>
+            <td><strong>11 SU</strong></td>
+            <td class="ta-right">64px</td>
+            <td class="ta-right">4rem</td>
+            <td class="fc-light-600">Large spacing</td>
+          </tr>
+          <tr>
+            <td><strong>12 SU</strong></td>
+            <td class="ta-right">72px</td>
+            <td class="ta-right">4.5rem</td>
+            <td class="fc-light-600">Large spacing</td>
+          </tr>
+          <tr>
+            <td><strong>13 SU</strong></td>
+            <td class="ta-right">80px</td>
+            <td class="ta-right">5rem</td>
+            <td class="fc-light-600">Large spacing</td>
+          </tr>
+          <tr>
+            <td><strong>14 SU</strong></td>
+            <td class="ta-right">120px</td>
+            <td class="ta-right">7.5rem</td>
+            <td class="fc-light-600">Extra large spacing</td>
+          </tr>
+          <tr>
+            <td><strong>15 SU</strong></td>
+            <td class="ta-right">160px</td>
+            <td class="ta-right">10rem</td>
+            <td class="fc-light-600">Extra large spacing</td>
+          </tr>
+          <tr>
+            <td><strong>16 SU</strong></td>
+            <td class="ta-right">200px</td>
+            <td class="ta-right">12.5rem</td>
+            <td class="fc-light-600">Extra large spacing</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="bg-light-100 p4 br-sm">
+      <h4>Exceptions to the Rule</h4>
+      <p>
+        <strong>1 SU, 3 SU, and 5 SU</strong> are exceptions to our consistent multiples of 8px
+        pattern. These units are designed for component spacing only and should not be used for
+        larger layout decisions such as spacing between content regions or arranging multiple
+        components horizontally.
+      </p>
+    </div>
+
+    <h3>Using Spacing Units in CSS</h3>
+
+    <p>Foundation CSS provides atomic classes for all spacing units:</p>
+
+    <div class="d-flex fd-column g2 bg-light p4 br-sm">
+      <h4>Margin Classes</h4>
+      <ul>
+        <li><code>m0</code> to <code>m16</code> - All sides</li>
+        <li><code>mt0</code> to <code>mt16</code> - Top margin</li>
+        <li><code>mr0</code> to <code>mr16</code> - Right margin</li>
+        <li><code>mb0</code> to <code>mb16</code> - Bottom margin</li>
+        <li><code>ml0</code> to <code>ml16</code> - Left margin</li>
+        <li><code>mx0</code> to <code>mx16</code> - Horizontal margins</li>
+        <li><code>my0</code> to <code>my16</code> - Vertical margins</li>
+      </ul>
+
+      <h4 class="pt2">Padding Classes</h4>
+      <ul>
+        <li><code>p0</code> to <code>p16</code> - All sides</li>
+        <li><code>pt0</code> to <code>pt16</code> - Top padding</li>
+        <li><code>pr0</code> to <code>pr16</code> - Right padding</li>
+        <li><code>pb0</code> to <code>pb16</code> - Bottom padding</li>
+        <li><code>pl0</code> to <code>pl16</code> - Left padding</li>
+        <li><code>px0</code> to <code>px16</code> - Horizontal padding</li>
+        <li><code>py0</code> to <code>py16</code> - Vertical padding</li>
+      </ul>
+
+      <h4 class="pt2">Gap Classes</h4>
+      <ul>
+        <li><code>g0</code> to <code>g16</code> - Grid and flexbox gaps</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="typography-scale" class="d-flex fd-column g4">
+    <h2>Typography Scale</h2>
+
+    <p>
+      Foundation CSS uses a systematic typography scale inspired by traditional printing
+      terminology. This approach provides semantic naming that helps designers and developers
+      communicate effectively about type choices.
+    </p>
+
+    <h3>Font Size Scale</h3>
+
+    <p>
+      Our typography scale uses names derived from traditional type measuring techniques, going back
+      as far as 1582. Some names came from the type of book produced in that size - for example,
+      Primer was used for religious books ordered by Henry VIII.
+    </p>
+
+    <div class="bg-light p4 br-sm">
+      <table class="w100">
+        <thead>
+          <tr>
+            <th class="ta-left">Size Name</th>
+            <th class="ta-left">Usage</th>
+            <th class="ta-left">Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>atlas</strong></td>
+            <td>Hero headlines, large display text</td>
+            <td class="fs-atlas fw-bold">Atlas Display</td>
+          </tr>
+          <tr>
+            <td><strong>elephant</strong></td>
+            <td>Large headlines, feature titles</td>
+            <td class="fs-elephant fw-bold">Elephant Headline</td>
+          </tr>
+          <tr>
+            <td><strong>imperial</strong></td>
+            <td>Major section headers</td>
+            <td class="fs-imperial fw-bold">Imperial Title</td>
+          </tr>
+          <tr>
+            <td><strong>royal</strong></td>
+            <td>Page titles, important headings</td>
+            <td class="fs-royal fw-bold">Royal Heading</td>
+          </tr>
+          <tr>
+            <td><strong>foolscap</strong></td>
+            <td>Subsection headers</td>
+            <td class="fs-foolscap fw-bold">Foolscap Subheading</td>
+          </tr>
+          <tr>
+            <td><strong>canon</strong></td>
+            <td>Article titles, blog post titles</td>
+            <td class="fs-canon fw-bold">Canon Article Title</td>
+          </tr>
+          <tr>
+            <td><strong>trafalgar</strong></td>
+            <td>Article titles, section headers</td>
+            <td class="fs-trafalgar fw-bold">Trafalgar Section</td>
+          </tr>
+          <tr>
+            <td><strong>paragon</strong></td>
+            <td>Primary headlines on indexes</td>
+            <td class="fs-paragon fw-bold">Paragon Headline</td>
+          </tr>
+          <tr>
+            <td><strong>double-pica</strong></td>
+            <td>Sub headers, secondary headings</td>
+            <td class="fs-double-pica fw-bold">Double Pica Subheader</td>
+          </tr>
+          <tr>
+            <td><strong>great-primer</strong></td>
+            <td>Headline titles, subtitles</td>
+            <td class="fs-great-primer fw-bold">Great Primer Title</td>
+          </tr>
+          <tr>
+            <td><strong>body-copy</strong></td>
+            <td>Article text, main content</td>
+            <td class="fs-body-copy">Body copy text for articles and main content areas.</td>
+          </tr>
+          <tr>
+            <td><strong>pica</strong></td>
+            <td>Small text, captions</td>
+            <td class="fs-pica">Pica text for captions and small details.</td>
+          </tr>
+          <tr>
+            <td><strong>long-primer</strong></td>
+            <td>Secondary text</td>
+            <td class="fs-long-primer">Long primer for secondary information.</td>
+          </tr>
+          <tr>
+            <td><strong>brevier</strong></td>
+            <td>Fine print, legal text</td>
+            <td class="fs-brevier">Brevier for fine print and legal text.</td>
+          </tr>
+          <tr>
+            <td><strong>minion</strong></td>
+            <td>Smallest text, footnotes</td>
+            <td class="fs-minion">Minion for footnotes and smallest text.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Font Weights</h3>
+
+    <div class="bg-light p4 br-sm">
+      <p>Foundation CSS provides the following font weight classes:</p>
+      <ul>
+        <li><code>fw-light</code> (300) - Light weight text</li>
+        <li><code>fw-normal</code> (400) - Normal weight text</li>
+        <li><code>fw-medium</code> (500) - Medium weight text</li>
+        <li><code>fw-semibold</code> (600) - Semi-bold text</li>
+        <li><code>fw-bold</code> (700) - Bold text</li>
+        <li><code>fw-extrabold</code> (800) - Extra bold text</li>
+        <li><code>fw-black</code> (900) - Black weight text</li>
+      </ul>
+    </div>
+
+    <h3>Responsive Typography</h3>
+
+    <p>
+      Foundation CSS automatically adjusts font sizes across different breakpoints to ensure optimal
+      readability on all devices. The typography scale adapts to screen size while maintaining
+      proportional relationships between different text sizes.
+    </p>
+  </section>
+
+  <section id="best-practices" class="d-flex fd-column g4">
+    <h2>Best Practices</h2>
+
+    <h3>Spacing Unit Guidelines</h3>
+
+    <div class="d-flex fd-column g4">
+      <div class="bg-green-100 p4 br-sm">
+        <h4 class="fc-green-900">✅ Do</h4>
+        <ul class="d-flex fd-column g2">
+          <li>
+            <strong>Use one spacing unit at a time</strong> - Avoid stacking multiple spacing units
+            together
+          </li>
+          <li>
+            <strong>Use spacing units only for space</strong> - Don't use them to define image sizes
+            or other measurements
+          </li>
+          <li>
+            <strong>Choose appropriate units</strong> - Use 1 SU, 3 SU, and 5 SU only for component
+            spacing
+          </li>
+          <li>
+            <strong>Be consistent</strong> - Use the same spacing units for similar elements across
+            your design
+          </li>
+          <li>
+            <strong>Consider responsive behavior</strong> - Adjust spacing units at different
+            breakpoints when needed
+          </li>
+        </ul>
+      </div>
+
+      <div class="bg-red-100 p4 br-sm">
+        <h4 class="fc-red-900">❌ Don't</h4>
+        <ul class="d-flex fd-column g2">
+          <li>
+            <strong>Stack spacing units</strong> - Don't combine multiple units to create custom
+            sizes
+          </li>
+          <li>
+            <strong>Use spacing units for non-spacing</strong> - Don't define image dimensions or
+            border widths with spacing units
+          </li>
+          <li>
+            <strong>Use component units for layout</strong> - Don't use 1 SU, 3 SU, or 5 SU for
+            larger layout decisions
+          </li>
+          <li>
+            <strong>Create custom spacing values</strong> - Stick to the predefined spacing unit
+            scale
+          </li>
+          <li>
+            <strong>Ignore responsive considerations</strong> - Don't use the same spacing for all
+            screen sizes
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Typography Guidelines</h3>
+
+    <div class="d-flex fd-column g4">
+      <div class="bg-green-100 p4 br-sm">
+        <h4 class="fc-green-900">✅ Do</h4>
+        <ul class="d-flex fd-column g2">
+          <li>
+            <strong>Use semantic sizing</strong> - Choose font sizes based on content hierarchy and
+            meaning
+          </li>
+          <li>
+            <strong>Maintain line length</strong> - Keep body copy to around 60 characters per line
+          </li>
+          <li><strong>Ensure contrast</strong> - Meet WCAG 2.0 AA contrast requirements</li>
+          <li>
+            <strong>Use appropriate weights</strong> - Reserve heavier weights for headlines and
+            interactive elements
+          </li>
+          <li>
+            <strong>Test readability</strong> - Verify text is readable across all target devices
+          </li>
+        </ul>
+      </div>
+
+      <div class="bg-red-100 p4 br-sm">
+        <h4 class="fc-red-900">❌ Don't</h4>
+        <ul class="d-flex fd-column g2">
+          <li>
+            <strong>Adjust letter spacing</strong> - Don't modify tracking as it's optimized for
+            readability
+          </li>
+          <li><strong>Use too many sizes</strong> - Stick to the predefined typography scale</li>
+          <li>
+            <strong>Ignore line length</strong> - Don't create extremely long or short text lines
+          </li>
+          <li>
+            <strong>Use heavy weights for body text</strong> - Reserve bold weights for emphasis and
+            headings
+          </li>
+          <li>
+            <strong>Forget about mobile</strong> - Ensure typography works well on small screens
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="examples" class="d-flex fd-column g4">
+    <h2>Examples</h2>
+
+    <h3>Button Component with Spacing Units</h3>
+
+    <div class="bg-light p4 br-sm">
+      <div class="d-flex fd-column g3">
+        <div class="d-flex fd-row g2">
+          <button class="btn btn--primary">Primary Button</button>
+          <button class="btn btn--secondary">Secondary Button</button>
+        </div>
+
+        <div class="bg-light-100 p3 br-sm">
+          <h4>HTML Structure</h4>
+          <pre><code>&lt;button class="btn btn--primary"&gt;Primary Button&lt;/button&gt;
+&lt;button class="btn btn--secondary"&gt;Secondary Button&lt;/button&gt;</code></pre>
+        </div>
+
+        <div class="bg-light-100 p3 br-sm">
+          <h4>CSS with Spacing Units</h4>
+          <pre><code>.btn {
+  padding: map.get($spacing-units, 3) map.get($spacing-units, 5);
+  border-radius: map.get($borders, sm);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn--primary {
+  background-color: var(--primary);
+  color: var(--light);
+}</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <h3>Article Layout with Typography Scale</h3>
+
+    <div class="bg-light p4 br-sm">
+      <article class="d-flex fd-column g4">
+        <header>
+          <h1 class="fs-canon fw-bold mb2">Article Title</h1>
+          <p class="fs-great-primer fc-light-600">Article subtitle or description</p>
+        </header>
+
+        <div class="fs-body-copy lh-relaxed">
+          <p>
+            This is the main article content using the body-copy font size. The typography scale
+            ensures consistent hierarchy and readability across different screen sizes.
+          </p>
+
+          <h2 class="fs-trafalgar fw-bold mt4 mb2">Section Heading</h2>
+          <p>
+            Section content continues with the same body-copy size, maintaining consistent reading
+            experience throughout the article.
+          </p>
+        </div>
+
+        <footer class="fs-pica fc-light-500">Published on January 1, 2024</footer>
+      </article>
+    </div>
+
+    <h3>Card Component with Combined Concepts</h3>
+
+    <div class="bg-light p4 br-sm">
+      <div class="d-grid grid__1 sm:grid__2 md:grid__3 g4">
+        <div class="bg-white p4 br-md">
+          <h3 class="fs-paragon fw-bold mb2">Card Title</h3>
+          <p class="fs-body-copy mb3">Card description using body-copy typography.</p>
+          <button class="btn btn--primary">Learn More</button>
+        </div>
+
+        <div class="bg-white p4 br-md">
+          <h3 class="fs-paragon fw-bold mb2">Another Card</h3>
+          <p class="fs-body-copy mb3">Consistent spacing and typography across cards.</p>
+          <button class="btn btn--secondary">Read More</button>
+        </div>
+
+        <div class="bg-white p4 br-md">
+          <h3 class="fs-paragon fw-bold mb2">Third Card</h3>
+          <p class="fs-body-copy mb3">Maintaining visual harmony with spacing units.</p>
+          <button class="btn btn--primary">Explore</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-light-100 p4 br-sm mt6">
+    <h3>Acknowledgments</h3>
+    <p>
+      The spacing unit and typography concepts in Foundation CSS are inspired by the
+      <a href="https://www.bbc.com/gel" target="_blank" rel="noopener"
+        >BBC GEL (Global Experience Language) guidelines</a
+      >. We extend our gratitude to the BBC UX&D team for their pioneering work in creating
+      systematic, accessible design systems.
+    </p>
+
+    <p>For more information about the original concepts, please refer to:</p>
+    <ul>
+      <li>
+        <a href="https://www.bbc.com/gel/features/spacing-units" target="_blank" rel="noopener"
+          >BBC GEL Spacing Units</a
+        >
+      </li>
+      <li>
+        <a href="https://www.bbc.com/gel/features/typography" target="_blank" rel="noopener"
+          >BBC GEL Typography</a
+        >
+      </li>
+    </ul>
+  </section>
+</section>
+
+<style>
+  .btn {
+    padding: 0.75rem 1.25rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .btn--primary {
+    background-color: var(--green, #007bff);
+    color: white;
+  }
+
+  .btn--primary:hover {
+    opacity: 0.8;
+  }
+
+  .btn--secondary {
+    background-color: var(--light-500, #6c757d);
+    color: white;
+  }
+
+  .btn--secondary:hover {
+    opacity: 0.8;
+  }
+</style>

@@ -1,0 +1,153 @@
+---
+layout: base.njk
+title: Interactivity
+---
+
+<header class="d-flex fd-column g4">
+  <h1>Interactivity</h1>
+  <p>Atomic classes for managing an element’s interactivity.</p>
+</header>
+
+<section>
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="classes">Pointer events</h2>
+    <a href="#pointer-events">🔗</a>
+  </header>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.pe-auto</code></th>
+        <td><code>pointer-events: auto;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.pe-none</code></th>
+        <td><code>pointer-events: none;</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <aside>
+    <header class="d-flex ai-center jc-space-between pt6 pb4">
+      <h3 id="pointer-event-examples">Examples</h3>
+      <a href="#pointer-event-examples">🔗</a>
+    </header>
+    <pre><code>&lt;button class="pe-auto"&gt;&lt;/button&gt;
+&lt;button class="pe-none"&gt;&lt;/button&gt;</code></pre>
+    <div class="preview">
+      <div class="d-flex g4">
+        <button class="pe-auto p2 bg-light baw1 bar-sm">.pe-auto</button>
+        <button class="pe-none p2 bg-light baw1 bar-sm">.pe-none</button>
+      </div>
+    </div>
+  </aside>
+</section>
+
+<section>
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="classes">User selects</h2>
+    <a href="#user-selects">🔗</a>
+  </header>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.us-auto</code></th>
+        <td><code>user-select: auto;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.us-none</code></th>
+        <td><code>user-select: none;</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <aside>
+    <header class="d-flex ai-center jc-space-between pt6 pb4">
+      <h3 id="user-select-examples">Examples</h3>
+      <a href="#user-select-examples">🔗</a>
+    </header>
+    <pre><code>&lt;div class="us-auto"&gt;&lt;/div&gt;
+&lt;div class="us-none"&gt;&lt;/div&gt;</code></pre>
+    <div class="preview">
+      <div class="d-flex g4">
+        <div class="us-auto p2 bg-light bar-sm">.us-auto</div>
+        <div class="us-none p2 bg-light bar-sm">.us-none</div>
+      </div>
+    </div>
+  </aside>
+</section>
+
+<section>
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="classes">User drags</h2>
+    <a href="#user-drags">🔗</a>
+  </header>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.ud-auto</code></th>
+        <td><code>-webkit-user-drag: auto;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.ud-none</code></th>
+        <td><code>-webkit-user-drag: none;</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <aside>
+    <header class="d-flex ai-center jc-space-between pt6 pb4">
+      <h3 id="user-drag-examples">Examples</h3>
+      <a href="#user-drag-examples">🔗</a>
+    </header>
+    <pre><code>&lt;img class="ud-auto" /&gt;
+&lt;img class="ud-none" /&gt;</code></pre>
+    <div class="preview">
+      <div class="d-flex g4">
+        <img
+          class="ud-auto"
+          width="64"
+          height="64"
+          src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Ccircle cx='32' cy='32' r='30'%3E%3C/circle%3E%3C/svg%3E"
+        />
+        <img
+          class="ud-none"
+          width="64"
+          height="64"
+          src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Ccircle cx='32' cy='32' r='30'%3E%3C/circle%3E%3C/svg%3E"
+        />
+      </div>
+    </div>
+  </aside>
+</section>
+
+<section>
+  <h2 id="customization">Customization</h2>
+  <p>Override interactivity variables:</p>
+
+  <div class="bg-light-025 p4 bar-md">
+    <pre><code>$pointer-events: auto, none;
+$user-selects: auto, none;
+$user-drags: auto, none;</code></pre>
+  </div>
+</section>

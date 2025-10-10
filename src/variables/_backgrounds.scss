@@ -1,0 +1,29 @@
+$backgrounds: (
+  size: (
+    auto,
+    cover,
+    contain,
+  ),
+  repeat: (
+    repeat,
+    no-repeat,
+    repeat-x,
+    repeat-y,
+  ),
+  position: (
+    center,
+    top,
+    bottom,
+    left,
+    left-top,
+    left-bottom,
+    right,
+    right-top,
+    right-bottom,
+  ),
+  attachment: (
+    fixed,
+    local,
+    scroll,
+  ),
+) !default;

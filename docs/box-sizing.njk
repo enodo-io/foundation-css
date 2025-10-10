@@ -1,0 +1,83 @@
+---
+layout: base.njk
+title: Box Sizing
+---
+
+<header class="d-flex fd-column g4">
+  <h1>Box Sizing</h1>
+  <p>Atomic classes for managing an element’s box-sizing properties.</p>
+</header>
+
+<section>
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="classes">Classes</h2>
+    <a href="#classes">🔗</a>
+  </header>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.box-content</code></th>
+        <td><code>box-sizing: content-box;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.box-border</code></th>
+        <td><code>box-sizing: border-box;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.box-unset</code></th>
+        <td><code>box-sizing: unset;</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <aside>
+    <header class="d-flex ai-center jc-space-between pt6 pb4">
+      <h3 id="box-sizing-examples">Examples</h3>
+      <a href="#box-sizing-examples">🔗</a>
+    </header>
+    <pre><code>&lt;div&gt;&lt;/div&gt;
+&lt;div class="box-content"&gt;&lt;/div&gt;
+&lt;div class="box-border"&gt;&lt;/div&gt;</code></pre>
+    <div class="preview d-flex g4">
+      <div class="ws3 bg-light-200 p2">
+        <span class="d-inline-block fw-700 pb4">Parent container</span>
+        <div class="box-content w100 p0 ba baw1 bg-light-100">
+          <span class="fw-700">Child container</span><br />
+          box-sizing: content-box<br />
+          width: 100%;<br />
+          padding: 0;<br />
+          border-width: 1px;
+        </div>
+      </div>
+
+      <div class="ws3 bg-light-200 p2">
+        <span class="d-inline-block fw-700 pb4">Parent container</span>
+        <div class="box-content w100 p4 ba baw1 bg-light-100">
+          <span class="fw-700">Child container</span><br />
+          box-sizing: content-box<br />
+          width: 100%;<br />
+          padding: 16px;<br />
+          border-width: 1px;
+        </div>
+      </div>
+
+      <div class="ws3 bg-light-200 p2">
+        <span class="d-inline-block fw-700 pb4">Parent container</span>
+        <div class="box-border w100 p4 ba baw1 bg-light-100">
+          <span class="fw-700">Child container</span><br />
+          box-sizing: border-box<br />
+          width: 100%;<br />
+          padding: 16px;<br />
+          border-width: 1px;
+        </div>
+      </div>
+    </div>
+  </aside>
+</section>

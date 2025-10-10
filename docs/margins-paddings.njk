@@ -1,0 +1,662 @@
+---
+layout: base.njk
+title: Margins & Paddings
+---
+
+<header class="d-flex fd-column g4">
+  <h1>Margins & Paddings</h1>
+  <p>
+    Atomic classes for controlling element spacing using Foundation CSS spacing units. These
+    utilities help create consistent layouts and reduce the need for custom CSS.
+  </p>
+</header>
+
+<section>
+  <h2 id="margin">Margin</h2>
+  <p>
+    Immutable margin utilities based on Foundation CSS spacing units. These classes help maintain
+    consistency and avoid magic numbers in your stylesheets.
+  </p>
+
+  <p>
+    <strong>Important:</strong> Margin should never be declared outside of these utilities. If the
+    default spacing scale doesn't suit your design, customize and extend it before use.
+  </p>
+
+  <h3>Margin Class Abbreviations</h3>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Abbreviation</th>
+        <th scope="col">Definition</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>m</code></th>
+        <td>margin</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>mt</code></th>
+        <td>margin-top</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>mr</code></th>
+        <td>margin-right</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>mb</code></th>
+        <td>margin-bottom</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>ml</code></th>
+        <td>margin-left</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>mx</code></th>
+        <td>margin x-axis (left, right)</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>my</code></th>
+        <td>margin y-axis (top, bottom)</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>m-auto</code></th>
+        <td>margin auto (all directions)</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>mt-auto</code></th>
+        <td>margin-top auto</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>mr-auto</code></th>
+        <td>margin-right auto</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>mb-auto</code></th>
+        <td>margin-bottom auto</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>ml-auto</code></th>
+        <td>margin-left auto</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>mx-auto</code></th>
+        <td>margin x-axis auto</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Margin Classes</h3>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Size</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.m0</code></th>
+        <td><code>margin: 0;</code></td>
+        <td>0 SU</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.m1</code></th>
+        <td><code>margin: 0.25rem;</code></td>
+        <td>1 SU / 4px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.m2</code></th>
+        <td><code>margin: 0.5rem;</code></td>
+        <td>2 SU / 8px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.m3</code></th>
+        <td><code>margin: 0.75rem;</code></td>
+        <td>3 SU / 12px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.m4</code></th>
+        <td><code>margin: 1rem;</code></td>
+        <td>4 SU / 16px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.m5</code></th>
+        <td><code>margin: 1.25rem;</code></td>
+        <td>5 SU / 20px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.m6</code></th>
+        <td><code>margin: 1.5rem;</code></td>
+        <td>6 SU / 24px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.m7</code></th>
+        <td><code>margin: 2rem;</code></td>
+        <td>7 SU / 32px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.m8</code></th>
+        <td><code>margin: 2.5rem;</code></td>
+        <td>8 SU / 40px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.m9</code></th>
+        <td><code>margin: 3rem;</code></td>
+        <td>9 SU / 48px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.m10</code></th>
+        <td><code>margin: 3.5rem;</code></td>
+        <td>10 SU / 56px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.m11</code></th>
+        <td><code>margin: 4rem;</code></td>
+        <td>11 SU / 64px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.m12</code></th>
+        <td><code>margin: 4.5rem;</code></td>
+        <td>12 SU / 72px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.m13</code></th>
+        <td><code>margin: 5rem;</code></td>
+        <td>13 SU / 80px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.m14</code></th>
+        <td><code>margin: 7.5rem;</code></td>
+        <td>14 SU / 120px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.m15</code></th>
+        <td><code>margin: 10rem;</code></td>
+        <td>15 SU / 160px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.m16</code></th>
+        <td><code>margin: 12.5rem;</code></td>
+        <td>16 SU / 200px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Negative Margin Classes</h3>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Size</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.mn1</code></th>
+        <td><code>margin: -0.25rem;</code></td>
+        <td>-1 SU / -4px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.mn2</code></th>
+        <td><code>margin: -0.5rem;</code></td>
+        <td>-2 SU / -8px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.mn3</code></th>
+        <td><code>margin: -0.75rem;</code></td>
+        <td>-3 SU / -12px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.mn4</code></th>
+        <td><code>margin: -1rem;</code></td>
+        <td>-4 SU / -16px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.mn5</code></th>
+        <td><code>margin: -1.25rem;</code></td>
+        <td>-5 SU / -20px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.mn6</code></th>
+        <td><code>margin: -1.5rem;</code></td>
+        <td>-6 SU / -24px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.mn7</code></th>
+        <td><code>margin: -2rem;</code></td>
+        <td>-7 SU / -32px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.mn8</code></th>
+        <td><code>margin: -2.5rem;</code></td>
+        <td>-8 SU / -40px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.mn9</code></th>
+        <td><code>margin: -3rem;</code></td>
+        <td>-9 SU / -48px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.mn10</code></th>
+        <td><code>margin: -3.5rem;</code></td>
+        <td>-10 SU / -56px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.mn11</code></th>
+        <td><code>margin: -4rem;</code></td>
+        <td>-11 SU / -64px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.mn12</code></th>
+        <td><code>margin: -4.5rem;</code></td>
+        <td>-12 SU / -72px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.mn13</code></th>
+        <td><code>margin: -5rem;</code></td>
+        <td>-13 SU / -80px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.mn14</code></th>
+        <td><code>margin: -7.5rem;</code></td>
+        <td>-14 SU / -120px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.mn15</code></th>
+        <td><code>margin: -10rem;</code></td>
+        <td>-15 SU / -160px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.mn16</code></th>
+        <td><code>margin: -12.5rem;</code></td>
+        <td>-16 SU / -200px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Margin Examples</h3>
+  <div class="preview bg-light p4 br-sm">
+    <div class="d-flex fd-column g4">
+      <div class="d-flex g2">
+        <div class="bg-blue fc-white p2 m2">.m2</div>
+        <div class="bg-green fc-white p2 m4">.m4</div>
+        <div class="bg-purple fc-white p2 m6">.m6</div>
+      </div>
+      <div class="d-flex g2">
+        <div class="bg-blue fc-white p2 mt4 mr2 mb6 ml8">Different margins</div>
+        <div class="bg-green fc-white p2 mx-auto">.mx-auto</div>
+      </div>
+      <div class="d-flex g2">
+        <div class="bg-blue fc-white p2 mn4">.mn4 (negative)</div>
+        <div class="bg-green fc-white p2 mn6">.mn6 (negative)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 id="padding">Padding</h2>
+  <p>
+    Immutable padding utilities based on Foundation CSS spacing units. These classes provide
+    consistent internal spacing for elements.
+  </p>
+
+  <p>
+    <strong>Important:</strong> Padding should never be declared outside of these utilities. This
+    ensures consistency and avoids magic numbers in your stylesheets.
+  </p>
+
+  <h3>Padding Class Abbreviations</h3>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Abbreviation</th>
+        <th scope="col">Definition</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>p</code></th>
+        <td>padding</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>pt</code></th>
+        <td>padding-top</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>pr</code></th>
+        <td>padding-right</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>pb</code></th>
+        <td>padding-bottom</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>pl</code></th>
+        <td>padding-left</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>px</code></th>
+        <td>padding x-axis (left, right)</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>py</code></th>
+        <td>padding y-axis (top, bottom)</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Padding Classes</h3>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Size</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.p0</code></th>
+        <td><code>padding: 0;</code></td>
+        <td>0 SU</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.p1</code></th>
+        <td><code>padding: 0.25rem;</code></td>
+        <td>1 SU / 4px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.p2</code></th>
+        <td><code>padding: 0.5rem;</code></td>
+        <td>2 SU / 8px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.p3</code></th>
+        <td><code>padding: 0.75rem;</code></td>
+        <td>3 SU / 12px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.p4</code></th>
+        <td><code>padding: 1rem;</code></td>
+        <td>4 SU / 16px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.p5</code></th>
+        <td><code>padding: 1.25rem;</code></td>
+        <td>5 SU / 20px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.p6</code></th>
+        <td><code>padding: 1.5rem;</code></td>
+        <td>6 SU / 24px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.p7</code></th>
+        <td><code>padding: 2rem;</code></td>
+        <td>7 SU / 32px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.p8</code></th>
+        <td><code>padding: 2.5rem;</code></td>
+        <td>8 SU / 40px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.p9</code></th>
+        <td><code>padding: 3rem;</code></td>
+        <td>9 SU / 48px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.p10</code></th>
+        <td><code>padding: 3.5rem;</code></td>
+        <td>10 SU / 56px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.p11</code></th>
+        <td><code>padding: 4rem;</code></td>
+        <td>11 SU / 64px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.p12</code></th>
+        <td><code>padding: 4.5rem;</code></td>
+        <td>12 SU / 72px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.p13</code></th>
+        <td><code>padding: 5rem;</code></td>
+        <td>13 SU / 80px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.p14</code></th>
+        <td><code>padding: 7.5rem;</code></td>
+        <td>14 SU / 120px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.p15</code></th>
+        <td><code>padding: 10rem;</code></td>
+        <td>15 SU / 160px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.p16</code></th>
+        <td><code>padding: 12.5rem;</code></td>
+        <td>16 SU / 200px</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Padding Examples</h3>
+  <div class="preview bg-light p4 br-sm">
+    <div class="d-flex fd-column g4">
+      <div class="d-flex g2">
+        <div class="bg-blue fc-white p2">.p2</div>
+        <div class="bg-green fc-white p4">.p4</div>
+        <div class="bg-purple fc-white p6">.p6</div>
+      </div>
+      <div class="d-flex g2">
+        <div class="bg-blue fc-white pt4 pr2 pb6 pl8">Different paddings</div>
+        <div class="bg-green fc-white px4 py2">.px4 .py2</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 id="usage-examples">Usage Examples</h2>
+
+  <h3>Card Component with Spacing</h3>
+  <pre><code>&lt;div class="bg-white bs-md br-lg p6 mb4"&gt;
+  &lt;h3 class="fs-h3 fw-bold mb3"&gt;Card Title&lt;/h3&gt;
+  &lt;p class="fc-light-700 mb4"&gt;Card content with consistent spacing.&lt;/p&gt;
+  &lt;button class="btn btn--primary"&gt;Action&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+  <h3>Responsive Layout with Auto Margins</h3>
+  <pre><code>&lt;div class="d-flex fd-column sm:fd-row g4"&gt;
+  &lt;aside class="ws3 bg-light p4"&gt;
+    &lt;!-- Sidebar content --&gt;
+  &lt;/aside&gt;
+  &lt;main class="fl1 p4 mx-auto wmx8"&gt;
+    &lt;!-- Main content with auto margins and max width --&gt;
+  &lt;/main&gt;
+&lt;/div&gt;</code></pre>
+
+  <h3>Overlapping Elements with Negative Margins</h3>
+  <pre><code>&lt;div class="bg-blue p6"&gt;
+  &lt;div class="bg-white p4 mn4 br-md"&gt;
+    &lt;!-- Content overlapping with negative margin --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+  <h3>Button with Consistent Padding</h3>
+  <pre><code>&lt;button class="
+  d-inline-flex ai-center jc-center
+  bg-blue fc-white
+  px6 py3
+  br-sm fw-500
+  h:bg-blue-600
+"&gt;
+  Click Me
+&lt;/button&gt;</code></pre>
+
+  <h3>Responsive Spacing</h3>
+  <pre><code>&lt;section class="p4 sm:p6 md:p8 lg:p10"&gt;
+  &lt;!-- Padding increases with screen size --&gt;
+  &lt;div class="mb4 sm:mb6 md:mb8"&gt;
+    &lt;!-- Margin bottom increases with screen size --&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</section>
+
+<section>
+  <h2 id="best-practices">Best Practices</h2>
+
+  <div class="d-flex fd-column g4">
+    <div class="bg-green-025 p4 br-md">
+      <h4 class="fc-green fw-bold mb3">✅ Do</h4>
+      <ul class="list-unstyled fc-light-700">
+        <li class="mb2">• Use spacing units consistently throughout your design</li>
+        <li class="mb2">• Combine margin and padding classes for complex layouts</li>
+        <li class="mb2">• Use auto margins for centering and flex layouts</li>
+        <li class="mb2">• Apply responsive spacing with conditional classes</li>
+        <li class="mb2">• Use negative margins for overlapping elements</li>
+        <li class="mb2">• Consider the spacing scale when designing components</li>
+      </ul>
+    </div>
+
+    <div class="bg-red-025 p4 br-md">
+      <h4 class="fc-red fw-bold mb3">❌ Don't</h4>
+      <ul class="list-unstyled fc-light-700">
+        <li class="mb2">• Mix spacing units with custom CSS values</li>
+        <li class="mb2">• Use negative margins without understanding the layout</li>
+        <li class="mb2">• Apply excessive spacing that breaks visual hierarchy</li>
+        <li class="mb2">• Ignore responsive considerations for spacing</li>
+        <li class="mb2">• Use auto margins without proper container setup</li>
+        <li class="mb2">• Create inconsistent spacing patterns</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Spacing Guidelines</h3>
+
+  <div class="bg-light-025 p4 br-md">
+    <h4>When to Use Each Spacing Unit</h4>
+    <ul class="list-unstyled fc-light-700">
+      <li class="mb2"><strong>1-2 SU:</strong> Fine adjustments, component internal spacing</li>
+      <li class="mb2"><strong>3-4 SU:</strong> Standard spacing between elements</li>
+      <li class="mb2"><strong>5-6 SU:</strong> Section spacing, card padding</li>
+      <li class="mb2"><strong>7-8 SU:</strong> Large component spacing</li>
+      <li class="mb2"><strong>9+ SU:</strong> Page-level spacing, major sections</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2 id="conditional-classes">Conditional Classes</h2>
+  <p>All margin and padding classes support responsive breakpoints and state modifiers:</p>
+
+  <h3>Responsive Examples</h3>
+  <pre><code>&lt;!-- Different padding at different breakpoints --&gt;
+&lt;div class="p2 sm:p4 md:p6 lg:p8"&gt;
+  &lt;!-- 8px on mobile, 16px on tablet, 24px on desktop, 32px on large screens --&gt;
+&lt;/div&gt;
+
+&lt;!-- Different margins for different screen sizes --&gt;
+&lt;div class="mb2 sm:mb4 md:mb6"&gt;
+  &lt;!-- Bottom margin increases with screen size --&gt;
+&lt;/div&gt;</code></pre>
+
+  <h3>State Modifiers</h3>
+  <pre><code>&lt;!-- Hover effects with spacing --&gt;
+&lt;button class="p3 h:p4 t"&gt;
+  &lt;!-- Padding increases on hover --&gt;
+&lt;/button&gt;
+
+&lt;!-- Focus states with margins --&gt;
+&lt;input class="p3 f:mx2"&gt;
+  &lt;!-- Horizontal margin on focus --&gt;
+&lt;/input&gt;</code></pre>
+</section>

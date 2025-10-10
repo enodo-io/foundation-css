@@ -1,0 +1,124 @@
+@use "sass:list";
+@use "./px2rem" as *;
+@use "./responsify" as *;
+@use "../variables/spacing-units" as *;
+
+@function contains($list, $var) {
+  @return (null != list.index($list, $var));
+}
+
+@mixin forge-units($namespace, $rule, $rule2: null) {
+  @include responsify($namespace) {
+    &0 {
+      #{$rule}: 0 !important;
+
+      @if $rule2 {
+        #{$rule2}: 0 !important;
+      }
+    }
+
+    @each $su, $value in $spacing-units {
+      &#{$su} {
+        #{$rule}: px2rem($value) !important;
+
+        @if $rule2 {
+          #{$rule2}: px2rem($value) !important;
+        }
+      }
+    }
+  }
+}
+
+@mixin forge-units-neg($namespace, $rule, $rule2: null) {
+  @include responsify($namespace) {
+    @each $su, $value in $spacing-units {
+      &n#{$su} {
+        #{$rule}: -(px2rem($value)) !important;
+
+        @if $rule2 {
+          #{$rule2}: -(px2rem($value)) !important;
+        }
+      }
+    }
+  }
+}
+
+@mixin forge-units-auto($namespace, $rule, $rule2: null) {
+  @include responsify($namespace) {
+    &-auto {
+      #{$rule}: auto !important;
+
+      @if $rule2 {
+        #{$rule2}: auto !important;
+      }
+    }
+  }
+}
+
+@mixin forge-percent($namespace, $rule, $rule2: null) {
+  @include responsify($namespace) {
+    &50 {
+      #{$rule}: 50% !important;
+    }
+
+    &n50 {
+      #{$rule}: -50% !important;
+    }
+
+    &100 {
+      #{$rule}: 100% !important;
+    }
+
+    &n100 {
+      #{$rule}: -100% !important;
+    }
+
+    @if $rule2 {
+      &50 {
+        #{$rule2}: 50% !important;
+      }
+
+      &n50 {
+        #{$rule2}: -50% !important;
+      }
+
+      &100 {
+        #{$rule2}: 100% !important;
+      }
+
+      &n100 {
+        #{$rule2}: -100% !important;
+      }
+    }
+  }
+}
+
+@mixin forge-space-units($namespace, $type, $rule, $rule2: null) {
+  @include forge-units($namespace, $rule, $rule2);
+
+  @if contains($type, neg) {
+    @include forge-units-neg($namespace, $rule, $rule2);
+  }
+
+  @if contains($type, auto) {
+    @include forge-units-auto($namespace, $rule, $rule2);
+  }
+
+  @if contains($type, percent) {
+    @include forge-percent($namespace, $rule, $rule2);
+  }
+}
+
+@mixin forge-static($namespace, $rule, $rule2: null) {
+  @include responsify($namespace) {
+    @for $i from 1 through 12 {
+      &#{$i} {
+        #{$rule}: px2rem($i * $su-step) !important;
+
+        @if $rule2 {
+          #{$rule2}: px2rem($i * $su-step) !important;
+        }
+      }
+    }
+  }
+}

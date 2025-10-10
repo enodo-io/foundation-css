@@ -1,0 +1,22 @@
+.t {
+  transition-duration: 0.1s;
+  transition-property: all;
+  transition-timing-function: ease-in;
+  transition-delay: 0s;
+
+  &-unset {
+    transition-property: none;
+  }
+
+  &__slow {
+    transition-duration: 0.25s;
+  }
+
+  &__fast {
+    transition-duration: 0.05s;
+  }
+
+  &__delay {
+    transition-delay: 0.25s;
+  }
+}

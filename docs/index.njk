@@ -1,0 +1,647 @@
+---
+layout: base.njk
+title: Foundation CSS
+---
+
+<section class="d-flex fd-column g6">
+  <header class="d-flex fd-column g4 ta-center">
+    <h1 class="fs-canon fw-bold fc-dark">Foundation CSS</h1>
+    <p class="fs-paragon fc-light-700 lh-relaxed">
+      A lightweight, atomic-first CSS framework for building <strong>fast</strong>,
+      <strong>accessible</strong>, and <strong>maintainable</strong> web interfaces.
+    </p>
+    <div class="d-flex jc-center g4">
+      <a href="#installation" class="btn btn--primary">Get Started</a>
+      <a
+        href="https://github.com/enodo-io/foundation-css"
+        target="_blank"
+        rel="noopener"
+        class="btn btn--secondary"
+        >View on GitHub</a
+      >
+    </div>
+  </header>
+
+  <div class="d-grid grid__1 sm:grid__2 lg:grid__3 g6">
+    <div class="d-flex fd-column g3 p4 bg-light-025 br-md">
+      <div class="fs-h2 fc-blue">⚡</div>
+      <h3 class="fs-h3 fw-bold">Lightweight</h3>
+      <p class="fc-light-700">
+        Only 19KB gzipped. Import only what you need with modular SCSS architecture to reduce even
+        more.
+      </p>
+    </div>
+
+    <div class="d-flex fd-column g3 p4 bg-light-025 br-md">
+      <div class="fs-h2 fc-green">♿</div>
+      <h3 class="fs-h3 fw-bold">Accessible</h3>
+      <p class="fc-light-700">
+        Built with accessibility in mind. Semantic HTML, keyboard navigation, and screen reader
+        support.
+      </p>
+    </div>
+
+    <div class="d-flex fd-column g3 p4 bg-light-025 br-md">
+      <div class="fs-h2 fc-purple">📱</div>
+      <h3 class="fs-h3 fw-bold">Responsive</h3>
+      <p class="fc-light-700">
+        Mobile-first approach with consistent breakpoints. Works perfectly on all devices.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="d-flex fd-column g4">
+  <header class="d-flex ai-center jc-space-between">
+    <h2 id="philosophy">Philosophy</h2>
+    <a href="#philosophy">🔗</a>
+  </header>
+
+  <div class="bg-light-025 p6 br-lg">
+    <p class="fs-h3 fw-500 fc-dark mb4">
+      Created in <strong>2019</strong> and now <strong>open source</strong>, Foundation CSS was born
+      from a simple frustration: existing CSS frameworks were either too heavy, too opinionated, or
+      not flexible enough.
+    </p>
+
+    <p class="fc-light-700 lh-relaxed">
+      Inspired by
+      <a
+        href="https://stackoverflow.design/product/develop/using-stacks/"
+        target="_blank"
+        rel="noopener"
+        class="fc-blue h:underline"
+        >Stacks</a
+      >
+      and
+      <a href="https://www.bbc.com/gel" target="_blank" rel="noopener" class="fc-blue h:underline"
+        >BBC GEL guidelines</a
+      >, Foundation CSS follows atomic design principles where every class is an independent,
+      composable building block.
+    </p>
+
+    <p class="fc-light-700 lh-relaxed">
+      Our goal is to help you create <strong>beautiful, readable interfaces quickly</strong> that
+      adapt correctly to all devices and are accessible to all people. Whether you're building a
+      simple website or a complex web application, Foundation CSS provides the foundation for
+      consistent, scalable design systems.
+    </p>
+  </div>
+</section>
+
+<section class="d-flex fd-column g4">
+  <header class="d-flex ai-center jc-space-between">
+    <h2 id="atomic-vs-components">Atomic CSS vs Components</h2>
+    <a href="#atomic-vs-components">🔗</a>
+  </header>
+
+  <div class="d-flex fd-column g4">
+    <p class="fc-light-700 lh-relaxed">
+      Foundation CSS excels at rapid prototyping and one-off styling, but it doesn't prevent you
+      from creating traditional CSS components for repeated elements. Here's when to use each
+      approach:
+    </p>
+
+    <div class="d-grid grid__1 md:grid__2 g6">
+      <div class="d-flex fd-column g3 p4 bg-green-025 br-md">
+        <h3 class="fs-h3 fw-bold fc-green">✅ Use Atomic Classes</h3>
+        <ul class="list-unstyled fc-light-700">
+          <li class="mb2">• Quick prototypes and layouts</li>
+          <li class="mb2">• One-off styling needs</li>
+          <li class="mb2">• Responsive adjustments</li>
+          <li class="mb2">• Spacing and typography</li>
+          <li class="mb2">• Utility styling (colors, borders, etc.)</li>
+        </ul>
+      </div>
+
+      <div class="d-flex fd-column g3 p4 bg-blue-025 br-md">
+        <h3 class="fs-h3 fw-bold fc-blue">🏗️ Create Components</h3>
+        <ul class="list-unstyled fc-light-700">
+          <li class="mb2">• Repeated UI elements (buttons, cards, forms)</li>
+          <li class="mb2">• Complex interactions and animations</li>
+          <li class="mb2">• When atomic classes become too verbose</li>
+          <li class="mb2">• Brand-specific styling</li>
+          <li class="mb2">• Performance-critical components</li>
+        </ul>
+      </div>
+    </div>
+
+    <aside class="bg-light-025 p4 br-md">
+      <h4 class="fs-h4 fw-bold mb3">💡 Pro Tip: Performance Optimization</h4>
+      <p class="fc-light-700 mb3">
+        Always arbitrate between atomic classes and components based on what will be lighter in
+        terms of bundle size. When writing CSS, try to write it at the component level to avoid
+        loading unnecessary CSS everywhere (unless the component is present on all pages).
+      </p>
+
+      <pre><code>// ❌ Too verbose - consider a component
+&lt;button class="d-inline-flex ai-center jc-center bg-blue fc-white
+               p3 br-sm fw-500 t h:bg-blue-600 f:bg-blue-700"&gt;
+  Submit
+&lt;/button&gt;
+
+// ✅ Better as a component
+&lt;button class="btn btn--primary"&gt;Submit&lt;/button&gt;</code></pre>
+    </aside>
+  </div>
+</section>
+
+<section class="d-flex fd-column g4">
+  <header class="d-flex ai-center jc-space-between">
+    <h2 id="installation">Installation</h2>
+    <a href="#installation">🔗</a>
+  </header>
+
+  <div class="d-flex fd-column g4">
+    <h3>NPM Package</h3>
+    <pre><code>npm install @enodo/foundation-css</code></pre>
+
+    <h3>Full Usage</h3>
+    <pre><code>@use "@enodo/foundation-css";</code></pre>
+
+    <h3>CDN (for quick testing)</h3>
+    <pre><code>&lt;link rel="stylesheet" href="https://unpkg.com/@enodo/foundation-css@latest/dist/index.css"&gt;</code></pre>
+
+    <h3>Modular Imports</h3>
+    <p class="fc-light-700">Import only what you need to optimize your bundle size:</p>
+    <pre><code>@use "@enodo/foundation-css/spacing-units";
+@use "@enodo/foundation-css/colors";
+@use "@enodo/foundation-css/typographies";
+@use "@enodo/foundation-css/cursors";
+// Import only the modules you need</code></pre>
+
+    <h3>Customization</h3>
+    <p class="fc-light-700">Customize the framework by overriding variables:</p>
+    <pre><code>@use "@enodo/foundation-css" with (
+  $backgrounds: (
+    size: (
+      auto,
+      cover,
+      contain,
+    ),
+    repeat: (
+      repeat,
+      no-repeat,
+      repeat-x,
+      repeat-y,
+    ),
+    position: (
+      center,
+      top,
+      bottom,
+      left,
+      left-top,
+      left-bottom,
+      right,
+      right-top,
+      right-bottom,
+    ),
+    attachment: (
+      fixed,
+      local,
+      scroll,
+    ),
+  ),
+  $borders: (
+    xs: 3px,
+    sm: 5px,
+    md: 8px,
+    lg: 16px,
+    xl: 24px,
+  ),
+  $box-shadows: (
+    none: none,
+    sm: (
+      0 1px 2px hsla(0deg, 0%, 0%, 0.05),
+      0 1px 4px hsla(0deg, 0%, 0%, 0.05),
+      0 2px 8px hsla(0deg, 0%, 0%, 0.05),
+    ),
+    md: (
+      0 1px 3px hsla(0deg, 0%, 0%, 0.06),
+      0 2px 6px hsla(0deg, 0%, 0%, 0.06),
+      0 3px 8px hsla(0deg, 0%, 0%, 0.09),
+    ),
+    lg: (
+      0 1px 4px hsla(0deg, 0%, 0%, 0.09),
+      0 3px 8px hsla(0deg, 0%, 0%, 0.09),
+      0 4px 13px hsla(0deg, 0%, 0%, 0.13),
+    ),
+    xl: (
+      0 10px 24px hsla(0deg, 0%, 0%, 0.05),
+      0 20px 48px hsla(0deg, 0%, 0%, 0.05),
+      0 1px 4px hsla(0deg, 0%, 0%, 0.1),
+    ),
+  ),
+  $breakpoints: (
+    sm: 600px,
+    md: 1008px,
+    lg: 1280px,
+  ),
+  $colors: (
+    light: (
+      "main": #fff,
+      "025": #f9f9f9,
+      "050": #f1f2f7,
+      "075": #eaecf2,
+      "100": #e1e3e8,
+      "200": #c8c8d5,
+      "300": #a9a9bf,
+      "400": #8b8da8,
+      "500": #6b6e94,
+      "600": #4f517d,
+      "700": #30336b,
+      "800": #27294f,
+      "900": #181a34,
+    ),
+    green: (
+      "main": #4bdc9f,
+      "100": #e8f8f2,
+      "200": #d1f1e5,
+      "300": #9ee6c7,
+      "400": #4bdc9f,
+      "500": #2bc885,
+      "600": #1a8f5f,
+    ),
+    red: (
+      "main": #ff855c,
+      "100": #ffe8e0,
+      "200": #ffd1c2,
+      "300": #ffb399,
+      "400": #ff855c,
+      "500": #ff6b33,
+      "600": #e54d1a,
+    ),
+    orange: (
+      "main": #ffb55c,
+      "100": #fff4e6,
+      "200": #ffe9cc,
+      "300": #ffd699,
+      "400": #ffb55c,
+      "500": #ff9f1f,
+      "600": #e6850a,
+    ),
+    yellow: (
+      "main": #ffd749,
+      "100": #fffce6,
+      "200": #fff9cc,
+      "300": #fff299,
+      "400": #ffd749,
+      "500": #ffcc1a,
+      "600": #e6b800,
+    ),
+    blue: (
+      "main": #4a90e2,
+      "100": #e6f2ff,
+      "200": #cce5ff,
+      "300": #99ccff,
+      "400": #4a90e2,
+      "500": #2e7ce6,
+      "600": #1a5bb3,
+    ),
+    purple: (
+      "main": #da93f3,
+      "100": #f4e6ff,
+      "200": #e9ccff,
+      "300": #d399ff,
+      "400": #da93f3,
+      "500": #c266e6,
+      "600": #a633cc,
+    ),
+    pink: (
+      "main": #ff92b9,
+      "100": #ffe6f0,
+      "200": #ffcce1,
+      "300": #ff99c2,
+      "400": #ff92b9,
+      "500": #ff66a3,
+      "600": #e6337a,
+    ),
+    teal: (
+      "main": #20c997,
+      "100": #e6faf5,
+      "200": #ccf5eb,
+      "300": #99ebd7,
+      "400": #20c997,
+      "500": #1aa085,
+      "600": #147a66,
+    ),
+  ),
+  $cursors: auto, default, pointer, wait, move, not-allowed, help, text, grab, grabbing,
+  $displays:
+    block, grid, inline-grid, inline, inline-block, flex, inline-flex, none, table, table-cell,
+    table-row, unset,
+  $pointer-events: auto, none,
+  $user-selects: auto, none,
+  $user-drags: auto, none,
+  $list-styles: disc, decimal, inherit,
+  $list-positions: inside, outside,
+  $object-fit: contain, cover, fill, none,
+  $opacities: (0, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100),
+  $opacities-hover: (0, 5, 50, 80, 100),
+  $opacities-focus: (100),
+  $positions: absolute, fixed, relative, static, sticky, unset,
+  $spacing-units: (
+    1: 4px,
+    2: 8px,
+    3: 12px,
+    4: 16px,
+    5: 20px,
+    6: 24px,
+    7: 32px,
+    8: 40px,
+    9: 48px,
+    10: 56px,
+    11: 64px,
+    12: 72px,
+    13: 80px,
+    14: 120px,
+    15: 160px,
+    16: 200px,
+  ),
+  $su-full: 1008px, // 996
+  $su-step: math.div($su-full, 12),
+  $font-families: (
+    sans: (
+      system-ui,
+      -apple-system,
+      "Segoe UI",
+      "Roboto",
+      "Helvetica Neue",
+      "Arial",
+      "Noto Sans",
+      "Liberation Sans",
+      sans-serif,
+      "Apple Color Emoji",
+      "Segoe UI Emoji",
+      "Segoe UI Symbol",
+      "Noto Color Emoji",
+    ),
+    mono: (
+      "SFMono-Regular",
+      "Consolas",
+      "Liberation Mono",
+      "Menlo",
+      "Courier",
+      monospace,
+    ),
+  ),
+  $base-font-size: 16px,
+  $font-sizes:
+    atlas, elephant, imperial, royal, foolscap, canon, trafalgar, paragon, double-pica, great-primer,
+    body-copy, pica, long-primer, brevier, minion,
+  $font-weights: 300, 400, 500, 600, 700, 800, 900,
+  $font-styles: normal, italic, unset,
+  $text-aligns: left, center, right, justify, unset,
+  $text-decorations: none, underline, line-through,
+  $text-transforms: capitalize, lowercase, uppercase, none, unset,
+  $white-spaces: normal, nowrap, pre, pre-wrap, pre-line, unset,
+  $word-breaks: normal, break-all, keep-all, inherit, initial, unset,
+  $overflow-wraps: normal, break-word, inherit, initial, unset,
+  $word-wraps: break-word,
+  $hyphens: none, auto, unset,
+  $vertical-aligns: baseline, bottom, middle, sub, super, text-bottom, text-top, top, unset,
+  $z-indexes: (
+    hide: -1,
+    base: 0,
+    selected: 25,
+    active: 50,
+    dropdown: 1000,
+    popover: 2000,
+    tooltip: 3000,
+    banner: 4000,
+    nav: 5000,
+    nav-fixed: 5050,
+    modal-bg: 9000,
+    modal: 9050,
+  )
+);
+</code></pre>
+  </div>
+</section>
+
+<section class="d-flex fd-column g4">
+  <header class="d-flex ai-center jc-space-between">
+    <h2 id="quick-examples">Quick Examples</h2>
+    <a href="#quick-examples">🔗</a>
+  </header>
+
+  <div class="d-flex fd-column g6">
+    <div class="d-flex fd-column g3">
+      <h3>Responsive Card Layout</h3>
+      <pre><code>&lt;div class="d-grid grid__1 sm:grid__2 lg:grid__3 g4"&gt;
+  &lt;div class="bg-white bs-md br-lg p4"&gt;
+    &lt;h3 class="fs-h3 fw-bold mb3"&gt;Card Title&lt;/h3&gt;
+    &lt;p class="fc-light-700 lh-relaxed"&gt;Card content goes here.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="d-flex fd-column g3">
+      <h3>Interactive Button</h3>
+      <pre><code>&lt;button class="
+  d-inline-flex ai-center jc-center
+  bg-blue fc-white
+  p3 br-sm fw-500
+  h:bg-blue-600 f:bg-blue-700
+  t
+"&gt;
+  Click Me
+&lt;/button&gt;</code></pre>
+    </div>
+
+    <div class="d-flex fd-column g3">
+      <h3>Typography Scale</h3>
+      <pre><code>&lt;h1 class="fs-canon fw-bold mb4"&gt;Main Heading&lt;/h1&gt;
+&lt;h2 class="fs-trafalgar fw-600 mb3"&gt;Section Heading&lt;/h2&gt;
+&lt;p class="fs-body-copy fc-light-700 lh-relaxed"&gt;
+  Body text with optimal line height for readability.
+&lt;/p&gt;</code></pre>
+    </div>
+  </div>
+</section>
+
+<section class="d-flex fd-column g4">
+  <header class="d-flex ai-center jc-space-between">
+    <h2 id="features">Key Features</h2>
+    <a href="#features">🔗</a>
+  </header>
+
+  <div class="d-grid grid__1 md:grid__2 g6">
+    <div class="d-flex fd-column g3">
+      <h3 class="fs-h3 fw-bold">🎨 Design System Ready</h3>
+      <ul class="list-unstyled fc-light-700">
+        <li class="mb2">• 16 Spacing Units for consistent rhythm</li>
+        <li class="mb2">• 15 Typography sizes with semantic naming</li>
+        <li class="mb2">• Comprehensive color system with variations</li>
+        <li class="mb2">• Consistent border radius and shadows</li>
+      </ul>
+    </div>
+
+    <div class="d-flex fd-column g3">
+      <h3 class="fs-h3 fw-bold">📱 Mobile-First Responsive</h3>
+      <ul class="list-unstyled fc-light-700">
+        <li class="mb2">• Breakpoints: 600px, 1008px, 1280px</li>
+        <li class="mb2">• Conditional classes: sm:, md:, lg:</li>
+        <li class="mb2">• Hover states: h: prefix</li>
+        <li class="mb2">• Focus states: f: prefix</li>
+      </ul>
+    </div>
+
+    <div class="d-flex fd-column g3">
+      <h3 class="fs-h3 fw-bold">♿ Accessibility Focused</h3>
+      <ul class="list-unstyled fc-light-700">
+        <li class="mb2">• Rem-based units for text scaling</li>
+        <li class="mb2">• High contrast color combinations</li>
+        <li class="mb2">• Keyboard navigation support</li>
+        <li class="mb2">• Screen reader friendly</li>
+      </ul>
+    </div>
+
+    <div class="d-flex fd-column g3">
+      <h3 class="fs-h3 fw-bold">⚡ Performance Optimized</h3>
+      <ul class="list-unstyled fc-light-700">
+        <li class="mb2">• Modular architecture</li>
+        <li class="mb2">• Tree-shakeable imports</li>
+        <li class="mb2">• Minimal CSS footprint</li>
+        <li class="mb2">• No JavaScript dependencies</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="d-flex fd-column g4">
+  <header class="d-flex ai-center jc-space-between">
+    <h2 id="component-creation">Creating Components</h2>
+    <a href="#component-creation">🔗</a>
+  </header>
+
+  <div class="d-flex fd-column g4">
+    <p class="fc-light-700">
+      Create custom components using Foundation CSS variables for consistency:
+    </p>
+
+    <pre><code>@use "sass:map";
+@use "@enodo/foundation-css/variables/spacing-units" as *;
+@use "@enodo/foundation-css/variables/borders" as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: map.get($borders, sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  // Use Foundation CSS spacing units
+  padding: map.get($spacing-units, 3) map.get($spacing-units, 5);
+
+  &__primary {
+    background-color: var(--blue);
+    color: var(--white);
+
+    &:hover {
+      background-color: var(--blue-600);
+    }
+  }
+}</code></pre>
+
+    <p class="fc-light-700">
+      This approach ensures consistency with your design system's spacing scale while creating
+      reusable, maintainable components.
+    </p>
+  </div>
+</section>
+
+<section class="d-flex fd-column g4">
+  <header class="d-flex ai-center jc-space-between">
+    <h2 id="next-steps">Next Steps</h2>
+    <a href="#next-steps">🔗</a>
+  </header>
+
+  <div class="d-grid grid__1 md:grid__2 g4">
+    <a
+      href="/conditional-classes"
+      class="d-flex fd-column g3 p4 bg-light-025 br-md h:bg-light-100 t"
+    >
+      <h3 class="fs-h3 fw-bold fc-blue">Conditional Classes</h3>
+      <p class="fc-light-700">
+        Learn about responsive breakpoints, hover states, and focus management.
+      </p>
+    </a>
+
+    <a href="/sizing" class="d-flex fd-column g3 p4 bg-light-025 br-md h:bg-light-100 t">
+      <h3 class="fs-h3 fw-bold fc-blue">Sizing Concepts</h3>
+      <p class="fc-light-700">
+        Understand spacing units, typography scale, and responsive design principles.
+      </p>
+    </a>
+
+    <a href="/palette" class="d-flex fd-column g3 p4 bg-light-025 br-md h:bg-light-100 t">
+      <h3 class="fs-h3 fw-bold fc-blue">Color Palette</h3>
+      <p class="fc-light-700">
+        Understand the color system, accessibility, and customization principles.
+      </p>
+    </a>
+
+    <a href="/colors" class="d-flex fd-column g3 p4 bg-light-025 br-md h:bg-light-100 t">
+      <h3 class="fs-h3 fw-bold fc-blue">Color Classes</h3>
+      <p class="fc-light-700">
+        Learn how to use color utility classes for text, backgrounds, and borders.
+      </p>
+    </a>
+
+    <a href="/typographies" class="d-flex fd-column g3 p4 bg-light-025 br-md h:bg-light-100 t">
+      <h3 class="fs-h3 fw-bold fc-blue">Typography</h3>
+      <p class="fc-light-700">Discover the typography scale and semantic naming conventions.</p>
+    </a>
+  </div>
+</section>
+
+<style>
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    &--primary {
+      background-color: var(--blue);
+      color: var(--white);
+
+      &:hover {
+        background-color: var(--blue-600);
+      }
+
+      &:focus {
+        background-color: var(--blue-700);
+        outline: 2px solid var(--blue-200);
+        outline-offset: 2px;
+      }
+    }
+
+    &--secondary {
+      background-color: var(--light-100);
+      color: var(--light-700);
+      border: 1px solid var(--light-300);
+
+      &:hover {
+        background-color: var(--light-200);
+        border-color: var(--light-400);
+      }
+
+      &:focus {
+        background-color: var(--light-200);
+        border-color: var(--blue);
+        outline: 2px solid var(--blue-200);
+        outline-offset: 2px;
+      }
+    }
+  }
+</style>

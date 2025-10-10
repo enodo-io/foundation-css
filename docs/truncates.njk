@@ -1,0 +1,89 @@
+---
+layout: base.njk
+title: Text truncation
+---
+
+<header class="d-flex fd-column g4">
+  <h1>Text truncation</h1>
+  <p>Atomic classes for managing an element’s text truncatation.</p>
+</header>
+
+<section>
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="classes">Classes</h2>
+    <a href="#classes">🔗</a>
+  </header>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.truncate</code></th>
+        <td>Single-line truncation with ellipsis.</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.truncate2</code></th>
+        <td>Clamp text to 2 line.</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.truncate3</code></th>
+        <td>Clamp text to 3 line.</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.truncate4</code></th>
+        <td>Clamp text to 4 line.</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.truncate5</code></th>
+        <td>Clamp text to 5 line.</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.truncate-fade</code></th>
+        <td>Fade-out effect at the bottom of the text block.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <aside>
+    <header class="d-flex ai-center jc-space-between pt6 pb4">
+      <h3 id="truncate-examples">Examples</h3>
+      <a href="#truncate-examples">🔗</a>
+    </header>
+    <pre><code>&lt;p class="truncate"&gt;
+  This sentence is too long to fit in one line and will be truncated with an ellipsis.
+&lt;/p&gt;
+
+&lt;p class="truncate3"&gt;
+  This paragraph demonstrates a multiline truncation effect using the -webkit-line-clamp property.
+  It limits the visible lines and hides the overflowed text.
+&lt;/p&gt;
+
+&lt;div class="truncate-fade hs1"&gt;
+  &lt;p&gt;This block demonstrates the fade-out truncation effect applied at the bottom.&lt;br /&gt;The text gradually fades to transparent.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    <div class="preview">
+      <div class="wmx3">
+        <p class="truncate">
+          This sentence is too long to fit in one line and will be truncated with an ellipsis.
+        </p>
+
+        <p class="truncate3">
+          This paragraph demonstrates a multiline truncation effect using the -webkit-line-clamp
+          property. It limits the visible lines and hides the overflowed text.
+        </p>
+
+        <div class="truncate-fade hs1">
+          <p>
+            This block demonstrates the fade-out truncation effect applied at the bottom.<br />The
+            text gradually fades to transparent.
+          </p>
+        </div>
+      </div>
+    </div>
+  </aside>
+</section>

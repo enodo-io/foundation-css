@@ -1,0 +1,122 @@
+---
+layout: base.njk
+title: Borders radius
+---
+
+<header class="d-flex fd-column g4">
+  <h1>Border radius</h1>
+  <p>Atomic classes for managing an element’s border-radius properties.</p>
+</header>
+
+<section>
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="classes">Classes</h2>
+    <a href="#classes">🔗</a>
+  </header>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.bar0</code></th>
+        <td><code>border-radius: 0;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.bar-xs</code></th>
+        <td><code>border-radius: 3px;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.bar-sm</code></th>
+        <td><code>border-radius: 5px;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.bar-md</code></th>
+        <td><code>border-radius: 8px;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.bar-lg</code></th>
+        <td><code>border-radius: 16px;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.bar-xl</code></th>
+        <td><code>border-radius: 24px;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.bar-circle</code></th>
+        <td><code>border-radius: 100%;</code></td>
+      </tr>
+
+      <tr>
+        <th scope="row"><code>.btlr-*</code></th>
+        <td><code>border-top-left-radius: *;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.btrr-*</code></th>
+        <td><code>border-top-right-radius: *;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.bblr-*</code></th>
+        <td><code>border-bottom-left-radius: *;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.bbrr-*</code></th>
+        <td><code>border-bottom-right-radius: *;</code></td>
+      </tr>
+
+      <tr>
+        <th scope="row"><code>.btr-*</code></th>
+        <td><code>border-top-radius: *;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.bbr-*</code></th>
+        <td><code>border-bottom-radius: *;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.blr-*</code></th>
+        <td><code>border-left-radius: *;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.brr-*</code></th>
+        <td><code>border-right-radius: *;</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <aside>
+    <header class="d-flex ai-center jc-space-between pt6 pb4">
+      <h3 id="border-radius-examples">Examples</h3>
+      <a href="#border-radius-examples">🔗</a>
+    </header>
+    <pre><code>&lt;div class="ba bar0"&gt;No radius&lt;/div&gt;
+&lt;div class="ba bar-xs"&gt;Extra small radius&lt;/div&gt;
+&lt;div class="ba bar-sm"&gt;Small radius&lt;/div&gt;
+&lt;div class="ba bar-md"&gt;Medium radius&lt;/div&gt;
+&lt;div class="ba bar-lg"&gt;Large radius&lt;/div&gt;
+&lt;div class="ba bar-xl"&gt;Extra large radius&lt;/div&gt;
+&lt;div class="ba bar-circle"&gt;Circle&lt;/div&gt;
+&lt;div class="ba bar-lg btlr0 btrr0"&gt;Rounded bottom only&lt;/div&gt;
+&lt;div class="ba bar-lg bblr0 bbrr0"&gt;Rounded top only&lt;/div&gt;
+&lt;div class="ba bar-lg btlr-xl btrr-xl"&gt;Rounded top corners&lt;/div&gt;
+&lt;div class="ba bar-lg bblr-xs bbrr-xs"&gt;Rounded bottom corners&lt;/div&gt;</code></pre>
+    <div class="preview">
+      <ul class="d-grid grid__3 g4">
+        <li class="bg-light p2 ba bar0">.bar0</li>
+        <li class="bg-light p2 ba bar-xs">.bar-xs</li>
+        <li class="bg-light p2 ba bar-sm">.bar-sm</li>
+        <li class="bg-light p2 ba bar-md">.bar-md</li>
+        <li class="bg-light p2 ba bar-lg">.bar-lg</li>
+        <li class="bg-light p2 ba bar-xl">.bar-xl</li>
+        <li class="bg-light p2 ba bar-circle">.bar-circle</li>
+        <li class="bg-light p2 ba bar-lg btlr0 btrr0">top 0</li>
+        <li class="bg-light p2 ba bar-lg bblr0 bbrr0">bottom 0</li>
+        <li class="bg-light p2 ba bar-lg btlr-xl btrr-xl">top xl</li>
+        <li class="bg-light p2 ba bar-lg bblr-xs bbrr-xs">bottom xs</li>
+      </ul>
+    </div>
+  </aside>
+</section>

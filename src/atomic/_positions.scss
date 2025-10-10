@@ -1,0 +1,13 @@
+@forward "../variables/positions";
+@use "sass:list";
+@use "sass:map";
+@use "../functions/responsify" as *;
+@use "../variables/positions" as *;
+
+@include responsify(ps) {
+  @each $position in $positions {
+    &-#{$position} {
+      position: $position !important;
+    }
+  }
+}

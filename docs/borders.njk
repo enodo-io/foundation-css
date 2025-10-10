@@ -1,0 +1,370 @@
+---
+layout: base.njk
+title: Borders
+---
+
+<header class="d-flex fd-column g4">
+  <h1>Borders</h1>
+  <p>Atomic classes for managing an element’s borders properties.</p>
+</header>
+
+<section>
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="classes">Classes</h2>
+    <a href="#classes">🔗</a>
+  </header>
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Responsiveness</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.ba</code></th>
+        <td><code>border: solid 1px;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.bt</code></th>
+        <td><code>border-top: solid 1px;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.bb</code></th>
+        <td><code>border-bottom: solid 1px;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.bl</code></th>
+        <td><code>border-left: solid 1px;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.br</code></th>
+        <td><code>border-right: solid 1px;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.by</code></th>
+        <td><code>border-top: solid 1px; border-bottom: solid 1px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.bx</code></th>
+        <td><code>border-left: solid 1px; border-right: solid 1px;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+    </tbody>
+  </table>
+  <aside>
+    <header class="d-flex ai-center jc-space-between pt6 pb4">
+      <h3 id="border-examples">Examples</h3>
+      <a href="#border-examples">🔗</a>
+    </header>
+    <pre><code>&lt;div class="ba"&gt;&lt;/div&gt;
+&lt;div class="bt"&gt;&lt;/div&gt;
+&lt;div class="br"&gt;&lt;/div&gt;
+&lt;div class="bb"&gt;&lt;/div&gt;
+&lt;div class="bl"&gt;&lt;/div&gt;
+&lt;div class="bx"&gt;&lt;/div&gt;
+&lt;div class="by"&gt;&lt;/div&gt;</code></pre>
+    <div class="preview">
+      <ul class="d-grid grid__3 g4">
+        <li class="bg-light p2 ba">.ba</li>
+        <li class="bg-light p2 bt">.bt</li>
+        <li class="bg-light p2 bb">.bb</li>
+        <li class="bg-light p2 bl">.bl</li>
+        <li class="bg-light p2 br">.br</li>
+        <li class="bg-light p2 bx">.bx</li>
+        <li class="bg-light p2 by">.by</li>
+      </ul>
+    </div>
+  </aside>
+</section>
+
+<section>
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="border-widths">Border Widths</h2>
+    <a href="#border-widths">🔗</a>
+  </header>
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Responsiveness</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.baw0</code></th>
+        <td><code>border-width: 0;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.baw1</code></th>
+        <td><code>border-width: 1px;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.baw2</code></th>
+        <td><code>border-width: 2px;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.baw3</code></th>
+        <td><code>border-width: 4px;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+
+      <tr>
+        <th scope="row"><code>.btw0</code></th>
+        <td><code>border-top-width: 0;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.btw1</code></th>
+        <td><code>border-top-width: 1px;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.btw2</code></th>
+        <td><code>border-top-width: 2px;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.btw3</code></th>
+        <td><code>border-top-width: 4px;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+
+      <tr>
+        <th scope="row"><code>.brw0</code></th>
+        <td><code>border-right-width: 0;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.brw1</code></th>
+        <td><code>border-right-width: 1px;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.brw2</code></th>
+        <td><code>border-right-width: 2px;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.brw3</code></th>
+        <td><code>border-right-width: 4px;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+
+      <tr>
+        <th scope="row"><code>.bbw0</code></th>
+        <td><code>border-bottom-width: 0;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.bbw1</code></th>
+        <td><code>border-bottom-width: 1px;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.bbw2</code></th>
+        <td><code>border-bottom-width: 2px;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.bbw3</code></th>
+        <td><code>border-bottom-width: 4px;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+
+      <tr>
+        <th scope="row"><code>.blw0</code></th>
+        <td><code>border-left-width: 0;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.blw1</code></th>
+        <td><code>border-left-width: 1px;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.blw2</code></th>
+        <td><code>border-left-width: 2px;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.blw3</code></th>
+        <td><code>border-left-width: 4px;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+
+      <tr>
+        <th scope="row"><code>.bxw*</code></th>
+        <td><code>border-left-width / border-right-width: *;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.byw*</code></th>
+        <td><code>border-top-width / border-bottom-width: *;</code></td>
+        <td class="fc-red ta-center">N</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <aside>
+    <header class="d-flex ai-center jc-space-between pt6 pb4">
+      <h3 id="border-width-examples">Examples</h3>
+      <a href="#border-width-examples">🔗</a>
+    </header>
+    <pre><code>&lt;div class="ba baw0"&gt;No border&lt;/div&gt;
+&lt;div class="ba baw1"&gt;1px border&lt;/div&gt;
+&lt;div class="ba baw2"&gt;2px border&lt;/div&gt;
+&lt;div class="ba baw3"&gt;4px border&lt;/div&gt;
+
+&lt;div class="bt btw3"&gt;Top border 4px&lt;/div&gt;
+&lt;div class="br brw2"&gt;Right border 2px&lt;/div&gt;
+&lt;div class="bb bbw1"&gt;Bottom border 1px&lt;/div&gt;
+&lt;div class="bl blw0"&gt;Left border removed&lt;/div&gt;
+
+&lt;div class="bx bxw2"&gt;Horizontal borders 2px&lt;/div&gt;
+&lt;div class="by byw3"&gt;Vertical borders 4px&lt;/div&gt;</code></pre>
+    <div class="preview">
+      <ul class="d-grid grid__3 g4">
+        <li class="bg-light p2 ba baw0">.baw0</li>
+        <li class="bg-light p2 ba baw1">.baw1</li>
+        <li class="bg-light p2 ba baw2">.baw2</li>
+        <li class="bg-light p2 ba baw3">.baw3</li>
+        <li class="bg-light p2 bt btw3">.btw3</li>
+        <li class="bg-light p2 br brw2">.brw2</li>
+        <li class="bg-light p2 bb bbw1">.bbw1</li>
+        <li class="bg-light p2 bl blw0">.blw0</li>
+        <li class="bg-light p2 bx bxw2">.bxw2</li>
+        <li class="bg-light p2 by byw3">.byw3</li>
+      </ul>
+    </div>
+  </aside>
+</section>
+
+<section>
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="border-styles">Border Styles</h2>
+    <a href="#border-styles">🔗</a>
+  </header>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.bas-solid</code></th>
+        <td><code>border-style: solid;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.bas-dashed</code></th>
+        <td><code>border-style: dashed;</code></td>
+      </tr>
+
+      <tr>
+        <th scope="row"><code>.bts-solid</code></th>
+        <td><code>border-top-style: solid;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.bts-dashed</code></th>
+        <td><code>border-top-style: dashed;</code></td>
+      </tr>
+
+      <tr>
+        <th scope="row"><code>.brs-solid</code></th>
+        <td><code>border-right-style: solid;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.brs-dashed</code></th>
+        <td><code>border-right-style: dashed;</code></td>
+      </tr>
+
+      <tr>
+        <th scope="row"><code>.bbs-solid</code></th>
+        <td><code>border-bottom-style: solid;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.bbs-dashed</code></th>
+        <td><code>border-bottom-style: dashed;</code></td>
+      </tr>
+
+      <tr>
+        <th scope="row"><code>.bls-solid</code></th>
+        <td><code>border-left-style: solid;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.bls-dashed</code></th>
+        <td><code>border-left-style: dashed;</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <aside>
+    <header class="d-flex ai-center jc-space-between pt6 pb4">
+      <h3 id="border-styles-examples">Examples</h3>
+      <a href="#border-styles-examples">🔗</a>
+    </header>
+    <pre><code>&lt;div class="ba bas-solid"&gt;Solid border&lt;/div&gt;
+&lt;div class="ba bas-dashed"&gt;Dashed border&lt;/div&gt;
+
+&lt;div class="bt bts-dashed"&gt;Dashed top border&lt;/div&gt;
+&lt;div class="br brs-dashed"&gt;Dashed right border&lt;/div&gt;
+&lt;div class="bb bbs-dashed"&gt;Dashed bottom border&lt;/div&gt;
+&lt;div class="bl bls-dashed"&gt;Dashed left border&lt;/div&gt;
+
+&lt;div class="bx brs-dashed bls-dashed"&gt;Dashed horizontal borders&lt;/div&gt;
+&lt;div class="by bts-solid bbs-dashed"&gt;Mixed vertical borders&lt;/div&gt;</code></pre>
+    <div class="preview">
+      <ul class="d-grid grid__3 g4">
+        <li class="bg-light p2 ba bas-solid">.bas-solid</li>
+        <li class="bg-light p2 ba bas-dashed">.bas-dashed</li>
+        <li class="bg-light p2 bt bts-dashed">.bts-dashed</li>
+        <li class="bg-light p2 br brs-dashed">.brs-dashed</li>
+        <li class="bg-light p2 bb bbs-dashed">.bbs-dashed</li>
+        <li class="bg-light p2 bl bls-dashed">.bls-dashed</li>
+        <li class="bg-light p2 bx brs-dashed bls-dashed">.bx (dashed)</li>
+        <li class="bg-light p2 by bts-solid bbs-dashed">.by (mixed)</li>
+      </ul>
+    </div>
+  </aside>
+</section>
+
+<section>
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="border-styles">Border Colors</h2>
+    <a href="#border-colors">🔗</a>
+  </header>
+
+  <p>
+    Each color stop can also be applied to borders. Refer to the
+    <a href="colors.html">Colors documentation</a> for the complete list of available classes.
+  </p>
+</section>
+
+<section>
+  <h2 id="customization">Customization</h2>
+  <p>Override border variables:</p>
+
+  <div class="bg-light-025 p4 bar-md">
+    <pre><code>$borders: (
+  xs: 3px,
+  sm: 5px,
+  md: 8px,
+  lg: 16px,
+  xl: 24px,
+);</code></pre>
+  </div>
+</section>

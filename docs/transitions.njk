@@ -1,0 +1,89 @@
+---
+layout: base.njk
+title: Animations
+---
+
+<header class="d-flex fd-column g4">
+  <h1>Animations</h1>
+  <p>Atomic classes for managing an element’s transition properties.</p>
+</header>
+
+<section>
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="classes">Classes</h2>
+    <a href="#classes">🔗</a>
+  </header>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.t</code></th>
+        <td>
+          <code
+            >transition-duration: .1s; transition-property: all; transition-timing-function:
+            ease-in; transition-delay: 0s;</code
+          >
+        </td>
+      </tr>
+      <tr>
+        <th scope="row"><code class="ws-nowrap">.t-unset</code></th>
+        <td><code>transition-property: none;</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="Modifiers">Modifiers</h2>
+    <a href="#modifiers">🔗</a>
+  </header>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.t__slow</code></th>
+        <td><code>transition-duration: .25s;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.t__fast</code></th>
+        <td><code>transition-duration: .05s;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.t__delay</code></th>
+        <td><code>transition-delay: .25s;</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <aside>
+    <header class="d-flex ai-center jc-space-between pt6 pb4">
+      <h3 id="transition-examples">Examples</h3>
+      <a href="#transition-examples">🔗</a>
+    </header>
+    <pre><code>&lt;div class="t-unset"&gt;&lt;/div&gt;
+&lt;div class="t"&gt;&lt;/div&gt;
+&lt;div class="t t__slow"&gt;&lt;/div&gt;
+&lt;div class="t t__fast"&gt;&lt;/div&gt;
+&lt;div class="t t__delay"&gt;&lt;/div&gt;</code></pre>
+    <div class="preview">
+      <ul class="d-flex g4">
+        <div class="t-unset ws1 hs1 bg-light bar-md p2 h:bg-green">.t-unset</div>
+        <div class="t ws1 hs1 bg-light bar-md p2 h:bg-green">.t</div>
+        <div class="t t__slow ws1 hs1 bg-light bar-md p2 h:bg-green">.t .t__slow</div>
+        <div class="t t__fast ws1 hs1 bg-light bar-md p2 h:bg-green">.t .t__fast</div>
+        <div class="t t__delay ws1 hs1 bg-light bar-md p2 h:bg-green">.t .t__delay</div>
+      </ul>
+    </div>
+  </aside>
+</section>

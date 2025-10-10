@@ -1,0 +1,137 @@
+---
+layout: base.njk
+title: Displays
+---
+
+<header class="d-flex fd-column g4">
+  <h1>Displays</h1>
+  <p>Atomic classes for managing an element’s display properties.</p>
+</header>
+
+<section>
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="classes">Classes</h2>
+    <a href="#classes">🔗</a>
+  </header>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Responsiveness</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.d-block</code></th>
+        <td><code>display: block;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.d-grid</code></th>
+        <td><code>display: grid;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.d-inline-grid</code></th>
+        <td><code>display: inline-grid;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.d-inline</code></th>
+        <td><code>display: inline;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.d-inline-block</code></th>
+        <td><code>display: inline-block;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.d-flex</code></th>
+        <td><code>display: flex;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.d-inline-flex</code></th>
+        <td><code>display: inline-flex;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.d-none</code></th>
+        <td><code>display: none;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.d-table</code></th>
+        <td><code>display: table;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.d-table-row</code></th>
+        <td><code>display: table-row;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.d-table-cell</code></th>
+        <td><code>display: table-cell;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.d-unset</code></th>
+        <td><code>display: unset;</code></td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <aside>
+    <header class="d-flex ai-center jc-space-between pt6 pb4">
+      <h3 id="display-examples">Examples</h3>
+      <a href="#display-examples">🔗</a>
+    </header>
+    <pre><code>&lt;div class="d-block"&gt;Block&lt;/div&gt;
+&lt;div class="d-inline"&gt;Inline&lt;/div&gt;
+&lt;div class="d-inline-block"&gt;Inline-block&lt;/div&gt;
+&lt;div class="d-flex"&gt;&lt;div&gt;Flex item&lt;/div&gt;&lt;/div&gt;
+&lt;div class="d-grid"&gt;&lt;div&gt;Grid item&lt;/div&gt;&lt;/div&gt;
+&lt;div class="d-none"&gt;Hidden element&lt;/div&gt;
+&lt;div class="d-table"&gt;&lt;div class="d-table-row"&gt;
+&lt;div class="d-table-cell"&gt;Table cell&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</code></pre>
+    <div class="preview d-flex fd-column g4">
+      <ul class="d-flex fd-column g4">
+        <li>
+          <div class="bg-light p2 d-block ws1 hs1">.d-block</div>
+        </li>
+        <li>
+          <div class="bg-light p2 d-flex ws1 hs1 jc-center ai-center">.d-flex</div>
+        </li>
+        <li>
+          <div class="bg-light p2 d-inline">.d-inline</div>
+          <div class="bg-light p2 d-inline">.d-inline</div>
+          <div class="bg-light p2 d-inline">.d-inline</div>
+        </li>
+        <li>
+          <div class="bg-light p2 d-inline-block ws1 hs1">.d-inline-block</div>
+          <div class="bg-light p2 d-inline-block ws1 hs1">.d-inline-block</div>
+          <div class="bg-light p2 d-inline-block ws1 hs1">.d-inline-block</div>
+        </li>
+        <li class="d-table bg-light-075 p2">
+          <div class="bg-light p2 d-table-cell ws1 hs1">.d-table > .d-table-cell</div>
+          <div class="bg-light p2 d-table-cell ws1 hs1">.d-table > .d-table-cell</div>
+          <div class="bg-light p2 d-table-cell ws1 hs1">.d-table > .d-table-cell</div>
+        </li>
+      </ul>
+    </div>
+  </aside>
+</section>
+
+<section>
+  <h2 id="customization">Customization</h2>
+  <p>Override display variables:</p>
+
+  <div class="bg-light-025 p4 bar-md">
+    <pre><code>$displays: block, grid, inline-grid, inline, inline-block, flex, inline-flex, none, table, table-cell, table-row, unset;</code></pre>
+  </div>
+</section>

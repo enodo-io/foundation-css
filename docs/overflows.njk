@@ -1,0 +1,95 @@
+---
+layout: base.njk
+title: Overflows
+---
+
+<header class="d-flex fd-column g4">
+  <h1>Overflow</h1>
+  <p>Atomic classes for managing a element's overflow properties.</p>
+</header>
+
+<section>
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="classes">Classes</h2>
+    <a href="#classes">🔗</a>
+  </header>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.overflow-auto</code></th>
+        <td><code>overflow: auto;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.overflow-x-auto</code></th>
+        <td><code>overflow-x: auto;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.overflow-y-auto</code></th>
+        <td><code>overflow-y: auto;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.overflow-hidden</code></th>
+        <td><code>overflow: hidden;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.overflow-x-hidden</code></th>
+        <td><code>overflow-x: hidden;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.overflow-y-hidden</code></th>
+        <td><code>overflow-y: hidden;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.overflow-scroll</code></th>
+        <td><code>overflow: scroll;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.overflow-x-scroll</code></th>
+        <td><code>overflow-x: scroll;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.overflow-y-scroll</code></th>
+        <td><code>overflow-y: scroll;</code></td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.overflow-visible</code></th>
+        <td><code>overflow: visible;</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <aside>
+    <header class="d-flex ai-center jc-space-between pt6 pb4">
+      <h3 id="overflow-examples">Examples</h3>
+      <a href="#overflow-examples">🔗</a>
+    </header>
+    <pre><code>&lt;div class="overflow-auto"&gt;
+  &lt;p&gt;This box will scroll if content exceeds its size.&lt;/p&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="overflow-hidden"&gt;
+  &lt;p&gt;Overflow is hidden here.&lt;/p&gt;
+  &lt;p&gt;This text won't be visible beyond the box.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+    <div class="preview d-grid g4 grid__2">
+      <div class="overflow-auto bg-light p2" style="width: 200px; height: 80px;">
+        <p>This box will scroll if content exceeds its size.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+
+      <div class="overflow-hidden bg-light p2" style="width: 200px; height: 80px;">
+        <p>Overflow is hidden here.</p>
+        <p>This text won't be visible beyond the box.</p>
+      </div>
+    </div>
+  </aside>
+</section>

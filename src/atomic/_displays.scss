@@ -1,0 +1,11 @@
+@forward "../variables/displays";
+@use "../variables/displays" as *;
+@use "../functions/responsify" as *;
+
+@include responsify("d") {
+  @each $display in $displays {
+    &-#{$display} {
+      display: $display !important;
+    }
+  }
+}
