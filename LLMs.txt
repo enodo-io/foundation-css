@@ -1,0 +1,640 @@
+# Foundation CSS - LLM Guide
+
+Foundation CSS is a lightweight (19.8KB gzipped), atomic-first CSS framework for building fast, accessible, and maintainable web interfaces.
+
+## LLM Usage Guide
+Purpose: Provide complete context about Foundation CSS for code generation, documentation, and integration.
+The AI should use this file to:
+- Suggest correct class combinations.
+- Enforce accessibility and responsive patterns.
+- Never invent new class names not listed here.
+- Prefer atomic composition instead of custom CSS.
+
+## Contents
+1. Quick Start
+2. Core Concepts
+3. Essential Classes
+4. Common Patterns
+5. Customization (SCSS)
+6. Accessibility
+7. Best Practices
+8. Performance
+9. Framework Comparison
+10. Reference Table
+11. Common Gotchas
+
+## Quick Start
+
+### Installation
+```html
+<!-- CDN -->
+<link rel="stylesheet" href="https://unpkg.com/@enodo/foundation-css@latest/dist/index.min.css">
+```
+
+```bash
+# NPM
+npm install @enodo/foundation-css
+```
+
+### Basic Usage
+Foundation CSS uses atomic utility classes with predictable naming conventions:
+
+```html
+<div class="d-flex fd-column g4 p4 bg-light-100 bar-md">
+  <h1 class="fs-canon fw-bold fc-dark">Hello World</h1>
+  <p class="fs-body-copy fc-light-700 lh-relaxed">Content here</p>
+  <button class="p3 bg-blue-400 fc-light bar-sm c-pointer">Click me</button>
+</div>
+```
+
+## Core Concepts
+
+### 1. Mobile-First Responsive Design
+All classes support responsive prefixes: `sm:`, `md:`, `lg:`, `xl:`
+
+**Breakpoints:**
+- `sm`: 480px (smartphone)
+- `md`: 768px (tablet)
+- `lg`: 1024px (desktop)
+- `xl`: 1280px (large desktop)
+
+```html
+<div class="d-block md:d-flex lg:d-grid">
+  <!-- block on mobile, flex on tablet, grid on desktop -->
+</div>
+```
+
+### 2. Spacing System
+Foundation uses 16 spacing units (SU) based on a 4px base:
+- `1` = 4px, `2` = 8px, `3` = 12px, `4` = 16px, `5` = 20px
+- `6` = 24px, `7` = 32px, `8` = 40px, `9` = 48px, `10` = 56px
+- `11` = 64px, `12` = 72px, `13` = 80px, `14` = 120px
+- `15` = 160px, `16` = 200px
+
+### 3. Typography Scale
+Semantic naming with 15 responsive sizes:
+- **Display sizes**: `atlas`, `elephant`, `imperial`, `royal`, `foolscap`
+- **Heading sizes**: `canon`, `trafalgar`, `paragon`, `double-pica`
+- **Body sizes**: `great-primer`, `body-copy`, `pica`, `long-primer`, `brevier`, `minion`
+
+## Essential Classes
+
+### Layout & Display
+```
+d-flex          - display: flex
+d-grid          - display: grid
+d-block         - display: block
+d-inline        - display: inline
+d-inline-block  - display: inline-block
+d-none          - display: none
+```
+
+### Flexbox
+```
+fd-row          - flex-direction: row
+fd-column       - flex-direction: column
+jc-center       - justify-content: center
+jc-space-between - justify-content: space-between
+jc-space-around - justify-content: space-around
+ai-center       - align-items: center
+ai-flex-start   - align-items: flex-start
+ai-flex-end     - align-items: flex-end
+fw-wrap         - flex-wrap: wrap
+```
+
+### Grid
+```
+grid__1         - 1 column grid
+grid__2         - 2 column grid
+grid__3         - 3 column grid
+grid__4         - 4 column grid
+grid__5         - 5 column grid
+grid__6         - 6 column grid
+grid__7         - 7 column grid
+grid__8         - 8 column grid
+grid__9         - 9 column grid
+grid__10         - 10 column grid
+grid__11         - 11 column grid
+grid__12        - 12 column grid
+```
+
+### Spacing (Margin & Padding)
+```
+m1, m2, m3...   - margin (all sides)
+mt1, mt2...     - margin-top
+mr1, mr2...     - margin-right
+mb1, mb2...     - margin-bottom
+ml1, ml2...     - margin-left
+mx1, mx2...     - margin-left + margin-right
+my1, my2...     - margin-top + margin-bottom
+
+p1, p2, p3...   - padding (all sides)
+pt1, pt2...     - padding-top
+pr1, pr2...     - padding-right
+pb1, pb2...     - padding-bottom
+pl1, pl2...     - padding-left
+px1, px2...     - padding-left + padding-right
+py1, py2...     - padding-top + padding-bottom
+
+g1, g2, g3...   - gap (for flex/grid)
+```
+
+### Typography
+```
+fs-atlas        - Largest display text
+fs-canon        - Large headings
+fs-paragon      - Medium headings
+fs-body-copy    - Body text (default)
+fs-pica         - Small body text
+fs-minion       - Smallest text
+
+fw-300          - font-weight: 300 (light)
+fw-400          - font-weight: 400 (normal)
+fw-500          - font-weight: 500 (medium)
+fw-600          - font-weight: 600 (semibold)
+fw-bold         - font-weight: 700 (bold)
+
+ta-left         - text-align: left
+ta-center       - text-align: center
+ta-right        - text-align: right
+
+lh-relaxed      - line-height: 1.6
+lh-normal       - line-height: 1.5
+```
+
+### Colors
+
+**Text Colors (fc-*):**
+```
+fc-light        - White text
+fc-light-100    - Very light gray
+fc-light-600    - Dark gray
+fc-light-900    - Darkest gray
+fc-dark         - Black text
+
+fc-green-100    - Light green
+fc-green-400    - Green (main)
+fc-green-600    - Dark green
+
+fc-red-100      - Light red
+fc-red-400      - Red (main)
+fc-red-600      - Dark red
+
+fc-blue-100     - Light blue
+fc-blue-400     - Blue (main)
+fc-blue-600     - Dark blue
+
+fc-orange-400   - Orange
+fc-yellow-400   - Yellow
+fc-purple-400   - Purple
+fc-pink-400     - Pink
+fc-teal-400     - Teal
+```
+
+**Background Colors (bg-*):**
+Same naming as text colors, replace `fc-` with `bg-`
+
+**Border Colors (bc-*):**
+Same naming as text colors, replace `fc-` with `bc-`
+
+**Light Color Stops:**
+- `025`, `050`, `075` - Extremely light variants
+- `100` - Very light
+- `200` - Light
+- `300` - Medium light
+- `400` - Main color
+- `500` - Medium dark
+- `600` - Dark
+- `700`, `800`, `900` - Very dark variants
+
+**Others Colors Stops:**
+- `100` - Very light
+- `200` - Light
+- `300` - Medium light
+- `400` - Main color
+- `500` - Medium dark
+- `600` - Darkest
+
+
+**Accessibility Note:**
+- Use light colors (100-300) on dark backgrounds
+- Use dark colors (600-900) on light backgrounds
+- Example: `bg-green-600 fc-green-100` for good contrast
+
+### Borders
+```
+ba              - border all sides (1px solid)
+bt              - border-top
+br              - border-right
+bb              - border-bottom
+bl              - border-left
+bn              - border: none
+
+baw1, baw2...   - border-width: 1px, 2px...
+bar-sm          - border-radius: 5px
+bar-md          - border-radius: 8px
+bar-lg          - border-radius: 16px
+bar-xl          - border-radius: 24px
+
+bas-solid       - border-style: solid
+bas-dashed      - border-style: dashed
+```
+
+### Box Shadows
+```
+bs-none         - box-shadow: none
+bs-sm           - Small shadow
+bs-md           - Medium shadow
+bs-lg           - Large shadow
+bs-xl           - Extra large shadow
+```
+
+### Width & Height
+```
+w10             - width: 10%
+w20             - width: 20%
+w25             - width: 25%
+w30             - width: 30%
+w33             - width: 33.3333%
+w40             - width: 40%
+w50             - width: 50%
+w60             - width: 60%
+w66             - width: 66.6667%
+w70             - width: 70%
+w80             - width: 80%
+w90             - width: 90%
+w100            - width: 100%
+w-auto          - width: auto
+h100            - height: 100%
+h0              - height: 0;
+h-auto          - height: auto
+h-screen        - height: 100vh
+
+ws1, ws2...     - width: su step unit (84px, 168px, 252px, ..., 1008px)
+hs1, hs2...     - height: su step unit
+
+mw100           - max-width: 100%
+mh100           - max-height: 100%
+```
+
+### Position
+```
+ps-static       - position: static
+ps-relative     - position: relative
+ps-absolute     - position: absolute
+ps-fixed        - position: fixed
+ps-sticky       - position: sticky
+
+t1, t2, t3...   - top: spacing unit
+r1, r2, r3...   - right: spacing unit
+b1, b2, b3...   - bottom: spacing unit
+l1, l2, l3...   - left: spacing unit
+
+i1, i2, i3...   - top, right, bottom, left (inset all)
+```
+
+### Opacity
+```
+o0              - opacity: 0
+o10             - opacity: 0.1
+o20             - opacity: 0.2
+o50             - opacity: 0.5
+o80             - opacity: 0.8
+o100            - opacity: 1
+
+h:o50           - hover: opacity: 0.5
+f:o100          - focus: opacity: 1
+```
+
+### Visibility
+```
+visibility-visible    - visibility: visible
+visibility-hidden     - visibility: hidden
+visibility-collapse   - visibility: collapse
+```
+
+### Overflow
+```
+overflow-auto     - overflow: auto
+overflow-hidden   - overflow: hidden
+overflow-scroll   - overflow: scroll
+overflow-visible  - overflow: visible
+
+overflow-x-auto   - overflow-x: auto
+overflow-y-auto   - overflow-y: auto
+```
+
+### Z-Index
+```
+z-hide          - z-index: -1
+z-base          - z-index: 0
+z-active        - z-index: 50
+z-dropdown      - z-index: 1000
+z-popover       - z-index: 2000
+z-tooltip       - z-index: 3000
+z-nav           - z-index: 5000
+z-modal         - z-index: 9050
+```
+
+### Cursor
+```
+c-auto          - cursor: auto
+c-pointer       - cursor: pointer
+c-default       - cursor: default
+c-not-allowed   - cursor: not-allowed
+c-grab          - cursor: grab
+c-grabbing      - cursor: grabbing
+```
+
+### Object Fit (for images/videos)
+```
+of-contain      - object-fit: contain
+of-cover        - object-fit: cover
+of-fill         - object-fit: fill
+of-none         - object-fit: none
+```
+
+### Interactivity
+```
+pe-auto         - pointer-events: auto
+pe-none         - pointer-events: none
+us-auto         - user-select: auto
+us-none         - user-select: none
+```
+
+### Lists
+```
+list-disc       - list-style-type: disc
+list-decimal    - list-style-type: decimal
+list-unstyled   - list-style: none
+list-inside     - list-style-position: inside
+list-outside    - list-style-position: outside
+```
+
+### Truncate Text
+```
+truncate        - Single line truncate with ellipsis
+truncate-2      - 2 line truncate
+truncate-3      - 3 line truncate
+```
+
+### Transitions
+```
+transition-all  - Transition all properties (200ms)
+```
+
+## Common Patterns
+
+### Card Component
+```html
+<div class="d-flex fd-column g3 p4 bg-light-100 bar-md bs-sm">
+  <h3 class="fs-paragon fw-bold fc-dark">Card Title</h3>
+  <p class="fs-body-copy fc-light-700 lh-relaxed">Card content goes here.</p>
+  <button class="p3 bg-blue-400 fc-light bar-sm c-pointer">Action</button>
+</div>
+```
+
+### Centered Container
+```html
+<div class="d-flex ai-center jc-center" style="height: 100vh;">
+  <div class="w100" style="max-width: 800px;">
+    <h1 class="fs-canon fw-bold ta-center">Centered Content</h1>
+  </div>
+</div>
+```
+
+### Responsive Grid
+```html
+<div class="d-grid grid__1 md:grid__2 lg:grid__3 g4">
+  <div class="p4 bg-light-100 bar-md">Item 1</div>
+  <div class="p4 bg-light-100 bar-md">Item 2</div>
+  <div class="p4 bg-light-100 bar-md">Item 3</div>
+</div>
+```
+
+### Navigation Bar
+```html
+<nav class="d-flex ai-center jc-space-between p4 bg-light-900">
+  <div class="fs-paragon fw-bold fc-light">Logo</div>
+  <div class="d-flex ai-center g4">
+    <a href="#" class="fc-light h:o80">Home</a>
+    <a href="#" class="fc-light h:o80">About</a>
+    <a href="#" class="fc-light h:o80">Contact</a>
+  </div>
+</nav>
+```
+
+### Form Input
+```html
+<div class="d-flex fd-column g2">
+  <label class="fs-body-copy fw-500 fc-dark">Email</label>
+  <input
+    type="email"
+    class="p3 ba bar-sm"
+    placeholder="your@email.com"
+  />
+  <span class="fs-pica fc-light-600">We'll never share your email.</span>
+</div>
+```
+
+### Alert Box
+```html
+<!-- Success -->
+<div class="d-flex ai-center g3 p4 bg-green-100 bar-md">
+  <span class="fc-green-600">✓</span>
+  <p class="fc-green-600 fs-body-copy">Success message here</p>
+</div>
+
+<!-- Error -->
+<div class="d-flex ai-center g3 p4 bg-red-100 bar-md">
+  <span class="fc-red-600">✗</span>
+  <p class="fc-red-600 fs-body-copy">Error message here</p>
+</div>
+```
+
+### Modal Layout
+```html
+<div class="ps-fixed i0 d-flex ai-center jc-center bg-dark o50 z-modal-bg">
+  <div class="bg-light-025 bar-lg p6 z-modal" style="width: 90%; max-width: 500px;">
+    <h2 class="fs-canon fw-bold mb4">Modal Title</h2>
+    <p class="fs-body-copy fc-light-700 mb4">Modal content...</p>
+    <div class="d-flex jc-flex-end g3">
+      <button class="p3 bar-sm ba c-pointer">Cancel</button>
+      <button class="p3 bg-blue-400 fc-light bar-sm c-pointer">Confirm</button>
+    </div>
+  </div>
+</div>
+```
+
+## Customization with SCSS
+
+Override variables before importing Foundation CSS:
+
+```scss
+// Custom spacing units
+$spacing-units: (
+  1: 4px, 2: 8px, 3: 12px, 4: 16px,
+  5: 20px, 6: 24px, 7: 32px, 8: 40px
+);
+
+// Custom colors
+$colors: (
+  primary: (
+    "main": #4a90e2,
+    "100": #e6f2ff,
+    "400": #4a90e2,
+    "600": #1a5bb3,
+  ),
+  // ... more colors
+);
+
+// Custom breakpoints
+$breakpoints: (
+  sm: 480px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+);
+
+@use "@enodo/foundation-css";
+```
+
+## State Variants
+
+Foundation CSS supports hover and focus states with prefixes:
+
+```html
+<!-- Hover states -->
+<div class="o80 h:o100">Hover to change opacity</div>
+<div class="bg-blue-400 h:bg-blue-600">Hover to darken</div>
+
+<!-- Focus states -->
+<input class="o80 f:o100" />
+```
+
+## Accessibility Guidelines
+
+1. **Color Contrast**: Use proper color combinations for WCAG AA compliance
+   - Light backgrounds (025-400): Use dark text (600-900)
+   - Dark backgrounds (500-900): Use light text (025-200)
+
+2. **Interactive Elements**: Always add cursor and focus states
+   ```html
+   <button class="c-pointer f:outline-2">Click me</button>
+   ```
+
+3. **Text Sizing**: Use rem-based units for browser zoom compatibility
+   - Foundation CSS uses rem units automatically
+
+4. **Focus Indicators**: Never use `outline: none` without alternative indicators
+
+## Best Practices
+
+1. **Class Order Convention**:
+   - Display/Position → Layout (flex/grid) → Spacing → Typography → Colors → Borders/Shadows → States
+   ```html
+   <div class="d-flex fd-column g4 p4 fs-body-copy fc-dark bg-light-100 bar-md bs-sm">
+   ```
+
+2. **Responsive Design**:
+   - Start with mobile styles, add larger breakpoints as needed
+   ```html
+   <div class="d-block md:d-flex lg:d-grid">
+   ```
+
+3. **Component Composition**:
+   - Combine multiple atomic classes instead of creating custom CSS
+   - This maintains consistency and reduces CSS bloat
+
+4. **Semantic HTML**:
+   - Always use proper HTML tags with utility classes
+   ```html
+   <article class="p4 bg-light-100">
+     <h1 class="fs-canon fw-bold">Title</h1>
+     <p class="fs-body-copy">Content</p>
+   </article>
+   ```
+
+## Performance Tips
+
+1. Use the CDN for production (cached across sites)
+2. Import only needed modules in SCSS builds
+3. Foundation CSS is already minified and gzipped (19.8KB)
+4. Classes are purge-CSS friendly for further optimization
+
+## Framework Comparison
+
+**Foundation CSS vs Tailwind:**
+- Smaller bundle size (19.8KB vs 40KB+)
+- Semantic spacing names (p4 vs p-4)
+- BBC GEL typography scale vs arbitrary sizes
+- More opinionated, less configuration needed
+
+**Foundation CSS vs Bootstrap:**
+- Atomic-first approach vs component-based
+- Lighter weight (19.8KB vs 150KB+)
+- No JavaScript dependencies
+- More flexible for custom designs
+
+## Documentation & Resources
+
+- **Full Documentation**: https://enodo-io.github.io/foundation-css
+- **NPM Package**: @enodo/foundation-css
+- **GitHub**: https://github.com/enodo-io/foundation-css
+- **License**: MIT
+
+## Quick Reference: Class Prefixes
+
+| Prefix | Property | Example |
+|--------|----------|---------|
+| `d-` | display | `d-flex`, `d-grid` |
+| `fd-` | flex-direction | `fd-row`, `fd-column` |
+| `jc-` | justify-content | `jc-center` |
+| `ai-` | align-items | `ai-center` |
+| `m`, `mt`, `mr`, `mb`, `ml`, `mx`, `my` | margin | `m4`, `mt2` |
+| `p`, `pt`, `pr`, `pb`, `pl`, `px`, `py` | padding | `p4`, `pt2` |
+| `g` | gap | `g4` |
+| `fs-` | font-size | `fs-body-copy` |
+| `fw-` | font-weight | `fw-bold` |
+| `fc-` | color (text) | `fc-dark` |
+| `bg-` | background-color | `bg-light-100` |
+| `bc-` | border-color | `bc-dark` |
+| `ba`, `bt`, `br`, `bb`, `bl` | border | `ba`, `bt` |
+| `bar-` | border-radius | `bar-md` |
+| `bs-` | box-shadow | `bs-sm` |
+| `ps-` | position | `ps-relative` |
+| `t`, `r`, `b`, `l` | top/right/bottom/left | `t4`, `l2` |
+| `w`, `h` | width/height | `w100`, `h50` |
+| `o` | opacity | `o80` |
+| `z-` | z-index | `z-modal` |
+| `c-` | cursor | `c-pointer` |
+| `ta-` | text-align | `ta-center` |
+| `lh-` | line-height | `lh-relaxed` |
+
+## Common Gotchas
+
+1. **Border Radius**: Use `bar-*` (not `br-*`, which is for border-right)
+2. **Colors**: Always check contrast for accessibility
+3. **Responsive**: Mobile-first means base classes apply to all sizes unless overridden
+4. **Z-index**: Use semantic names (`z-modal`, `z-dropdown`) instead of arbitrary numbers
+5. **Spacing**: SU1-16 system uses predictable increments based on 4px
+
+---
+
+**Version**: Compatible with @enodo/foundation-css v1.0.x
+**Last Updated**: 2025-06-01
+**LLM-Spec-Version**: 1.0
+**Maintainer**: @enodo
+
+```json
+{
+  "framework": "Foundation CSS",
+  "version": "1.0.x",
+  "size_gzipped_kb": 19.8,
+  "atomic": true,
+  "responsive_prefixes": ["sm", "md", "lg", "xl"],
+  "spacing_units": 16,
+  "base_unit_px": 4,
+  "docs_url": "https://enodo-io.github.io/foundation-css"
+}
+```
