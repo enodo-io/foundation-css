@@ -1,7 +1,7 @@
 @use "sass:map";
 @use "sass:math";
-@use "../variables/typographies" as *;
 @use "../functions/px2rem" as *;
+@use "../variables/typographies" as typo;
 
 @mixin forge($namespace, $type, $list) {
   @each $value in $list {
@@ -12,7 +12,7 @@
 }
 
 @mixin forge-sizes($values) {
-  @each $size in $font-sizes {
+  @each $size in typo.$font-sizes {
     $v: map.get($values, $size);
     .fs-#{$size} {
       font-size: px2rem(map.get($v, "size")) !important;
@@ -23,40 +23,40 @@
 
 @mixin forge-font-families() {
   :root {
-    @each $name, $font-family in $font-families {
+    @each $name, $font-family in typo.$font-families {
       --ff-#{$name}: #{$font-family};
     }
   }
 
-  @each $name, $font-family in $font-families {
+  @each $name, $font-family in typo.$font-families {
     .ff-#{$name} {
       font-family: var(--ff-#{$name}) !important;
     }
   }
 }
 
-@include forge-sizes(map.get($font-sizes-map, feature-phone));
+@include forge-sizes(map.get(typo.$font-sizes-map, feature-phone));
 
 @media (width >= 320px) {
-  @include forge-sizes(map.get($font-sizes-map, "smartphone"));
+  @include forge-sizes(map.get(typo.$font-sizes-map, "smartphone"));
 }
 
 @media (width >= 600px) {
-  @include forge-sizes(map.get($font-sizes-map, "tablet"));
+  @include forge-sizes(map.get(typo.$font-sizes-map, "tablet"));
 }
 
 @media (width >= 600px) and (hover: hover) and (pointer: fine) {
-  @include forge-sizes(map.get($font-sizes-map, "desktop"));
+  @include forge-sizes(map.get(typo.$font-sizes-map, "desktop"));
 }
 
 @include forge-font-families;
-@include forge("fs", font-style, $font-styles);
-@include forge("tt", text-transform, $text-transforms);
-@include forge("td", text-decoration, $text-decorations);
-@include forge("fw", font-weight, $font-weights);
-@include forge("ta", text-align, $text-aligns);
-@include forge("ws", white-space, $white-spaces);
-@include forge("wb", word-break, $word-breaks);
-@include forge("ow", overflow-wrap, $overflow-wraps);
-@include forge("ww", word-wrap, $word-wraps);
-@include forge("hyphens", hyphens, $hyphens);
+@include forge("fs", font-style, typo.$font-styles);
+@include forge("tt", text-transform, typo.$text-transforms);
+@include forge("td", text-decoration, typo.$text-decorations);
+@include forge("fw", font-weight, typo.$font-weights);
+@include forge("ta", text-align, typo.$text-aligns);
+@include forge("ws", white-space, typo.$white-spaces);
+@include forge("wb", word-break, typo.$word-breaks);
+@include forge("ow", overflow-wrap, typo.$overflow-wraps);
+@include forge("ww", word-wrap, typo.$word-wraps);
+@include forge("hyphens", hyphens, typo.$hyphens);
