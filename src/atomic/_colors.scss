@@ -1,4 +1,3 @@
-@forward "../variables/colors";
 @use "../variables/colors" as *;
 
 @mixin setProperty($property, $namespace, $name, $colors) {

@@ -1,3 +1,4 @@
+@forward "../variables/colors";
 @use "../variables/colors" as *;
 
 @mixin makePalette($name, $colors) {

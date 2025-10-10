@@ -1,7 +1,5 @@
 @use "normalize";
-@forward "./functions/px2rem";
 @forward "./functions/forge";
-@forward "./functions/responsify";
 @forward "./atomic/palettes";
 @forward "./atomic/backgrounds";
 @forward "./atomic/borders";
