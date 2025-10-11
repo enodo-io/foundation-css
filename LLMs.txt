@@ -291,6 +291,11 @@ b1, b2, b3...   - bottom: spacing unit
 l1, l2, l3...   - left: spacing unit
 
 i1, i2, i3...   - top, right, bottom, left (inset all)
+
+link--overlay   - Creates clickable overlay over parent container (SEO-friendly)
+                  Use on <a> tag inside link--wrapper
+link--wrapper   - Parent wrapper with position: relative
+                  Automatically elevates secondary links/buttons
 ```
 
 ### Opacity
@@ -392,6 +397,22 @@ transition-all  - Transition all properties (200ms)
   <p class="fs-body-copy fc-light-700 lh-relaxed">Card content goes here.</p>
   <button class="p3 bg-blue-400 fc-light bar-sm c-pointer">Action</button>
 </div>
+```
+
+### SEO-Friendly Clickable Card
+```html
+<!-- Based on: https://blog.enodo.io/fr/comment-integrer-correctement-un-lien-pour-le-seo-4.html -->
+<article class="link--wrapper d-flex fd-column g3 p4 bg-light-100 bar-md bs-sm">
+  <img src="image.jpg" alt="Card image" class="w100 bar-sm">
+  <h3 class="fs-paragon fw-bold fc-dark">
+    <a href="/article" class="link--overlay fc-dark">Card Title</a>
+  </h3>
+  <p class="fs-body-copy fc-light-700 lh-relaxed">
+    Card content goes here. The entire card is clickable while keeping semantic HTML.
+  </p>
+  <!-- Secondary links stay clickable automatically -->
+  <a href="/category" class="fs-pica fc-blue-400">Category</a>
+</article>
 ```
 
 ### Centered Container

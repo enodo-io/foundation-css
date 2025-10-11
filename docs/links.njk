@@ -1,0 +1,397 @@
+---
+layout: base.njk
+title: Links
+---
+
+<header class="d-flex fd-column g4">
+  <h1>Links</h1>
+  <p>Atomic classes for creating SEO-friendly and accessible links.</p>
+</header>
+
+<section>
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="link--overlay">Link Overlay</h2>
+    <a href="#link--overlay">#</a>
+  </header>
+
+  <p class="fc-light-700 lh-relaxed mb4">
+    The <code>.link--overlay</code> and <code>.link--wrapper</code> classes allow you to make an
+    entire container clickable while keeping semantic HTML for SEO. Based on
+    <a
+      href="https://blog.enodo.io/fr/comment-integrer-correctement-un-lien-pour-le-seo-4.html"
+      target="_blank"
+      rel="noopener"
+      class="fc-blue-400"
+    >
+      best practices from Enodo's SEO guide </a
+    >.
+  </p>
+
+  <table class="w100 mb4">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code class="ws-nowrap">.link--overlay</code></th>
+        <td>Creates a clickable overlay. Use on the <code>&lt;a&gt;</code> tag.</td>
+      </tr>
+      <tr>
+        <th scope="row"><code class="ws-nowrap">.link--wrapper</code></th>
+        <td>
+          Parent wrapper with <code>position: relative</code>. Automatically elevates secondary
+          links and buttons.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="bg-light-025 p4 bar-md mb4">
+    <h3 class="fs-h4 fw-bold mb3">Usage</h3>
+    <pre><code>&lt;article class="link--wrapper p4 bg-light-100 bar-md"&gt;
+  &lt;h3&gt;
+    &lt;a href="/article" class="link--overlay fc-dark"&gt;Article Title&lt;/a&gt;
+  &lt;/h3&gt;
+  &lt;p&gt;Card content...&lt;/p&gt;
+  &lt;!-- Secondary links stay clickable --&gt;
+  &lt;a href="/category" class="fc-blue-400"&gt;Category&lt;/a&gt;
+&lt;/article&gt;</code></pre>
+  </div>
+
+  <div class="d-grid grid__1 md:grid__2 g4 mb4">
+    <div class="bg-green-100 p4 bar-md">
+      <h3 class="fs-h4 fw-bold fc-green-600 mb3">Do</h3>
+      <ul class="list-disc list-inside fc-light-700 lh-relaxed">
+        <li class="mb2">Place the link inside a heading tag (h1-h6)</li>
+        <li class="mb2">Use descriptive anchor text</li>
+        <li class="mb2">Add <code>link--wrapper</code> to the parent container</li>
+        <li class="mb2">Keep the anchor text clean and focused</li>
+      </ul>
+    </div>
+
+    <div class="bg-red-100 p4 bar-md">
+      <h3 class="fs-h4 fw-bold fc-red-600 mb3">Don't</h3>
+      <ul class="list-disc list-inside fc-light-700 lh-relaxed">
+        <li class="mb2">Wrap the entire card in an <code>&lt;a&gt;</code> tag</li>
+        <li class="mb2">Use generic text like "Click here"</li>
+        <li class="mb2">Forget <code>link--wrapper</code> on the parent</li>
+        <li class="mb2">Pollute the anchor with unnecessary elements</li>
+      </ul>
+    </div>
+  </div>
+
+  <aside>
+    <header class="d-flex ai-center jc-space-between pt6 pb4">
+      <h3 id="examples">Interactive Examples</h3>
+      <a href="#examples">#</a>
+    </header>
+
+    <div class="preview">
+      <div class="d-grid grid__1 md:grid__2 g4">
+        <article
+          class="ps-relative link--wrapper d-flex fd-column g3 p4 bg-light-100 bar-md bs-sm transition-all h:bs-md"
+        >
+          <div class="w100 hs2 bg-light-300 bar-sm"></div>
+          <h3 class="fs-paragon fw-bold">
+            <a href="#examples" class="link--overlay fc-dark">Clickable Card</a>
+          </h3>
+          <p class="fs-body-copy fc-light-700">
+            Hover over this card. The entire card is clickable, but the HTML is clean and
+            SEO-friendly.
+          </p>
+          <a href="#examples" class="fs-pica fc-blue-400">Secondary Link →</a>
+        </article>
+
+        <article
+          class="ps-relative link--wrapper d-flex fd-column g3 p4 bg-light-100 bar-md bs-sm transition-all h:bs-md"
+        >
+          <div class="w100 hs2 bg-light-300 bar-sm"></div>
+          <h3 class="fs-paragon fw-bold">
+            <a href="#examples" class="link--overlay fc-dark">Another Card</a>
+          </h3>
+          <p class="fs-body-copy fc-light-700">
+            Try clicking the "Secondary Link" below - it works independently thanks to automatic
+            z-index handling!
+          </p>
+          <div class="d-flex g2 mt2">
+            <a href="#examples" class="fs-pica fc-green-400">Tag 1</a>
+            <a href="#examples" class="fs-pica fc-purple-400">Tag 2</a>
+          </div>
+        </article>
+
+        <article
+          class="ps-relative link--wrapper d-flex fd-column g3 p4 bg-green-100 bar-md bs-sm transition-all h:bs-md"
+        >
+          <h3 class="fs-paragon fw-bold">
+            <a href="#examples" class="link--overlay fc-green-600">Blog Post</a>
+          </h3>
+          <p class="fs-body-copy fc-light-700">
+            The link anchor only contains "Blog Post" - clean and SEO-optimized.
+          </p>
+          <div class="d-flex ai-center jc-space-between mt2">
+            <span class="fs-pica fc-light-600">5 min read</span>
+            <a href="#examples" class="fs-pica fc-green-600 fw-500">Read more →</a>
+          </div>
+        </article>
+
+        <article
+          class="ps-relative link--wrapper d-flex fd-column g3 p4 bg-blue-100 bar-md bs-sm transition-all h:bs-md"
+        >
+          <h3 class="fs-paragon fw-bold">
+            <a href="#examples" class="link--overlay fc-blue-600">Product Card</a>
+          </h3>
+          <p class="fs-body-copy fc-light-700">
+            Works perfectly for e-commerce product cards with multiple actions.
+          </p>
+          <div class="d-flex ai-center jc-space-between mt2">
+            <span class="fs-h4 fw-bold fc-blue-600">$29.99</span>
+            <button class="p2 px3 bg-blue-400 fc-light bar-sm c-pointer fs-pica">
+              Add to Cart
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </aside>
+</section>
+
+<section>
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="seo-benefits">SEO Benefits</h2>
+    <a href="#seo-benefits">#</a>
+  </header>
+
+  <div class="d-flex fd-column g4">
+    <p class="fc-light-700 lh-relaxed">
+      Using <code>.link--overlay</code> instead of wrapping the entire card in an
+      <code>&lt;a&gt;</code> tag provides significant SEO and accessibility advantages:
+    </p>
+
+    <div class="bg-light-025 p4 bar-md">
+      <h3 class="fs-h4 fw-bold mb3">Clean Anchor Text</h3>
+      <div class="d-grid grid__1 md:grid__2 g4">
+        <div>
+          <p class="fc-green-600 fw-bold mb2">✓ Good (with .link--overlay)</p>
+          <pre class="fs-pica"><code>&lt;h3&gt;
+  &lt;a class="link--overlay"&gt;Article Title&lt;/a&gt;
+&lt;/h3&gt;</code></pre>
+          <p class="fs-pica fc-light-700 mt2">Google sees: "Article Title"</p>
+        </div>
+
+        <div>
+          <p class="fc-red-600 fw-bold mb2">✗ Bad (wrapping everything)</p>
+          <pre class="fs-pica"><code>&lt;a href="..."&gt;
+  &lt;h3&gt;Article Title&lt;/h3&gt;
+  &lt;p&gt;Description...&lt;/p&gt;
+&lt;/a&gt;</code></pre>
+          <p class="fs-pica fc-light-700 mt2">Google sees: "Article Title Description..."</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-light-025 p4 bar-md">
+      <h3 class="fs-h4 fw-bold mb3">Semantic HTML</h3>
+      <ul class="list-disc list-inside fc-light-700 lh-relaxed">
+        <li class="mb2">Respects block/inline element hierarchy</li>
+        <li class="mb2">Better screen reader compatibility</li>
+        <li class="mb2">Cleaner DOM structure for crawlers</li>
+        <li class="mb2">Easier to maintain and debug</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="best-practices">Best Practices</h2>
+    <a href="#best-practices">#</a>
+  </header>
+
+  <div class="d-flex fd-column g4">
+    <div class="bg-light-025 p4 bar-md">
+      <h3 class="fs-h4 fw-bold mb3">
+        1. Use link--wrapper on parent (includes position: relative)
+      </h3>
+      <pre><code>&lt;article class="link--wrapper"&gt;
+  &lt;h3&gt;&lt;a class="link--overlay"&gt;Title&lt;/a&gt;&lt;/h3&gt;
+&lt;/article&gt;</code></pre>
+    </div>
+
+    <div class="bg-light-025 p4 bar-md">
+      <h3 class="fs-h4 fw-bold mb3">2. Place link inside semantic heading</h3>
+      <pre><code>&lt;h3&gt;
+  &lt;a href="/article" class="link--overlay"&gt;Article Title&lt;/a&gt;
+&lt;/h3&gt;</code></pre>
+    </div>
+
+    <div class="bg-light-025 p4 bar-md">
+      <h3 class="fs-h4 fw-bold mb3">3. Secondary links work automatically</h3>
+      <pre><code>&lt;!-- Secondary links/buttons are automatically elevated --&gt;
+&lt;a href="/category"&gt;Category&lt;/a&gt;
+&lt;button&gt;Add to Cart&lt;/button&gt;</code></pre>
+    </div>
+
+    <div class="bg-light-025 p4 bar-md">
+      <h3 class="fs-h4 fw-bold mb3">4. Use descriptive anchor text</h3>
+      <div class="d-grid grid__1 md:grid__2 g4 mt3">
+        <div>
+          <p class="fc-green-600 fw-bold mb2">✓ Good</p>
+          <p class="fs-pica fc-light-700">Complete guide to chocolate benefits</p>
+        </div>
+        <div>
+          <p class="fc-red-600 fw-bold mb2">✗ Bad</p>
+          <p class="fs-pica fc-light-700">Click here, Read more, Learn more</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="advanced-usage">Advanced Usage</h2>
+    <a href="#advanced-usage">#</a>
+  </header>
+
+  <div class="d-flex fd-column g4">
+    <div class="bg-light-025 p4 bar-md">
+      <h3 class="fs-h4 fw-bold mb3">Multiple Cards in a Grid</h3>
+      <pre><code>&lt;div class="d-grid grid__1 md:grid__2 lg:grid__3 g4"&gt;
+  &lt;article class="ps-relative link--wrapper p4 bg-light-100 bar-md"&gt;
+    &lt;h3&gt;&lt;a href="/post-1" class="link--overlay"&gt;Post 1&lt;/a&gt;&lt;/h3&gt;
+    &lt;p&gt;Content...&lt;/p&gt;
+  &lt;/article&gt;
+  &lt;article class="ps-relative link--wrapper p4 bg-light-100 bar-md"&gt;
+    &lt;h3&gt;&lt;a href="/post-2" class="link--overlay"&gt;Post 2&lt;/a&gt;&lt;/h3&gt;
+    &lt;p&gt;Content...&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="bg-light-025 p4 bar-md">
+      <h3 class="fs-h4 fw-bold mb3">With Image</h3>
+      <pre><code>&lt;article class="ps-relative link--wrapper p4 bg-light-100 bar-md"&gt;
+  &lt;img src="photo.jpg" alt="Descriptive alt text" class="w100 bar-sm"&gt;
+  &lt;h3&gt;
+    &lt;a href="/article" class="link--overlay"&gt;Article Title&lt;/a&gt;
+  &lt;/h3&gt;
+  &lt;p&gt;Description...&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+    </div>
+
+    <div class="bg-light-025 p4 bar-md">
+      <h3 class="fs-h4 fw-bold mb3">E-commerce Product Card</h3>
+      <pre><code>&lt;article class="ps-relative link--wrapper p4 bg-light-100 bar-md"&gt;
+  &lt;img src="product.jpg" alt="Product name" class="w100"&gt;
+  &lt;h3&gt;
+    &lt;a href="/product" class="link--overlay"&gt;Product Name&lt;/a&gt;
+  &lt;/h3&gt;
+  &lt;p class="fc-light-700"&gt;$29.99&lt;/p&gt;
+  &lt;button class="p2 bg-blue-400 fc-light"&gt;Add to Cart&lt;/button&gt;
+&lt;/article&gt;</code></pre>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="how-it-works">How It Works</h2>
+    <a href="#how-it-works">#</a>
+  </header>
+
+  <div class="d-flex fd-column g4">
+    <p class="fc-light-700 lh-relaxed">
+      The <code>.link--overlay</code> class uses a CSS pseudo-element to create an invisible layer
+      that covers the parent container. The <code>.link--wrapper</code> class includes
+      <code>position: relative</code> and automatically elevates secondary interactive elements:
+    </p>
+
+    <div class="bg-light-025 p4 bar-md">
+      <pre><code>.link--overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.link--wrapper {
+  position: relative;
+  
+  /* Secondary links automatically elevated */
+  a:not(.link--overlay),
+  button {
+    position: relative;
+    z-index: 2;
+  }
+}</code></pre>
+    </div>
+
+    <div class="bg-blue-100 p4 bar-md">
+      <h3 class="fs-h4 fw-bold fc-blue-600 mb3">💡 Technical Details</h3>
+      <ul class="list-disc list-inside fc-light-700 lh-relaxed">
+        <li class="mb2">
+          <strong>Pseudo-element overlay:</strong> Creates an invisible clickable layer over the
+          parent
+        </li>
+        <li class="mb2">
+          <strong>Position relative:</strong> <code>.link--wrapper</code> includes
+          <code>position: relative</code>
+        </li>
+        <li class="mb2"><strong>Z-index management:</strong> Overlay is at z-index: 1</li>
+        <li class="mb2">
+          <strong>Secondary elements:</strong> All links (except .link--overlay) and buttons get
+          z-index: 2
+        </li>
+        <li class="mb2"><strong>Performance:</strong> No JavaScript required, pure CSS solution</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="accessibility">Accessibility & SEO</h2>
+    <a href="#accessibility">#</a>
+  </header>
+
+  <div class="d-flex fd-column g4">
+    <div class="bg-light-025 p4 bar-md">
+      <h3 class="fs-h4 fw-bold mb3">Why This Matters for SEO</h3>
+      <p class="fc-light-700 lh-relaxed mb3">
+        Google analyzes the text inside <code>&lt;a&gt;</code> tags to understand what the link
+        points to. When you wrap an entire card in a link, Google sees all the content as the anchor
+        text:
+      </p>
+
+      <div class="bg-light-075 p3 bar-sm mb3">
+        <p class="fc-red-600 fw-bold mb2">❌ Bad anchor (wrapping all content):</p>
+        <p class="fs-pica fc-light-700">
+          "Complete Guide to Chocolate Benefits The chocolate is a source of happiness, reduces
+          stress, anxiety and even depression. Read more Category: Nutrition Tags: chocolate, health
+          Published: 2024-01-15"
+        </p>
+      </div>
+
+      <div class="bg-light-075 p3 bar-sm">
+        <p class="fc-green-600 fw-bold mb2">✓ Good anchor (with .link--overlay):</p>
+        <p class="fs-pica fc-light-700">"Complete Guide to Chocolate Benefits"</p>
+      </div>
+    </div>
+
+    <div class="bg-light-025 p4 bar-md">
+      <h3 class="fs-h4 fw-bold mb3">Screen Reader Experience</h3>
+      <ul class="list-disc list-inside fc-light-700 lh-relaxed">
+        <li class="mb2">Link is properly nested inside heading: better navigation</li>
+        <li class="mb2">Clear content hierarchy: heading, paragraph, secondary links</li>
+        <li class="mb2">Each link has distinct, meaningful text</li>
+        <li class="mb2">No confusion from nested interactive elements</li>
+      </ul>
+    </div>
+  </div>
+</section>
