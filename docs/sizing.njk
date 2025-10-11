@@ -32,7 +32,7 @@ title: Sizing concepts
 
     <p>Foundation CSS uses two key variables to define its spacing system:</p>
 
-    <div class="bg-light-025 p4 br-md mb4">
+    <div class="bg-light-025 p4 bar-md mb4">
       <ul class="list-unstyled">
         <li class="mb3">
           <strong><code>$su-full: 1008px</code></strong> - The maximum width of the design system's
@@ -66,7 +66,7 @@ title: Sizing concepts
 
     <h3>Spacing Unit Scale</h3>
 
-    <div class="bg-light p4 br-sm">
+    <div class="bg-light p4 bar-sm">
       <table class="w100">
         <thead>
           <tr>
@@ -177,7 +177,7 @@ title: Sizing concepts
       </table>
     </div>
 
-    <div class="bg-light-100 p4 br-sm">
+    <div class="bg-light-100 p4 bar-sm">
       <h4>Exceptions to the Rule</h4>
       <p>
         <strong>1 SU, 3 SU, and 5 SU</strong> are exceptions to our consistent multiples of 8px
@@ -191,7 +191,7 @@ title: Sizing concepts
 
     <p>Foundation CSS provides atomic classes for all spacing units:</p>
 
-    <div class="d-flex fd-column g2 bg-light p4 br-sm">
+    <div class="d-flex fd-column g2 bg-light p4 bar-sm">
       <h4>Margin Classes</h4>
       <ul>
         <li><code>m0</code> to <code>m16</code> - All sides</li>
@@ -238,7 +238,7 @@ title: Sizing concepts
       Primer was used for religious books ordered by Henry VIII.
     </p>
 
-    <div class="bg-light p4 br-sm">
+    <div class="bg-light p4 bar-sm">
       <table class="w100">
         <thead>
           <tr>
@@ -329,7 +329,7 @@ title: Sizing concepts
 
     <h3>Font Weights</h3>
 
-    <div class="bg-light p4 br-sm">
+    <div class="bg-light p4 bar-sm">
       <p>Foundation CSS provides the following font weight classes:</p>
       <ul>
         <li><code>fw-light</code> (300) - Light weight text</li>
@@ -357,7 +357,7 @@ title: Sizing concepts
     <h3>Spacing Unit Guidelines</h3>
 
     <div class="d-flex fd-column g4">
-      <div class="bg-green-100 p4 br-sm">
+      <div class="bg-green-100 p4 bar-sm">
         <h4 class="fc-green-900">✅ Do</h4>
         <ul class="d-flex fd-column g2">
           <li>
@@ -383,7 +383,7 @@ title: Sizing concepts
         </ul>
       </div>
 
-      <div class="bg-red-100 p4 br-sm">
+      <div class="bg-red-100 p4 bar-sm">
         <h4 class="fc-red-900">❌ Don't</h4>
         <ul class="d-flex fd-column g2">
           <li>
@@ -413,7 +413,7 @@ title: Sizing concepts
     <h3>Typography Guidelines</h3>
 
     <div class="d-flex fd-column g4">
-      <div class="bg-green-100 p4 br-sm">
+      <div class="bg-green-100 p4 bar-sm">
         <h4 class="fc-green-900">✅ Do</h4>
         <ul class="d-flex fd-column g2">
           <li>
@@ -434,7 +434,7 @@ title: Sizing concepts
         </ul>
       </div>
 
-      <div class="bg-red-100 p4 br-sm">
+      <div class="bg-red-100 p4 bar-sm">
         <h4 class="fc-red-900">❌ Don't</h4>
         <ul class="d-flex fd-column g2">
           <li>
@@ -462,20 +462,20 @@ title: Sizing concepts
 
     <h3>Button Component with Spacing Units</h3>
 
-    <div class="bg-light p4 br-sm">
+    <div class="bg-light p4 bar-sm">
       <div class="d-flex fd-column g3">
         <div class="d-flex fd-row g2">
           <button class="btn btn--primary">Primary Button</button>
           <button class="btn btn--secondary">Secondary Button</button>
         </div>
 
-        <div class="bg-light-100 p3 br-sm">
+        <div class="bg-light-100 p3 bar-sm">
           <h4>HTML Structure</h4>
           <pre><code>&lt;button class="btn btn--primary"&gt;Primary Button&lt;/button&gt;
 &lt;button class="btn btn--secondary"&gt;Secondary Button&lt;/button&gt;</code></pre>
         </div>
 
-        <div class="bg-light-100 p3 br-sm">
+        <div class="bg-light-100 p3 bar-sm">
           <h4>CSS with Spacing Units</h4>
           <pre><code>.btn {
   padding: map.get($spacing-units, 3) map.get($spacing-units, 5);
@@ -495,7 +495,7 @@ title: Sizing concepts
 
     <h3>Article Layout with Typography Scale</h3>
 
-    <div class="bg-light p4 br-sm">
+    <div class="bg-light p4 bar-sm">
       <article class="d-flex fd-column g4">
         <header>
           <h1 class="fs-canon fw-bold mb2">Article Title</h1>
@@ -521,21 +521,21 @@ title: Sizing concepts
 
     <h3>Card Component with Combined Concepts</h3>
 
-    <div class="bg-light p4 br-sm">
+    <div class="bg-light p4 bar-sm">
       <div class="d-grid grid__1 sm:grid__2 md:grid__3 g4">
-        <div class="bg-white p4 br-md">
+        <div class="bg-white p4 bar-md">
           <h3 class="fs-paragon fw-bold mb2">Card Title</h3>
           <p class="fs-body-copy mb3">Card description using body-copy typography.</p>
           <button class="btn btn--primary">Learn More</button>
         </div>
 
-        <div class="bg-white p4 br-md">
+        <div class="bg-white p4 bar-md">
           <h3 class="fs-paragon fw-bold mb2">Another Card</h3>
           <p class="fs-body-copy mb3">Consistent spacing and typography across cards.</p>
           <button class="btn btn--secondary">Read More</button>
         </div>
 
-        <div class="bg-white p4 br-md">
+        <div class="bg-white p4 bar-md">
           <h3 class="fs-paragon fw-bold mb2">Third Card</h3>
           <p class="fs-body-copy mb3">Maintaining visual harmony with spacing units.</p>
           <button class="btn btn--primary">Explore</button>
@@ -544,7 +544,7 @@ title: Sizing concepts
     </div>
   </section>
 
-  <section class="bg-light-100 p4 br-sm mt6">
+  <section class="bg-light-100 p4 bar-sm mt6">
     <h3>Acknowledgments</h3>
     <p>
       The spacing unit and typography concepts in Foundation CSS are inspired by the
