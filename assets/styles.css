@@ -4744,6 +4744,24 @@ h6 {
   -webkit-user-drag: none;
 }
 
+.link--overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.link--wrapper {
+  position: relative !important;
+}
+.link--wrapper a:not(.link--overlay),
+.link--wrapper button {
+  position: relative;
+  z-index: 2;
+}
+
 .of-contain {
   object-fit: contain !important;
 }
