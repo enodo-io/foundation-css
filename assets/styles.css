@@ -4945,10 +4945,10 @@ h6 {
     position: unset !important;
   }
 }
-.list-disc, ul {
+.list-disc {
   list-style-type: disc !important;
 }
-.list-decimal, ol {
+.list-decimal {
   list-style-type: decimal !important;
 }
 .list-inherit {
