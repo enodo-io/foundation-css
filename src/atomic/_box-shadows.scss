@@ -3,10 +3,17 @@
 @use "../variables/box-shadows" as *;
 @use "../functions/responsify" as *;
 
+// Generate CSS custom properties for box-shadows
+:root {
+  @each $size, $shadow in $box-shadows {
+    --bs-#{$size}: #{$shadow};
+  }
+}
+
 @include responsify("bs") {
   @each $size, $shadow in $box-shadows {
     &-#{$size} {
-      box-shadow: $shadow !important;
+      box-shadow: var(--bs-#{$size}) !important;
     }
   }
 }
@@ -14,7 +21,7 @@
 .h\:bs {
   @each $size, $shadow in $box-shadows {
     &-#{$size}:hover {
-      box-shadow: $shadow !important;
+      box-shadow: var(--bs-#{$size}) !important;
     }
   }
 }

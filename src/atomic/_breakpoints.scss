@@ -1,0 +1,9 @@
+@forward "../variables/breakpoints";
+@use "../variables/breakpoints" as *;
+
+// Generate CSS custom properties for breakpoints
+:root {
+  @each $name, $value in $breakpoints {
+    --bp-#{$name}: #{$value};
+  }
+}

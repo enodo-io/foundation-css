@@ -1,0 +1,189 @@
+---
+layout: base.njk
+title: Breakpoints
+---
+
+<header class="d-flex fd-column g4">
+  <h1>Breakpoints</h1>
+  <p>Responsive breakpoints for mobile-first design.</p>
+</header>
+
+<section>
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="breakpoints">Responsive Breakpoints</h2>
+    <a href="#breakpoints">#</a>
+  </header>
+
+  <p class="fc-light-700 lh-relaxed mb4">
+    Foundation CSS uses a mobile-first approach with three breakpoints that cover all device sizes.
+    All utility classes support responsive prefixes.
+  </p>
+
+  <table class="w100 mb4">
+    <thead>
+      <tr>
+        <th scope="col">Breakpoint</th>
+        <th scope="col">Prefix</th>
+        <th scope="col">Min Width</th>
+        <th scope="col">Target Devices</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Default</th>
+        <td><code>-</code></td>
+        <td><code>0px</code></td>
+        <td>All devices (mobile-first)</td>
+      </tr>
+      <tr>
+        <th scope="row">Small</th>
+        <td><code>sm:</code></td>
+        <td><code>600px</code></td>
+        <td>Tablets</td>
+      </tr>
+      <tr>
+        <th scope="row">Medium</th>
+        <td><code>md:</code></td>
+        <td><code>1008px</code></td>
+        <td>Desktops</td>
+      </tr>
+      <tr>
+        <th scope="row">Large</th>
+        <td><code>lg:</code></td>
+        <td><code>1280px</code></td>
+        <td>Large desktops</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="bg-light-025 p4 bar-md mb4">
+    <h3 class="fs-h4 fw-bold mb3">Usage</h3>
+    <pre><code>&lt;!-- Mobile-first: block by default, flex on tablet, grid on desktop --&gt;
+&lt;div class="d-block md:d-flex lg:d-grid"&gt;
+  &lt;!-- Content --&gt;
+&lt;/div&gt;
+
+&lt;!-- Responsive grid columns --&gt;
+&lt;div class="d-grid grid__1 sm:grid__2 md:grid__3 g4"&gt;
+  &lt;!-- 1 col mobile, 2 cols tablet, 3 cols desktop --&gt;
+&lt;/div&gt;
+
+&lt;!-- Responsive spacing --&gt;
+&lt;div class="p2 md:p4 lg:p6"&gt;
+  &lt;!-- Smaller padding on mobile, larger on tablet/desktop --&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+
+  <div class="bg-blue-100 p4 bar-md mb4">
+    <h3 class="fs-h4 fw-bold fc-blue-600 mb3">💡 Mobile-First Approach</h3>
+    <p class="fc-light-700 lh-relaxed mb3">
+      Foundation CSS uses <code>min-width</code> media queries, meaning styles cascade upward:
+    </p>
+    <ul class="list-disc list-inside fc-light-700 lh-relaxed">
+      <li class="mb2">Base styles apply to all screen sizes</li>
+      <li class="mb2"><code>sm:</code> overrides apply from 600px and up</li>
+      <li class="mb2"><code>md:</code> overrides apply from 1008px and up</li>
+      <li class="mb2"><code>lg:</code> overrides apply from 1280px and up</li>
+    </ul>
+  </div>
+
+  <aside>
+    <header class="d-flex ai-center jc-space-between pt6 pb4">
+      <h3 id="examples">Examples</h3>
+      <a href="#examples">#</a>
+    </header>
+
+    <div class="preview">
+      <div class="d-flex fd-column g4">
+        <div class="d-block sm:d-flex md:d-grid p4 bg-light-100 bar-md">
+          <code class="fs-pica fc-light-700">d-block sm:d-flex md:d-grid</code>
+        </div>
+
+        <div class="d-grid grid__1 sm:grid__2 md:grid__3 lg:grid__4 g4">
+          <div class="p4 bg-green-100 bar-md">
+            <code class="fs-pica fc-green-600">Item 1</code>
+          </div>
+          <div class="p4 bg-green-100 bar-md">
+            <code class="fs-pica fc-green-600">Item 2</code>
+          </div>
+          <div class="p4 bg-green-100 bar-md">
+            <code class="fs-pica fc-green-600">Item 3</code>
+          </div>
+          <div class="p4 bg-green-100 bar-md">
+            <code class="fs-pica fc-green-600">Item 4</code>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+</section>
+
+<section>
+  <h2 id="customization">Customization</h2>
+
+  <div class="d-flex fd-column g4">
+    <div>
+      <h3 class="fs-h4 fw-bold mb3">CSS Variables</h3>
+      <p class="fc-light-700 lh-relaxed mb3">
+        Breakpoints are exposed as CSS custom properties for use in custom media queries:
+      </p>
+      <div class="bg-light-025 p4 bar-md">
+        <pre><code>:root {
+  --bp-sm: 600px;
+  --bp-md: 1008px;
+  --bp-lg: 1280px;
+}
+
+/* Use in custom components */
+@media (min-width: var(--bp-md)) {
+  .my-component {
+    /* Desktop styles */
+  }
+}</code></pre>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="fs-h4 fw-bold mb3">SCSS Variables (Build-time)</h3>
+      <p class="fc-light-700 lh-relaxed mb3">Override SCSS variables before importing:</p>
+      <div class="bg-light-025 p4 bar-md">
+        <pre><code>@use "@enodo/foundation-css" with (
+  $breakpoints: (
+    sm: 600px,
+    md: 1008px,
+    lg: 1280px,
+  )
+);</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="best-practices">Best Practices</h2>
+    <a href="#best-practices">#</a>
+  </header>
+
+  <div class="d-grid grid__1 md:grid__2 g4">
+    <div class="bg-green-100 p4 bar-md">
+      <h3 class="fs-h4 fw-bold fc-green-600 mb3">Do</h3>
+      <ul class="list-disc list-inside fc-light-700 lh-relaxed">
+        <li class="mb2">Start with mobile styles (no prefix)</li>
+        <li class="mb2">Add complexity as screen size increases</li>
+        <li class="mb2">Test on real devices when possible</li>
+        <li class="mb2">Use semantic breakpoints (sm, md, lg, xl)</li>
+      </ul>
+    </div>
+
+    <div class="bg-red-100 p4 bar-md">
+      <h3 class="fs-h4 fw-bold fc-red-600 mb3">Don't</h3>
+      <ul class="list-disc list-inside fc-light-700 lh-relaxed">
+        <li class="mb2">Design for desktop first</li>
+        <li class="mb2">Create custom breakpoints for every device</li>
+        <li class="mb2">Rely solely on breakpoints for responsiveness</li>
+        <li class="mb2">Forget to test on mobile devices</li>
+      </ul>
+    </div>
+  </div>
+</section>

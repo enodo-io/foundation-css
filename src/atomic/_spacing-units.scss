@@ -1,4 +1,17 @@
 @use "../functions/forge" as *;
+@use "../functions/px2rem" as *;
+@use "../variables/spacing-units" as *;
+@use "sass:math";
+
+// Generate CSS custom properties for spacing units
+:root {
+  @each $su, $value in $spacing-units {
+    --su#{$su}: #{px2rem($value)};
+  }
+
+  --su-full: #{px2rem($su-full)};
+  --su-step: #{px2rem(math.div($su-full, 12))};
+}
 
 // MARGIN
 @include forge-space-units("m", (neg, auto), margin);

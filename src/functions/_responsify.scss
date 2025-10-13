@@ -1,4 +1,3 @@
-@forward "../variables/breakpoints";
 @use "../variables/breakpoints" as *;
 
 @mixin responsify($prefix) {

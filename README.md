@@ -350,65 +350,142 @@ Import only the modules you need:
 @use "@enodo/foundation-css/typographies";
 ```
 
-### Component creation with Foundation CSS variables
-Create custom components using Foundation CSS variables:
+### CSS Custom Properties (Runtime)
 
-```scss
-@use "sass:map";
-@use "@enodo/foundation-css/variables/spacing-units" as *;
-@use "@enodo/foundation-css/variables/borders" as *;
+Foundation CSS exposes reusable variables as CSS custom properties that can be overridden at runtime:
 
+```css
+/* Available CSS variables */
+:root {
+  /* Spacing units (in rem for accessibility) */
+  --su1: 0.25rem;   /* 4px */
+  --su2: 0.5rem;    /* 8px */
+  --su3: 0.75rem;   /* 12px */
+  --su4: 1rem;      /* 16px */
+  --su5: 1.25rem;   /* 20px */
+  --su6: 1.5rem;    /* 24px */
+  --su7: 2rem;      /* 32px */
+  --su8: 2.5rem;    /* 40px */
+  /* ... up to --su16: 12.5rem (200px) */
+  --su-full: 63rem;   /* 1008px */
+  --su-step: 5.25rem; /* 84px */
+
+  /* Breakpoints */
+  --bp-sm: 600px;
+  --bp-md: 1008px;
+  --bp-lg: 1280px;
+
+  /* Border radius */
+  --br-xs: 0.1875rem; /* 3px */
+  --br-sm: 0.3125rem; /* 5px */
+  --br-md: 0.5rem;    /* 8px */
+  --br-lg: 1rem;      /* 16px */
+  --br-xl: 1.5rem;    /* 24px */
+
+  /* Box shadows */
+  --bs-none: none;
+  --bs-sm: 0 1px 2px hsla(0deg, 0%, 0%, 0.05), ...;
+  --bs-md: 0 1px 3px hsla(0deg, 0%, 0%, 0.06), ...;
+  --bs-lg: 0 1px 4px hsla(0deg, 0%, 0%, 0.09), ...;
+  --bs-xl: 0 10px 24px hsla(0deg, 0%, 0%, 0.05), ...;
+
+  /* Colors (see palette documentation) */
+  --light: #fff;
+  --light-100: #e1e3e8;
+  --green: #4bdc9f;
+  --green-100: #e8f8f2;
+  /* ... all color stops */
+}
+
+/* Use in your custom components */
+.my-button {
+  padding: var(--su3) var(--su5);  /* 12px 20px */
+  border-radius: var(--br-md);      /* 8px */
+  box-shadow: var(--bs-sm);
+  background-color: var(--green);
+  color: var(--light);
+}
+
+.my-card {
+  padding: var(--su4);
+  gap: var(--su3);
+  border-radius: var(--br-lg);
+  box-shadow: var(--bs-md);
+}
+
+/* Custom media queries with breakpoints */
+@media (min-width: var(--bp-md)) {
+  .my-component {
+    padding: var(--su6);
+  }
+}
+
+/* Dynamic theming with JavaScript */
+document.documentElement.style.setProperty('--green', '#your-brand-color');
+```
+
+### Component creation with CSS variables (Recommended)
+Create custom components using CSS custom properties:
+
+```css
+/* Recommended: Use CSS variables for easier maintenance */
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border: none;
-  border-radius: map.get($borders, sm);
+  border-radius: var(--br-sm);
   cursor: pointer;
   transition: all 0.2s ease;
+  padding: var(--su3) var(--su5);  /* 12px 20px */
+}
 
-  // Use spacing units for padding
-  padding:
-    map.get($spacing-units, 3)
-    map.get($spacing-units, 5);
+.button--small {
+  padding: var(--su2) var(--su3);  /* 8px 12px */
+  font-size: 0.875rem;
+}
 
-  // Different button sizes
-  &__small {
-    padding:
-      map.get($spacing-units, 2)
-      map.get($spacing-units, 3);
-    font-size: 0.875rem;
-  }
+.button--large {
+  padding: var(--su4) var(--su7);  /* 16px 32px */
+  font-size: 1.125rem;
+}
 
-  &__large {
-    padding:
-      map.get($spacing-units, 4)
-      map.get($spacing-units, 7);
-    font-size: 1.125rem;
-  }
+.button--primary {
+  background-color: var(--green);
+  color: var(--light);
+}
 
-  // Button variants
-  &__primary {
-    background-color: var(--green);
-    color: var(--light);
+.button--primary:hover {
+  background-color: var(--green-600);
+}
 
-    &:hover {
-      opacity: 0.8;
-    }
-  }
+.button--secondary {
+  background-color: var(--light-500);
+  color: var(--light);
+}
 
-  &__secondary {
-    background-color: var(--light-500);
-    color: var(--light);
+.button--secondary:hover {
+  opacity: 0.8;
+}
 
-    &:hover {
-      opacity: 0.8;
-    }
+.my-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--su3);
+  padding: var(--su4);
+  background-color: var(--light-100);
+  border-radius: var(--br-md);
+  box-shadow: var(--bs-sm);
+}
+
+@media (min-width: var(--bp-md)) {
+  .my-card {
+    padding: var(--su6);
   }
 }
 ```
 
-This approach ensures consistency with your design system's spacing scale while creating reusable components.
+This approach ensures consistency with Foundation CSS design tokens while creating custom components.
 
 ## Architecture
 
@@ -431,7 +508,6 @@ Foundation CSS follows Atomic CSS principles:
 
 - Complete examples in the documentation
 - Add conditional classes for print media
-- Expose reusable variables for components as CSS variables (--myvar): spacing units, breakpoints, box-shadows
 - Refactor documentation generation to use loops and variables instead of hardcoded HTML (reduce code duplication in the repo)
 - Improve documentation
 - Create a better design or UI for the documentation using only Foundation CSS tools

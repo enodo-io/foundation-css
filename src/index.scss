@@ -1,5 +1,6 @@
 @use "normalize";
 @forward "./functions/forge";
+@forward "./atomic/breakpoints";
 @forward "./atomic/palettes";
 @forward "./atomic/backgrounds";
 @forward "./atomic/borders";

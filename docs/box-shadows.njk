@@ -98,31 +98,40 @@ title: Box shadows
 
 <section>
   <h2 id="customization">Customization</h2>
-  <p>Override box-shadow variables:</p>
 
-  <div class="bg-light-025 p4 bar-md">
-    <pre><code>$box-shadows: (
-  none: none,
-  sm: (
-    0 1px 2px hsla(0deg, 0%, 0%, 0.05),
-    0 1px 4px hsla(0deg, 0%, 0%, 0.05),
-    0 2px 8px hsla(0deg, 0%, 0%, 0.05),
-  ),
-  md: (
-    0 1px 3px hsla(0deg, 0%, 0%, 0.06),
-    0 2px 6px hsla(0deg, 0%, 0%, 0.06),
-    0 3px 8px hsla(0deg, 0%, 0%, 0.09),
-  ),
-  lg: (
-    0 1px 4px hsla(0deg, 0%, 0%, 0.09),
-    0 3px 8px hsla(0deg, 0%, 0%, 0.09),
-    0 4px 13px hsla(0deg, 0%, 0%, 0.13),
-  ),
-  xl: (
-    0 10px 24px hsla(0deg, 0%, 0%, 0.05),
-    0 20px 48px hsla(0deg, 0%, 0%, 0.05),
-    0 1px 4px hsla(0deg, 0%, 0%, 0.1),
-  ),
+  <div class="d-flex fd-column g4">
+    <div>
+      <h3 class="fs-h4 fw-bold mb3">CSS Variables (Runtime)</h3>
+      <p class="fc-light-700 lh-relaxed mb3">Box shadows are exposed as CSS custom properties:</p>
+      <div class="bg-light-025 p4 bar-md">
+        <pre><code>:root {
+  --bs-none: none;
+  --bs-sm: 0 1px 2px hsla(0deg, 0%, 0%, 0.05), ...;
+  --bs-md: 0 1px 3px hsla(0deg, 0%, 0%, 0.06), ...;
+  --bs-lg: 0 1px 4px hsla(0deg, 0%, 0%, 0.09), ...;
+  --bs-xl: 0 10px 24px hsla(0deg, 0%, 0%, 0.05), ...;
+}
+
+/* Use in custom components */
+.my-card {
+  box-shadow: var(--bs-md);
+}</code></pre>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="fs-h4 fw-bold mb3">SCSS Variables (Build-time)</h3>
+      <p class="fc-light-700 lh-relaxed mb3">Override SCSS variables before importing:</p>
+      <div class="bg-light-025 p4 bar-md">
+        <pre><code>@use "@enodo/foundation-css" with (
+  $box-shadows: (
+    none: none,
+    sm: (0 1px 2px rgba(0, 0, 0, 0.05)),
+    md: (0 2px 4px rgba(0, 0, 0, 0.1)),
+    // ... customize as needed
+  )
 );</code></pre>
+      </div>
+    </div>
   </div>
 </section>

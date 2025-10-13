@@ -356,15 +356,43 @@ title: Borders
 
 <section>
   <h2 id="customization">Customization</h2>
-  <p>Override border variables:</p>
 
-  <div class="bg-light-025 p4 bar-md">
-    <pre><code>$borders: (
-  xs: 3px,
-  sm: 5px,
-  md: 8px,
-  lg: 16px,
-  xl: 24px,
+  <div class="d-flex fd-column g4">
+    <div>
+      <h3 class="fs-h4 fw-bold mb3">CSS Variables (Runtime)</h3>
+      <p class="fc-light-700 lh-relaxed mb3">
+        Border radius sizes are exposed as CSS custom properties:
+      </p>
+      <div class="bg-light-025 p4 bar-md">
+        <pre><code>:root {
+  --br-xs: 0.1875rem; /* 3px */
+  --br-sm: 0.3125rem; /* 5px */
+  --br-md: 0.5rem;    /* 8px */
+  --br-lg: 1rem;      /* 16px */
+  --br-xl: 1.5rem;    /* 24px */
+}
+
+/* Use in custom components */
+.my-button {
+  border-radius: var(--br-md);
+}</code></pre>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="fs-h4 fw-bold mb3">SCSS Variables (Build-time)</h3>
+      <p class="fc-light-700 lh-relaxed mb3">Override SCSS variables before importing:</p>
+      <div class="bg-light-025 p4 bar-md">
+        <pre><code>@use "@enodo/foundation-css" with (
+  $borders: (
+    xs: 3px,
+    sm: 5px,
+    md: 8px,
+    lg: 16px,
+    xl: 24px,
+  )
 );</code></pre>
+      </div>
+    </div>
   </div>
 </section>

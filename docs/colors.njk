@@ -499,36 +499,104 @@ title: Colors
   </header>
 
   <div class="d-flex fd-column g4">
-    <p class="fc-light-700 lh-relaxed">Override color variables to customize your theme:</p>
+    <div>
+      <h3 class="fs-h4 fw-bold mb3">CSS Variables</h3>
+      <p class="fc-light-700 lh-relaxed mb3">
+        All colors are exposed as CSS custom properties for use in custom components:
+      </p>
+      <div class="bg-light-025 p4 bar-md">
+        <pre><code>:root {
+  /* Light palette */
+  --light: #fff;
+  --light-025: #f9f9f9;
+  --light-050: #f1f2f7;
+  --light-075: #eaecf2;
+  --light-100: #e1e3e8;
+  --light-200: #c8c8d5;
+  --light-300: #a9a9bf;
+  --light-400: #8b8da8;
+  --light-500: #6b6e94;
+  --light-600: #4f517d;
+  --light-700: #30336b;
+  --light-800: #27294f;
+  --light-900: #181a34;
 
-    <div class="bg-light-025 p4 bar-md">
-      <pre><code>$colors: (
-  light: (
-    "main": #fff,
-    "025": #f9f9f9,
-    "050": #f1f2f7,
-    "075": #eaecf2,
-    "100": #e1e3e8,
-    "200": #c8c8d5,
-    "300": #a9a9bf,
-    "400": #8b8da8,
-    "500": #6b6e94,
-    "600": #4f517d,
-    "700": #30336b,
-    "800": #27294f,
-    "900": #181a34,
-  ),
-  green: (
-    "main": #4bdc9f,
-    "100": #e8f8f2,
-    "200": #d1f1e5,
-    "300": #9ee6c7,
-    "400": #4bdc9f,
-    "500": #2bc885,
-    "600": #1a8f5f,
-  ),
-  // ... other colors
+  /* Green palette */
+  --green: #4bdc9f;
+  --green-100: #e8f8f2;
+  --green-200: #d1f1e5;
+  --green-300: #9ee6c7;
+  --green-400: #4bdc9f;
+  --green-500: #2bc885;
+  --green-600: #1a8f5f;
+
+  /* Red, Blue, Orange, Yellow, Purple, Pink, Teal */
+  /* ... (all color palettes available) */
+}
+
+/* Use in custom components */
+.my-alert {
+  background-color: var(--green-100);
+  border-left: 4px solid var(--green-600);
+  color: var(--green-600);
+  padding: var(--su4);
+  border-radius: var(--br-md);
+}
+
+.my-button--primary {
+  background-color: var(--blue);
+  color: var(--light);
+}
+
+.my-button--primary:hover {
+  background-color: var(--blue-600);
+}
+
+.my-badge {
+  background-color: var(--red-100);
+  color: var(--red-600);
+  padding: var(--su1) var(--su2);
+  border-radius: var(--br-sm);
+}</code></pre>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="fs-h4 fw-bold mb3">SCSS Variables (Build-time)</h3>
+      <p class="fc-light-700 lh-relaxed mb3">
+        Override SCSS variables before importing to customize your theme:
+      </p>
+      <div class="bg-light-025 p4 bar-md">
+        <pre><code>@use "@enodo/foundation-css" with (
+  $colors: (
+    light: (
+      "main": #fff,
+      "025": #f9f9f9,
+      "050": #f1f2f7,
+      "075": #eaecf2,
+      "100": #e1e3e8,
+      "200": #c8c8d5,
+      "300": #a9a9bf,
+      "400": #8b8da8,
+      "500": #6b6e94,
+      "600": #4f517d,
+      "700": #30336b,
+      "800": #27294f,
+      "900": #181a34,
+    ),
+    green: (
+      "main": #4bdc9f,
+      "100": #e8f8f2,
+      "200": #d1f1e5,
+      "300": #9ee6c7,
+      "400": #4bdc9f,
+      "500": #2bc885,
+      "600": #1a8f5f,
+    ),
+    // ... other colors
+  )
 );</code></pre>
+      </div>
     </div>
   </div>
 </section>

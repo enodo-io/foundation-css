@@ -5,6 +5,13 @@
 @use "../functions/responsify" as *;
 @use "../functions/px2rem" as *;
 
+// Generate CSS custom properties for border radius
+:root {
+  @each $name, $size in $borders {
+    --br-#{$name}: #{px2rem($size)};
+  }
+}
+
 @include responsify("b") {
   &a {
     border-style: solid !important;
@@ -248,7 +255,7 @@
 .bar {
   @each $name, $size in $borders {
     &-#{$name} {
-      border-radius: px2rem($size) !important;
+      border-radius: var(--br-#{$name}) !important;
     }
   }
 
@@ -267,7 +274,7 @@
 
   @each $name, $size in $borders {
     &-#{$name} {
-      border-top-left-radius: px2rem($size) !important;
+      border-top-left-radius: var(--br-#{$name}) !important;
     }
   }
 }
@@ -282,7 +289,7 @@
 
   @each $name, $size in $borders {
     &-#{$name} {
-      border-top-right-radius: px2rem($size) !important;
+      border-top-right-radius: var(--br-#{$name}) !important;
     }
   }
 }
@@ -297,7 +304,7 @@
 
   @each $name, $size in $borders {
     &-#{$name} {
-      border-bottom-left-radius: px2rem($size) !important;
+      border-bottom-left-radius: var(--br-#{$name}) !important;
     }
   }
 }
@@ -312,7 +319,7 @@
 
   @each $name, $size in $borders {
     &-#{$name} {
-      border-bottom-right-radius: px2rem($size) !important;
+      border-bottom-right-radius: var(--br-#{$name}) !important;
     }
   }
 }

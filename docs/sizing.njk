@@ -476,18 +476,22 @@ title: Sizing concepts
         </div>
 
         <div class="bg-light-100 p3 bar-sm">
-          <h4>CSS with Spacing Units</h4>
+          <h4>CSS with Design Tokens</h4>
           <pre><code>.btn {
-  padding: map.get($spacing-units, 3) map.get($spacing-units, 5);
-  border-radius: map.get($borders, sm);
+  padding: var(--su3) var(--su5);  /* 12px 20px */
+  border-radius: var(--br-sm);
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .btn--primary {
-  background-color: var(--primary);
+  background-color: var(--blue);
   color: var(--light);
+}
+
+.btn--primary:hover {
+  background-color: var(--blue-600);
 }</code></pre>
         </div>
       </div>
@@ -599,3 +603,76 @@ title: Sizing concepts
     opacity: 0.8;
   }
 </style>
+
+<section class="d-flex fd-column g6">
+  <header class="d-flex ai-center jc-space-between">
+    <h2 id="css-variables">CSS Variables</h2>
+    <a href="#css-variables">#</a>
+  </header>
+
+  <div class="d-flex fd-column g4">
+    <div>
+      <h3 class="fs-h4 fw-bold mb3">Spacing Units as CSS Variables</h3>
+      <p class="fc-light-700 lh-relaxed mb3">
+        All spacing units are exposed as CSS custom properties for use in custom components:
+      </p>
+      <div class="bg-light-025 p4 bar-md">
+        <pre><code>:root {
+  --su1: 0.25rem;   /* 4px */
+  --su2: 0.5rem;    /* 8px */
+  --su3: 0.75rem;   /* 12px */
+  --su4: 1rem;      /* 16px */
+  --su5: 1.25rem;   /* 20px */
+  --su6: 1.5rem;    /* 24px */
+  --su7: 2rem;      /* 32px */
+  --su8: 2.5rem;    /* 40px */
+  --su9: 3rem;      /* 48px */
+  --su10: 3.5rem;   /* 56px */
+  --su11: 4rem;     /* 64px */
+  --su12: 4.5rem;   /* 72px */
+  --su13: 5rem;     /* 80px */
+  --su14: 7.5rem;   /* 120px */
+  --su15: 10rem;    /* 160px */
+  --su16: 12.5rem;  /* 200px */
+  --su-full: 63rem; /* 1008px */
+  --su-step: 5.25rem; /* 84px */
+}
+
+/* Use in custom components */
+.my-component {
+  padding: var(--su4);
+  margin-bottom: var(--su6);
+  gap: var(--su3);
+}
+
+.my-container {
+  max-width: var(--su-full);
+  padding: var(--su4);
+}
+
+@media (min-width: var(--bp-md)) {
+  .my-container {
+    padding: var(--su6);
+  }
+}</code></pre>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="fs-h4 fw-bold mb3">SCSS Variables (Build-time)</h3>
+      <p class="fc-light-700 lh-relaxed mb3">
+        Override SCSS variables before importing to customize the spacing scale:
+      </p>
+      <div class="bg-light-025 p4 bar-md">
+        <pre><code>@use "@enodo/foundation-css" with (
+  $spacing-units: (
+    1: 4px, 2: 8px, 3: 12px, 4: 16px,
+    5: 20px, 6: 24px, 7: 32px, 8: 40px,
+    // ... customize as needed
+  ),
+  $su-full: 1008px
+);</code></pre>
+      </div>
+    </div>
+  </div>
+</section>

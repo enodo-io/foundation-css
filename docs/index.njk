@@ -520,30 +520,35 @@ title: Foundation CSS
       Create custom components using Foundation CSS variables for consistency:
     </p>
 
-    <pre><code>@use "sass:map";
-@use "@enodo/foundation-css/variables/spacing-units" as *;
-@use "@enodo/foundation-css/variables/borders" as *;
-
+    <pre><code>/* Use Foundation CSS custom properties */
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border: none;
-  border-radius: map.get($borders, sm);
+  border-radius: var(--br-sm);
   cursor: pointer;
   transition: all 0.2s ease;
+  padding: var(--su3) var(--su5);  /* 12px 20px */
+}
 
-  // Use Foundation CSS spacing units
-  padding: map.get($spacing-units, 3) map.get($spacing-units, 5);
+.button__primary {
+  background-color: var(--blue);
+  color: var(--light);
+}
 
-  &__primary {
-    background-color: var(--blue);
-    color: var(--white);
+.button__primary:hover {
+  background-color: var(--blue-600);
+}
 
-    &:hover {
-      background-color: var(--blue-600);
-    }
-  }
+.button__small {
+  padding: var(--su2) var(--su3);  /* 8px 12px */
+  font-size: 0.875rem;
+}
+
+.button__large {
+  padding: var(--su4) var(--su7);  /* 16px 32px */
+  font-size: 1.125rem;
 }</code></pre>
 
     <p class="fc-light-700">
