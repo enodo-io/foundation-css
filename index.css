@@ -4945,10 +4945,10 @@ h6 {
     position: unset !important;
   }
 }
-.list-disc {
+.list-disc, ul {
   list-style-type: disc !important;
 }
-.list-decimal {
+.list-decimal, ol {
   list-style-type: decimal !important;
 }
 .list-inherit {
@@ -11782,32 +11782,34 @@ h6 {
   line-height: 2.25rem !important;
 }
 
-.fs-canon {
+.fs-canon, h1 {
   font-size: 1.75rem !important;
   line-height: 2rem !important;
 }
 
-.fs-trafalgar {
+.fs-trafalgar, h2 {
   font-size: 1.25rem !important;
   line-height: 1.5rem !important;
 }
 
-.fs-paragon {
+.fs-paragon, h3 {
   font-size: 1.25rem !important;
   line-height: 1.5rem !important;
 }
 
-.fs-double-pica {
+.fs-double-pica, h4 {
   font-size: 1.25rem !important;
   line-height: 1.5rem !important;
 }
 
-.fs-great-primer {
+.fs-great-primer, h5,
+h6 {
   font-size: 1.125rem !important;
   line-height: 1.375rem !important;
 }
 
-.fs-body-copy {
+.fs-body-copy, body,
+p {
   font-size: 0.9375rem !important;
   line-height: 1.25rem !important;
 }
@@ -11853,27 +11855,29 @@ h6 {
     font-size: 2.5rem !important;
     line-height: 2.75rem !important;
   }
-  .fs-canon {
+  .fs-canon, h1 {
     font-size: 2rem !important;
     line-height: 2.25rem !important;
   }
-  .fs-trafalgar {
+  .fs-trafalgar, h2 {
     font-size: 1.5rem !important;
     line-height: 1.75rem !important;
   }
-  .fs-paragon {
+  .fs-paragon, h3 {
     font-size: 1.375rem !important;
     line-height: 1.625rem !important;
   }
-  .fs-double-pica {
+  .fs-double-pica, h4 {
     font-size: 1.25rem !important;
     line-height: 1.5rem !important;
   }
-  .fs-great-primer {
+  .fs-great-primer, h5,
+  h6 {
     font-size: 1.125rem !important;
     line-height: 1.375rem !important;
   }
-  .fs-body-copy {
+  .fs-body-copy, body,
+  p {
     font-size: 1rem !important;
     line-height: 1.375rem !important;
   }
@@ -11915,27 +11919,29 @@ h6 {
     font-size: 4.5rem !important;
     line-height: 5rem !important;
   }
-  .fs-canon {
+  .fs-canon, h1 {
     font-size: 3.25rem !important;
     line-height: 3.5rem !important;
   }
-  .fs-trafalgar {
+  .fs-trafalgar, h2 {
     font-size: 2.25rem !important;
     line-height: 2.5rem !important;
   }
-  .fs-paragon {
+  .fs-paragon, h3 {
     font-size: 1.75rem !important;
     line-height: 2rem !important;
   }
-  .fs-double-pica {
+  .fs-double-pica, h4 {
     font-size: 1.625rem !important;
     line-height: 1.875rem !important;
   }
-  .fs-great-primer {
+  .fs-great-primer, h5,
+  h6 {
     font-size: 1.3125rem !important;
     line-height: 1.5rem !important;
   }
-  .fs-body-copy {
+  .fs-body-copy, body,
+  p {
     font-size: 1.125rem !important;
     line-height: 1.5rem !important;
   }
@@ -11977,27 +11983,29 @@ h6 {
     font-size: 3.5rem !important;
     line-height: 3.75rem !important;
   }
-  .fs-canon {
+  .fs-canon, h1 {
     font-size: 2.75rem !important;
     line-height: 3rem !important;
   }
-  .fs-trafalgar {
+  .fs-trafalgar, h2 {
     font-size: 2rem !important;
     line-height: 2.25rem !important;
   }
-  .fs-paragon {
+  .fs-paragon, h3 {
     font-size: 1.75rem !important;
     line-height: 2rem !important;
   }
-  .fs-double-pica {
+  .fs-double-pica, h4 {
     font-size: 1.5rem !important;
     line-height: 1.75rem !important;
   }
-  .fs-great-primer {
+  .fs-great-primer, h5,
+  h6 {
     font-size: 1.25rem !important;
     line-height: 1.5rem !important;
   }
-  .fs-body-copy {
+  .fs-body-copy, body,
+  p {
     font-size: 1rem !important;
     line-height: 1.375rem !important;
   }
@@ -12035,7 +12043,9 @@ h6 {
   font-style: normal !important;
 }
 
-.fs-italic {
+.fs-italic, h6,
+em,
+q {
   font-style: italic !important;
 }
 
@@ -12067,11 +12077,11 @@ h6 {
   text-decoration: none !important;
 }
 
-.td-underline {
+.td-underline, u {
   text-decoration: underline !important;
 }
 
-.td-line-through {
+.td-line-through, strike {
   text-decoration: line-through !important;
 }
 
@@ -12083,11 +12093,15 @@ h6 {
   font-weight: 400 !important;
 }
 
-.fw-500 {
+.fw-500, h1,
+h2,
+h3,
+h4,
+h5 {
   font-weight: 500 !important;
 }
 
-.fw-600 {
+.fw-600, strong {
   font-weight: 600 !important;
 }
 
@@ -12216,10 +12230,10 @@ h6 {
 .va-middle {
   vertical-align: middle !important;
 }
-.va-sub {
+.va-sub, sub {
   vertical-align: sub !important;
 }
-.va-super {
+.va-super, sup {
   vertical-align: super !important;
 }
 .va-text-bottom {
@@ -12792,6 +12806,25 @@ h6 {
 }
 .z-modal {
   z-index: 9050 !important;
+}
+
+q::before {
+  content: open-quote;
+}
+q::after {
+  content: close-quote;
+}
+
+abbr {
+  text-decoration: underline dotted;
+}
+
+sup {
+  font-size: smaller;
+}
+
+sub {
+  font-size: smaller;
 }
 
 /*# sourceMappingURL=index.css.map */
