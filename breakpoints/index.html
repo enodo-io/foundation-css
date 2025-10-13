@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spacing - Enodo Foundation.css</title>
+    <title>Breakpoints - Enodo Foundation.css</title>
     <link rel="stylesheet" href="/foundation-css/assets/styles.css" />
   </head>
   <body>
@@ -72,6 +72,7 @@
     <ul class="d-flex fd-column g1 p2 pl4">
       <li><a href="/foundation-css/backgrounds">Backgrounds</a></li>
       <li><a href="/foundation-css/borders">Borders</a></li>
+      <li><a href="/foundation-css/breakpoints">Breakpoints</a></li>
       <li><a href="/foundation-css/borders-radius">Borders radius</a></li>
       <li><a href="/foundation-css/box-shadows">Box shadows</a></li>
       <li><a href="/foundation-css/box-sizing">Box sizing</a></li>
@@ -104,162 +105,115 @@
 
       <main class="d-flex fd-column g8 ws9 wmx100 md:mx-auto p2 md:px0">
 <header class="d-flex fd-column g4">
-  <h1>Spacing</h1>
-  <p>Atomic classes for managing a element's margin and padding properties.</p>
+  <h1>Breakpoints</h1>
+  <p>Responsive breakpoints for mobile-first design.</p>
 </header>
 
 <section>
   <header class="d-flex ai-center jc-space-between pb4">
-    <h2 id="margin">Margin</h2>
-    <a href="#margin">🔗</a>
+    <h2 id="breakpoints">Responsive Breakpoints</h2>
+    <a href="#breakpoints">#</a>
   </header>
 
-  <table class="w100">
+  <p class="fc-light-700 lh-relaxed mb4">
+    Foundation CSS uses a mobile-first approach with three breakpoints that cover all device sizes.
+    All utility classes support responsive prefixes.
+  </p>
+
+  <table class="w100 mb4">
     <thead>
       <tr>
-        <th scope="col">Class</th>
-        <th scope="col">CSS</th>
-        <th scope="col">Responsiveness</th>
+        <th scope="col">Breakpoint</th>
+        <th scope="col">Prefix</th>
+        <th scope="col">Min Width</th>
+        <th scope="col">Target Devices</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <th scope="row"><code>.ps-static</code></th>
-        <td><code>position: static;</code></td>
-        <td class="fc-green ta-center">Y</td>
+        <th scope="row">Default</th>
+        <td><code>-</code></td>
+        <td><code>0px</code></td>
+        <td>All devices (mobile-first)</td>
       </tr>
       <tr>
-        <th scope="row"><code>.ps-relative</code></th>
-        <td><code>position: relative;</code></td>
-        <td class="fc-green ta-center">Y</td>
+        <th scope="row">Small</th>
+        <td><code>sm:</code></td>
+        <td><code>600px</code></td>
+        <td>Tablets</td>
       </tr>
       <tr>
-        <th scope="row"><code>.ps-absolute</code></th>
-        <td><code>position: absolute;</code></td>
-        <td class="fc-green ta-center">Y</td>
+        <th scope="row">Medium</th>
+        <td><code>md:</code></td>
+        <td><code>1008px</code></td>
+        <td>Desktops</td>
       </tr>
       <tr>
-        <th scope="row"><code>.ps-fixed</code></th>
-        <td><code>position: fixed;</code></td>
-        <td class="fc-green ta-center">Y</td>
-      </tr>
-      <tr>
-        <th scope="row"><code>.ps-sticky</code></th>
-        <td><code>position: sticky;</code></td>
-        <td class="fc-green ta-center">Y</td>
-      </tr>
-      <tr>
-        <th scope="row"><code>.ps-unset</code></th>
-        <td><code>position: unset;</code></td>
-        <td class="fc-green ta-center">Y</td>
+        <th scope="row">Large</th>
+        <td><code>lg:</code></td>
+        <td><code>1280px</code></td>
+        <td>Large desktops</td>
       </tr>
     </tbody>
   </table>
 
-  <aside>
-    <header class="d-flex ai-center jc-space-between pt6 pb4">
-      <h3 id="position-examples">Examples</h3>
-      <a href="#position-examples">🔗</a>
-    </header>
-    <pre><code>&lt;div class="ps-static"&gt;&lt;/div&gt;
-&lt;div class="ps-relative"&gt;&lt;/div&gt;
-&lt;div class="ps-absolute"&gt;&lt;/div&gt;
-&lt;div class="ps-fixed"&gt;&lt;/div&gt;
-&lt;div class="ps-sticky"&gt;&lt;/div&gt;
-&lt;div class="ps-unset"&gt;&lt;/div&gt;</code></pre>
+  <div class="bg-light-025 p4 bar-md mb4">
+    <h3 class="fs-h4 fw-bold mb3">Usage</h3>
+    <pre><code>&lt;!-- Mobile-first: block by default, flex on tablet, grid on desktop --&gt;
+&lt;div class="d-block md:d-flex lg:d-grid"&gt;
+  &lt;!-- Content --&gt;
+&lt;/div&gt;
 
-    <div class="preview overflow-auto hmx2">
-      <div class="ps-relative d-flex">
-        <div class="ps-static p1 ws1 hs1 bg-light ba">.ps-static</div>
-        <div class="ps-relative p1 ws1 hs4 t8 l8 bg-light ba">.ps-relative .t8 .l8</div>
-        <div class="ps-absolute p1 ws1 hs2 t10 r8 bg-light ba">.ps-absolute .t10 .r8</div>
-        <div class="ps-sticky p1 ws1 hs2 t6 bg-light ba">.ps-sticky .t6</div>
-      </div>
-    </div>
-  </aside>
-</section>
+&lt;!-- Responsive grid columns --&gt;
+&lt;div class="d-grid grid__1 sm:grid__2 md:grid__3 g4"&gt;
+  &lt;!-- 1 col mobile, 2 cols tablet, 3 cols desktop --&gt;
+&lt;/div&gt;
 
-<section>
-  <header class="d-flex ai-center jc-space-between pb4">
-    <h2 id="coordinates">Coordinates</h2>
-    <a href="#coordinates">🔗</a>
-  </header>
+&lt;!-- Responsive spacing --&gt;
+&lt;div class="p2 md:p4 lg:p6"&gt;
+  &lt;!-- Smaller padding on mobile, larger on tablet/desktop --&gt;
+&lt;/div&gt;</code></pre>
+  </div>
 
-  <table class="w100">
-    <thead>
-      <tr>
-        <th scope="col">Class</th>
-        <th scope="col">CSS</th>
-        <th scope="col">Responsiveness</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row"><code>.t[SU]</code></th>
-        <td><code>top: [SU];</code></td>
-        <td class="fc-green ta-center">Y</td>
-      </tr>
-      <tr>
-        <th scope="row"><code>.r[SU]</code></th>
-        <td><code>right: [SU];</code></td>
-        <td class="fc-green ta-center">Y</td>
-      </tr>
-      <tr>
-        <th scope="row"><code>.b[SU]</code></th>
-        <td><code>bottom: [SU];</code></td>
-        <td class="fc-green ta-center">Y</td>
-      </tr>
-      <tr>
-        <th scope="row"><code>.l[SU]</code></th>
-        <td><code>left: [SU];</code></td>
-        <td class="fc-green ta-center">Y</td>
-      </tr>
-      <tr>
-        <th scope="row"><code>.i[SU]</code></th>
-        <td><code>inset: [SU];</code></td>
-        <td class="fc-green ta-center">Y</td>
-      </tr>
-      <tr>
-        <th scope="row"><code>.tn[SU]</code></th>
-        <td><code>top: -[SU];</code></td>
-        <td class="fc-green ta-center">Y</td>
-      </tr>
-      <tr>
-        <th scope="row"><code>.rn[SU]</code></th>
-        <td><code>right: -[SU];</code></td>
-        <td class="fc-green ta-center">Y</td>
-      </tr>
-      <tr>
-        <th scope="row"><code>.bn[SU]</code></th>
-        <td><code>bottom: -[SU];</code></td>
-        <td class="fc-green ta-center">Y</td>
-      </tr>
-      <tr>
-        <th scope="row"><code>.ln[SU]</code></th>
-        <td><code>left: -[SU];</code></td>
-        <td class="fc-green ta-center">Y</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="bg-blue-100 p4 bar-md mb4">
+    <h3 class="fs-h4 fw-bold fc-blue-600 mb3">💡 Mobile-First Approach</h3>
+    <p class="fc-light-700 lh-relaxed mb3">
+      Foundation CSS uses <code>min-width</code> media queries, meaning styles cascade upward:
+    </p>
+    <ul class="list-disc list-inside fc-light-700 lh-relaxed">
+      <li class="mb2">Base styles apply to all screen sizes</li>
+      <li class="mb2"><code>sm:</code> overrides apply from 600px and up</li>
+      <li class="mb2"><code>md:</code> overrides apply from 1008px and up</li>
+      <li class="mb2"><code>lg:</code> overrides apply from 1280px and up</li>
+    </ul>
+  </div>
 
   <aside>
     <header class="d-flex ai-center jc-space-between pt6 pb4">
-      <h3 id="coordinate-examples">Coordinate examples</h3>
-      <a href="#coordinate-examples">🔗</a>
+      <h3 id="examples">Examples</h3>
+      <a href="#examples">#</a>
     </header>
-    <pre><code>&lt;div class="ps-absolute i12"&gt;&lt;/div&gt;
-&lt;div class="ps-absolute t3 l3"&gt;&lt;/div&gt;
-&lt;div class="ps-absolute t8 r6"&gt;&lt;/div&gt;
-&lt;div class="ps-absolute b8 l8"&gt;&lt;/div&gt;
-&lt;div class="ps-absolute bn6 rn6"&gt;&lt;/div&gt;</code></pre>
 
-    <div class="preview overflow-visible">
-      <div class="ps-relative d-flex hs4">
-        <div class="ps-absolute i12 p2 bg-light ba">.i12</div>
-        <div class="ps-absolute t3 l3 p2 bg-light ba">.t3 .l3</div>
-        <div class="ps-absolute t8 r6 p2 bg-light ba">.t8 .r6</div>
-        <div class="ps-absolute b8 l8 p2 bg-light ba">.b8 .l8</div>
-        <div class="ps-absolute bn7 rn6 p2 bg-light ba">.bn7 .rn6</div>
+    <div class="preview">
+      <div class="d-flex fd-column g4">
+        <div class="d-block sm:d-flex md:d-grid p4 bg-light-100 bar-md">
+          <code class="fs-pica fc-light-700">d-block sm:d-flex md:d-grid</code>
+        </div>
+
+        <div class="d-grid grid__1 sm:grid__2 md:grid__3 lg:grid__4 g4">
+          <div class="p4 bg-green-100 bar-md">
+            <code class="fs-pica fc-green-600">Item 1</code>
+          </div>
+          <div class="p4 bg-green-100 bar-md">
+            <code class="fs-pica fc-green-600">Item 2</code>
+          </div>
+          <div class="p4 bg-green-100 bar-md">
+            <code class="fs-pica fc-green-600">Item 3</code>
+          </div>
+          <div class="p4 bg-green-100 bar-md">
+            <code class="fs-pica fc-green-600">Item 4</code>
+          </div>
+        </div>
       </div>
     </div>
   </aside>
@@ -267,17 +221,71 @@
 
 <section>
   <h2 id="customization">Customization</h2>
-  <p>Override spacing variables:</p>
 
-  <div class="bg-light-025 p4 bar-md">
-    <pre><code>$spacing-units: (
-  1: 4px, 2: 8px, 3: 12px, 4: 16px, 5: 20px,
-  6: 24px, 7: 32px, 8: 40px, 9: 48px, 10: 56px,
-  11: 64px, 12: 72px, 13: 80px, 14: 120px,
-  15: 160px, 16: 200px,
-);
-$su-full: 1008px;
-$su-step: math.div($su-full, 12);</code></pre>
+  <div class="d-flex fd-column g4">
+    <div>
+      <h3 class="fs-h4 fw-bold mb3">CSS Variables</h3>
+      <p class="fc-light-700 lh-relaxed mb3">
+        Breakpoints are exposed as CSS custom properties for use in custom media queries:
+      </p>
+      <div class="bg-light-025 p4 bar-md">
+        <pre><code>:root {
+  --bp-sm: 600px;
+  --bp-md: 1008px;
+  --bp-lg: 1280px;
+}
+
+/* Use in custom components */
+@media (min-width: var(--bp-md)) {
+  .my-component {
+    /* Desktop styles */
+  }
+}</code></pre>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="fs-h4 fw-bold mb3">SCSS Variables (Build-time)</h3>
+      <p class="fc-light-700 lh-relaxed mb3">Override SCSS variables before importing:</p>
+      <div class="bg-light-025 p4 bar-md">
+        <pre><code>@use "@enodo/foundation-css" with (
+  $breakpoints: (
+    sm: 600px,
+    md: 1008px,
+    lg: 1280px,
+  )
+);</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="d-flex ai-center jc-space-between pb4">
+    <h2 id="best-practices">Best Practices</h2>
+    <a href="#best-practices">#</a>
+  </header>
+
+  <div class="d-grid grid__1 md:grid__2 g4">
+    <div class="bg-green-100 p4 bar-md">
+      <h3 class="fs-h4 fw-bold fc-green-600 mb3">Do</h3>
+      <ul class="list-disc list-inside fc-light-700 lh-relaxed">
+        <li class="mb2">Start with mobile styles (no prefix)</li>
+        <li class="mb2">Add complexity as screen size increases</li>
+        <li class="mb2">Test on real devices when possible</li>
+        <li class="mb2">Use semantic breakpoints (sm, md, lg, xl)</li>
+      </ul>
+    </div>
+
+    <div class="bg-red-100 p4 bar-md">
+      <h3 class="fs-h4 fw-bold fc-red-600 mb3">Don't</h3>
+      <ul class="list-disc list-inside fc-light-700 lh-relaxed">
+        <li class="mb2">Design for desktop first</li>
+        <li class="mb2">Create custom breakpoints for every device</li>
+        <li class="mb2">Rely solely on breakpoints for responsiveness</li>
+        <li class="mb2">Forget to test on mobile devices</li>
+      </ul>
+    </div>
   </div>
 </section>
 </main>

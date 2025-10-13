@@ -72,6 +72,7 @@
     <ul class="d-flex fd-column g1 p2 pl4">
       <li><a href="/foundation-css/backgrounds">Backgrounds</a></li>
       <li><a href="/foundation-css/borders">Borders</a></li>
+      <li><a href="/foundation-css/breakpoints">Breakpoints</a></li>
       <li><a href="/foundation-css/borders-radius">Borders radius</a></li>
       <li><a href="/foundation-css/box-shadows">Box shadows</a></li>
       <li><a href="/foundation-css/box-sizing">Box sizing</a></li>
@@ -939,6 +940,56 @@
         <li class="mb2">• Test all color combinations for accessibility</li>
         <li class="mb2">• Consider both light and dark mode variations</li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<section class="d-flex fd-column g6">
+  <header class="d-flex ai-center jc-space-between">
+    <h2 id="css-variables">CSS Variables</h2>
+    <a href="#css-variables">#</a>
+  </header>
+
+  <div class="d-flex fd-column g4">
+    <p class="fc-light-700 lh-relaxed">
+      All palette colors are automatically exposed as CSS custom properties. Use them in your custom
+      components:
+    </p>
+
+    <div class="bg-light-025 p4 bar-md">
+      <pre><code>/* All color palettes available as CSS variables */
+.my-component {
+  background-color: var(--green-100);
+  border-color: var(--green-600);
+  color: var(--green-600);
+}
+
+.my-button {
+  background-color: var(--blue);
+  color: var(--light);
+}
+
+.my-button:hover {
+  background-color: var(--blue-600);
+}
+
+/* Combine with other design tokens */
+.my-alert {
+  background-color: var(--red-100);
+  color: var(--red-600);
+  padding: var(--su4);
+  border-radius: var(--br-md);
+  border-left: 4px solid var(--red-600);
+}</code></pre>
+    </div>
+
+    <div class="bg-blue-100 p4 bar-md">
+      <h3 class="fs-h4 fw-bold fc-blue-600 mb3">💡 Available Variables</h3>
+      <p class="fc-light-700 lh-relaxed mb3">
+        See the
+        <a href="colors.html#customization" class="fc-blue-600">Colors Customization section</a> for
+        the complete list of all available CSS custom properties.
+      </p>
     </div>
   </div>
 </section>
