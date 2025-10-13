@@ -77,14 +77,6 @@ p {
   @extend .fs-body-copy;
 }
 
-ul {
-  @extend .list-disc;
-}
-
-ol {
-  @extend .list-decimal;
-}
-
 strong {
   @extend .fw-600;
 }
