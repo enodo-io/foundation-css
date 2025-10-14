@@ -123,31 +123,25 @@ title: Breakpoints
 
   <div class="d-flex fd-column g4">
     <div>
-      <h3 class="fs-h4 fw-bold mb3">CSS Variables</h3>
+      <h3 class="fs-h4 fw-bold mb3">SCSS Variables</h3>
       <p class="fc-light-700 lh-relaxed mb3">
-        Breakpoints are exposed as CSS custom properties for use in custom media queries:
+        Breakpoints are defined as SCSS variables. You can use them in your custom styles or
+        override them:
       </p>
       <div class="bg-light-025 p4 bar-md">
-        <pre><code>:root {
-  --bp-sm: 600px;
-  --bp-md: 1008px;
-  --bp-lg: 1280px;
+        <pre><code>@use "@enodo/foundation-css/variables/breakpoints" as *;
+
+/* Use in media queries */
+@use "sass:map";
+
+@media (min-width: map.get($breakpoints, md)) {
+  .my-component {
+    padding: var(--su6);
+  }
 }
 
-/* Use in custom components */
-@media (min-width: var(--bp-md)) {
-  .my-component {
-    /* Desktop styles */
-  }
-}</code></pre>
-      </div>
-    </div>
-
-    <div>
-      <h3 class="fs-h4 fw-bold mb3">SCSS Variables (Build-time)</h3>
-      <p class="fc-light-700 lh-relaxed mb3">Override SCSS variables before importing:</p>
-      <div class="bg-light-025 p4 bar-md">
-        <pre><code>@use "@enodo/foundation-css" with (
+/* Or override before importing */
+@use "@enodo/foundation-css" with (
   $breakpoints: (
     sm: 600px,
     md: 1008px,

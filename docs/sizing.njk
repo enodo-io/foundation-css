@@ -650,7 +650,8 @@ title: Sizing concepts
   padding: var(--su4);
 }
 
-@media (min-width: var(--bp-md)) {
+/* Media queries need SCSS variables (evaluated at build-time) */
+@media (min-width: 1008px) {  /* $breakpoints.md */
   .my-container {
     padding: var(--su6);
   }

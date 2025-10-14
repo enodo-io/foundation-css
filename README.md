@@ -370,11 +370,6 @@ Foundation CSS exposes reusable variables as CSS custom properties that can be o
   --su-full: 63rem;   /* 1008px */
   --su-step: 5.25rem; /* 84px */
 
-  /* Breakpoints */
-  --bp-sm: 600px;
-  --bp-md: 1008px;
-  --bp-lg: 1280px;
-
   /* Border radius */
   --br-xs: 0.1875rem; /* 3px */
   --br-sm: 0.3125rem; /* 5px */
@@ -413,8 +408,8 @@ Foundation CSS exposes reusable variables as CSS custom properties that can be o
   box-shadow: var(--bs-md);
 }
 
-/* Custom media queries with breakpoints */
-@media (min-width: var(--bp-md)) {
+/* Media queries need hardcoded values (CSS vars don't work) */
+@media (min-width: map.get($breakpoints, md)) {
   .my-component {
     padding: var(--su6);
   }
@@ -428,6 +423,8 @@ document.documentElement.style.setProperty('--green', '#your-brand-color');
 Create custom components using CSS custom properties:
 
 ```css
+@use "sass:map";
+
 /* Recommended: Use CSS variables for easier maintenance */
 .button {
   display: inline-flex;
@@ -478,7 +475,7 @@ Create custom components using CSS custom properties:
   box-shadow: var(--bs-sm);
 }
 
-@media (min-width: var(--bp-md)) {
+@media (min-width: map.get($breakpoints, md)) {
   .my-card {
     padding: var(--su6);
   }

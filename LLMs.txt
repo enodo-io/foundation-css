@@ -547,11 +547,6 @@ Foundation CSS exposes key design tokens as CSS custom properties for runtime th
   --su-full: 63rem;   /* 1008px */
   --su-step: 5.25rem; /* 84px */
 
-  /* Breakpoints */
-  --bp-sm: 600px;
-  --bp-md: 1008px;
-  --bp-lg: 1280px;
-
   /* Border Radius */
   --br-xs: 0.1875rem; /* 3px */
   --br-sm: 0.3125rem; /* 5px */
@@ -595,21 +590,18 @@ Foundation CSS exposes key design tokens as CSS custom properties for runtime th
   box-shadow: var(--bs-md);
 }
 
-/* Custom media queries */
-@media (min-width: var(--bp-md)) {
+/* Media queries need hardcoded values (CSS vars don't work in @media) */
+@use "sass:map";
+@media (min-width: map.get($breakpoints, md)) {
   .my-card {
     padding: var(--su6);
   }
 }
-
-/* Dynamic theming with JavaScript */
-document.documentElement.style.setProperty('--green', '#your-brand-color');
 ```
 
 ### Benefits of CSS Custom Properties
 
 - **Runtime theming**: Change values without recompiling SCSS
-- **JavaScript integration**: Dynamic theme switching
 - **Component isolation**: Override at component level
 - **Browser DevTools**: Inspect and modify in real-time
 - **CSS-only theming**: No build step required for theme changes
