@@ -461,12 +461,6 @@ h6 {
   }
 }
 :root {
-  --bp-sm: 600px;
-  --bp-md: 1008px;
-  --bp-lg: 1280px;
-}
-
-:root {
   --light: #fff;
   --light-025: #f9f9f9;
   --light-050: #f1f2f7;
