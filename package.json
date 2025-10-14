@@ -79,7 +79,8 @@
     "dist/index.min.css.map",
     "dist/index.html",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "LLMs.txt"
   ],
   "engines": {
     "node": ">=16.0.0",
