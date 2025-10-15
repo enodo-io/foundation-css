@@ -1,6 +1,6 @@
 {
   "name": "@enodo/foundation-css",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "A lightweight, atomic-first CSS framework for building fast, accessible, and maintainable web interfaces",
   "keywords": [
     "css",
