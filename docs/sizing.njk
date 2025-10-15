@@ -349,6 +349,165 @@ title: Sizing concepts
       readability on all devices. The typography scale adapts to screen size while maintaining
       proportional relationships between different text sizes.
     </p>
+
+    <h3>Typography Scale by Device</h3>
+
+    <p>
+      Inspired by the <a href="https://www.bbc.com/gel/features/typography" target="_blank" rel="noopener">BBC GEL Typography guidelines</a>,
+      our type sizes are optimized for average screen densities and reading comfort under typical conditions.
+      We size our type across four device categories to suit a range of devices and input methods:
+    </p>
+
+    <div class="bg-light-025 p4 bar-md mb4">
+      <ul class="list-disc list-inside">
+        <li class="mb2"><strong>Feature Phone:</strong> 0 - 319px (basic mobile devices)</li>
+        <li class="mb2"><strong>Smartphone:</strong> 320 - 599px (standard mobile devices)</li>
+        <li class="mb2"><strong>Tablet:</strong> 600px and above (tablets and large screens)</li>
+        <li class="mb2"><strong>Desktop:</strong> 600px and above when hover/pointer:fine is available (desktop/laptop with mouse)</li>
+      </ul>
+    </div>
+
+    <p class="mb4">
+      The sizes shown correspond to font-size/line-height and are in pixels, based on a baseline of 72 pixels per inch (ppi).
+      Foundation CSS uses relative units (rem) to allow for browser text resizing and better accessibility.
+    </p>
+
+    <div class="bg-light p4 bar-sm" style="overflow-x: auto;">
+      <table class="w100">
+        <thead>
+          <tr>
+            <th class="ta-left" style="min-width: 120px;">Size Name</th>
+            <th class="ta-left" style="min-width: 180px;">Example Usage</th>
+            <th class="ta-center" style="min-width: 90px;">Feature Phone<br><small>0-319px</small></th>
+            <th class="ta-center" style="min-width: 90px;">Smartphone<br><small>320-599px</small></th>
+            <th class="ta-center" style="min-width: 90px;">Tablet<br><small>600px+</small></th>
+            <th class="ta-center" style="min-width: 90px;">Desktop<br><small>600px+ hover</small></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>atlas</strong></td>
+            <td class="fc-light-600">Hero headlines, large display</td>
+            <td class="ta-center"><code>78/84</code></td>
+            <td class="ta-center"><code>96/104</code></td>
+            <td class="ta-center"><code>192/208</code></td>
+            <td class="ta-center"><code>140/148</code></td>
+          </tr>
+          <tr>
+            <td><strong>elephant</strong></td>
+            <td class="fc-light-600">Large headlines, features</td>
+            <td class="ta-center"><code>60/64</code></td>
+            <td class="ta-center"><code>78/84</code></td>
+            <td class="ta-center"><code>156/170</code></td>
+            <td class="ta-center"><code>116/124</code></td>
+          </tr>
+          <tr>
+            <td><strong>imperial</strong></td>
+            <td class="fc-light-600">Major section headers</td>
+            <td class="ta-center"><code>50/54</code></td>
+            <td class="ta-center"><code>64/72</code></td>
+            <td class="ta-center"><code>124/136</code></td>
+            <td class="ta-center"><code>96/104</code></td>
+          </tr>
+          <tr>
+            <td><strong>royal</strong></td>
+            <td class="fc-light-600">Page titles, important headings</td>
+            <td class="ta-center"><code>40/44</code></td>
+            <td class="ta-center"><code>52/60</code></td>
+            <td class="ta-center"><code>94/104</code></td>
+            <td class="ta-center"><code>76/84</code></td>
+          </tr>
+          <tr>
+            <td><strong>foolscap</strong></td>
+            <td class="fc-light-600">Subsection headers</td>
+            <td class="ta-center"><code>32/36</code></td>
+            <td class="ta-center"><code>40/44</code></td>
+            <td class="ta-center"><code>72/80</code></td>
+            <td class="ta-center"><code>56/60</code></td>
+          </tr>
+          <tr>
+            <td><strong>canon</strong></td>
+            <td class="fc-light-600">Hero or blog post title</td>
+            <td class="ta-center"><code>28/32</code></td>
+            <td class="ta-center"><code>32/36</code></td>
+            <td class="ta-center"><code>52/56</code></td>
+            <td class="ta-center"><code>44/48</code></td>
+          </tr>
+          <tr>
+            <td><strong>trafalgar</strong></td>
+            <td class="fc-light-600">Article title, section header</td>
+            <td class="ta-center"><code>20/24</code></td>
+            <td class="ta-center"><code>24/28</code></td>
+            <td class="ta-center"><code>36/40</code></td>
+            <td class="ta-center"><code>32/36</code></td>
+          </tr>
+          <tr>
+            <td><strong>paragon</strong></td>
+            <td class="fc-light-600">Primary headline on indexes</td>
+            <td class="ta-center"><code>20/24</code></td>
+            <td class="ta-center"><code>22/26</code></td>
+            <td class="ta-center"><code>28/32</code></td>
+            <td class="ta-center"><code>28/32</code></td>
+          </tr>
+          <tr>
+            <td><strong>double-pica</strong></td>
+            <td class="fc-light-600">Sub header</td>
+            <td class="ta-center"><code>20/24</code></td>
+            <td class="ta-center"><code>20/24</code></td>
+            <td class="ta-center"><code>26/30</code></td>
+            <td class="ta-center"><code>24/28</code></td>
+          </tr>
+          <tr>
+            <td><strong>great-primer</strong></td>
+            <td class="fc-light-600">Headline title or subtitle</td>
+            <td class="ta-center"><code>18/22</code></td>
+            <td class="ta-center"><code>18/22</code></td>
+            <td class="ta-center"><code>21/24</code></td>
+            <td class="ta-center"><code>20/24</code></td>
+          </tr>
+          <tr class="bg-green-050">
+            <td><strong>body-copy</strong></td>
+            <td class="fc-light-600">Article body copy</td>
+            <td class="ta-center"><code>15/20</code></td>
+            <td class="ta-center"><code>16/22</code></td>
+            <td class="ta-center"><code>18/24</code></td>
+            <td class="ta-center"><code>16/22</code></td>
+          </tr>
+          <tr>
+            <td><strong>pica</strong></td>
+            <td class="fc-light-600">Index links, titles & headlines</td>
+            <td class="ta-center"><code>15/20</code></td>
+            <td class="ta-center"><code>16/20</code></td>
+            <td class="ta-center"><code>18/22</code></td>
+            <td class="ta-center"><code>16/20</code></td>
+          </tr>
+          <tr>
+            <td><strong>long-primer</strong></td>
+            <td class="fc-light-600">Body copy & image captions</td>
+            <td class="ta-center"><code>15/18</code></td>
+            <td class="ta-center"><code>15/18</code></td>
+            <td class="ta-center"><code>15/20</code></td>
+            <td class="ta-center"><code>14/18</code></td>
+          </tr>
+          <tr>
+            <td><strong>brevier</strong></td>
+            <td class="fc-light-600">Time stamps and bylines</td>
+            <td class="ta-center"><code>14/16</code></td>
+            <td class="ta-center"><code>14/18</code></td>
+            <td class="ta-center"><code>14/18</code></td>
+            <td class="ta-center"><code>13/16</code></td>
+          </tr>
+          <tr>
+            <td><strong>minion</strong></td>
+            <td class="fc-light-600">Small header capitals</td>
+            <td class="ta-center"><code>12/16</code></td>
+            <td class="ta-center"><code>12/16</code></td>
+            <td class="ta-center"><code>13/16</code></td>
+            <td class="ta-center"><code>12/16</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 
   <section id="best-practices" class="d-flex fd-column g4">
