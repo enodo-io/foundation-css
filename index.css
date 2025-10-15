@@ -12864,4 +12864,10 @@ sub {
   font-size: smaller;
 }
 
+button {
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
 /*# sourceMappingURL=index.css.map */
