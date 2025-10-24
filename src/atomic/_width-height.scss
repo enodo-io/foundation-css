@@ -79,7 +79,7 @@
 
   @for $i from 1 through 12 {
     &#{ $i } {
-      width: px2rem($su-step * $i) !important;
+      min-width: px2rem($su-step * $i) !important;
     }
   }
 
