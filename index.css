@@ -3578,6 +3578,42 @@ h6 {
 .grid__12 {
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
+.grid__r1 {
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+}
+.grid__r2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+.grid__r3 {
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+.grid__r4 {
+  grid-template-rows: repeat(4, minmax(0, 1fr));
+}
+.grid__r5 {
+  grid-template-rows: repeat(5, minmax(0, 1fr));
+}
+.grid__r6 {
+  grid-template-rows: repeat(6, minmax(0, 1fr));
+}
+.grid__r7 {
+  grid-template-rows: repeat(7, minmax(0, 1fr));
+}
+.grid__r8 {
+  grid-template-rows: repeat(8, minmax(0, 1fr));
+}
+.grid__r9 {
+  grid-template-rows: repeat(9, minmax(0, 1fr));
+}
+.grid__r10 {
+  grid-template-rows: repeat(10, minmax(0, 1fr));
+}
+.grid__r11 {
+  grid-template-rows: repeat(11, minmax(0, 1fr));
+}
+.grid__r12 {
+  grid-template-rows: repeat(12, minmax(0, 1fr));
+}
 .grid--col-all {
   grid-column: 1/-1;
 }
@@ -3837,6 +3873,42 @@ h6 {
   }
   .sm\:grid__12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+  .sm\:grid__r1 {
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
+  .sm\:grid__r2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+  .sm\:grid__r3 {
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+  }
+  .sm\:grid__r4 {
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+  }
+  .sm\:grid__r5 {
+    grid-template-rows: repeat(5, minmax(0, 1fr));
+  }
+  .sm\:grid__r6 {
+    grid-template-rows: repeat(6, minmax(0, 1fr));
+  }
+  .sm\:grid__r7 {
+    grid-template-rows: repeat(7, minmax(0, 1fr));
+  }
+  .sm\:grid__r8 {
+    grid-template-rows: repeat(8, minmax(0, 1fr));
+  }
+  .sm\:grid__r9 {
+    grid-template-rows: repeat(9, minmax(0, 1fr));
+  }
+  .sm\:grid__r10 {
+    grid-template-rows: repeat(10, minmax(0, 1fr));
+  }
+  .sm\:grid__r11 {
+    grid-template-rows: repeat(11, minmax(0, 1fr));
+  }
+  .sm\:grid__r12 {
+    grid-template-rows: repeat(12, minmax(0, 1fr));
   }
   .sm\:grid--col-all {
     grid-column: 1/-1;
@@ -4098,6 +4170,42 @@ h6 {
   .md\:grid__12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
+  .md\:grid__r1 {
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
+  .md\:grid__r2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+  .md\:grid__r3 {
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+  }
+  .md\:grid__r4 {
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+  }
+  .md\:grid__r5 {
+    grid-template-rows: repeat(5, minmax(0, 1fr));
+  }
+  .md\:grid__r6 {
+    grid-template-rows: repeat(6, minmax(0, 1fr));
+  }
+  .md\:grid__r7 {
+    grid-template-rows: repeat(7, minmax(0, 1fr));
+  }
+  .md\:grid__r8 {
+    grid-template-rows: repeat(8, minmax(0, 1fr));
+  }
+  .md\:grid__r9 {
+    grid-template-rows: repeat(9, minmax(0, 1fr));
+  }
+  .md\:grid__r10 {
+    grid-template-rows: repeat(10, minmax(0, 1fr));
+  }
+  .md\:grid__r11 {
+    grid-template-rows: repeat(11, minmax(0, 1fr));
+  }
+  .md\:grid__r12 {
+    grid-template-rows: repeat(12, minmax(0, 1fr));
+  }
   .md\:grid--col-all {
     grid-column: 1/-1;
   }
@@ -4357,6 +4465,42 @@ h6 {
   }
   .lg\:grid__12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+  .lg\:grid__r1 {
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
+  .lg\:grid__r2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+  .lg\:grid__r3 {
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+  }
+  .lg\:grid__r4 {
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+  }
+  .lg\:grid__r5 {
+    grid-template-rows: repeat(5, minmax(0, 1fr));
+  }
+  .lg\:grid__r6 {
+    grid-template-rows: repeat(6, minmax(0, 1fr));
+  }
+  .lg\:grid__r7 {
+    grid-template-rows: repeat(7, minmax(0, 1fr));
+  }
+  .lg\:grid__r8 {
+    grid-template-rows: repeat(8, minmax(0, 1fr));
+  }
+  .lg\:grid__r9 {
+    grid-template-rows: repeat(9, minmax(0, 1fr));
+  }
+  .lg\:grid__r10 {
+    grid-template-rows: repeat(10, minmax(0, 1fr));
+  }
+  .lg\:grid__r11 {
+    grid-template-rows: repeat(11, minmax(0, 1fr));
+  }
+  .lg\:grid__r12 {
+    grid-template-rows: repeat(12, minmax(0, 1fr));
   }
   .lg\:grid--col-all {
     grid-column: 1/-1;
