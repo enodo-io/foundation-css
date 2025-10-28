@@ -205,6 +205,140 @@ title: Grids
 </section>
 
 <section>
+  <h2 id="rows">Rows</h2>
+  <p>
+    To define a discrete number of rows in your grid layout, you can add a
+    <code>grid__r[x]</code> modifying class.
+  </p>
+
+  <table class="w100">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Definition</th>
+        <th scope="col">Responsive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>.grid__r1</code></th>
+        <td><code>grid-template-rows: repeat(1, minmax(0, 1fr));</code></td>
+        <td>Creates a grid layout with 1 row</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid__r2</code></th>
+        <td><code>grid-template-rows: repeat(2, minmax(0, 1fr));</code></td>
+        <td>Creates a grid layout with 2 rows</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid__r3</code></th>
+        <td><code>grid-template-rows: repeat(3, minmax(0, 1fr));</code></td>
+        <td>Creates a grid layout with 3 rows</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid__r4</code></th>
+        <td><code>grid-template-rows: repeat(4, minmax(0, 1fr));</code></td>
+        <td>Creates a grid layout with 4 rows</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid__r5</code></th>
+        <td><code>grid-template-rows: repeat(5, minmax(0, 1fr));</code></td>
+        <td>Creates a grid layout with 5 rows</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid__r6</code></th>
+        <td><code>grid-template-rows: repeat(6, minmax(0, 1fr));</code></td>
+        <td>Creates a grid layout with 6 rows</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid__r7</code></th>
+        <td><code>grid-template-rows: repeat(7, minmax(0, 1fr));</code></td>
+        <td>Creates a grid layout with 7 rows</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid__r8</code></th>
+        <td><code>grid-template-rows: repeat(8, minmax(0, 1fr));</code></td>
+        <td>Creates a grid layout with 8 rows</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid__r9</code></th>
+        <td><code>grid-template-rows: repeat(9, minmax(0, 1fr));</code></td>
+        <td>Creates a grid layout with 9 rows</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid__r10</code></th>
+        <td><code>grid-template-rows: repeat(10, minmax(0, 1fr));</code></td>
+        <td>Creates a grid layout with 10 rows</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid__r11</code></th>
+        <td><code>grid-template-rows: repeat(11, minmax(0, 1fr));</code></td>
+        <td>Creates a grid layout with 11 rows</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+      <tr>
+        <th scope="row"><code>.grid__r12</code></th>
+        <td><code>grid-template-rows: repeat(12, minmax(0, 1fr));</code></td>
+        <td>Creates a grid layout with 12 rows</td>
+        <td class="fc-green ta-center">Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Row Examples</h3>
+  <div class="preview bg-light p4 bar-sm">
+    <div class="d-flex fd-column g4">
+      <div>
+        <h4>.grid__r2</h4>
+        <div class="d-grid grid__2 grid__r2 g2" style="height: 120px;">
+          <div class="bg-blue fc-white p2 ta-center">1</div>
+          <div class="bg-green fc-white p2 ta-center">2</div>
+          <div class="bg-purple fc-white p2 ta-center">3</div>
+          <div class="bg-orange fc-white p2 ta-center">4</div>
+        </div>
+      </div>
+
+      <div>
+        <h4>.grid__r3</h4>
+        <div class="d-grid grid__2 grid__r3 g2" style="height: 180px;">
+          <div class="bg-blue fc-white p2 ta-center">1</div>
+          <div class="bg-green fc-white p2 ta-center">2</div>
+          <div class="bg-purple fc-white p2 ta-center">3</div>
+          <div class="bg-orange fc-white p2 ta-center">4</div>
+          <div class="bg-red fc-white p2 ta-center">5</div>
+          <div class="bg-teal fc-white p2 ta-center">6</div>
+        </div>
+      </div>
+
+      <div>
+        <h4>.grid__r4</h4>
+        <div class="d-grid grid__2 grid__r4 g2" style="height: 240px;">
+          <div class="bg-blue fc-white p2 ta-center">1</div>
+          <div class="bg-green fc-white p2 ta-center">2</div>
+          <div class="bg-purple fc-white p2 ta-center">3</div>
+          <div class="bg-orange fc-white p2 ta-center">4</div>
+          <div class="bg-red fc-white p2 ta-center">5</div>
+          <div class="bg-teal fc-white p2 ta-center">6</div>
+          <div class="bg-yellow fc-white p2 ta-center">7</div>
+          <div class="bg-pink fc-white p2 ta-center">8</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
   <h2 id="column-row-spans">Column and Row Spans</h2>
   <p>
     You can apply <code>grid--col[x]</code> to your columns, and <code>grid--row[x]</code> to your
@@ -411,7 +545,7 @@ title: Grids
 
       <div>
         <h4>Row spans</h4>
-        <div class="d-grid grid__4 g2" style="grid-template-rows: repeat(3, 60px);">
+        <div class="d-grid grid__4 grid__r3 g2" style="height: 180px;">
           <div class="bg-blue fc-white p2 ta-center grid--row2">2 rows</div>
           <div class="bg-green fc-white p2 ta-center">1 row</div>
           <div class="bg-purple fc-white p2 ta-center">1 row</div>
@@ -425,7 +559,7 @@ title: Grids
 
       <div>
         <h4>Combined spans</h4>
-        <div class="d-grid grid__4 g2" style="grid-template-rows: repeat(3, 60px);">
+        <div class="d-grid grid__4 grid__r3 g2" style="height: 180px;">
           <div class="bg-blue fc-white p2 ta-center grid--col2 grid--row2">2×2</div>
           <div class="bg-green fc-white p2 ta-center">1×1</div>
           <div class="bg-purple fc-white p2 ta-center">1×1</div>
@@ -490,7 +624,7 @@ title: Grids
 
       <div>
         <h4>.g-af-column</h4>
-        <div class="d-grid grid__3 g-af-column g2" style="grid-template-rows: repeat(4, 60px);">
+        <div class="d-grid grid__3 grid__r4 g-af-column g2" style="height: 240px;">
           <div class="bg-blue fc-white p2 ta-center">1</div>
           <div class="bg-green fc-white p2 ta-center grid--row2">2 (spans 2)</div>
           <div class="bg-purple fc-white p2 ta-center">3</div>
@@ -875,7 +1009,7 @@ title: Grids
 
       <div>
         <h4>Row positioning</h4>
-        <div class="d-grid grid__3 g2" style="grid-template-rows: repeat(4, 60px);">
+        <div class="d-grid grid__3 grid__r4 g2" style="height: 240px;">
           <div class="bg-blue fc-white p2 ta-center grid--row-start2 grid--row-end4">Row 2-4</div>
           <div class="bg-green fc-white p2 ta-center">1</div>
           <div class="bg-purple fc-white p2 ta-center">2</div>
@@ -1086,7 +1220,7 @@ title: Grids
 &lt;/div&gt;</code></pre>
 
   <h3>Dashboard Layout</h3>
-  <pre><code>&lt;div class="d-grid grid__12 g4"&gt;
+  <pre><code>&lt;div class="d-grid grid__12 grid__r3 g4"&gt;
   &lt;div class="grid--col-all grid--row1 bg-blue fc-white p4"&gt;
     &lt;h1 class="fs-h2 fw-bold"&gt;Dashboard&lt;/h1&gt;
   &lt;/div&gt;
@@ -1104,6 +1238,14 @@ title: Grids
     &lt;p&gt;Dashboard main content area.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+
+  <h3>Fixed Row Height Layout</h3>
+  <pre><code>&lt;div class="d-grid grid__3 grid__r4 g4"&gt;
+  &lt;div class="bg-blue fc-white p3 ta-center"&gt;Header&lt;/div&gt;
+  &lt;div class="bg-green fc-white p3 ta-center"&gt;Sidebar&lt;/div&gt;
+  &lt;div class="bg-purple fc-white p3 ta-center"&gt;Main&lt;/div&gt;
+  &lt;div class="bg-orange fc-white p3 ta-center"&gt;Footer&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 </section>
 
 <section>
@@ -1116,6 +1258,9 @@ title: Grids
         <li class="mb2">• Use CSS Grid for two-dimensional layouts (rows and columns)</li>
         <li class="mb2">• Combine with gap classes for consistent spacing</li>
         <li class="mb2">• Use responsive grid classes for mobile-first design</li>
+        <li class="mb2">
+          • Define explicit row templates with <code>grid__r[x]</code> for fixed layouts
+        </li>
         <li class="mb2">• Leverage column and row spans for complex layouts</li>
         <li class="mb2">• Use start/end classes for precise positioning</li>
         <li class="mb2">• Consider auto-flow for dynamic content placement</li>
@@ -1169,6 +1314,11 @@ title: Grids
   <pre><code>&lt;!-- Responsive grid columns --&gt;
 &lt;div class="d-grid grid__1 sm:grid__2 md:grid__3 lg:grid__4 g4"&gt;
   &lt;!-- 1 column on mobile, 2 on tablet, 3 on desktop, 4 on large screens --&gt;
+&lt;/div&gt;
+
+&lt;!-- Responsive grid rows --&gt;
+&lt;div class="d-grid grid__2 grid__r2 sm:grid__r3 md:grid__r4 g4"&gt;
+  &lt;!-- 2 rows on mobile, 3 on tablet, 4 on desktop --&gt;
 &lt;/div&gt;
 
 &lt;!-- Responsive column spans --&gt;
