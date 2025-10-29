@@ -460,6 +460,17 @@ h6 {
     scroll-behavior: auto !important;
   }
 }
+/**
+ * Reset some usefull elements
+ */
+figure {
+  margin: 0;
+}
+
+iframe {
+  border: 0;
+}
+
 :root {
   --light: #fff;
   --light-025: #f9f9f9;
