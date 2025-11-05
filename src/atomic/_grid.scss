@@ -5,12 +5,12 @@
 @include responsify("g") {
   // GAP
   &0 {
-    gap: 0;
+    gap: 0 !important;
   }
 
   @each $su, $value in $spacing-units {
     &#{$su} {
-      gap: px2rem($value);
+      gap: px2rem($value) !important;
     }
   }
 
