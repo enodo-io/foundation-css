@@ -33,7 +33,7 @@ h2,
 h3,
 h4,
 h5 {
-  @extend .fw-500;
+  font-weight: 500;
 }
 
 h1 {
@@ -60,7 +60,7 @@ h6 {
 h6,
 em,
 q {
-  @extend .fs-italic;
+  font-style: italic;
 }
 
 q {
@@ -79,15 +79,15 @@ p {
 }
 
 strong {
-  @extend .fw-600;
+  font-weight: 600;
 }
 
 u {
-  @extend .td-underline;
+  text-decoraiton: underline;
 }
 
 strike {
-  @extend .td-line-through;
+  text-decoraiton: line-through;
 }
 
 abbr {
@@ -95,14 +95,12 @@ abbr {
 }
 
 sup {
-  @extend .va-super;
-
+  vertical-align: super;
   font-size: smaller;
 }
 
 sub {
-  @extend .va-sub;
-
+  vertical-align: sub;
   font-size: smaller;
 }
 
