@@ -12232,9 +12232,7 @@ p {
   font-style: normal !important;
 }
 
-.fs-italic, h6,
-em,
-q {
+.fs-italic {
   font-style: italic !important;
 }
 
@@ -12266,11 +12264,11 @@ q {
   text-decoration: none !important;
 }
 
-.td-underline, u {
+.td-underline {
   text-decoration: underline !important;
 }
 
-.td-line-through, strike {
+.td-line-through {
   text-decoration: line-through !important;
 }
 
@@ -12282,15 +12280,11 @@ q {
   font-weight: 400 !important;
 }
 
-.fw-500, h1,
-h2,
-h3,
-h4,
-h5 {
+.fw-500 {
   font-weight: 500 !important;
 }
 
-.fw-600, strong {
+.fw-600 {
   font-weight: 600 !important;
 }
 
@@ -12419,10 +12413,10 @@ h5 {
 .va-middle {
   vertical-align: middle !important;
 }
-.va-sub, sub {
+.va-sub {
   vertical-align: sub !important;
 }
-.va-super, sup {
+.va-super {
   vertical-align: super !important;
 }
 .va-text-bottom {
@@ -12997,6 +12991,20 @@ h5 {
   z-index: 9050 !important;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
+}
+
+h6,
+em,
+q {
+  font-style: italic;
+}
+
 q::before {
   content: open-quote;
 }
@@ -13004,15 +13012,29 @@ q::after {
   content: close-quote;
 }
 
+strong {
+  font-weight: 600;
+}
+
+u {
+  text-decoraiton: underline;
+}
+
+strike {
+  text-decoraiton: line-through;
+}
+
 abbr {
   text-decoration: underline dotted;
 }
 
 sup {
+  vertical-align: super;
   font-size: smaller;
 }
 
 sub {
+  vertical-align: sub;
   font-size: smaller;
 }
 
